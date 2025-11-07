@@ -14,13 +14,13 @@ natbiboptions: numbers
 
 title: Senior Thesis Title
 
-firstreader: First Reader
-secondreader: Second Reader
+firstreader: Gregory Kapfhammer 
+secondreader: Oliver Bonham-Carter
 
 bibliography: references.bib
 
 author:
-  - name: A. Student
+  - name: Evan Nelson
     affiliation:
       name: Allegheny College
       address: 520 N. Main St., Box Q
