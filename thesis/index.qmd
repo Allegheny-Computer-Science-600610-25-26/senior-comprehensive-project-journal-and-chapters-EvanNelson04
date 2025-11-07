@@ -12,7 +12,8 @@ format:
 natbiboptions: numbers
 # EDIT AT YOUR OWN PERIL #
 
-title: Senior Thesis Title
+title: WorkoutEvaluator: IOS app that provides personalized exercise feedbackthrough user-inputted information
+
 
 firstreader: Gregory Kapfhammer 
 secondreader: Oliver Bonham-Carter
