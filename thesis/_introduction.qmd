@@ -20,14 +20,15 @@ trainer ranges from $40 to $70 (Niepytalska), which can significantly increase t
 maintaining a fitness routine. What if there were a way to provide this guidance in a simple,
 free iOS app on your phone?
 
-In this day and age everyove carries their phone every where they go, to work, to dinner, to their kids
-soccer game and to the gym. So taking advantage of this and creating all this feedbadck that can be
-at the palm of their hands in an app on their phone. In 2024, fitness apps were downloaded a total
-of 850 million times and out of that 345 million people actively utilized those fitness apps (Curry).
-
-
-
- 
+In this day and age, almost everyone carries their smartphone wherever they go—to work, to dinner, to
+their children’s soccer games, and to the gym. This constant presence presents a unique opportunity:
+fitness guidance and feedback can be delivered directly into the hands of users, anytime and anywhere.
+By leveraging this accessibility, an app can provide personalized, real-time feedback would complete 
+something that hasn't neccesarily been completed. In 2024, fitness apps were downloaded a total of 850
+million times, yet only 345 million people actively used them (Curry). This gap highlights a clear
+opportunity for apps that not only attract users but also maintain engagement by delivering meaningful,
+easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
+workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
 
 ## 1.2 - Overview of Completed Work
 
