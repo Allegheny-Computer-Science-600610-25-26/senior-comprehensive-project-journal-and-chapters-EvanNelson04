@@ -1,6 +1,6 @@
 # Introduction
 
-## 1.1 - Background
+## Background
 
 This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
 the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
@@ -30,15 +30,15 @@ opportunity for apps that not only attract users but also maintain engagement by
 easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
 workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
 
-## 1.2 - Overview of Completed Work
+## Overview of Completed Work
 
-## 1.3 - Project Motivation "Why Does This Matter?"
+## Project Motivation "Why Does This Matter?"
 
-## 1.4 - Personal Motivation "Why Me, Why This Project?"
+## Personal Motivation "Why Me, Why This Project?"
 
-## 1.5 - Ethical Implications
+## Ethical Implications
 
-## 1.6 - Structure of Senior Comprehensive Project
+## Structure of Senior Comprehensive Project
 
-## 1.7 - Contributions of The Project
+## Contributions of The Project
 
