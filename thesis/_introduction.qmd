@@ -1,20 +1,43 @@
 # Introduction
 
-## 1.1
-#### Overview of Completed Work
+## 1.1 - Background
 
-## 1.2
-#### Project Motivation "Why Does This Matter?"
+This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
+the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
+with the goal of improving their health and performance, yet many struggle to determine whether they are
+training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”
+, or “Is my progress on track?” often go unanswered without a personal trainer or advanced tracking
+tools. To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
+designed to guide.
 
-## 1.3
-#### Personal Motivation "Why Me, Why This Project?"
+The gym lifestyle has been actively growing for over 20 years. In 2000, around 32.8 million people had
+active gym memberships in the United States. Since then, that number has more than doubled to approximately
+77 million in 2024, with predictions estimating 85–90 million memberships by 2030 (Kerxhaliu). As the
+number of gym-goers continues to rise, so does the portion of this population seeking feedback—whether
+through phone applications, personal trainers, or wearables. Currently, about 29% of gym-goers work
+with personal trainers (Kerxhaliu). However, the average hourly rate for a professional personal
+trainer ranges from $40 to $70 (Niepytalska), which can significantly increase the cost of
+maintaining a fitness routine. What if there were a way to provide this guidance in a simple,
+free iOS app on your phone?
 
-## 1.4
-#### Ethical Implications
+In this day and age everyove carries their phone every where they go, to work, to dinner, to their kids
+soccer game and to the gym. So taking advantage of this and creating all this feedbadck that can be
+at the palm of their hands in an app on their phone. In 2024, fitness apps were downloaded a total
+of 850 million times and out of that 345 million people actively utilized those fitness apps (Curry).
 
-## 1.5
-#### Structure of Senior Comprehensive Project
 
-## 1.6
-#### Contributions of The Project
+
+ 
+
+## 1.2 - Overview of Completed Work
+
+## 1.3 - Project Motivation "Why Does This Matter?"
+
+## 1.4 - Personal Motivation "Why Me, Why This Project?"
+
+## 1.5 - Ethical Implications
+
+## 1.6 - Structure of Senior Comprehensive Project
+
+## 1.7 - Contributions of The Project
 
