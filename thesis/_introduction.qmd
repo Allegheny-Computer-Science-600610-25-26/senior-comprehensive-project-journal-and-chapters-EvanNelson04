@@ -32,7 +32,77 @@ workout guidance that keeps users motivated and informed without requiring addit
 
 ## Overview of Completed Work
 
-## Project Motivation "Why Does This Matter?"
+The current build of the project includes a working iOS application with all core components implemented.
+This app is made from three main ideas, workout progress tracking, providing evaluation and feedback and
+local data storage. 
+
+Workout progress tracking consists of 2 different areas. Primarily is the concept of
+logging your workout. In my app the goal is to keep it simple, taking in user-inputted data that consists
+of muscle group, exercise, weight, repetitions. Logging these 4 things in my developed app takes the user
+under 15 seconds. This is beneficial as it provides the user the ability to input data directly after
+a completed set that doesn't take up minutes. Once the user inputs the data it then gets shot to 2 different
+areas, workout log and visuals. Once the user inputs the data they are able to readily view this within
+their history log of workouts, providing the user with the information they provided along with the
+date that it was completed on. This is one way that the user will be able to visualize all the different
+exercises they have completed on any given day. From there it activates the other visual part that is
+emphasized. The user is able to see the data for any specific exercise they have inputted. This will
+aid the user in discovering trends and progress. You can easily view and recognize if you are bench
+pressing more weight than last time and how much it has progressed in the last month. The visuals
+are a large emphasis of this project, being able to provide the user with a simple and easy way
+to visualize if they are progressing or regressing goes a long way in the scope of fitness apps.
+
+Providing evaluation in my opinion is the main emphasis of this project. Within regards to the fitness
+app realm, there is not an app that can provide concise and specific feedback to aid the user in their
+gym journey. In my opinion too much feedback or too complicated feedback can be offputting for users
+for many different reasons. Lots of apps provide the user with 10 different graphs or 10 different data
+points that stand out, but a lot of the time the user may not understand what they are looking at and
+receiving. There has to be a way to provide the user feedback in 2-4 bulletpoints that can help them
+recognize that is good and what is bad so that they dont get stuck in a loop of creating bad habits
+within the gym. Well essentially this is what my app will have that will stand out. For example, if the
+user inputs exercises of a certain muscle group more than 2-3 times a week my app will tell the user
+that they are overtraining that muscle group. The basic science is that everytime you use a muscle group
+you are essentially creating micro tears in this muscle that need time to regrow bigger and stronger. If 
+it does not get that time to rest and regrow then essentially you will not see any progress. Things like
+this are not common for new gym-goers to know, so why not aid them in this journey. This evaluation will
+also be able to look at and evaluate trends. In the last month am I progressing or regressing? Well my app
+will let the user know this immediately after a data entry. Providing this feedback in my opinion is the
+missing puzzle piece in the fitness industry.
+
+Finally reaching the point of local data storage is an important milestone in developing my app. Local
+storage allows the app to save information directly on the user’s device, which is essential for
+reliability, performance, and user experience. It does this by saving a JSON file on the user's device.
+A JSON file (JavaScript Object Notation) is a format used to store and organize data in a structured way
+using key-value pairs. It’s easy for both humans to read and computers to process, making it ideal for
+app development. In my iOS app, a JSON file can store information such as workouts, exercises, or
+personal records locally. This helps keep the app’s data organized and easily accessible for future use
+or syncing. By storing data locally, users can still access and record their workouts even without an
+internet connection, making the app functional anywhere, including gyms or areas with poor service. It
+also ensures data persistence, meaning user progress and personal records are saved between sessions
+instead of being lost when the app closes. Additionally, local data storage enhances performance because
+retrieving information from the device is much faster than communicating with a remote server. Lastly,
+it supports better privacy and security, since sensitive fitness data remain on the user’s device, giving
+them greater control over their personal information. Security in 2025 is more important than ever, as
+data breaches and hacking attempts have become increasingly common. By prioritizing secure data handling
+within my app, users can feel confident that their personal information is protected. This added layer
+of security helps build trust and provides peace of mind while using the app.
+
+The app was developed using Xcode and is currently tested directly on my iPhone through Developer Mode. My
+primary focus at the beginning of the process was learning a new programming language, Swift, while also
+understanding how to code, commit, and push changes to a GitHub repository within this new environment. Although
+Xcode took some time to get comfortable with, trial and error combined with YouTube tutorials—especially those
+focused on Swift basics, SwiftUI interface design, and Xcode project setup—helped me progress quickly. Comparing
+Swift to Python also gave me valuable insight into how each language handles certain functions and where Swift
+performs better for iOS app development.
+
+I leveraged SwiftUI for the interface and used environment objects for data handling. The project was managed
+through GitHub, ensuring version control and consistent code saving. Testing on my personal iPhone required enabling
+Developer Mode, registering my device with Xcode, and configuring the necessary provisioning profiles to allow the
+app to run outside the simulator.
+
+Xcode also provides the option of using “Simulators” to run and test apps in development. A simulator is a software
+tool that mimics the behavior of an actual iPhone or iPad on your computer, allowing you to see how your app would
+look and function without needing a physical device. However, the downside is that the app may look or behave differently
+on a real iPhone. Therefore, testing on a physical device was essential to ensure accurate appearance and functionality. 
 
 ## Personal Motivation "Why Me, Why This Project?"
 
