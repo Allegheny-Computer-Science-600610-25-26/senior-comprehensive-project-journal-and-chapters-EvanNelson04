@@ -152,8 +152,8 @@ personal experience with my technical expertise, I am able to create an applicat
 
 
 
-Overall, my combination of technical training, practical experience, and personal motivation provides a strong foundation for this project. I am confident in
-my ability to develop an engaging, and functional app that bridges the gap between software technology and health and wellness.
+Overall, my combination of technical training, practical experience, and personal motivation provides a strong foundation for this project. I am confident 
+in my ability to develop an engaging, and functional app that bridges the gap between software technology and health and wellness.
 
 ## Project Motivation
 
