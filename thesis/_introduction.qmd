@@ -104,7 +104,58 @@ tool that mimics the behavior of an actual iPhone or iPad on your computer, allo
 look and function without needing a physical device. However, the downside is that the app may look or behave differently
 on a real iPhone. Therefore, testing on a physical device was essential to ensure accurate appearance and functionality. 
 
-## Personal Motivation "Why Me, Why This Project?"
+## Personal Motivation "Why Me? Why This Project?"
+
+This project aligns closely with my personal and academic interests in health technology and mobile app development.
+I have always loved video games, and as I got older, I became interested in understanding how they work behind the
+scenes. This project gave me the opportunity to finally explore that process and develop my own application from the
+ground up. I am also deeply passionate about health and wellness, so being able to bridge the gap between fitness and
+software development feels both meaningful and exciting. It represents a step toward creating technology that not only
+functions well but also has a real impact on people’s daily lives. 
+
+I have been an athlete my whole life, from my earliest years through college. I played soccer as soon as I could walk and run,
+continued with tennis up until my junior year of college, and have tried just about every sport imaginable. Sports have always been
+a central part of my life, keeping me active every day, whether through clubs or just playing with friends. This routine changed during
+my junior year of college when I left the Allegheny College Men’s Tennis Team due to a lingering shoulder injury. After playing sports
+my whole life, it felt strange not to be actively involved in a sport or hobby. To stay active, I decided to pursue a consistent gym
+lifestyle, going 5–6 days a week. Thankfully, I already had some experience in the gym through teams and clubs, but without that foundation,
+I would have had no idea where to start or how to define “success.” Through trial, learning from friends, and watching YouTube tutorials, I
+gradually gained knowledge and confidence in the gym. That experience sparked the idea: what if there was an app that could track my progress
+while providing personalized feedback to help me stay on track? I began experimenting with fitness apps like Whoop, Strong, Fitbod, and Hevy,
+but none provided exactly what I was looking for. That gap inspired me to develop my own app, tailored to my fitness goals and workflow.
+This process is especially unique because I am both the developer and a user of the app. Being able to experience the app firsthand allows me
+to constantly evaluate features from a real-world perspective, ensuring usability, simple design, and functionality. This dual role enables me
+to iterate quickly and create an application that is both practical and engaging for users like myself.
+
+This proccess is especially unique as I am the developer for this app as well as someone who will be a user for this application. This unique
+experience allows me to have a visual of what I want to create at all times of development. 
+
+This background is why I feel particularly well-qualified for the developer role on this project. My academics at Allegheny College’s
+CIS department has also provided me with a strong foundation in computer science, equipping me with the technical knowledge and problem-solving skills
+needed to successfully design and implement a mobile application. Over the course of my studies, I have taken courses across nearly every
+area of computer science, including software engineering, web design, computer security and programming languages. This breadth of
+exposure has allowed me to gain hands-on experience with multiple coding languages and frameworks, giving me the ability to approach the technical
+challenges of app development.
+
+Two courses, in particular, have shaped my ability to contribute effectively to this project: Software Engineering and Web Design. Software Engineering
+provided me with experience in professional development workflows, including collaborative sprints, version control, and team-based problem solving.
+I learned how to write code that is not only functional but also readable and maintainable by other team members which is a critical skill for any large-scale project.
+Understanding each function and code block in depth allows me to confidently iterate and expand the app while avoiding errors. Web Design, meanwhile, highlighted
+the importance of user interface and user experience. Developing a clean and visually appealing interface is crucial for engaging users, particularly
+in a mobile app where ease of navigation and clarity are essential. The lessons from this course ensure that the app I am building is not only technically advanced
+but also user-friendly.
+
+Beyond my academic preparation, my personal experiences have shaped my motivation and insight into this project. As a lifelong athlete, I have spent countless
+hours understanding training, fitness, and performance, which gave me firsthand knowledge of what users look for in a health and fitness app. Transitioning
+from organized sports to independent gym training revealed a gap in available tools for tracking and improving personal fitness progress. By combining this
+personal experience with my technical expertise, I am able to create an application that addresses real user needs.
+
+
+
+Overall, my combination of technical training, practical experience, and personal motivation provides a strong foundation for this project. I am confident in
+my ability to develop an engaging, and functional app that bridges the gap between software technology and health and wellness.
+
+## Project Motivation
 
 ## Ethical Implications
 
