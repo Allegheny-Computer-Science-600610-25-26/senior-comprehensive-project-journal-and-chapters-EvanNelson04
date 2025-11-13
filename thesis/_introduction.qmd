@@ -150,12 +150,63 @@ hours understanding training, fitness, and performance, which gave me firsthand 
 from organized sports to independent gym training revealed a gap in available tools for tracking and improving personal fitness progress. By combining this
 personal experience with my technical expertise, I am able to create an application that addresses real user needs.
 
-
-
 Overall, my combination of technical training, practical experience, and personal motivation provides a strong foundation for this project. I am confident 
 in my ability to develop an engaging, and functional app that bridges the gap between software technology and health and wellness.
 
 ## Project Motivation
+
+This project is driven by the goal of combining key areas of computer science, data analysis, and mobile system
+integration to create a functional and efficient fitness technology solution. It provides practical experience in app
+development, data integration, and automation—skills that are valued in the modern technology industry. Through
+the development of a mobile application that collects, processes, and evaluates the data, the project simulates
+the type of real-world problem-solving encountered in software engineering and health technology fields. 
+
+This project is also motivated by the intgration and correlation of scientific and technical principles to advance
+personal fitness through mobile app development. It applis core STEM disciplines - data evaluation, computer science
+, and software engeneering - to design and implement an IOS application that automatically takes in user-inputted data
+and provides concise feedback. 
+
+Science and data represent one of the most direct connections between this project and STEM disciplines. The iOS
+application collects user-inputted fitness data and performs automated analysis to interpret and present this
+information meaningfully. The collected data is utilized in multiple ways, primarily for evaluating user performance
+and progress over time. By processing the data into both structured logs and dynamic visualizations, the app enables
+users to identify trends, track new personal records, and observe progression or regression across various metrics. Data
+analysis plays a key role for both the user and the backend system. Users interact with visual representations such as
+graphs to, clearly view their performance history and identify patterns, while the backend continuously 
+updates and organizes the dataset to support accurate and real-time insights.
+
+Technology and engineering also play a heavy role in this project. The concept of building and developing a mobile
+app with real-world functionality demonstrates the practical application of engineering principles in software design
+and system development. The project involves using Apple's development ecosystem, including Swift, Xcode to. create 
+an efficient mobile app. Through these tools the app integrates user interfaces, local data storage and data analysis.
+From more of an engineering standpoint the project requires consistent testing and debugging to ensure complete
+functionality and accuracy. These proccesses mirror the real world design cycle. This being designing solutions, 
+implementing systems, and refining them based on testing. By applying these principles within this current project, 
+it is reinforcing the integration of technology and engineering.
+
+This project contributes to the broader field of public health and fitness engagement by allowing users to take an
+active role in understanding and improving their gym-self. Through user inputted data-driven insights and personalized analytics,
+the iOS application encourages consistent use and progress tracking, making health more accessible and
+engaging. By visualizing performance trends and progress over time, users are able to make informed decisions about
+their fitness routines and lifestyle habits. This approach promotes a stronger connection between personal data
+awareness and long-term health outcomes. Data has shown that consitent exercise provides a variety of benefits that
+include strengthening bones, positive effects on mood, and even helping to prevent chronic ilnesses like diabetes and
+heart desease (Ahmed). Knowing this, the ability to quickly and freely track progress is something that creates benefits
+even outside of benching more wight than last month.
+
+In addition to promoting user engagement, the project addresses critical considerations surrounding data privacy and
+security. Seemingly these days data privacy and security is a growing topic. We are seeing more and more mobilde devices
+contracting online virus' from phishing emails or users clicking faulty links. But specifically in the regards of data
+privacy, the importance of handling data leaks.
+
+The target audience for this project includes individuals who are seeking to learn more about their fitness habits and
+gain experience with technology-assisted self-improvement before committing to more advanced or intensive programs. By
+combining accessibility, automation, and educational value, the application serves as a bridge for users looking to
+develop a deeper understanding of their health through technology. In 2024 alone the number of data compromises in
+the United States alone was 3,158 which is only 1% under the record of number of compromises tracked within one calendar
+year (Identity Theft Resource Center). This emphasizes the importance of local data storage for this project. All the data
+that a user has within the application is directly stored on the user's mobile device. This significatnly reduces exposure
+to potential data breaches and ensures that sensitive information remains under the user's direct control. 
 
 ## Ethical Implications
 
