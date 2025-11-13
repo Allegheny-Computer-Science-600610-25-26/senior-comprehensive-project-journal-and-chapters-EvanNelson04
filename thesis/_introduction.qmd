@@ -210,6 +210,54 @@ to potential data breaches and ensures that sensitive information remains under 
 
 ## Ethical Implications
 
+There are several ethical considerations that need to be acknowledged and talked about for this senior comprehensive 
+project. A few things that are important to talk about are data security, bugs and false user reccomendation. By addressing
+these concerns it will provide context to the reasoning behind why I created what I did and how. 
+
+First it is important to acknowledge the user of personal data. As this an open mobile application that could receive a
+large number of users it is important to note the use of their data. As the developer of this application, I have no
+access to the information than the users put into their profile. This data is securely stored within their mobile
+device and no where else. There is no posibility of data sharing within the app, this creates no posibiltiy of a breach
+of data. I acknowledge that other apps provide the user's with the ability of sharing data with friends or communities
+within the app. While further researching this concept I decided that it would be a better and safer solution to solely
+keep the data to the user's use only. While there are benefits to communities and friends within an app like this to be
+able to compare data with friends and communities, the idea of user's data being jeopordized is a much more serious
+matter to be adressed. This concept plays into the idea of why I am developing my experiment in this specific fashion.
+
+At first, I thought it would be much more beneficial to conduct an experiment utilizing collegues to gather responses
+based upon their use of the app and how it helped them progress in the gym. While this experimental idea had its benefits
+it had many different ethical implications that had to be considered. As this experiment would be utilizing personal
+data, this creates the problem of going through the process with the IRB. The IRB, or the institutional review board,
+is a comittee that reviews and oversees research and experiments that involve human subjects to ensure their rights
+and welfare are protected. This would have come with months of developing a proposal, editing and resubmitting and much
+more very strenuos work. I decided to avoid this by developing the idea of testing the app through AI generated data.
+This experiment will provide me with all the information that I desire in a way that does not battle with any ethical
+considerations. This brings me to another thought of what if my evaluation could steer a user in the wrong direction?
+
+As this application has an emphasis on feedback to the user to aid them in their gym journey, is it possible that a false
+reccomendation could have implications on their mindset? This important to note and look further into. Once a user inputs
+their data they then recieve certain feedback within the evaluation page depending on their data. This feedback may range
+from letting the user know that they have exercised a muscle group too many times this week to you did 12 reps, maybe try 
+upping the exercise weight to stick to a rep range of 6-10. As this experiment is provided to the user it may provide the user
+with new knowledge that could change how they would approach their workout. It is critical to know that the app is a tool
+to supplement informed decision-making rather than a substitute for professional advice. By acknowledging the limitations
+of data-driven models, the application promotes responsible use and encourages the users to interpret their feedback as
+well as combining it with personal judgements. 
+
+Even with careful development and testing, the code may contain bugs or unexpected behaviors that could impact the user
+experience or the accuracy of the data analysis. In the context of a fitness application, such bugs could lead to
+incorrect feedback, misrepresented progress, or failure to update the users personal records. For example, a calculation
+error could suggest that a user has reached a personal record when they have not, or fail to warn them about overtraining
+a muscle group. From an ethical perspective, acknowledging and mitigating the risks of bugs is essential. This includes
+rigorous testing and providing mechanisms for users to report errors or inconsistencies. By planning for potential
+software errors and maintaining transparency, the application prioritizes user trust, safety, and well-being.
+
+As there are many ethical implications to consider within this application, I have developed this application in a specific
+fashion to avoid many possible ethical issues. These include local storage of user data to ensure privacy, conducting
+an experiment that handles AI generated data instead of dealing with human date, acknowledging the fact that this app
+may provide a false reccomendation due to model limitations, and by proactivly testing the code to avoid the posibility
+of bugs arrising.
+
 ## Structure of Senior Comprehensive Project
 
 ## Contributions of The Project
