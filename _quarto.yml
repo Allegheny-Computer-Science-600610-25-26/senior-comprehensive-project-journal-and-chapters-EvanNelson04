@@ -10,7 +10,7 @@ author:
   - name: Evan Nelson
     email: nelson01@allegheny.edu
 website:
-  title: "ReadyResearchers Template"
+  title: "WorkoutEvaluator: IOS app that provides personalized exercise feedback through user-inputted information"
   navbar:
     right:
       - text: "Senior Thesis"

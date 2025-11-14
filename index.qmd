@@ -1,5 +1,5 @@
 ---
-title: "ReadyResearchers Template"
+title: "Senior Comprehensive Project - Evan Nelson"
 listing:
   - id: posts
     contents:
