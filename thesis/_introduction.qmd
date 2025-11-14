@@ -271,3 +271,42 @@ and implications.
 
 ## Contributions of The Project
 
+This project contributes a custom IOS application that integrates workout tracking, data analysis and personalized
+feedback within a unified, simple, user friendly mobile platform. Unlike other fitness applications, this system is
+tailored to individual user-inputted data and emphasizes the interpretation of the data rather than just simple
+data logging and visuals. This application includes 6 sperate pages that are key in acknowledging, history, charts,
+evaluation, awards, add and the user profile view. 
+
+This includes the development of a local user login and account creation system and an entirely device-based data storage model 
+built in Swift. This creation demonstrates the importance of local data storage within my application. Like discussed before
+preventing data leaks is the #1 reason behind the local storage.  
+
+The main landing page once the user has logged in is the history or workout log page. Within this page it contains
+all the specific exercises the user has completed. Once a user inputs their data of an exercise including weight,
+repetitions and muscle group, this data will show up within the history page along with a date. The workout log
+is an essential piece of content to include when creating a fitness app as it allows the users to rewind in time
+to see their past data. Keeping this page simple is also of importance because as this page gets more complicated
+it may complicate the user's ability to easily view past workouts 
+
+Once new data is added to the History page, it is automatically reflected in the Charts page. The Charts page
+continuously monitors for newly recorded data points and updates the corresponding exercise-specific graph whenever
+a new entry is detected. Each graph visually represents trends over time, allowing users to clearly observe their
+progression in the gym. These visualizations not only make performance trends easier to interpret but also help users
+review their previous workouts to determine appropriate starting points for future sessions.
+
+After that the evaluation page then also updates. This will give the user with simple and concise feedback to aide the
+user. This will provide them will ternd insights to whether they are progressing or regressing, it will provide them
+with feedback to their training routine reccomending if they should train a certain muscle group more or less. The importance
+of a short and concise feedback is emphasized as I do not want to overload the user with information. 
+
+This then brings us to the awards page. This page is meant to bring gameification to life on my mobile app. The goal
+of this page is to give the user a reason to keep being consistent and coming back to using this app. A majority of
+the fitness apps contain some type of gameification as it is a way for users to stay engaged. An example of an
+award would look like entering a workout for 100 days, an award like this gives users incentive to keep going to the gym
+and bettering themself each day.
+
+Finally this includes the profile page. This is a very simple page including a few key details including personal
+records along with how many workouts the user has inputted. This was a way to let the user know their personal record
+totals meaning the total weight of squat, deadlift and bench press combined. This is a piece of information
+that lots of gym goers like to know as it gives the user another incentive to keep training hard.
+
