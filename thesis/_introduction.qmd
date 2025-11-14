@@ -279,7 +279,7 @@ evaluation, awards, add and the user profile view.
 
 This includes the development of a local user login and account creation system and an entirely device-based data storage model 
 built in Swift. This creation demonstrates the importance of local data storage within my application. Like discussed before
-preventing data leaks is the #1 reason behind the local storage.  
+preventing data leaks is the #1 reason behind the local storage.
 
 The main landing page once the user has logged in is the history or workout log page. Within this page it contains
 all the specific exercises the user has completed. Once a user inputs their data of an exercise including weight,
@@ -309,4 +309,60 @@ Finally this includes the profile page. This is a very simple page including a f
 records along with how many workouts the user has inputted. This was a way to let the user know their personal record
 totals meaning the total weight of squat, deadlift and bench press combined. This is a piece of information
 that lots of gym goers like to know as it gives the user another incentive to keep training hard.
+
+These components form the core of my application and reflect months of learning, experimentation, and iteration. I
+began studying app development—including the Xcode environment and the Swift programming language—in January 2024.
+Since Swift was a new language for me, I wanted to build a strong foundation in its functions, structures, and syntax
+before fully committing to development. I approached this by comparing Swift to languages I was already confident in,
+such as Python, Java, and C. This comparative learning strategy helped me see how the concepts I had mastered in previous
+coursework translated into Swift, ultimately giving me a more complete and intuitive understanding of iOS development.
+This learning process also deepened my understanding of development methodology. Most importantly, it taught me the value
+of continuous testing and troubleshooting—principles that cannot be emphasized enough. Early in development, I also
+learned the importance of feasibility testing. This involves prototyping and evaluating an idea before fully implementing
+it. A concept may seem perfectly reasonable when discussed in theory, but its feasibility often becomes much clearer once
+development begins. Some ideas that sound simple in conversation can become significantly more complex when put into practice.
+It is crucial to understand what can realistically be built. Once a developer commits to delivering a feature, users expect
+that promise to be fulfilled. Because of this, knowing the limits, challenges, and feasibility of an idea before promising it 
+is an essential part of responsible development. By integrating feasibility testing early and often, I was able to refine my ideas, 
+avoid unnecessary roadblocks, and move forward with confidence in the parts of the application I chose to implement. This
+leads into the importance of a thorough experiment.
+
+For my experiment I plan to utilize AI generated data. The goal of this experiment is to conduct a well thought out experiment
+that aims to evaluate each part of my application. By doing this I will gain important knowledge and information that can
+provide neccesary feedback to aid the final developmental sprint.
+
+For this experiment, I will utilize AI-generated data to simulate realistic user interactions and workout patterns
+within the application. Using AI-generated inputs allows me to test the system under controlled, repeatable conditions
+without relying on human data at this stage of development. This approach ensures that I can evaluate each feature of
+the app—including data processing, visualizations, and system responsiveness—using consistent and diverse datasets.
+AI-generated data also enables me to stress test the application, and identify potential issues early. By incorporating 
+this method, I can gather meaningful insights and feedback that will directly inform and improve the final development 
+sprint. While AI-generated data is highly useful for early-stage testing, it is important to acknowledge both
+its strengths and its limitations. AI data provides clean, structured inputs that allow for controlled experimentation, 
+making it ideal for identifying technical issues, validating core functionality, and ensuring the app behaves as expected across
+a wide range of scenarios, in this case across different mobile devices. However, AI-generated data cannot perfectly replicate the 
+unpredictability and variability of real human behavior. Because of this, the results of AI-based testing must be 
+viewed as preliminary. Even with these limitations, AI-generated data remains a powerful tool that enables efficient, 
+iterative testing and helps streamline the development process.
+
+This experiment aims to provide me with feedback within graph compression, responsiveness, data processing and query
+times. As visuals are a key component of this application, the importance that they are clean and legible cannot be
+emphasized enough. Some research questions that this aims to answer are as follows; How will the graphs look with 1
+years worth of user data? How will the graphs compress? Will the data points be too close together? These are all
+essential to the success of my application. Without knowing the answers to all these questions the app would feel
+incomplete. Moving forward with this concept is gaining the knowledge of responsivess. This theme is in #1 importance
+within app development. Developers pride themselves on giving a fun and engaging user experience. If the app takes 10
+seconds to load a specific page users will most likely find a different application. Learning about the amount of 
+data it takes t slow down the app or if it even slows down at all is an essential question. By providing this application
+with years worth of data will answer this question. Checking and examinating the responsivess of moving between pages, 
+loading the application and touch responsivess will all be of uttmost importance to answer. Query times is very similar
+to this theme. Within the application there are many different search queries like personal records, for loops actively looking
+for a specific experiment and many more. How will these be affected when they have to look through 1000 - 5000 data points?
+being able to provide evidence that this app can run these queries without the time being affected will be a very strong
+argument and point for my application. 
+
+This experiment in conclusion is well developed and aims to conduct a study in replacement for a human study. This AI
+generated data allows me to conduct an experiment in a controlled environment where there and defined variables is
+a strong point of this experiment.
+
 
