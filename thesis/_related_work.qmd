@@ -21,7 +21,51 @@ completed to learn more about this growing lifestyle.
 
 ## Review of Existing Aplications
 
-### Whoop 
+### Whoop
+
+Whoop is the only wearable device with a mobile application that I think is worth considering and looking into. For
+a brief introduction, Whoop is a wearable device that consists of a mobile application and a website. As of the current
+Whoop 5.0, there are three different tiered subscriptions. All of these subscriptions come with the device as long as you
+are actively paying for the subscription. 
+The first and cheapest option is Whoop One. This subscription comes with the following... 
+    1. Whoop 4.0 wearable, which is the previous release with 5 5-day battery
+    2. Provides sleep, strain, and recovery insights to the user
+    3. Personalized coaching.
+    4. VO2 Max & heart rate zones
+    5. Women's Hormonal Insights 
+This is the most affordable option at 199$ per year, providing the most basic insights that Whoop provides, but still
+allowing the user to access many of the benefits of Whoop
+
+The second subscription is the Whoop Peak, which comes with everything on Whoop One plus the following...
+    1. Whoop 5.0 wearable, which is the most recent release with a 14+ day battery 
+    2. Healthspan and Pace of Aging
+    3. Health Monitor with health alerts 
+    4. Real-Time stress monitors
+This is the second subscription option coming in at 239$ per year. This is the first subscription containing the new Whoop 5.0 device.
+
+The final subscription tier is Whoop Life, which contains everything on Whoop Peak, plus the following
+    1. Whoop MG with 14+ day battery life
+    2. Daily Blood Pressure insights (beta)
+    3. Heart Screener with ECG readings
+    4. On-demand AFib detection
+This is Whoop's highest and most expensive subscription, coming in at 359$ per year. This is the first wearable to provide many of the new features, like Afib detection and more. 
+
+I used Whoop for about three years when its most recent release was Whoop 4.0. This wearable and application does a great
+job at providing the user insights about how hard they trained and whether it would be beneficial to take a rest day
+or have a lighter workout the next day. The important thing to note within Whoop is that it is not directly similar
+to the app I am creating. Whoop is not geared specifically towards weightlifting but more towards athletic activity. This
+app does not provide the ability to track workouts or progress within the gym. My main focus with this app is to investigate
+the importance of well-deployed visuals and graphs, as well as the importance of an intriguing UI. User experience within
+a fitness app is important as it contributes to user engagement and consistent use of the app.
+
+![WHOOP Overview](images/Whoop.jpg)
+
+As you can see in this image, Whoop demonstrates a highly organized and well-structured UI and specifically 
+in this image, a landing page. Doing research in this application, I found that the uniqueness of their visuals is 
+something that users enjoyed while utilizing this app [Hietala2025]. Attempting to create visuals that can provide
+the user with an easily readable way to analyze progress is something that I can draw from Whoop, as they very cleanly
+provide the users with visuals. This aligns with the importance of my app in creating a clean UI and providing the users
+with well-designed visuals.
 
 ### Strong 
  
