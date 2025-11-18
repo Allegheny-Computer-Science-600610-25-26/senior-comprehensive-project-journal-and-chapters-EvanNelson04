@@ -34,7 +34,7 @@ are actively paying for the subscription.
 - Whoop 4.0 wearable, the previous-generation device with a 5-day battery life  
 - Sleep, strain, and recovery insights
 - Personalized coaching
-- VO₂ max and heart-rate zones
+- VO2 max and heart-rate zones
 - Women’s hormonal insights
 
 This tier costs $199 per year and provides the core functionality of Whoop while remaining the lowest-cost option.
@@ -70,6 +70,8 @@ to the app I am creating. Whoop is not geared specifically towards weightlifting
 app does not provide the ability to track workouts or progress within the gym. My main focus with this app is to investigate
 the importance of well-deployed visuals and graphs, as well as the importance of an intriguing UI. User experience within
 a fitness app is important as it contributes to user engagement and consistent use of the app.
+
+![Whoop UI Image](images/whoop.png)
 
 As you can see in this image, Whoop demonstrates a highly organized and well-structured UI and specifically 
 in this image, a landing page. Doing research in this application, I found that the uniqueness of their visuals is 
