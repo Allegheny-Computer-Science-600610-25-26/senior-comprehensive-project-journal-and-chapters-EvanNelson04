@@ -58,7 +58,7 @@ app does not provide the ability to track workouts or progress within the gym. M
 the importance of well-deployed visuals and graphs, as well as the importance of an intriguing UI. User experience within
 a fitness app is important as it contributes to user engagement and consistent use of the app.
 
-![WHOOP Overview](images/Whoop.jpg)
+![WHOOP Overview](images/whoop.jpg)
 
 As you can see in this image, Whoop demonstrates a highly organized and well-structured UI and specifically 
 in this image, a landing page. Doing research in this application, I found that the uniqueness of their visuals is 
