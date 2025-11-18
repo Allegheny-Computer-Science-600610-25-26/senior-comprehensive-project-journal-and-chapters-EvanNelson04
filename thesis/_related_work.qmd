@@ -29,37 +29,38 @@ Whoop 5.0, there are three different tiered subscriptions. All of these subscrip
 are actively paying for the subscription. 
 ### Whoop Subscription Options
 
+
 **Whoop One** is the first and most affordable subscription option. This plan includes:
 
-- **Whoop 4.0 wearable**, the previous-generation device with a 5-day battery life  
-- **Sleep, strain, and recovery insights**  
-- **Personalized coaching**  
-- **VO₂ max and heart-rate zones**  
-- **Women’s hormonal insights**
+- Whoop 4.0 wearable, the previous-generation device with a 5-day battery life  
+- Sleep, strain, and recovery insights  
+- Personalized coaching
+- VO₂ max and heart-rate zones  
+- Women’s hormonal insights
 
-This tier costs **$199 per year** and provides the core functionality of Whoop while remaining the lowest-cost option.
+This tier costs $199 per year and provides the core functionality of Whoop while remaining the lowest-cost option.
 
 ---
 
 **Whoop Peak** is the mid-tier subscription and includes everything in Whoop One, plus:
 
-- **Whoop 5.0 wearable**, the newest version with a 14+ day battery life  
-- **Healthspan and pace-of-aging metrics**  
-- **Health Monitor with alerts**  
-- **Real-time stress monitoring**
+- Whoop 5.0 wearable, the newest version with a 14+ day battery life  
+- Healthspan and pace-of-aging metrics 
+- Health Monitor with alerts
+- Real-time stress monitoring
 
-This subscription costs **$239 per year** and is the first tier that includes the new Whoop 5.0 device.
+This subscription costs $239 per year and is the first tier that includes the new Whoop 5.0 device.
 
 ---
 
 **Whoop Life** is the highest-tier subscription. It includes everything in Whoop Peak, along with:
 
-- **Whoop MG** device with 14+ day battery life  
-- **Daily blood pressure insights (beta)**  
-- **Heart Screener with ECG readings**  
-- **On-demand AFib detection**
+- Whoop MG device with 14+ day battery life  
+- Daily blood pressure insights (beta)
+- Heart Screener with ECG readings  
+- On-demand AFib detection
 
-This is Whoop’s most advanced subscription, priced at **$359 per year**, and introduces medical-grade features such as
+This is Whoop’s most advanced subscription, priced at $359 per year, and introduces medical-grade features such as
 ECG and AFib detection.
 
 
