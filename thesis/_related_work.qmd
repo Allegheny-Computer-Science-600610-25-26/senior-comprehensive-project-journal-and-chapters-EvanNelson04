@@ -105,7 +105,7 @@ minimal personalized insights or evaluative feedback beyond numerical summaries.
 personal records, but the app does not interpret this data to provide actionable guidance or recommendations tailored to
 individual progress. There is little indication of trends over time, patterns in strength gains or plateaus, or suggestions
 for optimizing future workouts. This aspect is common in most if not all of the fitness apps out there currently, being able
-to provide the user with feedback to aid future workouts is "untapped". 
+to provide the user with feedback to aid future workouts is untapped. 
 
 My app builds on this foundation by introducing a more dynamic evaluation model. Instead of only displaying raw numbers,
 it analyzes patterns in user-entered data, identifies strengths and weaknesses, and generates personalized feedback to
