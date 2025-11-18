@@ -80,7 +80,39 @@ the user with an easily readable way to analyze progress is something that I can
 provide the users with visuals. This aligns with the importance of my app in creating a clean UI and providing the users
 with well-designed visuals.
 
-### Strong 
+### Strong
+
+Strong is a mobile workout tracking application that allows users to manually input exercises, sets, reps, and weights
+to monitor progress over time. The app provides data visualization tools such as charts and personal records to help
+users evaluate their strength progression. Like the my project, Strong emphasizes user input rather than wearable
+data, focusing on the user’s engagement in tracking and reflecting on their workouts.
+
+![Strong App Workout Log](images/strong.png)
+
+Strong has many strengths within their app. Their main focus comes within an engaging workout log feature. You can
+see within this image that it is very unique in the elements that the log contains. It allows the user to enter
+in all their common data like weight, sets and repetitions, but it also allows the user to mark the set as a warm up
+or a working set. The next feature that is unique is that it allows the user to write certain notes to themselves to
+remember for next time like go up in weight or keep back straight. This workout log creates a unique way to engage
+the users much more than your common fitness app would. On the contrary, the time it takes to enter in all the neccesary
+information into this app would be much longer than other apps. I believe that there is an importance of keeping the
+workout log to quick and short entries that contain only the neccesary data. By doing this it allows the user to enter
+all the needed data in under ten to fifteen seconds. Users will not want to be typing away for minutes after their set
+as it will take away from their workout. 
+
+However, its primary limitation lies in its relatively static analytics—while it effectively logs performance, it offers
+minimal personalized insights or evaluative feedback beyond numerical summaries. Users can see what they lifted and track
+personal records, but the app does not interpret this data to provide actionable guidance or recommendations tailored to
+individual progress. There is little indication of trends over time, patterns in strength gains or plateaus, or suggestions
+for optimizing future workouts. This aspect is common in most if not all of the fitness apps out there currently, being able
+to provide the user with feedback to aid future workouts is "untapped". 
+
+My app builds on this foundation by introducing a more dynamic evaluation model. Instead of only displaying raw numbers,
+it analyzes patterns in user-entered data, identifies strengths and weaknesses, and generates personalized feedback to
+guide future training. By combining detailed logging with intelligent, interpretable analytics, the app transforms static
+workout data into actionable insights, empowering users to make more informed decisions and progress more efficiently
+toward their strength goals.
+
  
 ### Fitbod
 
