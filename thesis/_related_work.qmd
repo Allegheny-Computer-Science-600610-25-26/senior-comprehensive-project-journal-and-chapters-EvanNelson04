@@ -27,28 +27,41 @@ Whoop is the only wearable device with a mobile application that I think is wort
 a brief introduction, Whoop is a wearable device that consists of a mobile application and a website. As of the current
 Whoop 5.0, there are three different tiered subscriptions. All of these subscriptions come with the device as long as you
 are actively paying for the subscription. 
-The first and cheapest option is Whoop One. This subscription comes with the following... 
-    1. Whoop 4.0 wearable, which is the previous release with 5 5-day battery
-    2. Provides sleep, strain, and recovery insights to the user
-    3. Personalized coaching.
-    4. VO2 Max & heart rate zones
-    5. Women's Hormonal Insights 
-This is the most affordable option at 199$ per year, providing the most basic insights that Whoop provides, but still
-allowing the user to access many of the benefits of Whoop
+### Whoop Subscription Options
 
-The second subscription is the Whoop Peak, which comes with everything on Whoop One plus the following...
-    1. Whoop 5.0 wearable, which is the most recent release with a 14+ day battery 
-    2. Healthspan and Pace of Aging
-    3. Health Monitor with health alerts 
-    4. Real-Time stress monitors
-This is the second subscription option coming in at 239$ per year. This is the first subscription containing the new Whoop 5.0 device.
+**Whoop One** is the first and most affordable subscription option. This plan includes:
 
-The final subscription tier is Whoop Life, which contains everything on Whoop Peak, plus the following
-    1. Whoop MG with 14+ day battery life
-    2. Daily Blood Pressure insights (beta)
-    3. Heart Screener with ECG readings
-    4. On-demand AFib detection
-This is Whoop's highest and most expensive subscription, coming in at 359$ per year. This is the first wearable to provide many of the new features, like Afib detection and more. 
+- **Whoop 4.0 wearable**, the previous-generation device with a 5-day battery life  
+- **Sleep, strain, and recovery insights**  
+- **Personalized coaching**  
+- **VO₂ max and heart-rate zones**  
+- **Women’s hormonal insights**
+
+This tier costs **$199 per year** and provides the core functionality of Whoop while remaining the lowest-cost option.
+
+---
+
+**Whoop Peak** is the mid-tier subscription and includes everything in Whoop One, plus:
+
+- **Whoop 5.0 wearable**, the newest version with a 14+ day battery life  
+- **Healthspan and pace-of-aging metrics**  
+- **Health Monitor with alerts**  
+- **Real-time stress monitoring**
+
+This subscription costs **$239 per year** and is the first tier that includes the new Whoop 5.0 device.
+
+---
+
+**Whoop Life** is the highest-tier subscription. It includes everything in Whoop Peak, along with:
+
+- **Whoop MG** device with 14+ day battery life  
+- **Daily blood pressure insights (beta)**  
+- **Heart Screener with ECG readings**  
+- **On-demand AFib detection**
+
+This is Whoop’s most advanced subscription, priced at **$359 per year**, and introduces medical-grade features such as
+ECG and AFib detection.
+
 
 I used Whoop for about three years when its most recent release was Whoop 4.0. This wearable and application does a great
 job at providing the user insights about how hard they trained and whether it would be beneficial to take a rest day
