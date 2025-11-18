@@ -1,10 +1,38 @@
 # Related work
 
-This chapter includes a broad and detailed review of relevant existing work.
-The literature review should provide background and context for the thesis work.
-The subsections may be organized in whatever manner seems best suited to the material--
-chronological, or by topic, or according to some other criteria
-(e.g., primary versus secondary resources).
+## Introduction to Related Work
 
-If ethical issues are central to this work, you should also address historical and
-contemporary issues or efforts made to address them.
+For my specific senior comprehensive project, the related work section has unique importance. Since I am developing
+a fitness application, it is in the best interest of this project to focus on what other applications are out there
+and their importance, just as much as papers. Delving into the fitness application realm gives me knowledge about
+what is already out there and what other apps do well. Looking into different apps and seeing what exists and, in
+this case, what doesn't exist, is important to study and research more. This is what I have completed and will be
+sharing. I have lots of previous experience with many different fitness apps as well as different wearables that have
+allowed me to be more knowledgeable about what exists and what doesn't. Having experience within this realm has 
+also allowed me to understand what is important to include in a fitness app and what the significance of that
+specific concept is. As fitness is becoming a more popular industry and lifestyle, there is an influx of apps 
+that are being developed and created. There are thousands of fitness apps out there that aim to solve a similar problem. How can we best assist the user? 
+
+On the other hand, it is essential to examine various research papers and studies that complement my study. Some
+of the important themes to look at for my unique application are the methodology of app development and the importance of 
+gameification within fitness applications. There are many different studies that talk about different aspects of my
+project that will be important to note and talk about. Recently, there has been an influx of the amount of studies
+completed to learn more about this growing lifestyle.
+
+## Review of Existing Aplications
+
+### Whoop 
+
+### Strong 
+ 
+### Fitbod
+
+### Hevy
+
+### Jefit
+
+## Review of Existing Literature
+
+## Thematic Connections 
+
+## Summary
