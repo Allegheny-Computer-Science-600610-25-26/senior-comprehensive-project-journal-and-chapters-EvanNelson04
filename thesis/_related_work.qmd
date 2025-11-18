@@ -17,7 +17,7 @@ On the other hand, it is essential to examine various research papers and studie
 of the important themes to look at for my unique application are the methodology of app development and the importance of 
 gameification within fitness applications. There are many different studies that talk about different aspects of my
 project that will be important to note and talk about. Recently, there has been an influx of the amount of studies
-completed to learn more about this growing lifestyle.
+completed to learn more about this growing lifestyle. 
 
 ## Review of Existing Aplications
 
