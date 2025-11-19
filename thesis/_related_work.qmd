@@ -75,7 +75,7 @@ a fitness app is important as it contributes to user engagement and consistent u
 
 As you can see in this image, Whoop demonstrates a highly organized and well-structured UI and specifically 
 in this image, a landing page. Doing research in this application, I found that the uniqueness of their visuals is 
-something that users enjoyed while utilizing this app [Hietala2025]. Attempting to create visuals that can provide
+something that users enjoyed while utilizing this app (@Hietala2025). Attempting to create visuals that can provide
 the user with an easily readable way to analyze progress is something that I can draw from Whoop, as they very cleanly
 provide the users with visuals. This aligns with the importance of my app in creating a clean UI and providing the users
 with well-designed visuals.
@@ -115,6 +115,47 @@ toward their strength goals.
 
  
 ### Fitbod
+
+Fitbod is a mobile fitness application that focuses more on workout planning and recommendations. This app contains 
+similar concepts to workout logging and workout tracking, but focuses on the workout planning aspect as its main selling
+point. This application still provides the user with the important visuals, so the users can still see their progress or 
+regression. It also contains a workout logging feature, which, in my opinion, is less emphasized compared to the strong app.
+The main focus within Fitbod is their ability to aid the users in their workout planning, which is able to answer these
+user questions: What should I work out today? How long should I wait before working out my legs again? Has my muscle recovered
+long enough to work out that muscle group again?
+
+![Fitbod UI Picture](images/fitbod.png)
+
+Fitbods' major strength and focus is their ability to aid users in workout planning. One of the major concepts
+that this page includes is monitored recovery. After the user logs a workout, Fitbod records the exercises and assigns
+a percentage of recovery (0-100%) to each muscle group based on the intensity of the workout. Meaning that if the user
+records a workout that contains 3 chest exercises, the recovery score for the user's chest will be closer to 0% while
+the recovery score for legs will be closer to 100% as there was no recorded exercise that focused on legs. This is then
+portrayed within a heat map for the user's visual aid, which displays which muscles are fresh and which are fatigued. This
+is a great concept to help the user understand which muscle group to focus on within their next workout. This system also
+contains AI-powered suggestions. From researching this further, the recovery score is a key component of Fitbod's algorithm,
+which will use this information to suggest a certain workout for the user. For example, if a muscle group is very fatigued,
+it will recommend a different muscle group to train next. You are able as the user to change these recovery scores if you
+feel like the system didn't correctly portray your recovery status. 
+
+Each Fitness application has a strong suit and a selling point; whether it be a workout log, recommendations, or visuals, there
+has to be something that your app does better than everyone else to stand out. In this case, Fitbod hands down completes
+workout planning and recommendations better than any other app in the industry. 
+
+As every app has its strengths, there are always limitations to any application. In this case, since fitbod is providing 
+the user with similar information that you could receive from a personal trainer, arguably better and more accessible than
+a personal trainer, it comes at a cost. Fitbod requires a subscription that is either 15.99$ per month or 95.99$ per year. The
+yearly plan is much more cost-efficient compared to the monthly plan. On the contrary, if you were to compare this price
+to the price of a personal trainer, the value is much better. As talked about by author Aneta Niepytalska, the cost of a
+personal trainer can range from 60-100$, depending on where you live (@Niepytalska2025). For many, this can be a steep price
+to pay for feedback, which makes the Fitbod cost look great.
+
+My app will build on the importance of user accessibility. Being able to provide the user with feedback and suggestions like
+Fitbod, but also feedback on their workouts, as well as trend analysis, is something that hasn't been completed yet. By completing
+this aspect and delivering an evaluation page that provides the user with similar feedback that is simple and concise, it
+can provide the user with the necessary information while not overloading the user with information. By
+completing the evaluation while giving it to the users without needing a paid subscription is something that is unheard
+but something that I believe every gym-goer deserves better yet needs.
 
 ### Hevy
 
