@@ -215,6 +215,45 @@ help the user but I finid it hard to believe there is a better tool than feedbac
 
 ### Hevy
 
+Hevy is a modern workout tracking application designed to provide a clean, streamlined experience for logging strength training sessions. Hevy centers on manual
+user input—exercises, sets, reps, and weights—rather than wearable integration. The app is known for its minimalist interface, fast logging workflow, and 
+community-oriented features that let users share workouts and progress with friends or followers. This is a very important app to compare and talk about in
+comparison to my app. This apps selling point is the simplicity and how straight to the point the app is. This app doesn't pride itself in innovations and
+uniqueness but rather in simplicity and a well designed UI.
+
+This app contains of three major concepts, workout logging, measure progress and community motivation. These are the three conponents of this app that
+they have decided to develop and make stand out. The workout log is similar to other apps in the aspect of entering exercise, weight and repetitions
+as well as labeling the set as working or warm-up and having the ability to add notes. Once the user inputs their workout data, it gets uploaded to
+their personal data charts and visuals. Within this page the user has the ability to visualize their progress and see personal records for the
+specified exercise. Once again the focus point being simplicity and a well designed UI. Finally they provide the ability to join a community. User's are
+able to join communities to follow other athletes that use the app, like and comment on workouts and save other athlete's workout routines.
+
+This application in my opinion is the most similar to what I am developing. As you can see in the image, this app focuses being simplicity and user experience. The Hevy app does
+not overload the user with loads of information and visuals but keeps it simple to allow the user to easily visualize progress. The main difference is that
+Hevy does come with a paid subscription that compared to other apps is much cheaper. This subscription has three options: 2.99$ per month, 23.99$ per year,
+or 74.99$ for a one-time lifetime fee. This is because it is a much simpler app that thrives at what it aims to complete but lacks of some of the components
+that Strong or Fitbod contain.
+
+Hevy’s biggest strength lies in its simplicity and usability. The workout log is highly intuitive, allowing users to enter sets quickly, duplicate previous
+session data, and make adjustments without navigating through cluttered menus. The design emphasizes clarity: past performance is shown directly below each
+exercise, and graphs for volume or personal records are only one tap away. Hevy also includes helpful features like custom exercises, supersets, rest timers,
+and the ability to attach notes to individual sets. This creates a fluid logging experience ideal for users who want efficiency without sacrificing
+detail.
+
+![Hevy application image](images/hevy.png)
+
+Hevy’s biggest strength lies in its simplicity and usability. As you can see in the image, this app is much more simple within the design which helps users to understand
+how to use the application much better than a more complicated UI. The workout log is highly intuitive, allowing users to enter sets quickly, duplicate previous
+session data, and make adjustments without navigating through cluttered menus. The design emphasizes clarity: past performance is shown directly below each
+exercise, and graphs for volume or personal records are only one tap away. Hevy also includes helpful features like custom exercises, supersets, rest timers,
+and the ability to attach notes to individual sets. This creates a fluid logging experience ideal for users who want efficiency without sacrificing
+detail.
+
+However, similar to the other applications, Hevy’s analytics remain largely basic. While the app generates charts, volume graphs, and personal best summaries, it does not
+interpret these data points or provide personalized training insights. Users can view trends, but the app does not identify plateaus, highlight meaningful performance 
+changes, or offer recommendations based on logging history. The proposed project extends beyond these limitations by introducing an adaptive evaluation system that interprets 
+user-entered workout data, generates individualized feedback, and delivers deeper performance analysis rather than merely presenting raw progression graphs.
+
 ## Review of Existing Literature
 
 ## Thematic Connections 
