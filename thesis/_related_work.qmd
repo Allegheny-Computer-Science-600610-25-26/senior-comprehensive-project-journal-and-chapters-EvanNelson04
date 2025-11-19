@@ -157,9 +157,62 @@ can provide the user with the necessary information while not overloading the us
 completing the evaluation while giving it to the users without needing a paid subscription is something that is unheard
 but something that I believe every gym-goer deserves better yet needs.
 
-### Hevy
+### JEFIT
 
-### Jefit
+JEFIT is a long-standing workout tracking application designed to help users plan, record, and review their training sessions. The
+app allows users to manually log exercises, sets, reps, and weights, and it includes one of the largest prebuilt exercise libraries
+available in a consumer fitness app. Like Strong and like the proposed project, JEFIT relies heavily on user-entered data rather than
+biometric inputs from wearables, emphasizing detailed workout documentation and long-term progress tracking.
+
+JEFIT’s primary strength is its structured workout planning environment. Users can build routines from a large catalog of exercises,
+organize them into weekly training cycles, and follow them step-by-step during a workout session. The interface highlights rest timers,
+previous performance, and target rep ranges, helping users stay consistent and organized in the gym. The app also supports extensive note-taking
+and includes options for tracking time under tension, tempo, and training logs that can be revisited to evaluate how a session felt or performed.
+This provides a highly organized workout experience that appeals to users who prefer detailed, template-driven training plans. This training
+plan builds upon the workout planning from Fitbod. The workout planning style for JEFIT is different as it allows users to pick exercises
+to build and create their own workouts. 
+
+![Jefit App Image](images/jefit.png)
+
+Within this image it displays the ability to pick from a large group of different programs to aid the user in getting started. These different
+workouts have different target audiences. For example, one audience could be user's training to become a professional bodybuilder, or the user
+may be a 50 year old dad that wants to stay active and go to the gym consistently. You can also see in this image like every other app it has
+a way for users to track their workouts and progress through user inputted data. As well as containing a way for others to see your data and
+personal records if they are your friends in app. 
+
+The limitations in this app for me come from the amount of time it takes to input data. The app makes it as easy as they can wih the format
+provided but inputting every set you've completed along with weight and repetitions can take time away from a workout. I think it is important
+to note that within my application, the user is advised to enter their first and only set of each exercise. Studies have shown that your
+first working set of an exercise is often the strongest set as long as you have properly warmed up the muscle you are utilizing. This is
+because you are performing with the least amount of muscle fatigue, allowing for the largest force production. As you perform following
+sets, the muscle fatigue accumulates leading to a performace decline whether it be weight or repetitions. This has driven the component
+of only requiring the first set from a user. As the subsequent sets are of utmost importance to muscle breakdown and hypertrophy, the first
+set is usually when people will have personal records whether in weight or repetitions, which is the resoning behind reccomending the 
+user to input their first set of an exercise. 
+
+JEFIT like most of the other fitness applications currently available, requires a subscription for their "premium services". The monthly subscription
+is 12.99$ while their yearly subscription is 69.99$, again making the yearly subscription much more cost effective. However within this app, the free
+version does not give you access to any of their real selling points so unless you pay for the subscription the app may not contribute to a person's
+progress.
+
+---
+
+Paying for the premium subscription gives you access to the following...
+- Removes all ads
+- Access to advanced training reports, charts and analytics
+- Includes professional audio cues and exercise tips
+- Unlimited smartwatch workouts
+- Premium workout plans
+- Ability to compare workouts with friends
+
+
+However, despite its strong organizational tools, JEFIT’s analytics remain largely static. While it displays charts, personal records, and historical
+averages, the app rarely interprets those trends or provides meaningful feedback beyond raw statistics. Users can view numbers, but the app does not
+generate insights about performance patterns, identify plateaus, or suggest adjustments based on user behavior. As my project aims to complete this problem,
+this is similar throughout al of the fitness apps I am diving into. Paying for this subscription gives the user access to many important tools that can
+help the user but I finid it hard to believe there is a better tool than feedback and reccomendations to the user.
+
+### Hevy
 
 ## Review of Existing Literature
 
