@@ -155,7 +155,7 @@ Fitbod, but also feedback on their workouts, as well as trend analysis, is somet
 this aspect and delivering an evaluation page that provides the user with similar feedback that is simple and concise, it
 can provide the user with the necessary information while not overloading the user with information. By
 completing the evaluation while giving it to the users without needing a paid subscription is something that is unheard
-but something that I believe every gym-goer deserves.
+but something that I believe every gym-goer deserves better yet needs.
 
 ### Hevy
 
