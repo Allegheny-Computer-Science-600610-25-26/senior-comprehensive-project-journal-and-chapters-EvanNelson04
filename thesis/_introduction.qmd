@@ -4,68 +4,68 @@
 
 This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
 the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
-with the goal of improving their health and performance, yet many struggle to determine whether they are
-training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”
-, or “Is my progress on track?” often go unanswered without a personal trainer or advanced tracking
-tools. To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
+with to improve their health and performance, yet many struggle to determine whether they are
+training effectively. Questions such as “Am I using the right form?” “How much weight should I lift?”
+"Is my progress on track?” often goes unanswered without a personal trainer or advanced tracking
+To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
 designed to guide.
 
 The gym lifestyle has been actively growing for over 20 years. In 2000, around 32.8 million people had
 active gym memberships in the United States. Since then, that number has more than doubled to approximately
 77 million in 2024, with predictions estimating 85–90 million memberships by 2030 (Kerxhaliu). As the
-number of gym-goers continues to rise, so does the portion of this population seeking feedback—whether
-through phone applications, personal trainers, or wearables. Currently, about 29% of gym-goers work
+number of gymgoers continues to rise, so does the portion of this population seeking feedback, whether
+through phone applications, personal trainers, or wearables. Currently, about 29% of gymgoers work
 with personal trainers (Kerxhaliu). However, the average hourly rate for a professional personal
 trainer ranges from $40 to $70 (Niepytalska), which can significantly increase the cost of
 maintaining a fitness routine. What if there were a way to provide this guidance in a simple,
 free iOS app on your phone?
 
-In this day and age, almost everyone carries their smartphone wherever they go—to work, to dinner, to
-their children’s soccer games, and to the gym. This constant presence presents a unique opportunity:
-fitness guidance and feedback can be delivered directly into the hands of users, anytime and anywhere.
-By leveraging this accessibility, an app can provide personalized, real-time feedback would complete 
+In this day and age, almost everyone carries their smartphone wherever they go. Whether it be to work, to dinner, to
+their children’s soccer games or to the gym. This constant presence presents a unique opportunity:
+Fitness guidance and feedback can be delivered directly to users' hands at any time and from anywhere.
+By leveraging this accessibility, an app can provide personalized, real-time feedback that would complete 
 something that hasn't neccesarily been completed. In 2024, fitness apps were downloaded a total of 850
 million times, yet only 345 million people actively used them (Curry). This gap highlights a clear
 opportunity for apps that not only attract users but also maintain engagement by delivering meaningful,
 easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
 workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
 
-## Overview of Completed Work
+## Overview of WorokoutTracker Application
 
-The current build of the project includes a working iOS application with all core components implemented.
-This app is made from three main ideas, workout progress tracking, providing evaluation and feedback and
+This project includes a working iOS application with all core components implemented.
+This app is made from three main ideas: workout progress tracking, providing evaluation and feedback, and
 local data storage. 
 
 Workout progress tracking consists of 2 different areas. Primarily is the concept of
-logging your workout. In my app the goal is to keep it simple, taking in user-inputted data that consists
-of muscle group, exercise, weight, repetitions. Logging these 4 things in my developed app takes the user
-under 15 seconds. This is beneficial as it provides the user the ability to input data directly after
-a completed set that doesn't take up minutes. Once the user inputs the data it then gets shot to 2 different
-areas, workout log and visuals. Once the user inputs the data they are able to readily view this within
+logging your workout. In my app, the goal is to keep it simple, taking in user-inputted data that consists
+of muscle group, exercise, weight, and repetitions. Logging these 4 things in my developed app takes the user
+under 15 seconds. This is beneficial as it provides the user with the ability to input data directly after
+a completed set, which doesn't take up minutes. Once the user inputs the data, it then gets shot to 2 different
+areas: the workout log and visuals. Once the user inputs the data, they can readily view this within
 their history log of workouts, providing the user with the information they provided along with the
-date that it was completed on. This is one way that the user will be able to visualize all the different
-exercises they have completed on any given day. From there it activates the other visual part that is
-emphasized. The user is able to see the data for any specific exercise they have inputted. This will
+date that it was completed. This is one way that the user will be able to visualize all the different
+exercises they have completed on any given day. From there, it activates the other visual part that is
+emphasized. The user is able to see the data for any specific exercise they have entered. This will
 aid the user in discovering trends and progress. You can easily view and recognize if you are bench
 pressing more weight than last time and how much it has progressed in the last month. The visuals
 are a large emphasis of this project, being able to provide the user with a simple and easy way
 to visualize if they are progressing or regressing goes a long way in the scope of fitness apps.
 
-Providing evaluation in my opinion is the main emphasis of this project. Within regards to the fitness
-app realm, there is not an app that can provide concise and specific feedback to aid the user in their
-gym journey. In my opinion too much feedback or too complicated feedback can be offputting for users
+Providing evaluation, in my opinion, is the main emphasis of this project. With regards to the fitness
+app realm, no app that can provide concise and specific feedback to aid the user in their
+gym journey. In my opinion, too much feedback or too complicated feedback can be off-putting for users
 for many different reasons. Lots of apps provide the user with 10 different graphs or 10 different data
-points that stand out, but a lot of the time the user may not understand what they are looking at and
-receiving. There has to be a way to provide the user feedback in 2-4 bulletpoints that can help them
-recognize that is good and what is bad so that they dont get stuck in a loop of creating bad habits
-within the gym. Well essentially this is what my app will have that will stand out. For example, if the
-user inputs exercises of a certain muscle group more than 2-3 times a week my app will tell the user
-that they are overtraining that muscle group. The basic science is that everytime you use a muscle group
+points that stand out, but a lot of the time, the user may not understand what they are looking at and
+receiving. There has to be a way to provide the user feedback in two to four bullet points that can help them
+recognize what is good and what is bad, so that they don't get stuck in a loop of creating bad habits. 
+Well, essentially, this is what my app will have that will stand out. For example, if the
+user inputs exercises of a certain muscle group more than two to three times a week, my app will tell the user
+that they are overtraining that muscle group. The basic science is that every time you use a muscle group,
 you are essentially creating micro tears in this muscle that need time to regrow bigger and stronger. If 
-it does not get that time to rest and regrow then essentially you will not see any progress. Things like
-this are not common for new gym-goers to know, so why not aid them in this journey. This evaluation will
-also be able to look at and evaluate trends. In the last month am I progressing or regressing? Well my app
-will let the user know this immediately after a data entry. Providing this feedback in my opinion is the
+it does not get that time to rest and regrow, then essentially, you will not see any progress. Things like
+this are not common for new gymgoers to know, so why not aid them in this journey? This evaluation will
+also be able to look at and evaluate trends. In the last month, am I progressing or regressing? Well, my app
+will let the user know this immediately after a data entry. Providing this feedback, in my opinion, is the
 missing puzzle piece in the fitness industry.
 
 Finally reaching the point of local data storage is an important milestone in developing my app. Local
@@ -80,7 +80,7 @@ internet connection, making the app functional anywhere, including gyms or areas
 also ensures data persistence, meaning user progress and personal records are saved between sessions
 instead of being lost when the app closes. Additionally, local data storage enhances performance because
 retrieving information from the device is much faster than communicating with a remote server. Lastly,
-it supports better privacy and security, since sensitive fitness data remain on the user’s device, giving
+it supports better privacy and security, since sensitive fitness data remains on the user’s device, giving
 them greater control over their personal information. Security in 2025 is more important than ever, as
 data breaches and hacking attempts have become increasingly common. By prioritizing secure data handling
 within my app, users can feel confident that their personal information is protected. This added layer
@@ -99,7 +99,7 @@ through GitHub, ensuring version control and consistent code saving. Testing on 
 Developer Mode, registering my device with Xcode, and configuring the necessary provisioning profiles to allow the
 app to run outside the simulator.
 
-Xcode also provides the option of using “Simulators” to run and test apps in development. A simulator is a software
+Xcode also provides the option of using “simulators” to run and test apps in development. A simulator is a software
 tool that mimics the behavior of an actual iPhone or iPad on your computer, allowing you to see how your app would
 look and function without needing a physical device. However, the downside is that the app may look or behave differently
 on a real iPhone. Therefore, testing on a physical device was essential to ensure accurate appearance and functionality. 
@@ -108,7 +108,7 @@ on a real iPhone. Therefore, testing on a physical device was essential to ensur
 
 This project aligns closely with my personal and academic interests in health technology and mobile app development.
 I have always loved video games, and as I got older, I became interested in understanding how they work behind the
-scenes. This project gave me the opportunity to finally explore that process and develop my own application from the
+scenes. This project allowed me to finally explore that process and develop my own application from the
 ground up. I am also deeply passionate about health and wellness, so being able to bridge the gap between fitness and
 software development feels both meaningful and exciting. It represents a step toward creating technology that not only
 functions well but also has a real impact on people’s daily lives. 
@@ -127,20 +127,20 @@ This process is especially unique because I am both the developer and a user of 
 to constantly evaluate features from a real-world perspective, ensuring usability, simple design, and functionality. This dual role enables me
 to iterate quickly and create an application that is both practical and engaging for users like myself.
 
-This proccess is especially unique as I am the developer for this app as well as someone who will be a user for this application. This unique
+This process is especially unique as I am the developer for this app as well as someone who will be a user for this application. This unique
 experience allows me to have a visual of what I want to create at all times of development. 
 
 This background is why I feel particularly well-qualified for the developer role on this project. My academics at Allegheny College’s
-CIS department has also provided me with a strong foundation in computer science, equipping me with the technical knowledge and problem-solving skills
+CIS department have also provided me with a strong foundation in computer science, equipping me with the technical knowledge and problem-solving skills
 needed to successfully design and implement a mobile application. Over the course of my studies, I have taken courses across nearly every
-area of computer science, including software engineering, web design, computer security and programming languages. This breadth of
+area of computer science, including software engineering, web design, computer security, and programming languages. This breadth of
 exposure has allowed me to gain hands-on experience with multiple coding languages and frameworks, giving me the ability to approach the technical
 challenges of app development.
 
 Two courses, in particular, have shaped my ability to contribute effectively to this project: Software Engineering and Web Design. Software Engineering
 provided me with experience in professional development workflows, including collaborative sprints, version control, and team-based problem solving.
-I learned how to write code that is not only functional but also readable and maintainable by other team members which is a critical skill for any large-scale project.
-Understanding each function and code block in depth allows me to confidently iterate and expand the app while avoiding errors. Web Design, meanwhile, highlighted
+I learned how to write code that is not only functional but also readable and maintainable by other team members, which is a critical skill for any large-scale project.
+Understanding each function and code block in depth allows me to confidently iterate and expand the app while avoiding errors. Web design, meanwhile, highlighted
 the importance of user interface and user experience. Developing a clean and visually appealing interface is crucial for engaging users, particularly
 in a mobile app where ease of navigation and clarity are essential. The lessons from this course ensure that the app I am building is not only technically advanced
 but also user-friendly.
@@ -148,22 +148,22 @@ but also user-friendly.
 Beyond my academic preparation, my personal experiences have shaped my motivation and insight into this project. As a lifelong athlete, I have spent countless
 hours understanding training, fitness, and performance, which gave me firsthand knowledge of what users look for in a health and fitness app. Transitioning
 from organized sports to independent gym training revealed a gap in available tools for tracking and improving personal fitness progress. By combining this
-personal experience with my technical expertise, I am able to create an application that addresses real user needs.
+personal experience with my technical expertise, I can create an application that addresses real user needs.
 
 Overall, my combination of technical training, practical experience, and personal motivation provides a strong foundation for this project. I am confident 
-in my ability to develop an engaging, and functional app that bridges the gap between software technology and health and wellness.
+in my ability to develop an engaging and functional app that bridges the gap between software technology and health and wellness.
 
 ## Project Motivation
 
 This project is driven by the goal of combining key areas of computer science, data analysis, and mobile system
 integration to create a functional and efficient fitness technology solution. It provides practical experience in app
-development, data integration, and automation—skills that are valued in the modern technology industry. Through
+development, data integration, and skills that are valued in the modern technology industry. Through
 the development of a mobile application that collects, processes, and evaluates the data, the project simulates
 the type of real-world problem-solving encountered in software engineering and health technology fields. 
 
-This project is also motivated by the intgration and correlation of scientific and technical principles to advance
-personal fitness through mobile app development. It applis core STEM disciplines - data evaluation, computer science
-, and software engeneering - to design and implement an IOS application that automatically takes in user-inputted data
+This project is also motivated by the integration and correlation of scientific and technical principles to advance
+personal fitness through mobile app development. It applies core STEM disciplines of data evaluation, computer science,
+, and software engineering to design and implement an iOS application that automatically takes in user-inputted data
 and provides concise feedback. 
 
 Science and data represent one of the most direct connections between this project and STEM disciplines. The iOS
@@ -172,81 +172,78 @@ information meaningfully. The collected data is utilized in multiple ways, prima
 and progress over time. By processing the data into both structured logs and dynamic visualizations, the app enables
 users to identify trends, track new personal records, and observe progression or regression across various metrics. Data
 analysis plays a key role for both the user and the backend system. Users interact with visual representations such as
-graphs to, clearly view their performance history and identify patterns, while the backend continuously 
+graphs to clearly view their performance history and identify patterns, while the backend continuously 
 updates and organizes the dataset to support accurate and real-time insights.
 
 Technology and engineering also play a heavy role in this project. The concept of building and developing a mobile
 app with real-world functionality demonstrates the practical application of engineering principles in software design
-and system development. The project involves using Apple's development ecosystem, including Swift, Xcode to. create 
-an efficient mobile app. Through these tools the app integrates user interfaces, local data storage and data analysis.
-From more of an engineering standpoint the project requires consistent testing and debugging to ensure complete
-functionality and accuracy. These proccesses mirror the real world design cycle. This being designing solutions, 
+and system development. The project involves using Apple's development ecosystem, including Swift, Xcode to create 
+an efficient mobile app. Through these tools, the app integrates user interfaces, local data storage, and data analysis.
+From an engineering standpoint the project requires consistent testing and debugging to ensure complete
+functionality and accuracy. These processes mirror the real-world design cycle. This involves designing solutions, 
 implementing systems, and refining them based on testing. By applying these principles within this current project, 
-it is reinforcing the integration of technology and engineering.
+it reinforces the integration of technology and engineering.
 
 This project contributes to the broader field of public health and fitness engagement by allowing users to take an
-active role in understanding and improving their gym-self. Through user inputted data-driven insights and personalized analytics,
+active role in understanding and improving their gym-self. Through user-inputted data-driven insights and personalized analytics,
 the iOS application encourages consistent use and progress tracking, making health more accessible and
-engaging. By visualizing performance trends and progress over time, users are able to make informed decisions about
+engaging. By visualizing performance trends and progress over time, users can make informed decisions about
 their fitness routines and lifestyle habits. This approach promotes a stronger connection between personal data
-awareness and long-term health outcomes. Data has shown that consitent exercise provides a variety of benefits that
-include strengthening bones, positive effects on mood, and even helping to prevent chronic ilnesses like diabetes and
-heart desease (Ahmed). Knowing this, the ability to quickly and freely track progress is something that creates benefits
+awareness and long-term health outcomes. Data has shown that consistent exercise provides a variety of benefits that
+include strengthening bones, positive effects on mood, and even helping to prevent chronic illnesses like diabetes and
+heart disease (Ahmed). Knowing this, the ability to quickly and freely track progress is something that creates benefits, 
 even outside of benching more wight than last month.
 
 In addition to promoting user engagement, the project addresses critical considerations surrounding data privacy and
-security. Seemingly these days data privacy and security is a growing topic. We are seeing more and more mobilde devices
-contracting online virus' from phishing emails or users clicking faulty links. But specifically in the regards of data
-privacy, the importance of handling data leaks.
+security. Seemingly, these days, data privacy and security are a growing topic. We are seeing more and more mobile devices
+contracting online viruses from phishing emails or users clicking faulty links. But specifically regarding data
+privacy, the importance of handling data leaks is emphasized.
 
 The target audience for this project includes individuals who are seeking to learn more about their fitness habits and
 gain experience with technology-assisted self-improvement before committing to more advanced or intensive programs. By
 combining accessibility, automation, and educational value, the application serves as a bridge for users looking to
-develop a deeper understanding of their health through technology. In 2024 alone the number of data compromises in
-the United States alone was 3,158 which is only 1% under the record of number of compromises tracked within one calendar
+develop a deeper understanding of their health through technology. In 2024 alone, the number of data compromises in
+the United States was 3,158, which is only 1% under the record number of compromises tracked within one calendar
 year (Identity Theft Resource Center). This emphasizes the importance of local data storage for this project. All the data
-that a user has within the application is directly stored on the user's mobile device. This significatnly reduces exposure
+that a user has within the application is directly stored on the user's mobile device. This significantly reduces exposure
 to potential data breaches and ensures that sensitive information remains under the user's direct control. 
 
 ## Ethical Implications
 
-There are several ethical considerations that need to be acknowledged and talked about for this senior comprehensive 
-project. A few things that are important to talk about are data security, bugs and false user reccomendation. By addressing
-these concerns it will provide context to the reasoning behind why I created what I did and how. 
+Several ethical considerations that need to be acknowledged and talked about for this senior comprehensive project. A
+few things that are important to talk about are data security, bugs and false user recommendations. Addressing these
+concerns will provide context for the reasoning behind why I created what I did and how. 
 
-First it is important to acknowledge the user of personal data. As this an open mobile application that could receive a
-large number of users it is important to note the use of their data. As the developer of this application, I have no
-access to the information than the users put into their profile. This data is securely stored within their mobile
-device and no where else. There is no posibility of data sharing within the app, this creates no posibiltiy of a breach
-of data. I acknowledge that other apps provide the user's with the ability of sharing data with friends or communities
-within the app. While further researching this concept I decided that it would be a better and safer solution to solely
-keep the data to the user's use only. While there are benefits to communities and friends within an app like this to be
-able to compare data with friends and communities, the idea of user's data being jeopordized is a much more serious
-matter to be adressed. This concept plays into the idea of why I am developing my experiment in this specific fashion.
+First, it is important to acknowledge the user of personal data. This is an open mobile application that could receive a
+large number of users; it is important to note the use of their data. As the developer of this application, I have no
+access to the information that the users put into their profiles. This data is securely stored within their mobile
+device and nowhere else. There is no possibility of data sharing within the app, which creates no possibility of a breach
+of data. I acknowledge that other apps provide users with the ability to share data with friends or communities
+within the app. While further researching this concept, I decided that it would be a better and safer solution to solely
+keep the data for the user's use only. While there are benefits to communities and friends within an app like this to be
+able to compare data with friends and communities, the idea of users' data being jeopardized is a much more serious
+matter to be addressed. This concept plays into the idea of why I am developing my experiment in this specific fashion.
 
-At first, I thought it would be much more beneficial to conduct an experiment utilizing collegues to gather responses
-based upon their use of the app and how it helped them progress in the gym. While this experimental idea had its benefits
-it had many different ethical implications that had to be considered. As this experiment would be utilizing personal
-data, this creates the problem of going through the process with the IRB. The IRB, or the institutional review board,
-is a comittee that reviews and oversees research and experiments that involve human subjects to ensure their rights
-and welfare are protected. This would have come with months of developing a proposal, editing and resubmitting and much
-more very strenuos work. I decided to avoid this by developing the idea of testing the app through AI generated data.
-This experiment will provide me with all the information that I desire in a way that does not battle with any ethical
-considerations. This brings me to another thought of what if my evaluation could steer a user in the wrong direction?
+At first, I thought it would be much more beneficial to conduct an experiment utilizing colleagues to gather responses
+based on their use of the app and how it helped them progress in the gym. While this experimental idea had its benefits,
+it had many different ethical implications that had to be considered. I decided to avoid these implications by developing 
+the idea of testing the app through AI-generated data. This experiment will provide me with all the information that I desire
+in a way that does not conflict with any ethical considerations. This brings me to another thought: what if my evaluation could 
+steer a user in the wrong direction?
 
 As this application has an emphasis on feedback to the user to aid them in their gym journey, is it possible that a false
-reccomendation could have implications on their mindset? This important to note and look further into. Once a user inputs
-their data they then recieve certain feedback within the evaluation page depending on their data. This feedback may range
-from letting the user know that they have exercised a muscle group too many times this week to you did 12 reps, maybe try 
-upping the exercise weight to stick to a rep range of 6-10. As this experiment is provided to the user it may provide the user
-with new knowledge that could change how they would approach their workout. It is critical to know that the app is a tool
+recommendation could have implications on their mindset? This is important to note and look further into. Once a user inputs
+their data, they then receive certain feedback within the evaluation page depending on their data. This feedback may range
+from letting the user know that they have exercised a muscle group too many times this week to you did 12 reps; maybe try 
+upping the exercise weight to stick to a rep range of six to ten. As this experiment is provided to the user it may provide the user
+with new knowledge that could change how they approach their workout. It is critical to know that the app is a tool
 to supplement informed decision-making rather than a substitute for professional advice. By acknowledging the limitations
-of data-driven models, the application promotes responsible use and encourages the users to interpret their feedback as
-well as combining it with personal judgements. 
+of data-driven models, the application promotes responsible use and encourages users to interpret their feedback as
+well as combine it with personal judgments. 
 
 Even with careful development and testing, the code may contain bugs or unexpected behaviors that could impact the user
 experience or the accuracy of the data analysis. In the context of a fitness application, such bugs could lead to
-incorrect feedback, misrepresented progress, or failure to update the users personal records. For example, a calculation
+incorrect feedback, misrepresented progress, or failure to update the user's personal records. For example, a calculation
 error could suggest that a user has reached a personal record when they have not, or fail to warn them about overtraining
 a muscle group. From an ethical perspective, acknowledging and mitigating the risks of bugs is essential. This includes
 rigorous testing and providing mechanisms for users to report errors or inconsistencies. By planning for potential
@@ -254,9 +251,9 @@ software errors and maintaining transparency, the application prioritizes user t
 
 As there are many ethical implications to consider within this application, I have developed this application in a specific
 fashion to avoid many possible ethical issues. These include local storage of user data to ensure privacy, conducting
-an experiment that handles AI generated data instead of dealing with human date, acknowledging the fact that this app
-may provide a false reccomendation due to model limitations, and by proactivly testing the code to avoid the posibility
-of bugs arrising.
+an experiment that handles AI-generated data instead of dealing with human data, acknowledging the fact that this app
+may provide a false recommendation due to model limitations, and proactively testing the code to avoid the possibility
+of bugs arising.
 
 ## Structure of Senior Comprehensive Project
 
@@ -271,22 +268,22 @@ and implications.
 
 ## Contributions of The Project
 
-This project contributes a custom IOS application that integrates workout tracking, data analysis and personalized
-feedback within a unified, simple, user friendly mobile platform. Unlike other fitness applications, this system is
+This project contributes a custom iOS application that integrates workout tracking, data analysis, and personalized
+feedback within a unified, simple, user-friendly mobile platform. Unlike other fitness applications, this system is
 tailored to individual user-inputted data and emphasizes the interpretation of the data rather than just simple
-data logging and visuals. This application includes 6 sperate pages that are key in acknowledging, history, charts,
-evaluation, awards, add and the user profile view. 
+data logging and visuals. This application includes six seperate pages that are key in acknowledging history, charts,
+evaluation, awards, and the user profile view. 
 
 This includes the development of a local user login and account creation system and an entirely device-based data storage model 
-built in Swift. This creation demonstrates the importance of local data storage within my application. Like discussed before
+built in Swift. This creation demonstrates the importance of local data storage within my application. As discussed before,
 preventing data leaks is the #1 reason behind the local storage.
 
-The main landing page once the user has logged in is the history or workout log page. Within this page it contains
-all the specific exercises the user has completed. Once a user inputs their data of an exercise including weight,
-repetitions and muscle group, this data will show up within the history page along with a date. The workout log
-is an essential piece of content to include when creating a fitness app as it allows the users to rewind in time
-to see their past data. Keeping this page simple is also of importance because as this page gets more complicated
-it may complicate the user's ability to easily view past workouts 
+The main landing page, once the user has logged in, is the history or workout log page. This page contains
+all the specific exercises the user has completed. Once a user inputs their data for an exercise, including weight,
+repetitions, and muscle group, this data will show up within the history page along with a date. The workout log
+is an essential piece of content to include when creating a fitness app, as it allows users to rewind in time
+to see their past data. Keeping this page simple is also important because as this page gets more complicated,
+it may complicate the user's ability to easily view past workouts. 
 
 Once new data is added to the History page, it is automatically reflected in the Charts page. The Charts page
 continuously monitors for newly recorded data points and updates the corresponding exercise-specific graph whenever
@@ -294,21 +291,21 @@ a new entry is detected. Each graph visually represents trends over time, allowi
 progression in the gym. These visualizations not only make performance trends easier to interpret but also help users
 review their previous workouts to determine appropriate starting points for future sessions.
 
-After that the evaluation page then also updates. This will give the user with simple and concise feedback to aide the
-user. This will provide them will ternd insights to whether they are progressing or regressing, it will provide them
-with feedback to their training routine reccomending if they should train a certain muscle group more or less. The importance
-of a short and concise feedback is emphasized as I do not want to overload the user with information. 
+After that, the evaluation page also updates. This will give the user simple and concise feedback to aid them.
+This will provide them with timely insights into whether they are progressing or regressing, it will provide them
+with feedback on their training routine, recommending whether they should train a certain muscle group more or less. The importance
+of short and concise feedback is emphasized as I do not want to overload the user with information. 
 
-This then brings us to the awards page. This page is meant to bring gameification to life on my mobile app. The goal
+This then brings us to the awards page. This page is meant to bring gamification to life on my mobile app. The goal
 of this page is to give the user a reason to keep being consistent and coming back to using this app. A majority of
-the fitness apps contain some type of gameification as it is a way for users to stay engaged. An example of an
-award would look like entering a workout for 100 days, an award like this gives users incentive to keep going to the gym
-and bettering themself each day.
+the fitness apps contain some type of gamification as it is a way for users to stay engaged. An example of an
+award would look like entering a workout for 100 days; an award like this gives users incentive to keep going to the gym
+and bettering themselves each day.
 
-Finally this includes the profile page. This is a very simple page including a few key details including personal
-records along with how many workouts the user has inputted. This was a way to let the user know their personal record
-totals meaning the total weight of squat, deadlift and bench press combined. This is a piece of information
-that lots of gym goers like to know as it gives the user another incentive to keep training hard.
+Finally, this includes the profile page. This is a very simple page including a few key details, including personal
+records, along with how many workouts the user has inputted. This was a way to let the user know their personal record
+totals, meaning the total weight of the squat, deadlift, and bench press combined. This is a piece of information
+that lots of gymgoers like to know as it gives the user another incentive to keep training hard.
 
 These components form the core of my application and reflect months of learning, experimentation, and iteration. I
 began studying app development—including the Xcode environment and the Swift programming language—in January 2024.
@@ -325,17 +322,17 @@ It is crucial to understand what can realistically be built. Once a developer co
 that promise to be fulfilled. Because of this, knowing the limits, challenges, and feasibility of an idea before promising it 
 is an essential part of responsible development. By integrating feasibility testing early and often, I was able to refine my ideas, 
 avoid unnecessary roadblocks, and move forward with confidence in the parts of the application I chose to implement. This
-leads into the importance of a thorough experiment.
+leads to the importance of a thorough experiment.
 
-For my experiment I plan to utilize AI generated data. The goal of this experiment is to conduct a well thought out experiment
-that aims to evaluate each part of my application. By doing this I will gain important knowledge and information that can
-provide neccesary feedback to aid the final developmental sprint.
+For my experiment, I plan to utilize AI-generated data. The goal of this experiment is to conduct a thorough experiment
+that aims to evaluate each part of my application. By doing this, I will gain important knowledge and information that can
+provide necessary feedback to aid the final developmental sprint.
 
 For this experiment, I will utilize AI-generated data to simulate realistic user interactions and workout patterns
 within the application. Using AI-generated inputs allows me to test the system under controlled, repeatable conditions
 without relying on human data at this stage of development. This approach ensures that I can evaluate each feature of
 the app—including data processing, visualizations, and system responsiveness—using consistent and diverse datasets.
-AI-generated data also enables me to stress test the application, and identify potential issues early. By incorporating 
+AI-generated data also enables me to stress test the application and identify potential issues early. By incorporating 
 this method, I can gather meaningful insights and feedback that will directly inform and improve the final development 
 sprint. While AI-generated data is highly useful for early-stage testing, it is important to acknowledge both
 its strengths and its limitations. AI data provides clean, structured inputs that allow for controlled experimentation, 
@@ -345,24 +342,24 @@ unpredictability and variability of real human behavior. Because of this, the re
 viewed as preliminary. Even with these limitations, AI-generated data remains a powerful tool that enables efficient, 
 iterative testing and helps streamline the development process.
 
-This experiment aims to provide me with feedback within graph compression, responsiveness, data processing and query
+This experiment aims to provide me with feedback on graph compression, responsiveness, data processing, and query
 times. As visuals are a key component of this application, the importance that they are clean and legible cannot be
-emphasized enough. Some research questions that this aims to answer are as follows; How will the graphs look with 1
-years worth of user data? How will the graphs compress? Will the data points be too close together? These are all
-essential to the success of my application. Without knowing the answers to all these questions the app would feel
-incomplete. Moving forward with this concept is gaining the knowledge of responsivess. This theme is in #1 importance
+emphasized enough. Some research questions that this aims to answer are as follows: How will the graphs look with one
+year's worth of user data? How will the graphs compress? Will the data points be too close together? These are all
+essential to the success of my application. Without knowing the answers to all these questions, the app would feel
+incomplete. Moving forward with this concept involves gaining knowledge of responsiveness. This theme is of number one importance
 within app development. Developers pride themselves on giving a fun and engaging user experience. If the app takes 10
-seconds to load a specific page users will most likely find a different application. Learning about the amount of 
-data it takes t slow down the app or if it even slows down at all is an essential question. By providing this application
-with years worth of data will answer this question. Checking and examinating the responsivess of moving between pages, 
-loading the application and touch responsivess will all be of uttmost importance to answer. Query times is very similar
-to this theme. Within the application there are many different search queries like personal records, for loops actively looking
-for a specific experiment and many more. How will these be affected when they have to look through 1000 - 5000 data points?
-being able to provide evidence that this app can run these queries without the time being affected will be a very strong
+seconds to load a specific page, users will most likely find a different application. Learning about the amount of 
+data it takes to slow down the app or if it even slows down at all is an essential question. Providing this application
+with years' worth of data will answer this question. Checking and examining the responsiveness of moving between pages, 
+loading the application, and touch responsiveness will all be of utmost importance to answer. Query times are very similar
+to this theme. Within the application, there are many different search queries, like personal records, for loops actively looking
+for a specific experiment, and many more. How will these be affected when they have to look through 1000 or 5000 data points?
+Being able to provide evidence that this app can run these queries without the time being affected will be a very strong
 argument and point for my application. 
 
-This experiment in conclusion is well developed and aims to conduct a study in replacement for a human study. This AI
-generated data allows me to conduct an experiment in a controlled environment where there and defined variables is
+This experiment, in conclusion, is well developed and aims to conduct a study in place for a human study. This
+AI-generated data allows me to experiment in a controlled environment where the defined variables are
 a strong point of this experiment.
 
 
