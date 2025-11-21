@@ -168,7 +168,7 @@ the type of real-world problem-solving encountered in software engineering and h
 
 This project is also motivated by the integration and correlation of scientific and technical principles to advance
 personal fitness through mobile app development. It applies core STEM disciplines of data evaluation, computer science,
-, and software engineering to design and implement an iOS application that automatically takes in user-inputted data
+and software engineering to design and implement an iOS application that automatically takes in user-inputted data
 and provides concise feedback. 
 
 Science and data represent one of the most direct connections between this project and STEM disciplines. The iOS
