@@ -10,7 +10,7 @@ training effectively. Questions such as “Am I using the right form?” “How 
 To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
 designed to guide.
 
-The gym lifestyle has been actively growing for over 20 years. In 2000, around 32.8 million people had
+The gym lifestyle has been actively growing for over twenty years. In 2000, around 32.8 million people had
 active gym memberships in the United States. Since then, that number has more than doubled to approximately
 77 million in 2024, with predictions estimating 85–90 million memberships by 2030 (Kerxhaliu). As the
 number of gymgoers continues to rise, so does the portion of this population seeking feedback, whether
@@ -30,17 +30,20 @@ opportunity for apps that not only attract users but also maintain engagement by
 easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
 workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
 
+This raises the problem that I am driving to solve. Can feedback and analysis be provided to users through a simple
+and concise free mobile iOS application?
+
 ## Overview of WorkoutTracker Application
 
 This project includes a working iOS application with all core components implemented.
 This app is made from three main ideas: workout progress tracking, providing evaluation and feedback, and
 local data storage. 
 
-Workout progress tracking consists of 2 different areas. Primarily is the concept of
+Workout progress tracking consists of two different areas. Primarily is the concept of
 logging your workout. In my app, the goal is to keep it simple, taking in user-inputted data that consists
-of muscle group, exercise, weight, and repetitions. Logging these 4 things in my developed app takes the user
-under 15 seconds. This is beneficial as it provides the user with the ability to input data directly after
-a completed set, which doesn't take up minutes. Once the user inputs the data, it then gets shot to 2 different
+of muscle group, exercise, weight, and repetitions. Logging these four things in my developed app takes the user
+under fifteen seconds. This is beneficial as it provides the user with the ability to input data directly after
+a completed set, which doesn't take up minutes. Once the user inputs the data, it then gets shot to two different
 areas: the workout log and visuals. Once the user inputs the data, they can readily view this within
 their history log of workouts, providing the user with the information they provided along with the
 date that it was completed. This is one way that the user will be able to visualize all the different
@@ -54,7 +57,7 @@ to visualize if they are progressing or regressing goes a long way in the scope 
 Providing evaluation, in my opinion, is the main emphasis of this project. With regards to the fitness
 app realm, no app that can provide concise and specific feedback to aid the user in their
 gym journey. In my opinion, too much feedback or too complicated feedback can be off-putting for users
-for many different reasons. Lots of apps provide the user with 10 different graphs or 10 different data
+for many different reasons. Lots of apps provide the user with ten different graphs or ten different data
 points that stand out, but a lot of the time, the user may not understand what they are looking at and
 receiving. There has to be a way to provide the user feedback in two to four bullet points that can help them
 recognize what is good and what is bad, so that they don't get stuck in a loop of creating bad habits. 
@@ -118,7 +121,7 @@ continued with tennis up until my junior year of college, and have tried just ab
 a central part of my life, keeping me active every day, whether through clubs or just playing with friends. This routine changed during
 my junior year of college when I left the Allegheny College Men’s Tennis Team due to a lingering shoulder injury. After playing sports
 my whole life, it felt strange not to be actively involved in a sport or hobby. To stay active, I decided to pursue a consistent gym
-lifestyle, going 5–6 days a week. Thankfully, I already had some experience in the gym through teams and clubs, but without that foundation,
+lifestyle, going five to six days a week. Thankfully, I already had some experience in the gym through teams and clubs, but without that foundation,
 I would have had no idea where to start or how to define “success.” Through trial, learning from friends, and watching YouTube tutorials, I
 gradually gained knowledge and confidence in the gym. That experience sparked the idea: what if there was an app that could track my progress
 while providing personalized feedback to help me stay on track? I began experimenting with fitness apps like Whoop, Strong, Fitbod, and Hevy,
@@ -234,7 +237,7 @@ steer a user in the wrong direction?
 As this application has an emphasis on feedback to the user to aid them in their gym journey, is it possible that a false
 recommendation could have implications on their mindset? This is important to note and look further into. Once a user inputs
 their data, they then receive certain feedback within the evaluation page depending on their data. This feedback may range
-from letting the user know that they have exercised a muscle group too many times this week to you did 12 reps; maybe try 
+from letting the user know that they have exercised a muscle group too many times this week to you did twelve reps; maybe try 
 upping the exercise weight to stick to a rep range of six to ten. As this experiment is provided to the user it may provide the user
 with new knowledge that could change how they approach their workout. It is critical to know that the app is a tool
 to supplement informed decision-making rather than a substitute for professional advice. By acknowledging the limitations
@@ -258,11 +261,11 @@ of bugs arising.
 ## Structure of Senior Comprehensive Project
 
 This project is organized into five chapters. Chapter 1 introduces the project, including its professional and technical
-motivation, relevance to STEM disciplines, ethical considerations, and overall structure. Chapter 2 reviews related
-works and literature, compares similar applications, and provides the technical context. Chapter 3 describes the methods
-used in developing the iOS application, including system design, code architecture, and UI/UX decisions. Chapter 4
+motivation, relevance to STEM disciplines, ethical considerations, and overall structure. Chapter two reviews related
+works and literature, compares similar applications, and provides the technical context. Chapter three describes the methods
+used in developing the iOS application, including system design, code architecture, and UI/UX decisions. Chapter four
 presents experimental results, including testing outcomes, user feedback, data validation, and performance evaluation. 
-Finally, Chapter 5 discusses the results, highlights potential improvements, explores broader applications, and suggests 
+Finally, Chapter five discusses the results, highlights potential improvements, explores broader applications, and suggests 
 directions for future research. This structure ensures a clear and logical presentation of the project from conception to evaluation
 and implications.
 
@@ -348,7 +351,7 @@ emphasized enough. Some research questions that this aims to answer are as follo
 year's worth of user data? How will the graphs compress? Will the data points be too close together? These are all
 essential to the success of my application. Without knowing the answers to all these questions, the app would feel
 incomplete. Moving forward with this concept involves gaining knowledge of responsiveness. This theme is of number one importance
-within app development. Developers pride themselves on giving a fun and engaging user experience. If the app takes 10
+within app development. Developers pride themselves on giving a fun and engaging user experience. If the app takes ten
 seconds to load a specific page, users will most likely find a different application. Learning about the amount of 
 data it takes to slow down the app or if it even slows down at all is an essential question. Providing this application
 with years' worth of data will answer this question. Checking and examining the responsiveness of moving between pages, 
