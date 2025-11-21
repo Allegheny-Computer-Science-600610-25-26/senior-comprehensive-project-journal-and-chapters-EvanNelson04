@@ -6,7 +6,7 @@ This Senior Comprehensive Project aims to address the problem within the fitness
 the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
 with to improve their health and performance, yet many struggle to determine whether they are
 training effectively. Questions such as “Am I using the right form?” “How much weight should I lift?”
-"Is my progress on track?” often goes unanswered without a personal trainer or advanced tracking
+"Is my progress on track?” often goes unanswered without a personal trainer or advanced tracking.
 To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
 designed to guide.
 
@@ -30,7 +30,7 @@ opportunity for apps that not only attract users but also maintain engagement by
 easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
 workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
 
-## Overview of WorokoutTracker Application
+## Overview of WorkoutTracker Application
 
 This project includes a working iOS application with all core components implemented.
 This app is made from three main ideas: workout progress tracking, providing evaluation and feedback, and
