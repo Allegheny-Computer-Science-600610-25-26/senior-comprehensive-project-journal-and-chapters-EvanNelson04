@@ -262,7 +262,7 @@ of bugs arising.
 
 ## Structure of Senior Comprehensive Project
 
-This project is organized into five chapters. Chapter 1 introduces the project, including its professional and technical
+This project is organized into five chapters. Chapter one introduces the project, including its professional and technical
 motivation, relevance to STEM disciplines, ethical considerations, and overall structure. Chapter two reviews related
 works and literature, compares similar applications, and provides the technical context. Chapter three describes the methods
 used in developing the iOS application, including system design, code architecture, and UI/UX decisions. Chapter four
