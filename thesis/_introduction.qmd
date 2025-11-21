@@ -37,7 +37,9 @@ and concise free mobile iOS application?
 
 This project includes a working iOS application with all core components implemented.
 This app is made from three main ideas: workout progress tracking, providing evaluation and feedback, and
-local data storage. 
+local data storage.
+
+![My Application Image](images/AppImage.png)
 
 Workout progress tracking consists of two different areas. Primarily is the concept of
 logging your workout. In my app, the goal is to keep it simple, taking in user-inputted data that consists
