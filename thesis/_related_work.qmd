@@ -256,6 +256,46 @@ user-entered workout data, generates individualized feedback, and delivers deepe
 
 ## Review of Existing Literature
 
+Developing an effective health and fitness application requires more than simply tracking data—it depends on
+understanding how users stay motivated, how behavior change occurs, and which design choices actually support
+long-term engagement. Existing research on mobile health apps provides a critical foundation for this work.
+Studies in this area examine how design features, such as feedback, rewards, and gamification, influence user
+adherence, highlighting both successes and common shortcomings in current app approaches. Reviewing this body
+of literature is essential for identifying evidence-based strategies, avoiding ineffective design patterns, and
+grounding the development of my project in proven behavioral and motivational principles.  This context ensures
+that the app not only functions technically but is also aligned with research-backed methods that promote consistent
+use and meaningful health outcomes.
+
+### Gamification Use and Design in Popular Health and Fitness Mobile Applications (Cotton and Patel, 2018)
+
+Mobile health and fitness applications have rapidly expanded in popularity, offering users convenient ways to
+monitor workouts, track biometrics, and support healthy behavior change. A key design strategy used in many of
+these applications is gamification, defined as the integration of game-like elements, such as goals, challenges,
+rewards, or feedback. This aims to increase user motivation and adherence. Recent research has examined how gamification
+is implemented across commercial health and fitness apps and whether these design choices align with
+behavioral-science principles.
+
+One of the most influential analyses in this area is the study by Cotton and Patel (2018), who evaluated the 50
+most popular free health and fitness apps from the Apple App Store. Their findings showed that 64% of apps included
+at least one gamification feature. The most common elements were goal-setting (78%), social influence (78%),
+and challenges (63%). In contrast, classic game mechanics such as points (6%) and levels (3%) were rarely used.
+Cotton and Patel argued that while gamification is widely present, the depth of behavioral-science integration remains limited.
+Notably, none of the evaluated apps used behavioral-economics-based strategies such as loss aversion, variable reinforcement,
+or probability distortion—mechanisms shown to influence habit formation and motivation in other domains.
+
+![Results Table](images/Cotton_Patel.png)
+
+Talking about the results and this experiment specifically, it delves into different mobile applications and
+what each app contains in terms of gameification. These categories include goals, high scores, streaks, collaborations,
+challenges, etc. It is important to note that not all of these apps within the study are fitness apps, but they contain
+many running, cycling, and weight loss apps. So to specify, apps within all realms of fitness lifestyle. 
+
+I think that this brief experimental study is a good introduction and overview of what is important to include
+within a fitness app. This study helped me to understand roughly what percentage of apps include certain aspects
+of app development that my app includes. Knowing and recognizing that this is a very brief study to categorize what
+important aspects most fitness apps include was important background information for me to gather.
+
+
 ## Thematic Connections 
 
 ## Summary
