@@ -48,7 +48,7 @@ date: "2025-11-14"
  - Chapter 4: Experimental Results — Testing, data validation, performance results
  - Chapter 5: Discussion and Future Works — Interpretation, improvements, broader application, research directions
 
-## 1.6 Contributions of the Project
+## 1.7 Contributions of the Project
  - What is already built
  - Brief overview of each page
  - Technical contributions
