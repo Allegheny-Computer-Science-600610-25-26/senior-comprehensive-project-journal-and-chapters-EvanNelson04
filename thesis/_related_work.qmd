@@ -312,14 +312,11 @@ needs and motivations change dynamically, meaning effective fitness apps must ad
 This study is important because it goes beyond basic metrics like downloads or step counts and instead focuses on how people
 actually use fitness apps over time. Its findings reveal several key insights:
 
- - **Fitness-app engagement is not linear.** Users rarely stick to the same behavior pattern. They often change between routine and 
-   exploratory use depending on motivation, goals, or life context.  
- - **Retention depends on flexibility.** Apps designed for only one type of usage (e.g., daily routine tracking) may fail to satisfy 
-   users who prefer occasional or experimental use.
+ - **Fitness-app engagement is not linear.** Users rarely stick to the same behavior pattern. They often change between routine and exploratory use depending on motivation, goals, or life context.  
+ - **Retention depends on flexibility.** Apps designed for only one type of usage (e.g., daily routine tracking) may fail to satisfy users who prefer occasional or experimental use.
  - **Long-term success of fitness apps is linked to adapting to changing user goals.**
- - **Re-engagement features have real value.** Innovative users often return during goal shifts or motivational bursts, meaning apps 
-   should support smooth “re-entry” without penalizing inactivity.
-
+ - **Re-engagement features have real value.** Innovative users often return during goal shifts or motivational bursts, meaning apps should support smooth “re-entry” without penalizing inactivity.
+ 
    ---
 
 For researchers and developers, the experiment shows that understanding behavioral patterns gives more meaningful design guidance than 
