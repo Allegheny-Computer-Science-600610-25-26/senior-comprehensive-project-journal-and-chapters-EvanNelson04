@@ -316,7 +316,7 @@ actually use fitness apps over time. Its findings reveal several key insights:
  - **Retention depends on flexibility.** Apps designed for only one type of usage (e.g., daily routine tracking) may fail to satisfy users who prefer occasional or experimental use.
  - **Long-term success of fitness apps is linked to adapting to changing user goals.**
  - **Re-engagement features have real value.** Innovative users often return during goal shifts or motivational bursts, meaning apps should support smooth “re-entry” without penalizing inactivity.
- 
+
    ---
 
 For researchers and developers, the experiment shows that understanding behavioral patterns gives more meaningful design guidance than 
@@ -347,7 +347,93 @@ users exhibit evolving use patterns, the study validates my focus on creating a 
 and welcoming to both daily and occasional users. Its findings emphasize that user-entered data apps must be designed around flexibility 
 and engagement over time, which directly shapes how my project approaches user flow, data entry, and presentation of long-term progress.
 
+### A Systematic Review on Visualizations for Self-Generated Health Data for Daily Activities
+
+Kim {Kim2022} presents a systematic review of studies that evaluate visualizations for self-generated health data collected during daily 
+activities. The review breaks down what kinds of visualizations researchers used (like timelines, dashboards, and comparison charts), what types
+of data they focused on (such as steps, sleep, or exercise), how these visualizations were tested (usability tests, walkthroughs, or real-world trials), 
+and what outcomes they aimed to support, like helping users gain insight, change behavior, or make health decisions. From these studies Kim derives an evaluation framework 
+that categorizes visualization utility across levels of actionability — from simple awareness/monitoring up to supporting concrete actions or 
+clinical decisions. The review also identifies recurring design challenges (cognitive overload, ambiguous units, inconsistent timescales) and 
+recommends evaluation best practices.
+
 
 ## Thematic Connections 
 
+Across the selected research and the fitness applications examined (Hevy, Fitbod, WHOOP, Strong, and JEFIT), several shared themes emerge that
+highlight how modern health technologies attempt to motivate users, support long-term engagement, and provide meaningful feedback. These 
+themes directly correlate to my project.
+
+### Engagement and Motivation Through Design
+
+The gamification paper emphasizes how features like challenges, streaks, achievements, and progress indicators can boost short-term motivation 
+but must be thoughtfully designed to sustain long-term use. This theme appears clearly in real apps:
+
+ - **Fitbod** uses adaptive workout recommendations that give users a sense of progress through muscle fatigue tracking and streaks.
+ - **Hevy** incorporates badges, workout milestones, and leaderboards that align with the paper’s findings on motivational triggers.
+ - **JEFIT** includes goals, calendars, and training plans that resemble early forms of gamification.
+
+    ---
+
+
+The literature and the apps both show that engagement is not just about collecting data—it’s about creating an experience where users feel 
+rewarded and see evidence of improvement. By providing the users with a unique experience within the application, this creates the oppurtunity 
+for long term engagement. I want users to use this app to help them through every workout in the gym. The goal isn't to create an app that
+has users utilize the app for 1 month stints, but rather to use it for years of training. By learning and researching about user engagement
+through design, it helps me to understand what within an application can create long term engagement.
+
+*** The Role of Ease-of-Use and Habit Formation
+
+Research on fitness app usage highlights that users often stop using apps when tracking becomes inconvenient, repetitive, or overly manual. 
+Through the research in the article that talks about routine and innovative use of fitness apps {Li-Sun-Wang-Guo2024}, it is evident that it is 
+easier for someone who has the routine of workout tracking to use these fitness apps. Creating a way for the users to easily find this routine 
+of workout logging and tracking is of utmost importance. This helped me to develop and understand the importance of creating my app in a simple 
+and easy-to-use way. Meaning that if my app becomes too complicated to enter data or visualize data, it is harder for the users to find that 
+routine. My app has a simple way to input data that only takes about 15 seconds, making it much easier for users to implement this in their 
+daily gym routine.
+
+We see this exemplified within some of the apps that I previously talked about.
+
+ - **Strong** focuses on fast, minimal-effort logging, by tapping the exercise and enter sets. This displays the research that simple interfaces support habit formation.
+ - **Hevy** uses templates and quick-add features to speed up workflow.
+ - **Fitbod** automates workout planning entirely, reducing the user’s cognitive load.
+
+   ---
+
+The apps demonstrate the same principles found in the literature: users stick with systems that minimize effort and streamline self-tracking.
+
+*** Visualization as the Bridge Between Data and Action
+
+The visualization review shows that how data is presented determines whether users can interpret trends, identify patterns, or make behavior 
+changes. The research stresses multi-time-scale charts, clear labeling, and actionable insights. When researching different fitness applications,
+a majority of the time, the thing that helps an app stand out is how the data is visualized. To create a successful fitness app, there has to 
+be a well-constructed visualization of the user's data. This visualization needs to provide the user with the ability to easily analyze the 
+data to see progression or regression. If the user can't tell if what they are doing is progressing, then the visual has failed to complete 
+the task it aims to solve.
+
+These apps provide strong examples of these visuals:
+
+ - **WHOOP** excels at data visualization, giving users daily, weekly, and monthly reports on strain, recovery, and sleep.
+ - **Fitbod** visualizes muscle fatigue and session volume through color coding and bar charts.
+ - **Strong and Hevy** provide personal record charts, volume graphs, and exercise history timelines.
+
+   ---
+
+These apps show how effective visualizations transform the user's data into insights that align with the paper’s claim that clarity and context 
+drive understanding and action. This relates to the work within my application that I am creating. A unique visual that stands out within the fitness
+application industry, which solves the issue of simplicity.
+
 ## Summary
+
+The insights from three research areas of gamification, fitness app usage, and data visualization, combined with the practical lessons from 
+apps like Hevy, Fitbod, WHOOP, Strong, and JEFIT, highlight the core design principles needed for an effective fitness-tracking system. The 
+literature consistently shows that long-term engagement depends on meaningful motivation, simple tracking and logging, and clear visual feedback.
+The apps are live demonstrations of how these ideas work in real products. WHOOP and Fitbod emphasize data-driven personalization, Strong and Hevy show 
+the value of simple and fast manual logging, and all incorporate elements of progress feedback that align with gamification research. The 
+visualization paper further reinforces that users must be able to clearly interpret the relationship between their actions, manually entered 
+data, and trends if they are going to make informed decisions or sustain behavior change. Together, these themes directly inform 
+the design goals of my project: creating a fitness application that interprets user-entered data, supports effortless user 
+input, and presents information through personalized visualizations. In summary, both research and existing apps point toward the 
+same conclusion: the creation of a successful fitness application must seamlessly merge motivation, usability, and insight. My project draws from these findings 
+to build a platform that not only tracks data but transforms it into meaningful feedback that encourages long-term consistency and healthier 
+habits.
