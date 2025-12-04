@@ -275,7 +275,7 @@ rewards, or feedback. This aims to increase user motivation and adherence. Recen
 is implemented across commercial health and fitness apps and whether these design choices align with
 behavioral-science principles.
 
-One of the most influential analyses in this area is the study by Cotton and Patel (2018), who evaluated the 50
+One of the most influential analyses in this area is the study by Cotton and Patel (@Cotton&Patel2018), who evaluated the 50
 most popular free health and fitness apps from the Apple App Store. Their findings showed that 64% of apps included
 at least one gamification feature. The most common elements were goal-setting (78%), social influence (78%),
 and challenges (63%). In contrast, classic game mechanics such as points (6%) and levels (3%) were rarely used.
@@ -312,7 +312,7 @@ needs and motivations change dynamically, meaning effective fitness apps must ad
 This study is important because it goes beyond basic metrics like downloads or step counts and instead focuses on how people
 actually use fitness apps over time. Its findings reveal several key insights:
 
- - **Fitness-app engagement is not linear.** Users rarely stick to the same behavior pattern. They often change between routine and exploratory use depending on motivation, goals, or life context.  
+ - **Fitness-app engagement is not linear.** Users rarely stick to the same behavior pattern. They often change between routine and exploratory use depending on motivation, goals, or life context.
  - **Retention depends on flexibility.** Apps designed for only one type of usage (e.g., daily routine tracking) may fail to satisfy users who prefer occasional or experimental use.
  - **Long-term success of fitness apps is linked to adapting to changing user goals.**
  - **Re-engagement features have real value.** Innovative users often return during goal shifts or motivational bursts, meaning apps should support smooth “re-entry” without penalizing inactivity.
@@ -349,7 +349,7 @@ and engagement over time, which directly shapes how my project approaches user f
 
 ### A Systematic Review on Visualizations for Self-Generated Health Data for Daily Activities
 
-Kim {Kim2022} presents a systematic review of studies that evaluate visualizations for self-generated health data collected during daily 
+Kim (@Kim2022) presents a systematic review of studies that evaluate visualizations for self-generated health data collected during daily 
 activities. The review breaks down what kinds of visualizations researchers used (like timelines, dashboards, and comparison charts), what types
 of data they focused on (such as steps, sleep, or exercise), how these visualizations were tested (usability tests, walkthroughs, or real-world trials), 
 and what outcomes they aimed to support, like helping users gain insight, change behavior, or make health decisions. From these studies Kim derives an evaluation framework 
@@ -385,7 +385,7 @@ through design, it helps me to understand what within an application can create 
 ### The Role of Ease-of-Use and Habit Formation
 
 Research on fitness app usage highlights that users often stop using apps when tracking becomes inconvenient, repetitive, or overly manual. 
-Through the research in the article that talks about routine and innovative use of fitness apps {Li-Sun-Wang-Guo2024}, it is evident that it is 
+Through the research in the article that talks about routine and innovative use of fitness apps (@Li-Sun-Wang-Guo2024), it is evident that it is 
 easier for someone who has the routine of workout tracking to use these fitness apps. Creating a way for the users to easily find this routine 
 of workout logging and tracking is of utmost importance. This helped me to develop and understand the importance of creating my app in a simple 
 and easy-to-use way. Meaning that if my app becomes too complicated to enter data or visualize data, it is harder for the users to find that 

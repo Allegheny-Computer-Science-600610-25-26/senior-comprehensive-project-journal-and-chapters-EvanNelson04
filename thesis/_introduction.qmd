@@ -12,11 +12,11 @@ designed to guide.
 
 The gym lifestyle has been actively growing for over twenty years. In 2000, around 32.8 million people had
 active gym memberships in the United States. Since then, that number has more than doubled to approximately
-77 million in 2024, with predictions estimating 85–90 million memberships by 2030 (Kerxhaliu). As the
+77 million in 2024, with predictions estimating 85–90 million memberships by 2030 (@Kerxhaliu). As the
 number of gymgoers continues to rise, so does the portion of this population seeking feedback, whether
 through phone applications, personal trainers, or wearables. Currently, about 29% of gymgoers work
-with personal trainers (Kerxhaliu). However, the average hourly rate for a professional personal
-trainer ranges from $40 to $70 (Niepytalska), which can significantly increase the cost of
+with personal trainers (@Kerxhaliu). However, the average hourly rate for a professional personal
+trainer ranges from $40 to $70 (@Niepytalska2025), which can significantly increase the cost of
 maintaining a fitness routine. What if there were a way to provide this guidance in a simple,
 free iOS app on your phone?
 
@@ -25,7 +25,7 @@ their children’s soccer games or to the gym. This constant presence presents a
 Fitness guidance and feedback can be delivered directly to users' hands at any time and from anywhere.
 By leveraging this accessibility, an app can provide personalized, real-time feedback that would complete 
 something that hasn't neccesarily been completed. In 2024, fitness apps were downloaded a total of 850
-million times, yet only 345 million people actively used them (Curry). This gap highlights a clear
+million times, yet only 345 million people actively used them (@Curry2025). This gap highlights a clear
 opportunity for apps that not only attract users but also maintain engagement by delivering meaningful,
 easy-to-access insights. My iOS application aims to fill this gap, offering concise and actionable 
 workout guidance that keeps users motivated and informed without requiring additional cost or equipment.
