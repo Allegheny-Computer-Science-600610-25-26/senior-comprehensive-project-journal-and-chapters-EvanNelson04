@@ -297,7 +297,7 @@ important aspects most fitness apps include was important background information
 
 ### Variously and freely to use: Exploring routine and innovative use of fitness apps from a self-management perspective
 
-Moving forward from the previous article, I now think it is important to dive into the use of fitness apps. The
+This study (@Li2024) delves shows the importance of diving into the use of fitness apps. The
 article investigates how individuals use fitness applications by applying an "exploration–exploitation
 framework". Instead of treating the use of fitness apps as a simple active or inactive binary, the study identifies two 
 major usage patterns: routine use and innovative use. Routine use occurs when users habitually rely on the app
