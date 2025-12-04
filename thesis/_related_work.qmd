@@ -382,7 +382,7 @@ for long term engagement. I want users to use this app to help them through ever
 has users utilize the app for 1 month stints, but rather to use it for years of training. By learning and researching about user engagement
 through design, it helps me to understand what within an application can create long term engagement.
 
-*** The Role of Ease-of-Use and Habit Formation
+### The Role of Ease-of-Use and Habit Formation
 
 Research on fitness app usage highlights that users often stop using apps when tracking becomes inconvenient, repetitive, or overly manual. 
 Through the research in the article that talks about routine and innovative use of fitness apps {Li-Sun-Wang-Guo2024}, it is evident that it is 
@@ -402,7 +402,7 @@ We see this exemplified within some of the apps that I previously talked about.
 
 The apps demonstrate the same principles found in the literature: users stick with systems that minimize effort and streamline self-tracking.
 
-*** Visualization as the Bridge Between Data and Action
+### Visualization as the Bridge Between Data and Action
 
 The visualization review shows that how data is presented determines whether users can interpret trends, identify patterns, or make behavior 
 changes. The research stresses multi-time-scale charts, clear labeling, and actionable insights. When researching different fitness applications,
