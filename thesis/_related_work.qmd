@@ -275,7 +275,7 @@ rewards, or feedback. This aims to increase user motivation and adherence. Recen
 is implemented across commercial health and fitness apps and whether these design choices align with
 behavioral-science principles.
 
-One of the most influential analyses in this area is the study by Cotton and Patel (@Cotton&Patel2018), who evaluated the 50
+One of the most influential analyses in this area is the study by Cotton and Patel (@CottonPatel2018), who evaluated the 50
 most popular free health and fitness apps from the Apple App Store. Their findings showed that 64% of apps included
 at least one gamification feature. The most common elements were goal-setting (78%), social influence (78%),
 and challenges (63%). In contrast, classic game mechanics such as points (6%) and levels (3%) were rarely used.
@@ -355,8 +355,50 @@ of data they focused on (such as steps, sleep, or exercise), how these visualiza
 and what outcomes they aimed to support, like helping users gain insight, change behavior, or make health decisions. From these studies Kim derives an evaluation framework 
 that categorizes visualization utility across levels of actionability — from simple awareness/monitoring up to supporting concrete actions or 
 clinical decisions. The review also identifies recurring design challenges (cognitive overload, ambiguous units, inconsistent timescales) and 
-recommends evaluation best practices.
+recommends evaluation best practices. I really like this paper as it provides insights to how visualizations influence users' understanding, 
+motivation, and behavior when interacting with this data.
 
+In this article it really provides 2 different approaches for visualization. These 2 main categories are as follows:
+
+**Data Visualizations**
+
+ - Bar charts, line graphs, stacked bar charts
+ - Strong for trends, comparisons, and giving accurate numerical cues
+ - Most common in fitness apps because they're simple and mobile-friendly
+
+**Infographics**
+
+ - Icons, metaphors
+ - Useful for low-literacy users, quick meaning, emotional engagement
+ - Can boost motivation or interest
+
+   ---
+
+Within the fitness application industry, almost every app will utilize both of these approaches. To aid the user in their journey, you need to
+provide the user with charts and graphs. Line graphs being the simplist way to visualize data, to be able to see progress. We see many different
+types of graphs but all are used for the ssme goal, visualizing data. On the other side, a bar graph is utilized within the fitness industry for
+comparisons. For example, workouts per week or even steps per day.
+
+The next thing that this paper talks about that is important to recognize is how these visualizations influence the user behavior. This
+study identifies six levels of efficacy, that are split into cognitive (mental understanding) and physical (behavior action). These map directly
+
+**Cognitive Effects (Mindset)**
+
+ - Attract Interest: Visuals that are fun, colorful, or metaphorical make users open the app more
+ - Enhance Self-Awareness: Clear graphs help users to understand their health status
+ - Enhance Motivation & Self-Efficacy: Progress bars, streaks, or green/red colors influence confidence and motivation 
+ - Gain Insight: Trend analysis helps users connect behaviors (bad sleep = low steps next day)
+
+** Physical Effects
+
+ - Promote Behavioral Change: Seeing gaps or progress increases motivation 
+ - Promote Self-Care / Community Health: Tailored visualizations encourage sustained healthy habits
+
+   ---
+
+Through all of these effects because of the visualizations, the main goal is to improve the users' understanding of health data, which
+increases the engagement and leads to significant behavior change. Learning and understanding about all of this is important as visualizations
+are a key selling point for a fitness application. 
 
 ## Thematic Connections 
 
