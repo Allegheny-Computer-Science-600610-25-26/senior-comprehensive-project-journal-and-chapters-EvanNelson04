@@ -4,7 +4,7 @@ date: "2025-12-5"
 image: slides/AppImage.png
 ---
 
-<img src="AppImage.png" width="100%" height="500px" style="object-fit:contain;" />
+<img src="slides/AppImage.png" width="100%" height="500px" style="object-fit:contain;" />
 
 
 Regarding my computational artifact's current status, I am very happy with the work that has been completed up to this point. There have been a
@@ -21,7 +21,9 @@ app that provides the user with concise feedback is unheard of, so that is the p
 best and simplest way to give this to the user. By gathering the most important pieces of feedback, trend analysis, and a few other points, I have
 developed something that hasn't been included in fitness applications. Here is a base example of what that looks like right now.
 
-<img src="slides/evaluation.png" style="width:200px; height:auto;" />
+<div style="text-align:center;">
+  <img src="slides/evaluation.png" style="width:200px; height:auto;" />
+</div>
 
 As you can see, this consists of 2 major points: the graph and the feedback. The graph is currently still under development as I am working through
 data handling and compression as more and more data points are input by the user. This is how the user will be able to view their progress
