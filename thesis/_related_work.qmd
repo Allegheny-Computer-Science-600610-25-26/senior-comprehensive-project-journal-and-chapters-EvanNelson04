@@ -280,8 +280,6 @@ most popular free health and fitness apps from the Apple App Store. Their findin
 at least one gamification feature. The most common elements were goal-setting (78%), social influence (78%),
 and challenges (63%). In contrast, classic game mechanics such as points (6%) and levels (3%) were rarely used.
 Cotton and Patel argued that while gamification is widely present, the depth of behavioral-science integration remains limited.
-Notably, none of the evaluated apps used behavioral-economics-based strategies such as loss aversion, variable reinforcement,
-or probability distortion—mechanisms shown to influence habit formation and motivation in other domains.
 
 ![Results Table](images/Cotton_Patel.png)
 
