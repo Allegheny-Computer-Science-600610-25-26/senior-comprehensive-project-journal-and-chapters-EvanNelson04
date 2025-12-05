@@ -12,7 +12,7 @@ format:
 natbiboptions: numbers
 # EDIT AT YOUR OWN PERIL #
 
-title: WorkoutEvaluator - IOS app that provides personalized exercise feedback through user-inputted information
+title: WorkoutEvaluator - iOS app that provides personalized exercise feedback through user-inputted information
 
 
 firstreader: Gregory Kapfhammer 
