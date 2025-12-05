@@ -1,9 +1,28 @@
 ---
-title: "Sample feedback post"
-date: "2025-08-29"
+title: "Feedback Post"
+date: "2025-12-5"
 ---
 
 ![Image post thumbnail](thumbnail.jpg)
 
-This is a sample post in which students provide feedback on process or other prompts
-provided as part of class activities or assignments.
+I think this class has been organized in a very beneficial way for me and hopefully my colleagues if they feel the same way. All the work
+that I have completed up to this point has really been helped and driven through this class.
+
+One major point that I really enjoyed was the presenation pitch. I think about halfway through the semester we all presented to our professors
+and colleagues what we were developing. This provided us the ability to recieve questions from colleagues and professors which made sure 
+that I knew to a full extent what I was creating and had the ability to put this on display in front of my peers. The feedback that I recieved
+made me certain that I was on the right track for my comp and what I was developing. I recieved lots of good praises from my professors
+about what I was creating along with ideas and crticism that I was able to implement into my application. Without this presentation, I dont 
+think that I would have advanced my "elevator pitch" skills to be able to talk about my senior comprehensive project to anyone that is 
+curious about it. This was by far my favorite part of this class even though it was slightly nerve-racking.
+
+Another thing that I really enjoyed was all the peer reviews about our writing and computational artifact. Getting this outside feedback from
+colleagues that aren't always getting constant updates about my project is very important. Making sure that from my first chapter they can understand
+what my project is and what it aims to solve is important to me. I want anyone to read my paper and understand the problem and solution that
+I am working with each day. I was able to gain feedback from my first reader and advisor, along with feedback from my colleagues Benedek and
+Logan. This provided me with things I didn't see in my paper which helped me sound more professional and change certain things for the
+better.
+
+In conclusion I really have no bad feedback about the way this course was designed. I think it is tailored in a way that really focuses on us
+as the students to help us in our journey throughout this year. I personally wouldn't change anything or add anything within the class as I
+really have enjoyed everything we have completed.
