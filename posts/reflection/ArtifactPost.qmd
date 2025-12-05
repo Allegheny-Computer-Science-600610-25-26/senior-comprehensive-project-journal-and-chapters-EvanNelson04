@@ -25,7 +25,7 @@ app that provides the user with concise feedback is unheard of, so that is the p
 best and simplest way to give this to the user. By gathering the most important pieces of feedback, trend analysis, and a few other points, I have
 developed something that hasn't been included in fitness applications. Here is a base example of what that looks like right now.
 
-![Evaluation Tab View](slides/evaluation.png){width=200px height 400px}
+![Evaluation Tab View](slides/evaluation.png){width=200px height=auto}
 
 As you can see, this consists of 2 major points: the graph and the feedback. The graph is currently still under development as I am working through
 data handling and compression as more and more data points are input by the user. This is how the user will be able to view their progress
