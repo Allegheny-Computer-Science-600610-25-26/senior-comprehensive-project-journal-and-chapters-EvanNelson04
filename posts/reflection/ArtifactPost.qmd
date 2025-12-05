@@ -1,0 +1,35 @@
+---
+title: "Computational Artifact Reflection"
+date: "2025-12-5"
+image: slides/AppImage.png
+---
+
+<object 
+  data="slides/PresentationSlides.pdf" 
+  type="application/pdf" 
+  width="100%" 
+  height="500px">
+</object>
+
+Regarding my computational artifact's current status, I am very happy with the work that has been completed up to this point. There have been a
+lot of ups and downs, specifically regarding finalizing what I was going to develop as a product. I think for me, the research that I completed
+within the first few months really helped shape my vision of what I want to develop and how that process will go.
+
+Currently, my app contains at least a rough draft version of all the main selling points I want to include. This includes a user login and creation
+system, workout log, visuals, and evaluation to provide feedback to the user, an awards system to add gameification, a recommendation page, and a user
+profile to easily track workout personal records of bench, squat, and deadlift. Within these pages, there are definitely more things that I want
+to develop and add on, but I am really happy with the progress right now. 
+
+One of the main things I want to further develop is the evaluation portion of my application. This is the main piece of my artifact. Finding an
+app that provides the user with concise feedback is unheard of, so that is the problem that I aim to solve. To do this, I need to develop the 
+best and simplest way to give this to the user. By gathering the most important pieces of feedback, trend analysis, and a few other points, I have
+developed something that hasn't been included in fitness applications. Here is a base example of what that looks like right now.
+
+![Evaluation Tab View](slides/evaluation.png)
+
+As you can see, this consists of 2 major points: the graph and the feedback. The graph is currently still under development as I am working through
+data handling and compression as more and more data points are input by the user. This is how the user will be able to view their progress
+and understand what they can do better to continue to improve on their gym journey.
+
+In conclusion, I am very happy with the application's current state, but still feel excited about the work that is to come in the next few months
+of development.
