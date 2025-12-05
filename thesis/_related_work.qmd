@@ -281,8 +281,6 @@ at least one gamification feature. The most common elements were goal-setting (7
 and challenges (63%). In contrast, classic game mechanics such as points (6%) and levels (3%) were rarely used.
 Cotton and Patel argued that while gamification is widely present, the depth of behavioral-science integration remains limited.
 
-![Results Table](images/Cotton_Patel.png)
-
 Talking about the results and this experiment specifically, it delves into different mobile applications and
 what each app contains in terms of gameification. These categories include goals, high scores, streaks, collaborations,
 challenges, etc. It is important to note that not all of these apps within the study are fitness apps, but they contain
