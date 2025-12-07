@@ -87,7 +87,7 @@ to monitor progress over time. The app provides data visualization tools such as
 users evaluate their strength progression. Like the my project, Strong emphasizes user input rather than wearable
 data, focusing on the user’s engagement in tracking and reflecting on their workouts.
 
-![Strong App workout log — screenshot](images/strong.png) , Link: https://www.strong.app
+[![Strong App workout log — screenshot](images/strong.png)](https://www.strong.app)
 
 Strong has many strengths within their app. Their main focus comes within an engaging workout log feature. You can
 see within this image that it is very unique in the elements that the log contains. It allows the user to enter
@@ -124,7 +124,7 @@ The main focus within Fitbod is their ability to aid the users in their workout 
 user questions: What should I work out today? How long should I wait before working out my legs again? Has my muscle recovered
 long enough to work out that muscle group again?
 
-![Fitbod UI Picture - image](images/fitbod.png) , Link: https://fitnessdrum.com/fitbod-review/
+[![Fitbod UI Picture - image](images/fitbod.png)](https://fitnessdrum.com/fitbod-review/)
 
 Fitbods' major strength and focus is their ability to aid users in workout planning. One of the major concepts
 that this page includes is monitored recovery. After the user logs a workout, Fitbod records the exercises and assigns
@@ -172,7 +172,7 @@ This provides a highly organized workout experience that appeals to users who pr
 plan builds upon the workout planning from Fitbod. The workout planning style for JEFIT is different as it allows users to pick exercises
 to build and create their own workouts. 
 
-![Jefit App Image - image](images/jefit.png) , Link: https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.gymbird.com%2Ffitness-apps%2Fjefit-app-review&ved=0CBsQ3YkBahcKEwjwgo_akKyRAxUAAAAAHQAAAAAQBw&opi=89978449
+[![Jefit App Image - image](images/jefit.png)](https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.gymbird.com%2Ffitness-apps%2Fjefit-app-review&ved=0CBsQ3YkBahcKEwjwgo_akKyRAxUAAAAAHQAAAAAQBw&opi=89978449)
 
 Within this image it displays the ability to pick from a large group of different programs to aid the user in getting started. These different
 workouts have different target audiences. For example, one audience could be user's training to become a professional bodybuilder, or the user
@@ -240,7 +240,7 @@ exercise, and graphs for volume or personal records are only one tap away. Hevy 
 and the ability to attach notes to individual sets. This creates a fluid logging experience ideal for users who want efficiency without sacrificing
 detail.
 
-![Hevy application image](images/hevy.png) , Link: https://www.hevyapp.com/how-we-built-hevy/
+[![Hevy application image](images/hevy.png)](https://www.hevyapp.com/how-we-built-hevy/)
 
 Hevy’s biggest strength lies in its simplicity and usability. As you can see in the image, this app is much more simple within the design which helps users to understand
 how to use the application much better than a more complicated UI. The workout log is highly intuitive, allowing users to enter sets quickly, duplicate previous
