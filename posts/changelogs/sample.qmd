@@ -1,29 +1,30 @@
 ---
-date: "2025-08-29"
-"Thesis Version": 0.0.1
-"Artifact Version": 0.0.1
+date: "2025-12-7"
+"Thesis Version": 1.0.3
 ---
 
-## Thesis {{< meta "Thesis Version" >}}
+After about 2 months of writing, I was finally able to release a 1.0.0 version of my senior thesis. This process was completed
+through many hours of writing and researching. I am going to describe the processes I took for both chapters. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus lacus in lectus vehicula finibus. Donec nec tellus eu nisl aliquam porta a id sem. Phasellus a massa nulla. Mauris quis lectus ut arcu viverra convallis. Duis efficitur pellentesque placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris feugiat massa in ligula commodo, in posuere mi lacinia. Donec rutrum odio non pretium dignissim. Pellentesque felis elit, lobortis quis eros a, tempor fermentum sapien. Nunc volutpat dolor non lorem pharetra dictum. Nunc interdum pulvinar felis finibus rutrum.
+For the introduction chapter, this was mostly made up of how I wanted to pitch my project and how to explain it within the first
+chapter. The most important thing for me was coming up with and designing a full chapter outline that contained all of the 
+different sections and subsections that I needed to write. Outlining before what the main points that I needed to write about
+really helped me to think ahead to transitions in between sections as well as how to summarize the project without repeating
+myself. In my opinion, the main parts of my first chapter were motivation and ethical implications. I think the motivation
+part for me, specifically within my project, is something unique and important. Writing about this was relatively easy, but making
+sure that it had professional reasoning and explanation was the part that was more difficult. Finding a way to describe to the readers
+the feelings that I have while writing and developing is something that was important to me as well. The motivation for me is special
+because I am someone who could benefit from what I am creating, along with all the future users. This plays into the ethical considerations
+section as well. Ensuring that I write about and note all the important possible ethical implications is crucial. This was
+a very important section to write about correctly because it raises awareness about what I am developing and how the users should 
+utilize the application.
 
-### Changes
+For the second chapter, related works, this was a long process that isn't complete for me yet. To begin, I still think that I will constantly
+be discovering important studies or applications to include. As for now, the process for me was unique because I needed to research different
+fitness applications as well as papers. Researching applications was important for me to discover what was already out there. I had a very specific
+process that I tried to follow, researching an application that strengthens something that I aim to complete within my app. Meaning I want to
+find a fitness app whose selling point is something that I am in the process of developing. This would help me discover the most popular strategies
+or UI developments that I should include. By doing this, I could research every part of my application, which I think would help lead me to 
+success.
 
-* Ipsum'd a lorem
-* Determined the vehicula finibus
-* Aliquam porta a id senior sem
-* Tempus fugit semesterium
-* Tellem whatus we changeus
-
-## Artifact {{< meta "Artifact Version" >}}
-
-Nullam ultricies et justo in vehicula. Nulla vitae lectus vitae mauris mattis elementum nec a mi. In hac habitasse platea dictumst. Nunc pretium ultrices metus, id interdum lectus tincidunt in. Sed venenatis mauris nec ornare iaculis. Vestibulum eget nisl turpis. Integer viverra nunc ac nulla auctor bibendum. Fusce eget lectus quis mauris vehicula convallis. Curabitur imperdiet ac metus ac blandit. Aliquam congue faucibus tortor, vitae pretium elit auctor sit amet. Proin tincidunt posuere sagittis. Ut quis tellus orci. Quisque placerat rutrum augue, id pretium velit consectetur in. Maecenas ac porta eros, et lobortis magna. Integer sollicitudin eget ex vitae facilisis. Fusce pellentesque vel tellus sed pretium.
-
-### Changes
-
-* Changed null values to nullam
-* Nunc'd the premium ultrices menus
-* When vitae lectus, do as the Romans do
-* The bug clearly was in hac habitasse
-* If you see velit, let consectetur in
+The process for me was very fun and long; it took lots of editing and rewriting, but I think it turned out well.
