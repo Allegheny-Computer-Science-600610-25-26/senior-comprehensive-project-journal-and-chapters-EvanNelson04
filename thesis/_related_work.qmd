@@ -385,7 +385,7 @@ study identifies six levels of efficacy, that are split into cognitive (mental u
  - Enhance Motivation & Self-Efficacy: Progress bars, streaks, or green/red colors influence confidence and motivation 
  - Gain Insight: Trend analysis helps users connect behaviors (bad sleep = low steps next day)
 
-** Physical Effects
+** Physical Effects **
 
  - Promote Behavioral Change: Seeing gaps or progress increases motivation 
  - Promote Self-Care / Community Health: Tailored visualizations encourage sustained healthy habits
