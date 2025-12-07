@@ -287,13 +287,13 @@ challenges, etc. It is important to note that not all of these apps within the s
 many running, cycling, and weight loss apps. So to specify, apps within all realms of fitness lifestyle. 
 
 I think that this brief experimental study is a good introduction and overview of what is important to include
-within a fitness app. This study helped me to understand roughly what percentage of apps include certain aspects
+within a fitness app. Cotton and Patel helped me to understand roughly what percentage of apps include certain aspects
 of app development that my app includes. Knowing and recognizing that this is a very brief study to categorize what
 important aspects most fitness apps include was important background information for me to gather.
 
 ### Variously and freely to use: Exploring routine and innovative use of fitness apps from a self-management perspective
 
-This study (@Li2024) delves shows the importance of diving into the use of fitness apps. The
+This study (@Li2024)  delves shows the importance of diving into the use of fitness apps. The
 article investigates how individuals use fitness applications by applying an "exploration–exploitation
 framework". Instead of treating the use of fitness apps as a simple active or inactive binary, the study identifies two 
 major usage patterns: routine use and innovative use. Routine use occurs when users habitually rely on the app
@@ -305,7 +305,7 @@ and used user data to evaluate how these behaviors manifest over time. Their fin
 fluctuates, and users often shift between stable routines and more experimental patterns. The study highlights that user
 needs and motivations change dynamically, meaning effective fitness apps must adapt to different usage modes.
 
-This study is important because it goes beyond basic metrics like downloads or step counts and instead focuses on how people
+This paper by these authors ephasize it is important because it goes beyond basic metrics like downloads or step counts and instead focuses on how people
 actually use fitness apps over time. Its findings reveal several key insights:
 
  - **Fitness-app engagement is not linear.** Users rarely stick to the same behavior pattern. They often change between routine and exploratory use depending on motivation, goals, or life context.
