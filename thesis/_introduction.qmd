@@ -5,8 +5,8 @@
 This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
 the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
 with to improve their health and performance, yet many struggle to determine whether they are
-training effectively. Questions such as “Am I using the right form?” “How much weight should I lift?”
-"Is my progress on track?” often goes unanswered without a personal trainer or advanced tracking.
+training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”,
+"Is my progress on track?”, often goes unanswered without a personal trainer or advanced tracking.
 To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
 designed to guide.
 
@@ -109,7 +109,7 @@ tool that mimics the behavior of an actual iPhone or iPad on your computer, allo
 look and function without needing a physical device. However, the downside is that the app may look or behave differently
 on a real iPhone. Therefore, testing on a physical device was essential to ensure accurate appearance and functionality. 
 
-## Personal Motivation "Why Me? Why This Project?"
+## Personal Motivation: "Why Me? Why This Project?"
 
 This project aligns closely with my personal and academic interests in health technology and mobile app development.
 I have always loved video games, and as I got older, I became interested in understanding how they work behind the
