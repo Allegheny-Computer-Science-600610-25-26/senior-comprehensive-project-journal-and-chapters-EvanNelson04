@@ -174,8 +174,11 @@ This provides a highly organized workout experience that appeals to users who pr
 plan builds upon the workout planning from Fitbod. The workout planning style for JEFIT is different as it allows users to pick exercises
 to build and create their own workouts. 
 
-![Jefit App Screenshot](images/jefit.png)
-: **[Jefit App Review](https://www.gymbird.com/fitness-apps/jefit-app-review)** :
+::: {#fig-jefit .figure}
+![Jefit App Screenshot](images/jefit.png){width=300px}
+
+**Figure:** [Jefit App Review](https://www.gymbird.com/fitness-apps/jefit-app-review)
+:::
 
 
 Within this image it displays the ability to pick from a large group of different programs to aid the user in getting started. These different
