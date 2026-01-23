@@ -364,6 +364,7 @@ Being able to provide evidence that this app can run these queries without the t
 argument and point for my application. 
 
 This experiment, in conclusion, is well developed and aims to conduct a study in place for a human study. This
-AI-generated data allows me to experiment in a controlled environment where the defined variables are a strong point of this experiment.
+AI-generated data allows me to experiment in a controlled environment where the defined variables are a strong point 
+of this experiment.
 
 
