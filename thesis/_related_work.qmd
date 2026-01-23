@@ -88,7 +88,7 @@ users evaluate their strength progression. Like the my project, Strong emphasize
 data, focusing on the user’s engagement in tracking and reflecting on their workouts.
 
 ![Strong App Screenshot](images/strong.png)
-: **[Strong App](https://www.strong.app/)** :
+: **[Strong App](https://www.theverge.com/2017/5/23/15678588/strong-app-fitness)** :
 
 Strong has many strengths within their app. Their main focus comes within an engaging workout log feature. You can
 see within this image that it is very unique in the elements that the log contains. It allows the user to enter
