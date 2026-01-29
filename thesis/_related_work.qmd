@@ -467,6 +467,31 @@ These apps show how effective visualizations transform the user's data into insi
 drive understanding and action. This relates to the work within my application that I am creating. A unique visual that stands out within the fitness
 application industry, which solves the issue of simplicity.
 
+### A Systematic Review of Synthetic Data Generation Techniques Using Generative AI
+
+As my mobile application has a focus on data analysis for my experiment, it is of utmost importance that I look into different papers that
+talk about the standard process of data analysis and regarding the use of synthetically generated data. Understanding how to generate this
+data correctly, will validate my experiment and help it become more credible and professional.
+
+As an introduction to this article, this paper provides a comprehensive systematic review of research on how synthetic data is generated
+using generative AI techniques such as GANs (Generative Adversarial Networks), VAEs (Variational Autoencoders), and LLMs (Large Language 
+Models). This synthetic data is defined as data that retains the structure and patterns of real data without exposing sensitive or identifying
+details, making it useful in analytics, model training, and test environments. This study seemingly defines the foundational benchmark for
+understanding the state of synthetic data methods, which directly ties to my experiment.
+
+The motivation for synthetic data is something thats worth noting in both the professional field, and for my senior comprehensive project. Motivation
+for synthetic data generation in general stems from the growing demand for large, high-quality datasets and the limitations imposed by data privacy
+amd cost. This paper emphasizes that real-world datasets are often very difficult to obtain or share, particularly regarding the domains such as health
+care and finance. Generative AI offers a solution by enabling researchers and developers to generate artificial datasets that resemble real data 
+without directly exposing personal or confidential information. This context is especially relevant for experimental systems that rely on simulated
+or synthetic inputs to test performance and analyze robustness.
+
+This source is giving me a basline knowledge of how to correctly generate the synthetic data that I will be using for my experiment. It is important
+to make sure this part is done correctl and professionally so that the experiment doesn't have any holes in it. Fully grasping this concept will
+also help me to be able to fully document the process that I took to create my experiment.
+
+
+
 ## Summary
 
 The insights from three research areas of gamification, fitness app usage, and data visualization, combined with the practical lessons from 
