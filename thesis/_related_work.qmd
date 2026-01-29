@@ -486,9 +486,39 @@ care and finance. Generative AI offers a solution by enabling researchers and de
 without directly exposing personal or confidential information. This context is especially relevant for experimental systems that rely on simulated
 or synthetic inputs to test performance and analyze robustness.
 
-This source is giving me a basline knowledge of how to correctly generate the synthetic data that I will be using for my experiment. It is important
-to make sure this part is done correctl and professionally so that the experiment doesn't have any holes in it. Fully grasping this concept will
+This source provides a baseline knowledge of how to correctly generate the synthetic data that I will be using for my experiment. It is important
+to make sure this part is done correctly and professionally so that the experiment doesn't have any holes in it. Fully grasping this concept will
 also help me to be able to fully document the process that I took to create my experiment.
+
+### AutoEval Done Right: Using Synthetic Data for Model Evaluation
+
+This next source directly correlates to my experiment, specifically the evaluation portion. As my experiment is working with synthetic data, it
+is important that I understand how to evaluate the data and results, since it isn't human data. This article specifically addresses the challenge
+of how to reliably evaluate models when using synthetic data instead of real human data. The author shows that naïvely generated synthetic data
+could possibly introduce bias and misleading results. 
+
+To solve this, the paper proposes a statistically principled evaluation framework that separates data generation from evaluation and introduces
+methods to reduce bias and variance in synthetic benchmarks. The study demonstrates that, when designed correctly, synthetic data can be used 
+as a valid substitute for real evaluation datasets, producing results that closely align with real-world model performance. The authors validate 
+their approach through controlled experiments comparing synthetic and real evaluation outcomes.
+
+My project involves feeding this synthetic data into a mobile application and analyzing the results, specifically load time, graph behavior, graph
+compression, and more. This paper provides recent evidence that synthetic data can be used to evaluate these types of systems, as long as the evaluation
+is done carefully. Knowing this, this goes to strengthen my methodology and approach to gathering data about my application. This also protects my experiment
+from criticism around the use of synthetic data instead of human data.
+
+Moving forward with supporting my evaluation design, AutoEval emphasizes three main things...
+
+- Comparing outcomes from synthetic vs. real-data pipelines
+- Measuring consistency of results, not just raw accuracy
+- Using task-based evaluation rather than surface similarity
+
+---
+
+These three things are important for me to point out because they align very well with my app. Specifically talking about load time consistency,
+graph behavior, and performance under controlled synthetic inputs. This will help me to conclude that if my app behaves similarly under synthetic
+data, the synthetic data is valid for testing.
+
 
 
 
