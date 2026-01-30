@@ -519,6 +519,36 @@ These three things are important for me to point out because they align very wel
 graph behavior, and performance under controlled synthetic inputs. This will help me to conclude that if my app behaves similarly under synthetic
 data, the synthetic data is valid for testing.
 
+### Synthetic Data Generation for Screen Time and App Usage
+
+Recent advances in generative artificial intelligence have expanded the feasibility of using synthetic data in application-level research, 
+particularly in contexts where real user data is limited by privacy, cost, or availability. Synthetic Data Generation for Screen Time and App 
+Usage contributes to this emerging area by investigating how large language models can generate realistic smartphone 
+usage datasets that mimic real screen time and app interaction patterns. Unlike broader surveys of synthetic data generation, this work focuses 
+specifically on mobile usage behavior, positioning it as a practical case study rather than a purely theoretical exploration. This makes the 
+paper especially relevant to mobile application research, where user-generated data is central to both functionality and evaluation.
+
+The study proposes a structured methodology for generating synthetic app usage data using multiple prompt strategies and evaluates the 
+resulting datasets along structural and behavioral dimensions. Structural evaluation examines whether the generated data conforms to expected 
+formats and schemas, while behavioral evaluation assesses realism through metrics such as session duration distributions, daily usage cycles, 
+and app diversity. By separating data generation from evaluation, the paper aligns closely with recent work such as AutoEval Done Right (@Boyeau2025), 
+which emphasizes bias-aware and task-based evaluation of synthetic data. Together, these studies reinforce the importance of evaluating synthetic 
+data not solely by surface similarity, but by how well it supports meaningful downstream analysis.
+
+This paper is particularly important for this project because it demonstrates a concrete standard for supplying mobile systems with synthetic 
+data in an experimental setting. Whereas systematic reviews of generative AI-based synthetic data provide high-level high-level classification frameworks of methods, 
+Synthetic Data Generation for Screen Time and App Usage offers an applied example of how synthetic data can be constructed, validated, and then 
+used as a substitute for real mobile usage logs. This directly supports the methodological validity of providing a mobile application with 
+AI-generated data to evaluate performance characteristics, such as responsiveness, loading time, and visualization changes or bugs.
+
+In the context of this senior comprehensive project, this source bridges the gap between synthetic data theory and mobile app experimentation. 
+When combined with recent evaluation-focused work on synthetic data validity and standardized approaches to data analysis, it strengthens the 
+overall experimental pipeline that generative AI produces the data, established evaluation frameworks assess its quality, and standardized analytical 
+methods interpret application performance outcomes. By situating the project within this growing body of applied research, the study supports 
+the claim that synthetic data can be responsibly and rigorously used to test mobile and fitness-related applications under controlled and 
+reproducible conditions.
+
+
 
 
 
