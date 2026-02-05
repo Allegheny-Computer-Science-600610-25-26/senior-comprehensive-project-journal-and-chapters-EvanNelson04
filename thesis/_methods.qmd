@@ -1,18 +1,28 @@
 # Method of approach
 
-This chapter answers the "how" question - how did you complete your project,
-including the overall design of your study, details of the algorithms and tools you
-have used, etc.  Use technical diagrams, equations, algorithms, and paragraphs of text
-to describe the research that you have completed. Be sure to number all figures and
-tables and to explicitly refer to them in your text.
+## Overview of WorkoutTracker
 
-This should contain:
+WorkoutTracker is a dynamic fitness app designed to help users log, monitor, analyze, and receive evaluations on their workouts in a seamless 
+and visually engaging way. Beyond simply recording exercises, the app provides charts, trend analysis, and personalized evaluations, 
+allowing users to track progress, identify patterns, and receive actionable insights on strength, endurance, and fatigue. Its architecture 
+emphasizes a single source of truth for workout data, ensuring that every logged session automatically updates history views, progress 
+visualizations, and predictive assessments in real time. The intuitive interface and integrated analytics make it a tool not just for 
+tracking workouts, but for optimizing training and staying motivated over the long term.
 
-* lists
-* with points
-* and more points
-  * possibly subpoints
+The purpose of WorkoutTracker is to provide users with free and accessible tools to track and evaluate their workouts, helping them 
+improve over time. While fitness can often feel complicated, this app simplifies progress tracking, emphasizing that real growth comes 
+from commitment, consistency, and determination. Providing the mobile fitness world with this application will finally solve the problem
+of receiving free and concise feedback and analysis to benefit the user. 
 
-For those projects whose implications address social or moral issues (i.e. ethical
-standards, causes, effects), you will want to use this section to describe how you
-actively mitigated or considered these issues.
+WorkoutTracker is designed for fitness enthusiasts of all levels, from beginners who want to establish consistent workout habits to advanced 
+athletes aiming to monitor performance trends and optimize training. Its intuitive interface and automated tracking features make it accessible 
+to anyone, regardless of prior experience with fitness apps. Users can log individual exercises, track weight and repetitions, monitor heart 
+rate, and view historical progress, enabling them to make data-driven decisions about their training routine. Whether the goal is building 
+strength, improving endurance, or maintaining overall fitness, the app supports consistent tracking and evaluation over time.
+
+## System Architecture
+
+![App Overview Image](images/Overview.png)
+
+
+
