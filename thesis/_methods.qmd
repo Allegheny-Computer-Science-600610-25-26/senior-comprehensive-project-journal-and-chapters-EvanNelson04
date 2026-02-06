@@ -120,6 +120,11 @@ than continuously running.
 7    heartRate: Double(heartRate)
 8  )
 ```
+\begin{figure}[h!]
+\centering
+\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\label{fig:workoutcard}
+\end{figure}
 
 This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
 a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
@@ -147,6 +152,11 @@ example if the developer was looking to collect all of the exercises that are wo
 4    }
 5  }
 ```
+\begin{figure}[h!]
+\centering
+\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\label{fig:workoutcard}
+\end{figure}
 
 Within this code snippet, you can see that it is parsing through every entry within the list and looking for the targetMuscle, which would
 have been initialized before the loop. If the targetMuscle was declared as "legs," then the matchingExercises list would solely contain
@@ -185,6 +195,11 @@ is displaying the list of entries in a neat and easily readable output. There ar
 19    }
 20  }
 ```
+\begin{figure}[h!]
+\centering
+\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\label{fig:workoutcard}
+\end{figure}
 
 
 This SwiftUI code defines the user interface for a "Workout History" screen. The main view is a NavigationView containing a ZStack, which 
@@ -202,9 +217,6 @@ clearly shows the title of the screen. Overall, this layout combines style and f
 
 The next part that is important for this page 
 
-\begin{figure}[h!]
-\centering
-\begin{lstlisting}
 ```swift
 VStack(alignment: .leading, spacing: 6) {
   HStack {
@@ -230,7 +242,8 @@ VStack(alignment: .leading, spacing: 6) {
   }
 }
 ```
-\end{lstlisting}
+\begin{figure}[h!]
+\centering
 \caption{Layout of a single workout entry in the `WorkoutCard` view.}
 \label{fig:workoutcard}
 \end{figure}
