@@ -120,7 +120,7 @@ let entry = WorkoutEntry(
   heartRate: Double(heartRate)
         )
 ```
-![Workout Entry]
+![Workout Entry]()
 
 This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
 a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
