@@ -111,16 +111,15 @@ is critical when working in app development. This also aligns with modern mobile
 than continuously running.
 
 ```swift
-let entry = WorkoutEntry(
-  date: Date(),
-  muscleGroup: cleanMuscleGroup,
-  exercise: cleanExercise,
-  weight: Double(weight) ?? 0,
-  reps: Int(reps) ?? 0,
-  heartRate: Double(heartRate)
-        )
+1  let entry = WorkoutEntry(
+2    date: Date(),
+3    muscleGroup: cleanMuscleGroup,
+4    exercise: cleanExercise,
+5    weight: Double(weight) ?? 0,
+6    reps: Int(reps) ?? 0,
+7    heartRate: Double(heartRate)
+8  )
 ```
-![Workout Entry]()
 
 This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
 a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
@@ -142,11 +141,11 @@ visualization. It only requires a for each loop to then parse through the list a
 example if the developer was looking to collect all of the exercises that are working out a specific muscle group it would look like this. 
 
 ```swift
-workoutData.entries.forEach { entry in
-    if entry.muscleGroup == targetMuscle {
-        matchingExercises.append(entry)
-    }
-}
+1  workoutData.entries.forEach { entry in
+2    if entry.muscleGroup == targetMuscle {
+3       matchingExercises.append(entry)
+4    }
+5  }
 ```
 
 Within this code snippet, you can see that it is parsing through every entry within the list and looking for the targetMuscle, which would
@@ -156,8 +155,80 @@ example. First, what are you parsing through in this case, specifically, the nam
 each loop to do once it gets to a data input, in this case, looking for a specific muscle group, and then finally appending the data only if
 it matches the desired muscle group.
 
-Moving forward in the flow chart we can see that this list WorkoutData.entries, fuels the rest of the processes. 
+Moving forward in the flow chart, we can see that this list WorkoutData.entries, fuels the rest of the processes. There are three different 
+pages that take data from this list: History, Progress (charts and evaluation), and Profile. All of these different sections of WorkoutTracker
+actively us different queries to update data. 
 
+WorkoutListView (history) is the page where the user is able to view a log of all the workouts they have entered into the app. Within this page
+users have the ability to delete specific entries if they mis-entered information or wish to remove an entry. All that this page is doing 
+is displaying the list of entries in a neat and easily readable output. There are two important code parts that go into this page. 
+
+```swift
+1  var body: some View {
+2    NavigationView {
+3      ZStack {
+4        // Full screen gradient
+5        AppColors.gradient
+6          .ignoresSafeArea()
+7        List {
+8          ForEach(workoutData.entries) { entry in
+9            WorkoutCard(entry: entry)
+10              .listRowBackground(Color.clear) // make row background transparent
+11              .listRowSeparator(.hidden)      // hide default separator
+12          }
+13          .onDelete(perform: workoutData.delete)
+14        }
+15        .listStyle(PlainListStyle()) // remove extra padding & default style
+16      }
+17      .navigationTitle("Workout History")
+18      .navigationBarTitleDisplayMode(.inline)
+19    }
+20  }
+```
+
+
+This SwiftUI code defines the user interface for a "Workout History" screen. The main view is a NavigationView containing a ZStack, which 
+allows layering of elements. At the back of the stack, a full-screen gradient defined by AppColors.gradient is displayed and extended to 
+cover the safe area using .ignoresSafeArea(). On top of this gradient, a List presents all workout entries stored in workoutData.entries 
+using ForEach, where each entry is represented by a custom WorkoutCard view. Each list row is customized to have a transparent background 
+(.listRowBackground(Color.clear)) and no default separator (.listRowSeparator(.hidden)), giving it a clean, card-like appearance. Users can 
+also delete entries with swipe actions via .onDelete(perform:). The list uses PlainListStyle() to remove extra padding and the default list 
+styling, and the navigation bar is set with the title "Workout History," displayed inline for a compact appearance.
+
+This view shows a user-friendly “Workout History” screen where each workout is displayed as a card. The colorful gradient in the background 
+makes the screen visually appealing, while the list of workouts scrolls on top of it. Each card is easy to read because the rows are 
+transparent and have no separators, giving a clean, modern look. Users can also swipe to delete workouts, and the navigation bar at the top 
+clearly shows the title of the screen. Overall, this layout combines style and functionality in a simple, organized way.
+
+The next part that is important for this page 
+
+```swift
+1  VStack(alignment: .leading, spacing: 6) {
+2    HStack {
+3      Text(entry.exercise)
+4        .font(.headline)
+5        .foregroundColor(.white)
+6      Spacer()
+7      Text("\(Int(entry.weight)) lbs x \(entry.reps)")
+8        .font(.subheadline)
+9        .foregroundColor(.white.opacity(0.9))
+10    }    
+11                       
+12    HStack(spacing: 12) {
+13      if let hr = entry.heartRate {
+14        Label("\(Int(hr)) bpm", systemImage: "heart.fill")
+15          .font(.caption)
+16          .foregroundColor(hr > 140 ? .red : .green)
+17      }
+18                        
+19      Label(entry.date.formatted(.dateTime.month().day().year()), systemImage: "calendar")
+20        .font(.caption)
+21        .foregroundColor(.white.opacity(0.8))
+22    }
+23  }
+```
+
+ 
 
 
 
