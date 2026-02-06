@@ -218,29 +218,30 @@ clearly shows the title of the screen. Overall, this layout combines style and f
 The next part that is important for this page 
 
 ```swift
-VStack(alignment: .leading, spacing: 6) {
-  HStack {
-      Text(entry.exercise)
-        .font(.headline)
-        .foregroundColor(.white)
-      Spacer()
-      Text("\(Int(entry.weight)) lbs x \(entry.reps)")
-        .font(.subheadline)
-        .foregroundColor(.white.opacity(0.9))
-  }
-  
-  HStack(spacing: 12) {
-    if let hr = entry.heartRate {
-      Label("\(Int(hr)) bpm", systemImage: "heart.fill")
-        .font(.caption)
-        .foregroundColor(hr > 140 ? .red : .green)
-      }
-      
-      Label(entry.date.formatted(.dateTime.month().day().year()), systemImage: "calendar")
-        .font(.caption)
-        .foregroundColor(.white.opacity(0.8))
-  }
-}
+1  VStack(alignment: .leading, spacing: 6) {
+2      HStack {
+3          Text(entry.exercise)
+4              .font(.headline)
+5              .foregroundColor(.white)
+6          Spacer()
+7          Text("\(Int(entry.weight)) lbs x \(entry.reps)")
+8              .font(.subheadline)
+9              .foregroundColor(.white.opacity(0.9))
+10     }
+11     
+12     HStack(spacing: 12) {
+13         if let hr = entry.heartRate {
+14             Label("\(Int(hr)) bpm", systemImage: "heart.fill")
+15                 .font(.caption)
+16                 .foregroundColor(hr > 140 ? .red : .green)
+17         }
+18         
+19         Label(entry.date.formatted(.dateTime.month().day().year()), 
+20           systemImage: "calendar")
+21             .font(.caption)
+22             .foregroundColor(.white.opacity(0.8))
+23     }
+24 }
 ```
 \begin{figure}[h!]
 \centering
