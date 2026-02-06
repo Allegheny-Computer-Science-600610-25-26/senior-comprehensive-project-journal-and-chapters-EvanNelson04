@@ -110,7 +110,7 @@ This design was carefully developed to ensure efficient resource usage, avoiding
 is critical when working in app development. This also aligns with modern mobile app development standards, where data processing is reactive rather
 than continuously running.
 
-```{swift}
+```swift
 1  let entry = WorkoutEntry(
 2    date: Date(),
 3    muscleGroup: cleanMuscleGroup,
@@ -145,7 +145,7 @@ By appending each incoming input to the same list in the same structure, it enab
 visualization. It only requires a for each loop to then parse through the list and check for any specific detail the developer wants. For 
 example if the developer was looking to collect all of the exercises that are working out a specific muscle group it would look like this. 
 
-```{swift}
+```swift
 1  workoutData.entries.forEach { entry in
 2    if entry.muscleGroup == targetMuscle {
 3       matchingExercises.append(entry)
@@ -173,7 +173,7 @@ WorkoutListView (history) is the page where the user is able to view a log of al
 users have the ability to delete specific entries if they mis-entered information or wish to remove an entry. All that this page is doing 
 is displaying the list of entries in a neat and easily readable output. There are two important code parts that go into this page. 
 
-```{swift}
+```swift
 1  var body: some View {
 2    NavigationView {
 3      ZStack {
@@ -217,7 +217,7 @@ clearly shows the title of the screen. Overall, this layout combines style and f
 
 The next part that is important for this page 
 
-```{swift}
+```swift
 VStack(alignment: .leading, spacing: 6) {
   HStack {
       Text(entry.exercise)
