@@ -202,8 +202,9 @@ clearly shows the title of the screen. Overall, this layout combines style and f
 
 The next part that is important for this page 
 
-```swift
-1  VStack(alignment: .leading, spacing: 6) {
+\begin{figure}[h!]
+\centering
+\begin{lstlisting}1  VStack(alignment: .leading, spacing: 6) {
 2    HStack {
 3      Text(entry.exercise)
 4        .font(.headline)
@@ -226,7 +227,10 @@ The next part that is important for this page
 21        .foregroundColor(.white.opacity(0.8))
 22    }
 23  }
-```
+\end{lstlisting}
+\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\label{fig:workoutcard}
+\end{figure}
 
 This SwiftUI code defines the layout of a single workout entry in a vertical stack (VStack) with a small spacing of 6 points between its 
 elements, aligned to the leading edge. The first horizontal stack (HStack) displays the exercise name on the left in a bold headline font 
@@ -236,6 +240,13 @@ additional details: if the workout entry includes a heart rate, it displays it w
 rate is above 140 bpm and green otherwise. Next to that, a calendar icon with the formatted workout date is displayed, also in a caption font
 and semi-transparent white. Overall, this layout creates a clean, organized card showing both the main workout information and supplemental 
 details like heart rate and date.
+
+The first code snippet defines the overall screen layout, using a NavigationView with a scrollable List that displays all workout entries, 
+while the second snippet defines what each individual entry looks like inside that list as a WorkoutCard. Essentially, the List in the first 
+snippet loops over all workoutData.entries and places a WorkoutCard for each one, creating a full workout history view. The WorkoutCard layout, 
+shown in the second snippet, organizes the exercise name, weight, reps, heart rate, and date in a clean, readable format using vertical and 
+horizontal stacks. Together, the two snippets work in tandem: the first handles the overall structure, scrolling, and navigation, and the 
+second handles the content and styling of each row, resulting in a cohesive, visually appealing workout history screen.
 
  
 
