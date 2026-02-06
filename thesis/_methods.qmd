@@ -24,5 +24,113 @@ strength, improving endurance, or maintaining overall fitness, the app supports 
 
 ![App Overview Image](images/Overview.png)
 
+The overall architecture of WorkoutTracker is designed to provide a seamless, reactive experience for users while maintaining a simple design.
+As seen in the flowchart above, there are many moving pieces within this application that are important to note and explain. Many of these
+pages communicate together and work together to produce one functioning application. Explaining the Xcode platform and the Swift language will be
+completed first, after that there are 6 different pages that will be explained: History, Progress, Awards, Suggestions, Add, and Profile. 
+
+### Xcode 
+
+Xcode is Apple’s integrated development environment (IDE) for building applications across its platforms, including iOS, iPadOS, macOS and watchOS. 
+It provides developers with a complete toolkit, including a code editor, interface builder, simulator, debugging tools, and project management, 
+all in one environment. For a mobile app like WorkoutTracker, Xcode allows for rapid development and testing, letting developers design 
+interactive interfaces visually while simultaneously writing and compiling Swift code. It allows users to utilize themselves as a prototype tester
+for their app by providing the users with 2 choices. Test the app on provided simulators of chosen platform (iOS, watchOS, etc...), or est the app 
+on their own device 
+
+While Xcode provides simulators for iOS, watchOS, and other Apple platforms, testing on a live device offers a more accurate understanding of 
+how the app performs in real-world conditions. Simulators are helpful for quickly checking layouts and basic functionality, but they cannot 
+fully replicate device-specific behaviors such as actual touch responsiveness, performance under load, battery usage, or integration with 
+hardware features such as local user creation.
+
+To test WorkoutTracker on a live device, the following steps were taken:
+
+1. Device Preparation: The iPhone was connected via USB to the development computer. The device was trusted and registered with Xcode.
+2. Provisioning and Signing: A free or paid Apple Developer account was used to set up a provisioning profile and code signing for the device.
+3. Selecting the Device in Xcode: In Xcode, the target device was selected from the run destination menu instead of the simulator.
+4. Building and Running: The app was built and deployed directly to the device using Xcode’s Run command.
+5. Live Testing: The app was interacted with on the device to verify UI responsiveness, chart updates, data entry, and performance in real usage scenarios.
+
+By completing these steps, this allowed my mobile phone to have a running version of my current computational artifact during development. Which
+enabled testing of many aspects of the app that were previously mentioned. There are many additional key features of Xcode that are worth hightlighting.
+
+Xcode is very tightly intergrated with swift, Apple's primary programming language. It provides realt-time syntax highlighting, error 
+detection, and compile-time checks, allowing developers to identify and correct issues early in the development process. This tight integration 
+improves code reliability and reduces debugging time.
+
+Xcode includes advanced debugging tools such as breakpoints, variable inspection, and console logging. Additionally, Instruments allows 
+developers to profile CPU usage, memory consumption, and energy impact. These tools are especially important for a fitness app like 
+WorkoutTracker, where performance efficiency and battery usage are critical during prolonged use.
+
+Xcode’s Interface Builder and SwiftUI Previews allow developers to visually design user interfaces and immediately see changes reflected in 
+real time. This significantly speeds up UI iteration and ensures layouts adapt properly across different screen sizes and device types.
+
+Xcode has built-in Git support, allowing developers to track changes, manage branches, and revert to previous versions directly within the 
+IDE. This is essential for maintaining code stability as features are added or modified throughout development. Haing built-in GIT support was
+crucial for this project. It allows continuous work saving within a repository that can be tracked and viewed by my colleagues and professors.
+
+Xcode manages the full application lifecycle—from development and testing to archiving and preparing the app for distribution via 
+TestFlight or the App Store. This makes it a centralized tool not only for development but also for deployment and maintenance.
+
+Xcode provides detailed build logs and warnings that help developers understand compilation errors and runtime issues. This feedback is 
+crucial for debugging logic errors and ensuring the app meets Apple’s platform requirements. Overall, Xcode serves as a comprehensive 
+development environment that supports the entire workflow of the WorkoutTracker app, from initial design and coding to real-device testing, 
+performance optimization, and eventual deployment.
+
+### User Authentication
+
+### Add Workout 
+
+### Workout Log
+
+### Progress / Evaluation 
+
+### Profile
+
+### Awards 
+
+### Suggestions
+
+## Data Flow and Processing Pipeline
+
+This section introduces the data flow and processing pipeline used in the WorkoutTracker application. It explains how user-entered workout 
+data moves through the system, from initial input to final output, and how each stage contributes to the app’s overall functionality. Rather 
+than focusing solely on individual code segments, this section emphasizes the logical flow of data and the design decisions behind it, 
+supported by a flowchart and selected code examples. This approach provides a clear understanding of how raw workout data is transformed into 
+meaningful metrics, summaries, and visualizations presented to the user.
+
+![Data Pipeline Flowchart](images/DataFlow.png)
+
+Let's start with how the data gets inputted from the user. As seen in the flowchart, the user-inputted data starts all the following processes.
+In WorkoutTracker, data querying does not run continuously. This means that everything becomes powered and runs when the user presses the save
+button which finalizes the data they are inputting. This folows what is called an event-driven model, where queries are triggered only when
+specific events occur, in this case being when the user logs a workout. Other cases within this app are when the user navigates to the progress
+page to view visualizations. When no new data is being entered or requested, the querying logic becomes idle, consuming no processing resources. 
+This design was carefully developed to ensure efficient resource usage, avoiding unnecessary computation, and improves battery performance which
+is critical when working in app development. This also aligns with modern mobile app development standards, where data processing is reactive rather
+than continuously running.
+
+```swift
+let entry = WorkoutEntry(
+  date: Date(),
+  muscleGroup: cleanMuscleGroup,
+  exercise: cleanExercise,
+  weight: Double(weight) ?? 0,
+  reps: Int(reps) ?? 0,
+  heartRate: Double(heartRate)
+        )
+```
+
+This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
+a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
+when it comes to looping through the data to find specific inputs. Each input is made up of six parts with one of them being optional, date, muscle
+group, exercise, weight, reps, and the optional choice to input heart-rate
+
+
+
+
+
+
+
 
 
