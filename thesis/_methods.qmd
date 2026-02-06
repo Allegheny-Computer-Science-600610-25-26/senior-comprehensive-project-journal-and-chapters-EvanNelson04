@@ -120,11 +120,43 @@ let entry = WorkoutEntry(
   heartRate: Double(heartRate)
         )
 ```
+![Workout Entry]
 
 This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
 a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
 when it comes to looping through the data to find specific inputs. Each input is made up of six parts with one of them being optional, date, muscle
-group, exercise, weight, reps, and the optional choice to input heart-rate
+group, exercise, weight, reps, and the optional choice to input heart-rate. Every time an input is recieved, it is then transformed into this
+structure and then finally appended to list "Data.entries"
+
+This list as seen in the flowchart is the color teal. This list contains all of the data inputs that the user has ever provided the app. So as
+the user continues to add hundreds of inputs the list continues to get larger. WorkoutData.entries is an in-memory data structure rather than a 
+JSON object. It is implemented as a Swift array containing strongly typed workout entry models, such as structs that represent individual 
+workout records. This array exists only while the application is running and is used by the app’s logic and user interface to query, process, 
+and display workout information efficiently. JSON is involved only when this data needs to be persisted or loaded; in that case, the Swift 
+objects stored in WorkoutData.entries are serialized into a JSON file for local storage and later deserialized back into Swift objects when 
+the app is relaunched. This separation between runtime data structures and storage format ensures type safety, efficient processing, and clean 
+state management within the application. 
+
+By appending each incoming input to the same list in the same structure, it enables much easier coding when it comes to PR querying, or data
+visualization. It only requires a for each loop to then parse through the list and check for any specific detail the developer wants. For 
+example if the developer was looking to collect all of the exercises that are working out a specific muscle group it would look like this. 
+
+```swift
+workoutData.entries.forEach { entry in
+    if entry.muscleGroup == targetMuscle {
+        matchingExercises.append(entry)
+    }
+}
+```
+
+Within this code snippet, you can see that it is parsing through every entry within the list and looking for the targetMuscle, which would
+have been initialized before the loop. If the targetMuscle was declared as "legs," then the matchingExercises list would solely contain
+all the exercises that have muscleGroup as legs. Swift makes for each loop very simple by only requiring three things for this specific 
+example. First, what are you parsing through in this case, specifically, the name of the list. Secondly, you need to specify what you want the for
+each loop to do once it gets to a data input, in this case, looking for a specific muscle group, and then finally appending the data only if
+it matches the desired muscle group.
+
+Moving forward in the flow chart we can see that this list WorkoutData.entries, fuels the rest of the processes. 
 
 
 
