@@ -228,6 +228,15 @@ The next part that is important for this page
 23  }
 ```
 
+This SwiftUI code defines the layout of a single workout entry in a vertical stack (VStack) with a small spacing of 6 points between its 
+elements, aligned to the leading edge. The first horizontal stack (HStack) displays the exercise name on the left in a bold headline font 
+with white text, and on the right, it shows the weight lifted and the number of repetitions in a slightly smaller, semi-transparent white 
+font. A Spacer() between them pushes the two pieces of text to opposite sides. Below that, a second HStack with a spacing of 12 points shows 
+additional details: if the workout entry includes a heart rate, it displays it with a heart icon in a caption font, coloring it red if the 
+rate is above 140 bpm and green otherwise. Next to that, a calendar icon with the formatted workout date is displayed, also in a caption font
+and semi-transparent white. Overall, this layout creates a clean, organized card showing both the main workout information and supplemental 
+details like heart rate and date.
+
  
 
 
