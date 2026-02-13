@@ -130,7 +130,7 @@ This code structures every data input that app recieves from the user. As you ca
 a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
 when it comes to looping through the data to find specific inputs. Each input is made up of six parts with one of them being optional, date, muscle
 group, exercise, weight, reps, and the optional choice to input heart-rate. Every time an input is recieved, it is then transformed into this
-structure and then finally appended to list "Data.entries"
+structure and then finally appended to list "Data.entries". 
 
 This list as seen in the flowchart is the color teal. This list contains all of the data inputs that the user has ever provided the app. So as
 the user continues to add hundreds of inputs the list continues to get larger. WorkoutData.entries is an in-memory data structure rather than a 
@@ -215,8 +215,6 @@ makes the screen visually appealing, while the list of workouts scrolls on top o
 transparent and have no separators, giving a clean, modern look. Users can also swipe to delete workouts, and the navigation bar at the top 
 clearly shows the title of the screen. Overall, this layout combines style and functionality in a simple, organized way.
 
-The next part that is important for this page 
-
 ```swift
 1  VStack(alignment: .leading, spacing: 6) {
 2      HStack {
@@ -263,12 +261,66 @@ while the second snippet defines what each individual entry looks like inside th
 snippet loops over all workoutData.entries and places a WorkoutCard for each one, creating a full workout history view. The WorkoutCard layout, 
 shown in the second snippet, organizes the exercise name, weight, reps, heart rate, and date in a clean, readable format using vertical and 
 horizontal stacks. Together, the two snippets work in tandem: the first handles the overall structure, scrolling, and navigation, and the 
-second handles the content and styling of each row, resulting in a cohesive, visually appealing workout history screen.
+second handles the content and styling of each row, resulting in a cohesive, visually appealing workout history screen. 
 
+Moving forward from the history page, the ProgressView file is really what this moile application is specifically focused on. This page
+produces the evaluation and visuals for the user to read. All of the algorithms within this file all start when a user enters in data. This 
+is important to once again note that when the user enters in data it is exactly like a car starting its engine. It provides power to the screen 
+display, activates the underlying logic of the program, and triggers the sequence of operations that follow. Without that initial input, the 
+system remains idle, waiting for instruction. Once the data is entered, the algorithms process it step by step, transforming raw input into 
+meaningful output that is then presented back to the user. In this way, user input serves as the driving force that moves the entire program forward.
+
+```swift
+func entries(for exercise: String) -> [WorkoutEntry] {
+        workoutData.entries
+            .filter { $0.exercise == exercise }
+            .sorted { $0.date < $1.date }
+    }
+```
+\begin{figure}[h!]
+\centering
+\caption{Graph Visualization Query.}
+\label{fig:workoutcard}
+\end{figure}
+
+Regarding the visual portion, the most important thing was to create a visual for each separate exercise that the user enters. When the user navigates
+to the progress tab, they are prompted to first select the exercise that they would like to view the visual and evaluation for. Once the user selects this
+exercise, for example, bench press, the app will then select from the list of workoutData.entries all the pieces of data that are entered for that selected
+exercise. As you can see, within this code, the program utilizes a simple but efficient for loop. This for loop will parse through the list of entries and select
+only the ones for the specified exercise. This allows the program to effectively display all of the data for the specified exercise.
+
+In other functions, the progress tab will also retrieve information such as weight, repetitions, and date for the specific data piece to add it to the graph. The 
+graph powers the user with the ability to visualize trends within their exercise history and receive feedback on why that might be happening. The data
+is then also used by the evaluation portion of this file. Many different algorithms are used to calculate trends within the user's data, provide feedback on
+whether their muscles may be fatigued, and much more essential knowledge. The program completes this by initializing multiple variables up front, like momentum and
+latestEntry that are then used to calculate different feedback, like fatigue and volume. These variables are all grabbing the data from the list of workout entries,
+so once new data is entered, these variables may change to stay up to date with the data.
+
+The last page that gets powered by the user-inputted data is the profile page. The profile page is something important to include when creating a mobile fitness 
+application. It allows the user to easily discover, in this fitness app specifically, personal records, the number of workouts, and cumulative personal record data.
+This page uses the data in a very simple way, designed specifically to be important but simple.  
  
+```swift
+let squatPR = workoutData.entries
+    .filter { $0.exercise.lowercased().contains("squat") }
+    .map { $0.weight }
+    .max() ?? 0.0
+```
+\begin{figure}[h!]
+\centering
+\caption{Profile Squat PR Query.}
+\label{fig:workoutcard}
+\end{figure}
 
+This code calculates a user’s squat personal record (PR) by analyzing their stored workout data. It begins by accessing the entries array inside workoutData, 
+which likely contains all logged workouts. It then filters that list to include only exercises whose names contain the word “squat,” converting each exercise name to 
+lowercase to ensure the search is case-insensitive. After narrowing the list to only squat-related movements, the code maps those entries to extract just the weight 
+values. From that list of weights, it uses .max() to determine the highest value, which represents the user’s heaviest recorded squat. If no squat entries are found 
+and .max() returns nil, the nil-coalescing operator (??) ensures the result defaults to 0.0. Overall, this line of code efficiently finds the maximum squat weight the 
+user has logged, providing their squat PR.
 
-
+A significant portion of this project and application focuses on data and data analysis. By breaking this application down piece by piece we are able to see
+how the user-inputted data is the center of attention in this application.
 
 
 
