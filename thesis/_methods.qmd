@@ -79,17 +79,102 @@ performance optimization, and eventual deployment.
 
 ### User Authentication
 
+When the user opens the application, they are automatically brought to the login page. When the user downloads and opens the app for the first
+time, they will need to press a button to be brought to the user creation page. Within the user creation page, they are prompted to create a username
+, then create a password that is required to be typed in 2 times for confirmation. To keep this application safe and secure, the username and
+password are both stored locally on the user's device. By developing the app in this fashion, it creates the best chance to keep secure data, so only
+the user will be able to access the account. 
+
+Once the user creates this account, they will be brought back to the login page and will now log in with the same username and password that
+they just created. The information they type into the username and password fields is then checked against what is stored locally within the 
+device. If and only if the information provided matches the stored information correctly, the user will then be allowed into the application.
+If the username or password is incorrect, an error message will be displayed, telling the user that the information does not match what  the 
+app has locally. 
+
+This user-authentication system allows this application to keep pushing a safe and secure build, while also making sure that the person signing
+into the application is the right user.
+
 ### Add Workout 
+
+The page where the user enters all of their workout data is the engine of this whole application. Without the user entering any data, nothing
+will happen within this application. Once the user enters data, such as repetitions, weight, exercise, and muscle group, this powers all the other
+parts of this application. As discussed in the upcoming section, the data input by the user then goes to multiple different pages to 
+display different data or evaluations.
+
+Within the add workout page, there are four fields that the user is required to enter. These fields are repetitions, weight, exercise, and muscle group. 
+Once the user has entered all of the following information, they are able to press the save button, which kickstarts the data flow within
+the system. Each of these fields has a unique purpose within the application. Repetitions and weight solve the same problem of workout tracking 
+over time. If the user consistently enters data of the same workout over time, they are easily able to receive feedback, visualize progression
+or regression, and track personal records. When the user tells the application what exercise they have completed, it will allow the application 
+to recognize where this data should go. If the user enters a bench press session, the backend of the application is able to recognize the name of the
+exercise and place the data with all of the other bench press entries. By entering the muscle group, the application is able to more accurately calculate
+the fatigue of a muscle group, and also is able to group together entries of a specific muscle group.   
 
 ### Workout Log
 
+The Workout Log is the centralized history of all workouts the user has recorded. Its primary purpose is to give users a clear, organized view of their 
+past training sessions, allowing them to track consistency, review performance, and monitor progress over time. Each entry represents data the user 
+manually input such as exercise name, weight, reps, and date. This is displayed in a structured list format for easy scanning.
+
+Beyond simply viewing entries, the log also allows users to manage their data. Users can delete individual entries, giving them control 
+to remove mistakes, outdated records, or duplicate workouts. This keeps the dataset accurate and relevant, which is important because other parts 
+of the app — such as progress tracking, award calculations, and performance evaluations — rely on this stored workout data. In this way, the 
+Workout Log acts as both a historical record and the core data source that powers the app’s analytics and achievement systems.
+
 ### Progress / Evaluation 
+
+The progress and evaluation page analyzes the user’s recorded workouts and transforms raw data into meaningful performance insights. Rather than simply 
+listing exercises, this section identifies trends such as personal records, strength improvements, workout frequency, and consistency over time. 
+Its purpose is to help users clearly see whether they are progressing toward their fitness goals and to provide measurable feedback that reinforces 
+motivation. By evaluating stored workout entries, it turns past activity into actionable performance information.
+
+The evaluation portion is the center of attention within this application because it provides a level of personalized performance feedback that is 
+not commonly found in basic workout tracking apps. While many fitness apps allow users to log exercises and view past entries, they often stop at 
+simple data storage. This application goes further by actively interpreting that data to generate meaningful insights, such as tracking personal 
+records, identifying strength trends, and highlighting consistency patterns. Instead of forcing users to manually analyze their own progress, the 
+evaluation system transforms raw workout entries into clear, actionable feedback.
+
+What makes this feature especially valuable is its ability to connect effort with measurable results. By continuously analyzing logged workouts, 
+the evaluation system gives users a deeper understanding of how their training habits impact their performance over time. This creates a more 
+engaging and motivating experience, as users are not just recording workouts—they are receiving structured feedback that reinforces improvement 
+and goal progression. In this way, the evaluation component becomes the defining feature of the application, elevating it beyond a simple workout 
+log and into a performance-driven fitness tool.
 
 ### Profile
 
+The profile page serves as the user’s personal account center within the app. It displays information tied to the authenticated user, such as 
+their username, and may include a summary of their activity, including total workouts or number of different exercises. Its purpose is to provide a centralized 
+location for identity, personalization, and account-related controls, reinforcing a sense of ownership over the user’s data and progress.
+
+The purpose of this page is to keep certain peices of data in one page for the user to see. There is an importance in fitness applications for
+personal record tracking, so displaying these records to the user as well as the total weight is something specifically catered towards the fitness
+community.
+
 ### Awards 
 
+The Awards page is designed to motivate users by recognizing milestones and accomplishments achieved through consistent training. Awards may be 
+earned for completing a certain number of workouts, maintaining streaks, or reaching performance benchmarks such as personal records. Its purpose 
+is to gamify the fitness experience, making progress feel rewarding and encouraging users to remain consistent with their routines.
+
+This page relies on workout data stored in the Workout Log and analyzed in the Progress section to determine eligibility for achievements. 
+When users add or remove workout entries, award qualifications may update accordingly. By connecting effort to recognition, the Awards page 
+reinforces positive habits and enhances long-term engagement with the app.
+
+Gameification is an important peice of fitness applications. By adding awards and accomplishments, it provides the user with a sense of motivation
+as well as engagement. Keeping a user in the app for a long period of time will first help them progress in the gym, and two make the app's data
+more accurate because of the longer period of time. So creating something to engage the userbase was done through the awards section.
+
 ### Suggestions
+
+The suggestions page functions as an educational and guidance tool within the app. It provides users with recommended exercises organized 
+by muscle group, helping them structure workouts and explore new movements. Each suggestion may include helpful tips or instructional 
+resources to ensure proper form and safe execution. Its primary purpose is to support users in building effective and well-rounded training 
+routines.
+
+While this page does not store or analyze user data directly, it complements the workout log by influencing what users choose to record. 
+By offering structured guidance and variety, the suggestions page enhances the overall training experience and helps users make informed 
+decisions about their workouts. This allows beginners in the gym to choose from a suggested list of exercises to get started in their gym 
+journey.
 
 ## Data Flow and Processing Pipeline
 
