@@ -434,11 +434,11 @@ concerns makes both functions simpler and less error-prone.
 The core of the evaluation logic begins with a direct comparison between the latest session and the one immediately preceding it.
 The function retrieves the two most recent entries from the descending history and compares weight and repetitions side by side.
 This produces the opening line of the evaluation feedback, which is dynamically selected based on the outcome of that comparison.
-If both weight and reps increased, the feedback reflects progressive overload — the gold standard of strength training. If only
+If both weight and reps increased, the feedback reflects progressive overload which is the gold standard of strength training. If only
 weight increased, the feedback identifies strength development. If only reps increased, endurance improvement is noted. If
 neither increased, the system identifies the session as a maintenance effort and recommends a focus on technique.
 
-This comparison-first approach is justified because session-to-session delta is the most immediately meaningful signal to a
+This comparison-first approach is justified because session-to-session comparison is the most immediately meaningful signal to a
 fitness user. It directly answers the question every athlete asks after a workout: did I do better than last time? By leading
 with this signal and framing it in motivational language, the evaluation delivers actionable context before introducing any
 more complex metrics.
@@ -447,7 +447,7 @@ more complex metrics.
 
 Beyond raw weight and reps, the system calculates training volume for each session as the product of weight multiplied by
 repetitions. Volume is a well-established metric in exercise science for quantifying total mechanical work performed in a
-session. Comparing the current session's volume against the previous session's volume gives a more holistic view of
+session. Comparing the current session's volume against the previous session's volume gives a more complete view of
 performance change than weight or reps alone meaning a user who lifts slightly less weight but performs significantly more
 repetitions may actually have produced greater training stimulus, and volume captures this.
 
@@ -457,10 +457,10 @@ important aspect of any weightlifting session.
 
 ### Momentum Calculation
 
-One of the more analytically nuanced components of the evaluation system is the momentum metric. Rather than comparing
+One of the more analytically complex components of the evaluation system is the momentum metric. Rather than comparing
 only the two most recent sessions, momentum is calculated by comparing the average volume across the five most recent
-sessions against the average volume of the five sessions before that. This produces a measure of medium-term performance
-trajectory that is more resistant to single-session noise than a simple session-to-session comparison.
+sessions against the average volume of the five sessions before that. This produces a measure of performance
+trajectory that is more valuable for the user than a comparison between the last 2 workouts.
 
 The momentum value is expressed as a percentage change between the two rolling windows. A value above 0.15 indicates
 rapidly accelerating performance, a value between 0.05 and 0.15 indicates steady positive progress, and a value below -0.10
@@ -477,7 +477,7 @@ The evaluation system also generates a prediction for the user's next session us
 the five most recent entries. The slope of the weight trend and the slope of the reps trend are each calculated
 independently and applied to the most recent session's values to project what the following session might look like.
 
-The implementation computes the slope using the standard least-squares formula, applying it over an indexed sequence
+The implementation computes the slope, and applies it over an indexed sequence
 of sessions rather than raw dates, which avoids distortions caused by irregular training intervals. The predicted weight
 is then rounded to the nearest five-pound increment which is a practical decision reflecting the standard plate increments
 available in most gym settings. Predicted reps are rounded to the nearest whole number. Minimum floors of five
