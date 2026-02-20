@@ -1,0 +1,14 @@
+---
+title: "Senior Comprehensive Project Title"
+date: "2025-11-14"
+---
+
+![](AppLogo.jpg)
+
+WorkoutEvaluator: IOS app that provides personalized exercise feedback through user-inputted information
+
+My senior Comprehensive project aims to bridge the gap between fitness and free accessible
+feedback and analysis. This is completed through a mobile IOS app that will provide the users
+a simple way to track and evaluate their progress. This title WorkoutEvaluator was chosen because
+of how it emphasizes the importance of the evaluation portion of the app. This is also emphasized 
+in what comes after the app title.

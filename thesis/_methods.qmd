@@ -1,18 +1,516 @@
 # Method of approach
 
-This chapter answers the "how" question - how did you complete your project,
-including the overall design of your study, details of the algorithms and tools you
-have used, etc.  Use technical diagrams, equations, algorithms, and paragraphs of text
-to describe the research that you have completed. Be sure to number all figures and
-tables and to explicitly refer to them in your text.
+## Overview of WorkoutTracker
 
-This should contain:
+WorkoutTracker is a dynamic fitness app designed to help users log, monitor, analyze, and receive evaluations on their workouts in a seamless 
+and visually engaging way. Beyond simply recording exercises, the app provides charts, trend analysis, and personalized evaluations, 
+allowing users to track progress, identify patterns, and receive actionable insights on strength, endurance, and fatigue. Its architecture 
+emphasizes a single source of truth for workout data, ensuring that every logged session automatically updates history views, progress 
+visualizations, and predictive assessments in real time. The intuitive interface and integrated analytics make it a tool not just for 
+tracking workouts, but for optimizing training and staying motivated over the long term.
 
-* lists
-* with points
-* and more points
-  * possibly subpoints
+The purpose of WorkoutTracker is to provide users with free and accessible tools to track and evaluate their workouts, helping them 
+improve over time. While fitness can often feel complicated, this app simplifies progress tracking, emphasizing that real growth comes 
+from commitment, consistency, and determination. Providing the mobile fitness world with this application will finally solve the problem
+of receiving free and concise feedback and analysis to benefit the user. 
 
-For those projects whose implications address social or moral issues (i.e. ethical
-standards, causes, effects), you will want to use this section to describe how you
-actively mitigated or considered these issues.
+WorkoutTracker is designed for fitness enthusiasts of all levels, from beginners who want to establish consistent workout habits to advanced 
+athletes aiming to monitor performance trends and optimize training. Its intuitive interface and automated tracking features make it accessible 
+to anyone, regardless of prior experience with fitness apps. Users can log individual exercises, track weight and repetitions, monitor heart 
+rate, and view historical progress, enabling them to make data-driven decisions about their training routine. Whether the goal is building 
+strength, improving endurance, or maintaining overall fitness, the app supports consistent tracking and evaluation over time.
+
+## System Architecture
+
+![App Overview Image](images/Overview.png)
+
+The overall architecture of WorkoutTracker is designed to provide a seamless, reactive experience for users while maintaining a simple design.
+As seen in the flowchart above, there are many moving pieces within this application that are important to note and explain. Many of these
+pages communicate together and work together to produce one functioning application. Explaining the Xcode platform and the Swift language will be
+completed first, after that there are 6 different pages that will be explained: History, Progress, Awards, Suggestions, Add, and Profile. 
+
+### Xcode 
+
+Xcode is Apple’s integrated development environment (IDE) for building applications across its platforms, including iOS, iPadOS, macOS and watchOS. 
+It provides developers with a complete toolkit, including a code editor, interface builder, simulator, debugging tools, and project management, 
+all in one environment. For a mobile app like WorkoutTracker, Xcode allows for rapid development and testing, letting developers design 
+interactive interfaces visually while simultaneously writing and compiling Swift code. It allows users to utilize themselves as a prototype tester
+for their app by providing the users with 2 choices. Test the app on provided simulators of chosen platform (iOS, watchOS, etc...), or est the app 
+on their own device 
+
+While Xcode provides simulators for iOS, watchOS, and other Apple platforms, testing on a live device offers a more accurate understanding of 
+how the app performs in real-world conditions. Simulators are helpful for quickly checking layouts and basic functionality, but they cannot 
+fully replicate device-specific behaviors such as actual touch responsiveness, performance under load, battery usage, or integration with 
+hardware features such as local user creation.
+
+To test WorkoutTracker on a live device, the following steps were taken:
+
+1. Device Preparation: The iPhone was connected via USB to the development computer. The device was trusted and registered with Xcode.
+2. Provisioning and Signing: A free or paid Apple Developer account was used to set up a provisioning profile and code signing for the device.
+3. Selecting the Device in Xcode: In Xcode, the target device was selected from the run destination menu instead of the simulator.
+4. Building and Running: The app was built and deployed directly to the device using Xcode’s Run command.
+5. Live Testing: The app was interacted with on the device to verify UI responsiveness, chart updates, data entry, and performance in real usage scenarios.
+
+By completing these steps, this allowed my mobile phone to have a running version of my current computational artifact during development. Which
+enabled testing of many aspects of the app that were previously mentioned. There are many additional key features of Xcode that are worth hightlighting.
+
+Xcode is very tightly intergrated with swift, Apple's primary programming language. It provides realt-time syntax highlighting, error 
+detection, and compile-time checks, allowing developers to identify and correct issues early in the development process. This tight integration 
+improves code reliability and reduces debugging time.
+
+Xcode includes advanced debugging tools such as breakpoints, variable inspection, and console logging. Additionally, Instruments allows 
+developers to profile CPU usage, memory consumption, and energy impact. These tools are especially important for a fitness app like 
+WorkoutTracker, where performance efficiency and battery usage are critical during prolonged use.
+
+Xcode’s Interface Builder and SwiftUI Previews allow developers to visually design user interfaces and immediately see changes reflected in 
+real time. This significantly speeds up UI iteration and ensures layouts adapt properly across different screen sizes and device types.
+
+Xcode has built-in Git support, allowing developers to track changes, manage branches, and revert to previous versions directly within the 
+IDE. This is essential for maintaining code stability as features are added or modified throughout development. Haing built-in GIT support was
+crucial for this project. It allows continuous work saving within a repository that can be tracked and viewed by my colleagues and professors.
+
+Xcode manages the full application lifecycle—from development and testing to archiving and preparing the app for distribution via 
+TestFlight or the App Store. This makes it a centralized tool not only for development but also for deployment and maintenance.
+
+Xcode provides detailed build logs and warnings that help developers understand compilation errors and runtime issues. This feedback is 
+crucial for debugging logic errors and ensuring the app meets Apple’s platform requirements. Overall, Xcode serves as a comprehensive 
+development environment that supports the entire workflow of the WorkoutTracker app, from initial design and coding to real-device testing, 
+performance optimization, and eventual deployment.
+
+### User Authentication
+
+When the user opens the application, they are automatically brought to the login page. When the user downloads and opens the app for the first
+time, they will need to press a button to be brought to the user creation page. Within the user creation page, they are prompted to create a username
+, then create a password that is required to be typed in 2 times for confirmation. To keep this application safe and secure, the username and
+password are both stored locally on the user's device. By developing the app in this fashion, it creates the best chance to keep secure data, so only
+the user will be able to access the account. 
+
+Once the user creates this account, they will be brought back to the login page and will now log in with the same username and password that
+they just created. The information they type into the username and password fields is then checked against what is stored locally within the 
+device. If and only if the information provided matches the stored information correctly, the user will then be allowed into the application.
+If the username or password is incorrect, an error message will be displayed, telling the user that the information does not match what  the 
+app has locally. 
+
+This user-authentication system allows this application to keep pushing a safe and secure build, while also making sure that the person signing
+into the application is the right user.
+
+### Add Workout 
+
+The page where the user enters all of their workout data is the engine of this whole application. Without the user entering any data, nothing
+will happen within this application. Once the user enters data, such as repetitions, weight, exercise, and muscle group, this powers all the other
+parts of this application. As discussed in the upcoming section, the data input by the user then goes to multiple different pages to 
+display different data or evaluations.
+
+Within the add workout page, there are four fields that the user is required to enter. These fields are repetitions, weight, exercise, and muscle group. 
+Once the user has entered all of the following information, they are able to press the save button, which kickstarts the data flow within
+the system. Each of these fields has a unique purpose within the application. Repetitions and weight solve the same problem of workout tracking 
+over time. If the user consistently enters data of the same workout over time, they are easily able to receive feedback, visualize progression
+or regression, and track personal records. When the user tells the application what exercise they have completed, it will allow the application 
+to recognize where this data should go. If the user enters a bench press session, the backend of the application is able to recognize the name of the
+exercise and place the data with all of the other bench press entries. By entering the muscle group, the application is able to more accurately calculate
+the fatigue of a muscle group, and also is able to group together entries of a specific muscle group.   
+
+### Workout Log
+
+The Workout Log is the centralized history of all workouts the user has recorded. Its primary purpose is to give users a clear, organized view of their 
+past training sessions, allowing them to track consistency, review performance, and monitor progress over time. Each entry represents data the user 
+manually input such as exercise name, weight, reps, and date. This is displayed in a structured list format for easy scanning.
+
+Beyond simply viewing entries, the log also allows users to manage their data. Users can delete individual entries, giving them control 
+to remove mistakes, outdated records, or duplicate workouts. This keeps the dataset accurate and relevant, which is important because other parts 
+of the app — such as progress tracking, award calculations, and performance evaluations — rely on this stored workout data. In this way, the 
+Workout Log acts as both a historical record and the core data source that powers the app’s analytics and achievement systems.
+
+### Progress / Evaluation 
+
+The progress and evaluation page analyzes the user’s recorded workouts and transforms raw data into meaningful performance insights. Rather than simply 
+listing exercises, this section identifies trends such as personal records, strength improvements, workout frequency, and consistency over time. 
+Its purpose is to help users clearly see whether they are progressing toward their fitness goals and to provide measurable feedback that reinforces 
+motivation. By evaluating stored workout entries, it turns past activity into actionable performance information.
+
+The evaluation portion is the center of attention within this application because it provides a level of personalized performance feedback that is 
+not commonly found in basic workout tracking apps. While many fitness apps allow users to log exercises and view past entries, they often stop at 
+simple data storage. This application goes further by actively interpreting that data to generate meaningful insights, such as tracking personal 
+records, identifying strength trends, and highlighting consistency patterns. Instead of forcing users to manually analyze their own progress, the 
+evaluation system transforms raw workout entries into clear, actionable feedback.
+
+What makes this feature especially valuable is its ability to connect effort with measurable results. By continuously analyzing logged workouts, 
+the evaluation system gives users a deeper understanding of how their training habits impact their performance over time. This creates a more 
+engaging and motivating experience, as users are not just recording workouts—they are receiving structured feedback that reinforces improvement 
+and goal progression. In this way, the evaluation component becomes the defining feature of the application, elevating it beyond a simple workout 
+log and into a performance-driven fitness tool.
+
+### Profile
+
+The profile page serves as the user’s personal account center within the app. It displays information tied to the authenticated user, such as 
+their username, and may include a summary of their activity, including total workouts or number of different exercises. Its purpose is to provide a centralized 
+location for identity, personalization, and account-related controls, reinforcing a sense of ownership over the user’s data and progress.
+
+The purpose of this page is to keep certain peices of data in one page for the user to see. There is an importance in fitness applications for
+personal record tracking, so displaying these records to the user as well as the total weight is something specifically catered towards the fitness
+community.
+
+### Awards 
+
+The Awards page is designed to motivate users by recognizing milestones and accomplishments achieved through consistent training. Awards may be 
+earned for completing a certain number of workouts, maintaining streaks, or reaching performance benchmarks such as personal records. Its purpose 
+is to gamify the fitness experience, making progress feel rewarding and encouraging users to remain consistent with their routines.
+
+This page relies on workout data stored in the Workout Log and analyzed in the Progress section to determine eligibility for achievements. 
+When users add or remove workout entries, award qualifications may update accordingly. By connecting effort to recognition, the Awards page 
+reinforces positive habits and enhances long-term engagement with the app.
+
+Gameification is an important peice of fitness applications. By adding awards and accomplishments, it provides the user with a sense of motivation
+as well as engagement. Keeping a user in the app for a long period of time will first help them progress in the gym, and two make the app's data
+more accurate because of the longer period of time. So creating something to engage the userbase was done through the awards section.
+
+### Suggestions
+
+The suggestions page functions as an educational and guidance tool within the app. It provides users with recommended exercises organized 
+by muscle group, helping them structure workouts and explore new movements. Each suggestion may include helpful tips or instructional 
+resources to ensure proper form and safe execution. Its primary purpose is to support users in building effective and well-rounded training 
+routines.
+
+While this page does not store or analyze user data directly, it complements the workout log by influencing what users choose to record. 
+By offering structured guidance and variety, the suggestions page enhances the overall training experience and helps users make informed 
+decisions about their workouts. This allows beginners in the gym to choose from a suggested list of exercises to get started in their gym 
+journey.
+
+## Data Flow and Processing Pipeline
+
+This section introduces the data flow and processing pipeline used in the WorkoutTracker application. It explains how user-entered workout 
+data moves through the system, from initial input to final output, and how each stage contributes to the app’s overall functionality. Rather 
+than focusing solely on individual code segments, this section emphasizes the logical flow of data and the design decisions behind it, 
+supported by a flowchart and selected code examples. This approach provides a clear understanding of how raw workout data is transformed into 
+meaningful metrics, summaries, and visualizations presented to the user.
+
+![Data Pipeline Flowchart](images/DataFlow.png)
+
+Let's start with how the data gets inputted from the user. As seen in the flowchart, the user-inputted data starts all the following processes.
+In WorkoutTracker, data querying does not run continuously. This means that everything becomes powered and runs when the user presses the save
+button which finalizes the data they are inputting. This folows what is called an event-driven model, where queries are triggered only when
+specific events occur, in this case being when the user logs a workout. Other cases within this app are when the user navigates to the progress
+page to view visualizations. When no new data is being entered or requested, the querying logic becomes idle, consuming no processing resources. 
+This design was carefully developed to ensure efficient resource usage, avoiding unnecessary computation, and improves battery performance which
+is critical when working in app development. This also aligns with modern mobile app development standards, where data processing is reactive rather
+than continuously running.
+
+```swift
+1  let entry = WorkoutEntry(
+2    date: Date(),
+3    muscleGroup: cleanMuscleGroup,
+4    exercise: cleanExercise,
+5    weight: Double(weight) ?? 0,
+6    reps: Int(reps) ?? 0,
+7    heartRate: Double(heartRate)
+8  )
+```
+\begin{figure}[h!]
+\centering
+\caption{Input Format}
+\label{fig:workoutcard}
+\end{figure}
+
+This code structures every data input that app recieves from the user. As you can see in the flowchart, once the user adds a workout, it creates
+a "WorkoutEntry". This function processes every input that is recieved and structures them the same way every time. This allows for easy coding
+when it comes to looping through the data to find specific inputs. Each input is made up of six parts with one of them being optional, date, muscle
+group, exercise, weight, reps, and the optional choice to input heart-rate. Every time an input is recieved, it is then transformed into this
+structure and then finally appended to list "Data.entries". 
+
+This list as seen in the flowchart is the color teal. This list contains all of the data inputs that the user has ever provided the app. So as
+the user continues to add hundreds of inputs the list continues to get larger. WorkoutData.entries is an in-memory data structure rather than a 
+JSON object. It is implemented as a Swift array containing strongly typed workout entry models, such as structs that represent individual 
+workout records. This array exists only while the application is running and is used by the app’s logic and user interface to query, process, 
+and display workout information efficiently. JSON is involved only when this data needs to be persisted or loaded; in that case, the Swift 
+objects stored in WorkoutData.entries are serialized into a JSON file for local storage and later deserialized back into Swift objects when 
+the app is relaunched. This separation between runtime data structures and storage format ensures type safety, efficient processing, and clean 
+state management within the application. 
+
+By appending each incoming input to the same list in the same structure, it enables much easier coding when it comes to PR querying, or data
+visualization. It only requires a for each loop to then parse through the list and check for any specific detail the developer wants. For 
+example if the developer was looking to collect all of the exercises that are working out a specific muscle group it would look like this. 
+
+```swift
+1  workoutData.entries.forEach { entry in
+2    if entry.muscleGroup == targetMuscle {
+3       matchingExercises.append(entry)
+4    }
+5  }
+```
+\begin{figure}[h!]
+\centering
+\caption{Searching for targetMuscle}
+\label{fig:workoutcard}
+\end{figure}
+
+Within this code snippet, you can see that it is parsing through every entry within the list and looking for the targetMuscle, which would
+have been initialized before the loop. If the targetMuscle was declared as "legs," then the matchingExercises list would solely contain
+all the exercises that have muscleGroup as legs. Swift makes for each loop very simple by only requiring three things for this specific 
+example. First, what are you parsing through in this case, specifically, the name of the list. Secondly, you need to specify what you want the for
+each loop to do once it gets to a data input, in this case, looking for a specific muscle group, and then finally appending the data only if
+it matches the desired muscle group.
+
+Moving forward in the flow chart, we can see that this list WorkoutData.entries, fuels the rest of the processes. There are three different 
+pages that take data from this list: History, Progress (charts and evaluation), and Profile. All of these different sections of WorkoutTracker
+actively us different queries to update data. 
+
+WorkoutListView (history) is the page where the user is able to view a log of all the workouts they have entered into the app. Within this page
+users have the ability to delete specific entries if they mis-entered information or wish to remove an entry. All that this page is doing 
+is displaying the list of entries in a neat and easily readable output. There are two important code parts that go into this page. 
+
+```swift
+1  var body: some View {
+2    NavigationView {
+3      ZStack {
+4        // Full screen gradient
+5        AppColors.gradient
+6          .ignoresSafeArea()
+7        List {
+8          ForEach(workoutData.entries) { entry in
+9            WorkoutCard(entry: entry)
+10              .listRowBackground(Color.clear)
+11              .listRowSeparator(.hidden)     
+12          }
+13          .onDelete(perform: workoutData.delete)
+14        }
+15        .listStyle(PlainListStyle())
+16      }
+17      .navigationTitle("Workout History")
+18      .navigationBarTitleDisplayMode(.inline)
+19    }
+20  }
+```
+\begin{figure}[h!]
+\centering
+\caption{Define The User Interface for History}
+\label{fig:workoutcard}
+\end{figure}
+
+
+This SwiftUI code defines the user interface for a "Workout History" screen. The main view is a NavigationView containing a ZStack, which 
+allows layering of elements. At the back of the stack, a full-screen gradient defined by AppColors.gradient is displayed and extended to 
+cover the safe area using .ignoresSafeArea(). On top of this gradient, a List presents all workout entries stored in workoutData.entries 
+using ForEach, where each entry is represented by a custom WorkoutCard view. Each list row is customized to have a transparent background 
+(.listRowBackground(Color.clear)) and no default separator (.listRowSeparator(.hidden)), giving it a clean, card-like appearance. Users can 
+also delete entries with swipe actions via .onDelete(perform:). The list uses PlainListStyle() to remove extra padding and the default list 
+styling, and the navigation bar is set with the title "Workout History," displayed inline for a compact appearance.
+
+This view shows a user-friendly “Workout History” screen where each workout is displayed as a card. The colorful gradient in the background 
+makes the screen visually appealing, while the list of workouts scrolls on top of it. Each card is easy to read because the rows are 
+transparent and have no separators, giving a clean, modern look. Users can also swipe to delete workouts, and the navigation bar at the top 
+clearly shows the title of the screen. Overall, this layout combines style and functionality in a simple, organized way.
+
+```swift
+1  VStack(alignment: .leading, spacing: 6) {
+2      HStack {
+3          Text(entry.exercise)
+4              .font(.headline)
+5              .foregroundColor(.white)
+6          Spacer()
+7          Text("\(Int(entry.weight)) lbs x \(entry.reps)")
+8              .font(.subheadline)
+9              .foregroundColor(.white.opacity(0.9))
+10     }
+11     
+12     HStack(spacing: 12) {
+13         if let hr = entry.heartRate {
+14             Label("\(Int(hr)) bpm", systemImage: "heart.fill")
+15                 .font(.caption)
+16                 .foregroundColor(hr > 140 ? .red : .green)
+17         }
+18         
+19         Label(entry.date.formatted(.dateTime.month().day().year()), 
+20           systemImage: "calendar")
+21             .font(.caption)
+22             .foregroundColor(.white.opacity(0.8))
+23     }
+24 }
+```
+\begin{figure}[h!]
+\centering
+\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\label{fig:workoutcard}
+\end{figure}
+
+This SwiftUI code defines the layout of a single workout entry in a vertical stack (VStack) with a small spacing of 6 points between its 
+elements, aligned to the leading edge. The first horizontal stack (HStack) displays the exercise name on the left in a bold headline font 
+with white text, and on the right, it shows the weight lifted and the number of repetitions in a slightly smaller, semi-transparent white 
+font. A Spacer() between them pushes the two pieces of text to opposite sides. Below that, a second HStack with a spacing of 12 points shows 
+additional details: if the workout entry includes a heart rate, it displays it with a heart icon in a caption font, coloring it red if the 
+rate is above 140 bpm and green otherwise. Next to that, a calendar icon with the formatted workout date is displayed, also in a caption font
+and semi-transparent white. Overall, this layout creates a clean, organized card showing both the main workout information and supplemental 
+details like heart rate and date.
+
+The first code snippet defines the overall screen layout, using a NavigationView with a scrollable List that displays all workout entries, 
+while the second snippet defines what each individual entry looks like inside that list as a WorkoutCard. Essentially, the List in the first 
+snippet loops over all workoutData.entries and places a WorkoutCard for each one, creating a full workout history view. The WorkoutCard layout, 
+shown in the second snippet, organizes the exercise name, weight, reps, heart rate, and date in a clean, readable format using vertical and 
+horizontal stacks. Together, the two snippets work in tandem: the first handles the overall structure, scrolling, and navigation, and the 
+second handles the content and styling of each row, resulting in a cohesive, visually appealing workout history screen. 
+
+Moving forward from the history page, the ProgressView file is really what this moile application is specifically focused on. This page
+produces the evaluation and visuals for the user to read. All of the algorithms within this file all start when a user enters in data. This 
+is important to once again note that when the user enters in data it is exactly like a car starting its engine. It provides power to the screen 
+display, activates the underlying logic of the program, and triggers the sequence of operations that follow. Without that initial input, the 
+system remains idle, waiting for instruction. Once the data is entered, the algorithms process it step by step, transforming raw input into 
+meaningful output that is then presented back to the user. In this way, user input serves as the driving force that moves the entire program forward.
+
+```swift
+func entries(for exercise: String) -> [WorkoutEntry] {
+        workoutData.entries
+            .filter { $0.exercise == exercise }
+            .sorted { $0.date < $1.date }
+    }
+```
+\begin{figure}[h!]
+\centering
+\caption{Graph Visualization Query.}
+\label{fig:workoutcard}
+\end{figure}
+
+Regarding the visual portion, the most important thing was to create a visual for each separate exercise that the user enters. When the user navigates
+to the progress tab, they are prompted to first select the exercise that they would like to view the visual and evaluation for. Once the user selects this
+exercise, for example, bench press, the app will then select from the list of workoutData.entries all the pieces of data that are entered for that selected
+exercise. As you can see, within this code, the program utilizes a simple but efficient for loop. This for loop will parse through the list of entries and select
+only the ones for the specified exercise. This allows the program to effectively display all of the data for the specified exercise.
+
+In other functions, the progress tab will also retrieve information such as weight, repetitions, and date for the specific data piece to add it to the graph. The 
+graph powers the user with the ability to visualize trends within their exercise history and receive feedback on why that might be happening. The data
+is then also used by the evaluation portion of this file. Many different algorithms are used to calculate trends within the user's data, provide feedback on
+whether their muscles may be fatigued, and much more essential knowledge. The program completes this by initializing multiple variables up front, like momentum and
+latestEntry that are then used to calculate different feedback, like fatigue and volume. These variables are all grabbing the data from the list of workout entries,
+so once new data is entered, these variables may change to stay up to date with the data.
+
+The last page that gets powered by the user-inputted data is the profile page. The profile page is something important to include when creating a mobile fitness 
+application. It allows the user to easily discover, in this fitness app specifically, personal records, the number of workouts, and cumulative personal record data.
+This page uses the data in a very simple way, designed specifically to be important but simple.  
+ 
+```swift
+let squatPR = workoutData.entries
+    .filter { $0.exercise.lowercased().contains("squat") }
+    .map { $0.weight }
+    .max() ?? 0.0
+```
+\begin{figure}[h!]
+\centering
+\caption{Profile Squat PR Query.}
+\label{fig:workoutcard}
+\end{figure}
+
+This code calculates a user’s squat personal record (PR) by analyzing their stored workout data. It begins by accessing the entries array inside workoutData, 
+which likely contains all logged workouts. It then filters that list to include only exercises whose names contain the word “squat,” converting each exercise name to 
+lowercase to ensure the search is case-insensitive. After narrowing the list to only squat-related movements, the code maps those entries to extract just the weight 
+values. From that list of weights, it uses .max() to determine the highest value, which represents the user’s heaviest recorded squat. If no squat entries are found 
+and .max() returns nil, the nil-coalescing operator (??) ensures the result defaults to 0.0. Overall, this line of code efficiently finds the maximum squat weight the 
+user has logged, providing their squat PR.
+
+A significant portion of this project and application focuses on data and data analysis. By breaking this application down piece by piece we are able to see
+how the user-inputted data is the center of attention in this application.
+
+## Algorithms and Analytical Methods
+
+The trend analysis and evaluation system is the most analytically sophisticated component of WorkoutTracker, and represents the
+feature that most clearly differentiates this application from a basic workout logging tool. Implemented within WorkoutProgressView.swift,
+this system transforms a user's raw workout history into a structured, session-by-session performance assessment. The following subsections
+explain the logic, design decisions, and justifications behind each analytical layer.
+
+### Exercise Filtering and Chronological Sorting
+
+Before any trend analysis can occur, the application must isolate the relevant subset of data for the exercise the user has selected.
+This is handled by two complementary functions. The entries function, a for loop, filters WorkoutData.entries to include only records
+matching the selected exercise name, then sorts them in ascending chronological order. This sorted sequence becomes the data source
+for the progress chart, ensuring that the visualization accurately reflects the progression of the user's training. A
+companion function, history which is also a for loop, performs the same filtering but sorts in descending order, returning the most recent session
+first. This ordering is intentional meaning the evaluation logic always begins from the latest entry and works backwards, making the
+most recent session the reference point against which all prior sessions are compared.
+
+The choice to maintain two separately ordered views of the same data, rather than sorting on the fly within each function, reflects
+a deliberate design decision to keep the chart logic and the evaluation logic independent of one another. The chart needs ascending
+order to plot points left to right over time and the evaluator needs descending order to prioritize recency. Separating these
+concerns makes both functions simpler and less error-prone.
+
+### Session-to-Session Comparison
+
+The core of the evaluation logic begins with a direct comparison between the latest session and the one immediately preceding it.
+The function retrieves the two most recent entries from the descending history and compares weight and repetitions side by side.
+This produces the opening line of the evaluation feedback, which is dynamically selected based on the outcome of that comparison.
+If both weight and reps increased, the feedback reflects progressive overload which is the gold standard of strength training. If only
+weight increased, the feedback identifies strength development. If only reps increased, endurance improvement is noted. If
+neither increased, the system identifies the session as a maintenance effort and recommends a focus on technique.
+
+This comparison-first approach is justified because session-to-session comparison is the most immediately meaningful signal to a
+fitness user. It directly answers the question every athlete asks after a workout: did I do better than last time? By leading
+with this signal and framing it in motivational language, the evaluation delivers actionable context before introducing any
+more complex metrics.
+
+### Volume Calculation
+
+Beyond raw weight and reps, the system calculates training volume for each session as the product of weight multiplied by
+repetitions. Volume is a well-established metric in exercise science for quantifying total mechanical work performed in a
+session. Comparing the current session's volume against the previous session's volume gives a more complete view of
+performance change than weight or reps alone meaning a user who lifts slightly less weight but performs significantly more
+repetitions may actually have produced greater training stimulus, and volume captures this.
+
+The volume comparison result feeds directly into the evaluation text, informing the user whether their overall training
+load increased or decreased relative to their last session, and by how much. This was an important metric to include as volume is an
+important aspect of any weightlifting session. 
+
+### Momentum Calculation
+
+One of the more analytically complex components of the evaluation system is the momentum metric. Rather than comparing
+only the two most recent sessions, momentum is calculated by comparing the average volume across the five most recent
+sessions against the average volume of the five sessions before that. This produces a measure of performance
+trajectory that is more valuable for the user than a comparison between the last 2 workouts.
+
+The momentum value is expressed as a percentage change between the two rolling windows. A value above 0.15 indicates
+rapidly accelerating performance, a value between 0.05 and 0.15 indicates steady positive progress, and a value below -0.10
+signals a meaningful decline that may indicate fatigue or insufficient recovery. This tiered interpretation ensures that
+the feedback adapts to the magnitude of the trend rather than applying binary labels to continuous data.
+
+Using a rolling window approach rather than a cumulative average is justified by the recency principle in sports science that
+recent training sessions are more predictive of current fitness state than the entirety of training history, which may
+include periods of deconditioning, injury, or significant load changes.
+
+### Predictive Next Session Estimation
+
+The evaluation system also generates a prediction for the user's next session using a simple linear regression over
+the five most recent entries. The slope of the weight trend and the slope of the reps trend are each calculated
+independently and applied to the most recent session's values to project what the following session might look like.
+
+The implementation computes the slope, and applies it over an indexed sequence
+of sessions rather than raw dates, which avoids distortions caused by irregular training intervals. The predicted weight
+is then rounded to the nearest five-pound increment which is a practical decision reflecting the standard plate increments
+available in most gym settings. Predicted reps are rounded to the nearest whole number. Minimum floors of five
+pounds and one repetition are enforced to prevent the model from generating nonsensical outputs during periods of decline.
+
+This prediction is intentionally modest in scope. It does not attempt to model long-term periodization or account for
+biological variability. Instead, it provides a single concrete data point which is a suggested target for the next session
+that is grounded in recent trend data and presented as a guide. For a user-facing fitness application, a simple, interpretable 
+prediction is more valuable than a complex model whose outputs cannot be easily explained or verified by the user.
+
+### Fatigue and Recovery Index
+
+The final analytical layer in the evaluation system is a fatigue index, calculated by dividing the user's total
+training volume over the past seven days by their recent average session volume, then scaling the result to a
+0-to-100 range. This ratio effectively measures how many "average sessions" worth of volume the user has accumulated
+in the past week. A score below 40 indicates a manageable training load with adequate recovery capacity; scores
+between 40 and 70 suggest elevated load that warrants attention; scores above 70 signal potential overtraining and
+recommend rest.
+
+The fatigue index is important because volume and momentum metrics alone cannot distinguish between productive
+high-frequency training and accumulated fatigue. Two users might show identical momentum scores, but one may have
+achieved that momentum with three sessions per week while the other trained seven days consecutively. The fatigue
+index surfaces this distinction, providing context that the other metrics do not capture.
+
+By evaluating these metrics and providing the user with this information, WorkoutTracker is able to complete a task that no other
+mobile fitness applications have been able to complete. Providing careful justification within this section is important to 
+understand why and how many of these metrics are being completed, as well as to demonstrate the uniqueness of this project.
+
+
+
+
+
+
+
+
+

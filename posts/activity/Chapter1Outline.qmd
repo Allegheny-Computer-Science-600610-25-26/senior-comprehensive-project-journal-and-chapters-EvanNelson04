@@ -1,0 +1,61 @@
+---
+title: "Introduction Chapter Outline"
+date: "2025-11-14"
+---
+
+# Chapter 1: Introduction
+
+## 1.1 Background
+ - Problem 
+ - Growing lifestyle
+ - Solution
+
+## 1.2 Overview of the Completed Work
+ - Concise description of the developed app
+ - Core functionality 
+ - Platform(s) used (iPhone)
+ - Programming environment and tools (Swift, SwiftUI)
+
+## 1.3 Personal Motivation: “Why Me? Why This Project?”
+ - Personal and academic interest in health technology or app development
+ - Bridging the gap between development and wellness
+ - Why this project?
+ - User / developer
+ - Alignment with professional or research goals
+
+## 1.4 Project Motivation
+ - Professional and Technical Motivation
+ - Relevance to STEM disciplines (data evaluation, mobile app development)
+ - Emphasis on developing new approaches to personal health and fitness technology.
+ - Broader Impacts and Societal Implications
+ - Contribution to public health and fitness engagement
+ - Enabling users to take control of their health through data-driven insights and personalized analytics.
+ - Implications for health data privacy and security
+ - Audience 
+ - People who need to learn and get more experience before diving into the deep end
+
+## 1.5 Ethical Considerations
+ - Responsible collection and storage of personal data
+ - Acknowledgment of why local data storage
+ - Experimental reasoning
+ - False reccomendation problems?
+ - Developmental bugs or data leaks
+
+## 1.6 Structure of the Senior Comprehensive Project
+ - Chapter 1: Introduction — Overview, motivation, ethical considerations, and project structure
+ - Chapter 2: Related Works / Background — Literature, app comparisons, technical context
+ - Chapter 3: Methods — System design, implementation details, code architecture, UI/UX decisions
+ - Chapter 4: Experimental Results — Testing, data validation, performance results
+ - Chapter 5: Discussion and Future Works — Interpretation, improvements, broader application, research directions
+
+## 1.7 Contributions of the Project
+ - What is already built
+ - Brief overview of each page
+ - Technical contributions
+
+ This outline is super important in the developmental proccess. Knowing what is going to be put
+ on the paper is a super important step before starting to write as it aids me to know where to
+ start with each chapter. All the details for each chapter were carefully outlined and discussed
+ with both my first and second readers to ensure that no important elements were left out of any
+ part of the chapter. For each section I attempted to make sure that all areas were covered and not
+ to leave any questions within the readers minds.
