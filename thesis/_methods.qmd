@@ -410,10 +410,109 @@ how the user-inputted data is the center of attention in this application.
 ## Algorithms and Analytical Methods
 
 The querying and analytical methods employed within WorkoutTracker were selected carefully to align with the performance demands,
-resource constraints, and user-facing goals of a mobile fitness application. Rather than implementing computationally expensive or
-externally dependent analytical frameworks, the system relies on lightweight, in-memory Swift operations — specifically filtering,
-sorting, and aggregation over a structured array of workout entries. This section justifies why these methods were chosen, how they
-support the application's core purpose, and why they are well-suited to the mobile context in which the app operates.
+resource constraints, and user-facing goals of a mobile fitness application. Completing these queries and analysis in a fashion
+that focuses on efficient parsing and efficient analysis is the main priority. As this application could face upwards of thousands
+of data entries over time, these functions need to be written in a code efficient way so that it can handle parsing through large
+date sets. As the data analysis and evaluation is the main aspect of this application, that is where this justification will start.
+
+### Trend Analysis and Evaluation
+
+The trend analysis and evaluation system is the most analytically sophisticated component of WorkoutTracker, and represents the
+feature that most clearly differentiates this application from a basic workout logging tool. Implemented within WorkoutProgressView.swift,
+this system transforms a user's raw workout history into a structured, session-by-session performance assessment. The following subsections
+explain the logic, design decisions, and justifications behind each analytical layer.
+
+#### Exercise Filtering and Chronological Sorting
+
+Before any trend analysis can occur, the application must isolate the relevant subset of data for the exercise the user has selected.
+This is handled by two complementary functions. The entries function, a for loop, filters WorkoutData.entries to include only records
+matching the selected exercise name, then sorts them in ascending chronological order. This sorted sequence becomes the data source
+for the progress chart, ensuring that the visualization accurately reflects the progression of the user's training. A
+companion function, history which is also a for loop, performs the same filtering but sorts in descending order, returning the most recent session
+first. This ordering is intentional meaning the evaluation logic always begins from the latest entry and works backwards, making the
+most recent session the reference point against which all prior sessions are compared.
+
+The choice to maintain two separately ordered views of the same data, rather than sorting on the fly within each function, reflects
+a deliberate design decision to keep the chart logic and the evaluation logic independent of one another. The chart needs ascending
+order to plot points left to right over time and the evaluator needs descending order to prioritize recency. Separating these
+concerns makes both functions simpler and less error-prone.
+
+#### Session-to-Session Comparison
+
+The core of the evaluation logic begins with a direct comparison between the latest session and the one immediately preceding it.
+The function retrieves the two most recent entries from the descending history and compares weight and repetitions side by side.
+This produces the opening line of the evaluation feedback, which is dynamically selected based on the outcome of that comparison.
+If both weight and reps increased, the feedback reflects progressive overload — the gold standard of strength training. If only
+weight increased, the feedback identifies strength development. If only reps increased, endurance improvement is noted. If
+neither increased, the system identifies the session as a maintenance effort and recommends a focus on technique.
+
+This comparison-first approach is justified because session-to-session delta is the most immediately meaningful signal to a
+fitness user. It directly answers the question every athlete asks after a workout: did I do better than last time? By leading
+with this signal and framing it in motivational language, the evaluation delivers actionable context before introducing any
+more complex metrics.
+
+#### Volume Calculation
+
+Beyond raw weight and reps, the system calculates training volume for each session as the product of weight multiplied by
+repetitions. Volume is a well-established metric in exercise science for quantifying total mechanical work performed in a
+session. Comparing the current session's volume against the previous session's volume gives a more holistic view of
+performance change than weight or reps alone meaning a user who lifts slightly less weight but performs significantly more
+repetitions may actually have produced greater training stimulus, and volume captures this.
+
+The volume comparison result feeds directly into the evaluation text, informing the user whether their overall training
+load increased or decreased relative to their last session, and by how much. This was an important metric to include as volume is an
+important aspect of any weightlifting session. 
+
+#### Momentum Calculation
+
+One of the more analytically nuanced components of the evaluation system is the momentum metric. Rather than comparing
+only the two most recent sessions, momentum is calculated by comparing the average volume across the five most recent
+sessions against the average volume of the five sessions before that. This produces a measure of medium-term performance
+trajectory that is more resistant to single-session noise than a simple session-to-session comparison.
+
+The momentum value is expressed as a percentage change between the two rolling windows. A value above 0.15 indicates
+rapidly accelerating performance, a value between 0.05 and 0.15 indicates steady positive progress, and a value below -0.10
+signals a meaningful decline that may indicate fatigue or insufficient recovery. This tiered interpretation ensures that
+the feedback adapts to the magnitude of the trend rather than applying binary labels to continuous data.
+
+Using a rolling window approach rather than a cumulative average is justified by the recency principle in sports science that
+recent training sessions are more predictive of current fitness state than the entirety of training history, which may
+include periods of deconditioning, injury, or significant load changes.
+
+#### Predictive Next Session Estimation
+
+The evaluation system also generates a prediction for the user's next session using a simple linear regression over
+the five most recent entries. The slope of the weight trend and the slope of the reps trend are each calculated
+independently and applied to the most recent session's values to project what the following session might look like.
+
+The implementation computes the slope using the standard least-squares formula, applying it over an indexed sequence
+of sessions rather than raw dates, which avoids distortions caused by irregular training intervals. The predicted weight
+is then rounded to the nearest five-pound increment which is a practical decision reflecting the standard plate increments
+available in most gym settings. Predicted reps are rounded to the nearest whole number. Minimum floors of five
+pounds and one repetition are enforced to prevent the model from generating nonsensical outputs during periods of decline.
+
+This prediction is intentionally modest in scope. It does not attempt to model long-term periodization or account for
+biological variability. Instead, it provides a single concrete data point which is a suggested target for the next session
+that is grounded in recent trend data and presented as a guide. For a user-facing fitness application, a simple, interpretable 
+prediction is more valuable than a complex model whose outputs cannot be easily explained or verified by the user.
+
+#### Fatigue and Recovery Index
+
+The final analytical layer in the evaluation system is a fatigue index, calculated by dividing the user's total
+training volume over the past seven days by their recent average session volume, then scaling the result to a
+0-to-100 range. This ratio effectively measures how many "average sessions" worth of volume the user has accumulated
+in the past week. A score below 40 indicates a manageable training load with adequate recovery capacity; scores
+between 40 and 70 suggest elevated load that warrants attention; scores above 70 signal potential overtraining and
+recommend rest.
+
+The fatigue index is important because volume and momentum metrics alone cannot distinguish between productive
+high-frequency training and accumulated fatigue. Two users might show identical momentum scores, but one may have
+achieved that momentum with three sessions per week while the other trained seven days consecutively. The fatigue
+index surfaces this distinction, providing context that the other metrics do not capture.
+
+
+
+
 
 
 
