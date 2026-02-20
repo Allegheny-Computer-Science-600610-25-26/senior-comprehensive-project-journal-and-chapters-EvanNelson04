@@ -407,6 +407,14 @@ user has logged, providing their squat PR.
 A significant portion of this project and application focuses on data and data analysis. By breaking this application down piece by piece we are able to see
 how the user-inputted data is the center of attention in this application.
 
+## Algorithms and Analytical Methods
+
+The querying and analytical methods employed within WorkoutTracker were selected carefully to align with the performance demands,
+resource constraints, and user-facing goals of a mobile fitness application. Rather than implementing computationally expensive or
+externally dependent analytical frameworks, the system relies on lightweight, in-memory Swift operations — specifically filtering,
+sorting, and aggregation over a structured array of workout entries. This section justifies why these methods were chosen, how they
+support the application's core purpose, and why they are well-suited to the mobile context in which the app operates.
+
 
 
 
