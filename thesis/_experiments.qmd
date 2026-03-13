@@ -1,14 +1,31 @@
 # Experiments
 
-This chapter describes your experimental set up and evaluation. It should also
-produce and describe the results of your study. The section titles below offer
-a typical structure used for this chapter.
+## Experimental Setup
 
-## Experimental Design
+### Hardware and Software Environment
 
-Especially as it pertains to responisble computing, if conducting experiments or
-evaluations that involve particular ethical considerations, detail those issues here.
+### Dataset Generation 
 
-## Evaluation
+### Benchmark Methodology
+
+## Experimental Results 
+
+### Load Performance Results 
+
+### Query Performance Results
+
+### Chart Rendering Results 
+
+### Performance Scaling 
+
+## Evaluation 
 
 ## Threats to Validity
+
+### Synthetic Data 
+
+### Hardware Dependence 
+
+### Limited Dataset Sizes 
+
+

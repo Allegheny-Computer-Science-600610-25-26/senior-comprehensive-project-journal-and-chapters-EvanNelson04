@@ -478,22 +478,21 @@ the five most recent entries. The slope of the weight trend and the slope of the
 independently and applied to the most recent session's values to project what the following session might look like.
 
 The implementation computes the slope, and applies it over an indexed sequence
-of sessions rather than raw dates, which avoids distortions caused by irregular training intervals. The predicted weight
+of sessions rather than raw dates, which avoids potential problems caused by irregular training intervals. The predicted weight
 is then rounded to the nearest five-pound increment which is a practical decision reflecting the standard plate increments
 available in most gym settings. Predicted reps are rounded to the nearest whole number. Minimum floors of five
 pounds and one repetition are enforced to prevent the model from generating nonsensical outputs during periods of decline.
 
 This prediction is intentionally modest in scope. It does not attempt to model long-term periodization or account for
 biological variability. Instead, it provides a single concrete data point which is a suggested target for the next session
-that is grounded in recent trend data and presented as a guide. For a user-facing fitness application, a simple, interpretable 
+that is built in recent trend data and presented as a guide. For a user-facing fitness application, a simple, interpretable 
 prediction is more valuable than a complex model whose outputs cannot be easily explained or verified by the user.
 
 ### Fatigue and Recovery Index
 
 The final analytical layer in the evaluation system is a fatigue index, calculated by dividing the user's total
 training volume over the past seven days by their recent average session volume, then scaling the result to a
-0-to-100 range. This ratio effectively measures how many "average sessions" worth of volume the user has accumulated
-in the past week. A score below 40 indicates a manageable training load with adequate recovery capacity; scores
+0-to-100 range. A score below 40 indicates a manageable training load with adequate recovery capacity; scores
 between 40 and 70 suggest elevated load that warrants attention; scores above 70 signal potential overtraining and
 recommend rest.
 
