@@ -4,28 +4,28 @@
 
 ### Hardware and Software Environment
 
-### Dataset Generation 
+### Dataset Generation
 
 ### Benchmark Methodology
 
-## Experimental Results 
+## Experimental Results
 
-### Load Performance Results 
+### Load Performance Results
 
 ### Query Performance Results
 
-### Chart Rendering Results 
+### Chart Rendering Results
 
-### Performance Scaling 
+### Performance Scaling
 
-## Evaluation 
+## Evaluation
 
 ## Threats to Validity
 
-### Synthetic Data 
+### Synthetic Data
 
-### Hardware Dependence 
+### Hardware Dependence
 
-### Limited Dataset Sizes 
+### Limited Dataset Sizes
 
 
