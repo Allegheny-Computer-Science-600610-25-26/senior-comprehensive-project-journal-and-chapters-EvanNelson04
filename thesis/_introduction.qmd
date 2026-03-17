@@ -4,7 +4,7 @@
 
 This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
 the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
-with to improve their health and performance, yet many struggle to determine whether they are
+to improve their health and performance, yet many struggle to determine whether they are
 training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”,
 "Is my progress on track?”, often goes unanswered without a personal trainer or advanced tracking.
 To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
