@@ -7,7 +7,7 @@ the lack of accessible, personalized feedback in gym training. Millions of peopl
 to improve their health and performance, yet many struggle to determine whether they are
 training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”,
 "Is my progress on track?”, often goes unanswered without a personal trainer or advanced tracking.
-To bridge this gap, my iOS application provides real-time, user input data-driven feedback 
+To bridge this gap, my iOS application provides real-time, user-input data-driven feedback 
 designed to guide.
 
 The gym lifestyle has been actively growing for over twenty years. In 2000, around 32.8 million people had

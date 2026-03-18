@@ -2,9 +2,79 @@
 
 ## Experimental Setup
 
+This experiment is tailored specifically to the technical components and development environment used in the WorkoutTracker 
+application. Since the project was designed, implemented, and tested entirely within Xcode using the simulator, the experimental 
+setup focuses on the conditions required to reproduce the app’s behavior and performance measurements. In order 
+to make the results clear and repeatable, this section describes the hardware and software environment, the method used to 
+generate the datasets for testing, and the benchmark methodology used to evaluate system performance. Together, these elements 
+define the foundation of the experimental process and ensure that the reported results can be understood, replicated, and fairly 
+interpreted.
+
 ### Hardware and Software Environment
 
+The experiments for this project were conducted on Apple hardware using Xcode and the iPhone Simulator to ensure a consistent and 
+reproducible testing environment. The hardware platform used was an Apple MacBook Air equipped with an Apple M4 chip and 16 GB of 
+RAM. This machine provided sufficient processing power and memory to build, run, and evaluate the application without hardware-related 
+limitations affecting the benchmark results. Rather than deploying to a physical iPhone for the reported experiments, the 
+application was executed through the iPhone Simulator included with Xcode, allowing controlled and repeatable testing conditions 
+across multiple runs. 
+
+On the software side, the development environment consisted of macOS as the host operating system, Xcode as the integrated 
+development environment, Swift as the programming language, and the iOS SDK version bundled with the installed Xcode release. 
+Unless otherwise stated, the application was compiled and tested using the Debug build configuration, since this was the 
+configuration used during development and simulator-based experimental runs. Recording these hardware and software details is 
+important so that another reader or developer can recreate the same setup and reproduce the experimental procedure under 
+comparable conditions.
+
 ### Dataset Generation
+
+It is important to talk about this data generation as it is the central point of the experiment. This data needed to be created and generated
+in the same format as the data the users will enter into the app to simulate real data. By simulating this real data, it will make
+this experiment as close to what a user's real app will look like. 
+
+```swift
+static let exercises = [
+        "Bench Press", "Squat", "Deadlift", "Overhead Press",
+        "Pull Up", "Barbell Row", "Leg Press", "Incline Bench",
+        "Dumbbell Curl", "Tricep Pushdown", "Lat Pulldown", "Cable Fly"
+    ]
+
+    static let muscleGroups = ["Chest", "Back", "Legs", "Arms", "Shoulders", "Core"]
+```
+\begin{figure}[h!]
+\centering
+\caption{List of Exercises and Muscle Groups}
+\label{fig:workoutcard}
+\end{figure}
+
+This is where the data generation starts. The data generation was designed to be simple and efficient. As you can see in the code above,
+there is a set list of exercises that the data gets generated from, as well as a set list of muscle groups. When the data is being generated
+the loop will cycle through this list of exercises, generating piece by piece in a fashion that equally generates data for each set
+exercise. This is also most accurate to what a real user's data might look like. Ideally data should be spread out evenly over different
+exercises using different muscle groups. Initializing a set list of exercises makes the data generation easier, as it is just 
+assigning a exercise to the piece of data.
+
+Next, it is important to display what this data looks like in the code. Like noted before, the data is built to the same format as the
+real data within the app. Like previously mentioned, this will best mirror a user's real data. 
+
+```swift
+entries.append(WorkoutEntry(
+    date: date,
+    muscleGroup: muscleGroup,
+    exercise: exercise,
+    weight: weight,
+    reps: Int.random(in: 3...12)
+))
+```
+\begin{figure}[h!]
+\centering
+\caption{Data Format and Progression Simulation}
+\label{fig:workoutcard}
+\end{figure}
+
+This code above is the format for every piece of generated data that this experiment uses. It outlines and uses the same parameters
+that the real user data utilizes.
+
 
 ### Benchmark Methodology
 
