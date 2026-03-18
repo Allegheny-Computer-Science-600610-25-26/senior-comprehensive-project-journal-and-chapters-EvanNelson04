@@ -76,22 +76,46 @@ entries.append(WorkoutEntry(
 \end{figure}
 
 This code above is the format for every piece of generated data that this experiment uses. It outlines and uses the same parameters
-that the real user data utilizes.
-
+that the real user data utilizes. Within this code segment you can see that it generates different parameters such as date, muscleGroup,
+exercise, weight, and reps. These are all of the important things that the app needs to produce a full and accurate evaluation 
+so the user can progress over their time of using the app. By making the data all in the same format, it makes the generation
+process super simple and can be done in only a few steps.
 
 ### Benchmark Methodology
 
+The benchmark methodology begins by generating synthetic workout data and appending it to the dataset list used by the 
+application. This process fills the app with realistic test data before any measurements are taken, ensuring that the benchmark 
+reflects how the app performs when it is already populated with entries similar to those a real user would create. For this 
+experiment, the dataset size was set to 100, 1000, and 10000 entries so that performance could be observed under a controlled and 
+repeatable condition.
+
+Performance was measured in milliseconds to provide precise timing results for each tested operation. Each benchmark test was 
+executed 5 times, and the final reported values were calculated as the average of those 5 runs. Averaging the results helped 
+reduce the effect of temporary system variation and produced a more reliable representation of the app’s typical performance. As
+learned in many classes including data analysis, taking the average of 5 or more runs creates a more accurate depiction of the 
+performance. When an experiment is only run once, this contains the possibility of having outliers in your data. By running the
+benchmarking experiment multiple times, it allows the times to be much more accurate. 
+
+The benchmark includes three main performance categories: load time, query performance, and chart rendering. Load time measures 
+how long the application takes to read and display the stored workout data after launch. Query performance measures how quickly 
+the app can search, filter, or retrieve workout-related information from the dataset. Chart rendering measures the time required 
+for the app to generate and display visual progress charts based on the stored entries. Together, these three categories provide 
+a clear view of the app’s responsiveness and efficiency during its most important functions.
+
 ## Experimental Results
 
-### Load Performance Results
+In this section, the results of each category will be analyzed and discussed to demonstrate this application’s ability to 
+maintain strong performance under high-stress conditions. As this experiment was performed with 3 different dataset sizes, 
+this evaluation and analysis is broken into three sections with the corresponding dataset size. By completing this analysis in this
+fashion, it will best align with the code output, which will make the analysis much easier.
 
-### Query Performance Results
+### Performance Results with 100 Entries
 
-### Chart Rendering Results
+### Performance Results with 1,000 Entries
 
-### Performance Scaling
+### Performance Results with 10,000 Entries
 
-## Evaluation
+### Final Results Evaluation
 
 ## Threats to Validity
 

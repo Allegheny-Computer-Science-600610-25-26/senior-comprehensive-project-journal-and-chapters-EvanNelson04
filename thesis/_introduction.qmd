@@ -3,7 +3,7 @@
 ## Background
 
 This Senior Comprehensive Project aims to address the problem within the fitness domain. Specifically, 
-the lack of accessible, personalized feedback in gym training. Millions of people visit gyms each day
+the lack of accessible, personalized feedback in weightlifting training. Millions of people visit gyms each day
 to improve their health and performance, yet many struggle to determine whether they are
 training effectively. Questions such as “Am I using the right form?”, “How much weight should I lift?”,
 "Is my progress on track?”, often goes unanswered without a personal trainer or advanced tracking.
