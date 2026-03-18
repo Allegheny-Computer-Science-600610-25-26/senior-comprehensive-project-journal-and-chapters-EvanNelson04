@@ -30,7 +30,9 @@ comparable conditions.
 
 It is important to talk about this data generation as it is the central point of the experiment. This data needed to be created and generated
 in the same format as the data the users will enter into the app to simulate real data. By simulating this real data, it will make
-this experiment as close to what a user's real app will look like. 
+this experiment as close to what a user's real app will look like. Being able to simulate the look of real data for this experiment
+is important for strengthening my argument and experiment. This synthetic data generation process ensures that the benchmark results 
+reflect realistic usage conditions rather than an artificial test environment.
 
 ```swift
 static let exercises = [
@@ -39,7 +41,8 @@ static let exercises = [
         "Dumbbell Curl", "Tricep Pushdown", "Lat Pulldown", "Cable Fly"
     ]
 
-    static let muscleGroups = ["Chest", "Back", "Legs", "Arms", "Shoulders", "Core"]
+    static let muscleGroups = ["Chest", "Back", "Legs", "Arms", 
+    "Shoulders", "Core"]
 ```
 \begin{figure}[h!]
 \centering
