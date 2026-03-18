@@ -113,6 +113,37 @@ fashion, it will best align with the code output, which will make the analysis m
 
 ![Dataset 100 results](images/Dataset100.png)
 
+```swift
+┌─────────────────────────────────────────────────────────────
+│  DATASET SIZE: 100 entries
+├─────────────────────────────────────────────────────────────
+│
+│  📦 LOAD TIME (encode + UserDefaults write + decode)
+│     2.67 ms   (avg of 5 runs)
+│
+│  🔍 QUERY TIMES  (avg of 5 runs each)
+│     Filter by exercise (Bench Press)       0.036 ms  [░░░░░░░░░░]
+│     Filter by muscle group (Chest)         0.009 ms  [░░░░░░░░░░]
+│     Sort by date descending                0.015 ms  [░░░░░░░░░░]
+│     Max weight per exercise                0.032 ms  [░░░░░░░░░░]
+│     Unique exercise count                  0.020 ms  [░░░░░░░░░░]
+│     Monthly unique workout days            0.095 ms  [░░░░░░░░░░]
+│     Big Three combined max weight          0.097 ms  [░░░░░░░░░░]
+│     ─────────────────────────────────────────────────────
+│     Total query time (all award checks combined):  0.303 ms
+│
+│  📈 CHART RENDERING (same logic as WorkoutChartView, capped at 25 pts)
+│     Chart data for Bench Press   0.008 ms  [9 total → 9 shown, 100.0% retained]
+│     Chart data for Squat         0.003 ms  [9 total → 9 shown, 100.0% retained]
+│     Chart data for Deadlift      0.002 ms  [9 total → 9 shown, 100.0% retained]
+└─────────────────────────────────────────────────────────────
+```
+\begin{figure}[h!]
+\centering
+\caption{List of Exercises and Muscle Groups}
+\label{fig:workoutcard}
+\end{figure}
+
 ### Performance Results with 1,000 Entries
 
 ### Performance Results with 10,000 Entries
