@@ -107,7 +107,10 @@ a clear view of the app’s responsiveness and efficiency during its most import
 In this section, the results of each category will be analyzed and discussed to demonstrate this application’s ability to 
 maintain strong performance under high-stress conditions. As this experiment was performed with 3 different dataset sizes, 
 this evaluation and analysis is broken into three sections with the corresponding dataset size. By completing this analysis in this
-fashion, it will best align with the code output, which will make the analysis much easier.
+fashion, it will best align with the code output, which will make the analysis much easier. One important point to note, so that 
+it does not need to be repeated in each section, is that a common performance standard for application responsiveness is to keep 
+loading times under 100 milliseconds. As long as the load time and query time remain below this threshold, the user is unlikely 
+to notice any lag during normal app use.
 
 ### Performance Results with 100 Entries
 
@@ -140,9 +143,54 @@ fashion, it will best align with the code output, which will make the analysis m
 ```
 \begin{figure}[h!]
 \centering
-\caption{List of Exercises and Muscle Groups}
+\caption{Performance Results With 100 Entries}
 \label{fig:workoutcard}
 \end{figure}
+
+Looking at the results in the output above there are many different sections to evaluate. This is going to be broken down into
+three different sections, load time, query time, and chart rendering. 
+
+Starting with the load time at the size of 100 data entries. This was expected to be quite rapid as there are not many data entries
+for the app to be slow. As we see in the output, the load time took approximately 2.67 milliseconds on average to load the app. This
+is the most important metric to measure in app development. The load time needs to always be under 100 milliseconds so the transition 
+from the home screen to the app is seamless. 100 entries on average equates to about one month of workouts. Knowing this, we can finalize
+that with 100 entries within the application, the app functions seamlessly with no delay at all.
+
+Moving onto the query times, as this is the first section each parameter will be introduced with reasoning. The goal of testing the
+queries, is to measuer each section of the app with nothing falling through the cracks. To complete this there were multiple different
+types of queries that needed to be measured starting with two different filtering queries. The first query is used to file through
+the list of exercises to then pull out the specific exercise that the user wants to see the graph for. The second query is used in similar
+fashion to group together all the exercises of the same muscle group. These both are some of the main queries used in this application
+and are essential to be rapid so there is no delay, which as we can see in the results are for this size of data. Both being under 0.050
+milliseconds, and the muscle group query being slightly faster. Moving on from that, the next query is utilized to display the data
+in the workout log in a descending fashion. This specifically files through the data making sure it is displaying the most recent data
+first. This is also rapid at around 0.015 milliseconds which will cause no problems whatsever. The next 4 queries are focused within
+the profile page. This page as explained previously, is designed to show certain personal records, the number of unique exercises, 
+the combined weight of deadlift, squat, and bench press, and finally unique workout days. These queries all focus on differnet but important
+aspects of weightlifting. Regarding the maximum weight query, this timed how fast the application can pick out a user's personal record
+for a specific exercise, which as expected was very fast at 0.032 milliseconds. This next query looks at how many different unique exercises
+has the user completed, which again was rapid at 0.020 milliseconds. Then jumping to the big three combined max weight, this was expected
+to be around triple the time of finding the max weight of one exercise. This is because the big three combined query is searching and 
+collecting three different pieces of data then adding them together to finish with one combined variable. The time for this query was 
+measured at 0.097 milliseconds which is almost three times more than the singular maximum weight query. Finally the monthly
+unique workout days is filing through the list to discover how many days out of the month has the user worked out. This was also
+expected to be a little slower as it is searching multiple times. This still was very fast at 0.095 milliseconds, which again will
+cause zero problems within this application. Closing this section, all these query times performed very well at a smaller data size
+of 100 entries, which is very exciting to see for the performance of this app.
+
+Finally looking at the chart rendering section. These charts are designed in a specific way so that no matter how much data the user
+enters, the chart will always appear legible. The way this was completed was by keeping the amount of data points per graph to a maximum
+of 25 data points. We can see for this small data size, that there are only 9 data points in the graphs and for that reason 100% of 
+the data was retained. This is just showing the percentage of how many data points are displayed versus how many data points there are
+in total. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
+no problems inside my application. For the queries of this section, the experiment looks only into 3 exercises, but important to note
+that they all should perform around the same. For all of these queries we can see that they have ranged from 0.02 - 0.08 milliseconds.
+This is very exciting as the developer to see, as it gives confidence that the graphs won't cause any slowness within the application
+functionality.
+
+Wrapping up the first dataset size, all of the parts of the app functioned extremely well under relatively low stress. Knowing how 
+fast they perform will really help with the comparisons as the stress of the app gets increased with higher dataset sizes.
+
 
 ### Performance Results with 1,000 Entries
 
