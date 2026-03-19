@@ -216,7 +216,7 @@ that they all should perform around the same. For all of these queries we can se
 This is very exciting as the developer to see, as it gives confidence that the graphs won't cause any slowness within the application
 functionality.
 
-### Final Results Evaluation
+### Final Results Analysis
 
 ## Threats to Validity
 
