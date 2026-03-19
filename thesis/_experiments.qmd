@@ -172,13 +172,93 @@ rest. After this initial run, the remaining four times are much closer together,
 milliseconds. This small range indicates that the load operation is highly consistent once the application has completed 
 its initial startup behavior.
 
-The median value, represented by the black line in the box-and-whisker plot, is 0.861 milliseconds. This is especially important 
+The median value, represented by the black line in the box and whisker plot, is 0.861 milliseconds. This is especially important 
 because it shows that most runs are clustered at a much lower value than the average of 1.58 milliseconds. In this case, the 
 average is raised by the unusually slower first run, meaning the median may better represent the typical load performance for 
 this dataset size. Overall, these results demonstrate that with 100 entries, the application is able to load workout data 
 extremely quickly and with very little variation between repeated runs. This suggests that at smaller dataset sizes, the loading 
 functionality performs efficiently and would not create any noticeable delay for the user.
 
+```swift
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 1000 entries                                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 5.35 ms, 5.64 ms, 9.83 ms, 6.83 ms, 6.89 ms       │
+│     Avg : 6.91 ms                                           │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 1,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
+    \caption{Performance Results With 1,000 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+Moving onto the next dataset size, five separate load time measurements were recorded for the dataset containing 1000 
+entries, followed by the average of those five runs. Among these five run times, the highest 
+recorded value was 9.83 milliseconds, which is noticeably higher than the other four runs. This suggests that one run 
+experienced slightly more overhead than the others, while the remaining measurements stayed within a much narrower range 
+of 5.35 milliseconds to 6.89 milliseconds. The relatively small spread among those four runs indicates that the app loading time 
+remains stable as the dataset size increases.
+
+The median value for these five runs is 6.83 milliseconds, which provides a better representation of the typical load 
+performance than the average in this case. This is because the average of 6.91 milliseconds is slightly influenced by the 
+slower 9.83 millisecond run. Even with that higher result included, all five measurements remain well below the 100 
+millisecond threshold for noticeable delay, showing that the application continues to load data very quickly at this
+dataset size. Overall, these results demonstrate that with 1000 entries, the loading functionality remains efficient, 
+consistent, and responsive, suggesting that the app can comfortably handle a moderate amount of stored workout data without 
+causing visible lag for the user.
+
+```swift
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 10000 entries                                │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 47.51 ms, 44.11 ms, 42.29 ms, 42.25 ms, 41.99 ms  │
+│     Avg : 43.63 ms                                          │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 10,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
+    \caption{Performance Results With 10,000 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+Finally moving onto the largest dataset size of 10,000 entries. This is the largest dataset size that this experiment handles, which
+will provide a complete picture on how the WorkoutTracker application can function with lots of data. Looking at the 5 run times,
+they are all very close together as we can see in the plot. Since the dataset is a larger size, meaning the runtimes may vary more
+than you would see in a smaller dataset, the run at 47.51 milliseconds is not considered an outlier within this experiment. 
+
+The median within this dataset is run three at 42.29 milliseconds, which is very close to the average time of 43.63 milliseconds.
+This demonstrates that the results are very consistent, with no outlier heavily distorting the average. Although the load time
+has increased greatly, this is expected because of the growth in the size of the dataset. Knowing this, all five of the measurements
+at the largest dataset size still remain well below the 100 millisecond threshold for noticeable delay. This goes to show how
+efficient the code and functionality within the app works.
+
+Across all three dataset sizes, the load time results show a clear and expected increase as the amount of stored data grows. 
+However, even at the largest tested size of 10000 entries, the average load time remained at only 43.63 milliseconds, which is 
+still comfortably below the 100 millisecond standard for maintaining a smooth user experience. The smaller dataset sizes of 100 
+and 1,000 entries performed especially fast, with results in the range of only a few milliseconds. Overall, these findings show 
+that the application’s loading process scales efficiently as more workout data is added, while still maintaining a level of 
+performance that should feel instantaneous to the user.
 
 ### Query Time Performance Results 
 
