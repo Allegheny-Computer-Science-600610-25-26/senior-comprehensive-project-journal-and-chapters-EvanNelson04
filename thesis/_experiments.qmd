@@ -139,8 +139,7 @@ to notice any lag during normal app use.
 
 ### Load Time Performance Results 
 
-{\footnotesize
-\begin{verbatim}
+```swift
 ┌─────────────────────────────────────────────────────────────┐
 │  DATASET SIZE: 100 entries                                  │
 ├─────────────────────────────────────────────────────────────┤
@@ -149,8 +148,13 @@ to notice any lag during normal app use.
 │     Runs: 4.48 ms, 0.934 ms, 0.861 ms, 0.830 ms, 0.805 ms   │
 │     Avg : 1.58 ms                                           │
 └─────────────────────────────────────────────────────────────┘
-\end{verbatim}
-}
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 100 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
 
 \begin{figure}[h!]
     \centering
