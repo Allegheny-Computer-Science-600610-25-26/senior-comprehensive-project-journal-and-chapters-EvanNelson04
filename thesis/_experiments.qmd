@@ -102,6 +102,31 @@ the app can search, filter, or retrieve workout-related information from the dat
 for the app to generate and display visual progress charts based on the stored entries. Together, these three categories provide 
 a clear view of the app’s responsiveness and efficiency during its most important functions.
 
+Within the query performance category, several specific queries were selected because they represent the most important 
+data-processing tasks used throughout the application. These queries were chosen to ensure that each major area of the app 
+was tested without overlooking any essential operation. The first set of queries focuses on filtering. One filtering query 
+searches through the workout entries to isolate records for a specific exercise so that the correct graph data can be displayed 
+to the user. A second filtering query groups exercises by muscle group, allowing the application to organize and present workout 
+data based on categories such as chest, back, or legs. These filtering operations are central to how users interact with their 
+workout history and progress.
+
+Another important query included in the benchmark is the descending sort query used in the workout log. This query organizes the 
+stored entries so that the most recent workout data appears first, which is a key part of making the workout log practical and 
+user-friendly. Since users are most likely to review their newest workouts, this sorting behavior is an important operation to 
+measure.
+
+Additional benchmarked queries were taken from the profile page, where the application calculates several performance-based 
+statistics. One query finds the maximum weight recorded for a specific exercise, which represents the user’s personal record. 
+Another determines the number of unique exercises completed, giving insight into workout variety. A third calculates the combined 
+total of the user’s bench press, squat, and deadlift maximums, commonly referred to as the “big three” total in weightlifting. 
+The final profile-related query counts the number of unique workout days in a month, which helps summarize consistency and training 
+frequency. These queries were included because they measure the speed of retrieving some of the most meaningful fitness metrics 
+displayed by the application.
+
+By defining these queries in advance and testing each one individually, the benchmark methodology provides a structured way to 
+evaluate how efficiently the application handles its core features. This allows the results section to not only report the measured 
+query times, but also explain why each query matters to the overall user experience and performance of the app.
+
 ## Experimental Results
 
 In this section, the results of each category will be analyzed and discussed to demonstrate this application’s ability to 
@@ -112,34 +137,16 @@ it does not need to be repeated in each section, is that a common performance st
 loading times under 100 milliseconds. As long as the load time and query time remain below this threshold, the user is unlikely 
 to notice any lag during normal app use.
 
-### Performance Results with 100 Entries
-
-![Dataset 100 results](images/Dataset100.png)
+### Load Time Performance Results 
 
 ```swift
-┌─────────────────────────────────────────────────────────────
-│  DATASET SIZE: 100 entries
-├─────────────────────────────────────────────────────────────
-│
-│  📦 LOAD TIME (encode + UserDefaults write + decode)
-│     2.67 ms   (avg of 5 runs)
-│
-│  🔍 QUERY TIMES  (avg of 5 runs each)
-│     Filter by exercise (Bench Press)       0.036 ms  [░░░░░░░░░░]
-│     Filter by muscle group (Chest)         0.009 ms  [░░░░░░░░░░]
-│     Sort by date descending                0.015 ms  [░░░░░░░░░░]
-│     Max weight per exercise                0.032 ms  [░░░░░░░░░░]
-│     Unique exercise count                  0.020 ms  [░░░░░░░░░░]
-│     Monthly unique workout days            0.095 ms  [░░░░░░░░░░]
-│     Big Three combined max weight          0.097 ms  [░░░░░░░░░░]
-│     ─────────────────────────────────────────────────────
-│     Total query time (all award checks combined):  0.303 ms
-│
-│  📈 CHART RENDERING (same logic as WorkoutChartView, capped at 25 pts)
-│     Chart data for Bench Press   0.008 ms  [9 total → 9 shown, 100.0% retained]
-│     Chart data for Squat         0.003 ms  [9 total → 9 shown, 100.0% retained]
-│     Chart data for Deadlift      0.002 ms  [9 total → 9 shown, 100.0% retained]
-└─────────────────────────────────────────────────────────────
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 100 entries                                  │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 4.48 ms, 0.934 ms, 0.861 ms, 0.830 ms, 0.805 ms   │
+│     Avg : 1.58 ms   
 ```
 \begin{figure}[h!]
 \centering
@@ -147,14 +154,26 @@ to notice any lag during normal app use.
 \label{fig:workoutcard}
 \end{figure}
 
-Looking at the results in the output above there are many different sections to evaluate. This is going to be broken down into
-three different sections, load time, query time, and chart rendering. 
+![Dataset 100 results](ExperimentData/Load100.png)
 
-Starting with the load time at the size of 100 data entries. This was expected to be quite rapid as there are not many data entries
-for the app to be slow. As we see in the output, the load time took approximately 2.67 milliseconds on average to load the app. This
-is the most important metric to measure in app development. The load time needs to always be under 100 milliseconds so the transition 
-from the home screen to the app is seamless. 100 entries on average equates to about one month of workouts. Knowing this, we can finalize
-that with 100 entries within the application, the app functions seamlessly with no delay at all.
+As shown in the benchmark output above, five separate load time measurements were recorded for the dataset containing 100 
+entries, followed by the average of those five runs. The box-and-whisker plot below presents these same results visually 
+and will be used throughout the remainder of the benchmark analysis for consistency. Among these five run times, the slowest 
+recorded value was 4.48 milliseconds. This is likely due to the first run including additional startup overhead from the 
+simulator and the initial execution of the loading process, which can make the first measurement slightly slower than the 
+rest. After this initial run, the remaining four times are much closer together, ranging from 0.805 milliseconds to 0.934 
+milliseconds. This small range indicates that the load operation is highly consistent once the application has completed 
+its initial startup behavior.
+
+The median value, represented by the black line in the box-and-whisker plot, is 0.861 milliseconds. This is especially important 
+because it shows that most runs are clustered at a much lower value than the average of 1.58 milliseconds. In this case, the 
+average is raised by the unusually slower first run, meaning the median may better represent the typical load performance for 
+this dataset size. Overall, these results demonstrate that with 100 entries, the application is able to load workout data 
+extremely quickly and with very little variation between repeated runs. This suggests that at smaller dataset sizes, the loading 
+functionality performs efficiently and would not create any noticeable delay for the user.
+
+
+### Query Time Performance Results 
 
 Moving onto the query times, as this is the first section each parameter will be introduced with reasoning. The goal of testing the
 queries, is to measuer each section of the app with nothing falling through the cracks. To complete this there were multiple different
@@ -178,6 +197,8 @@ expected to be a little slower as it is searching multiple times. This still was
 cause zero problems within this application. Closing this section, all these query times performed very well at a smaller data size
 of 100 entries, which is very exciting to see for the performance of this app.
 
+### Chart Rendering Performance Results
+
 Finally looking at the chart rendering section. These charts are designed in a specific way so that no matter how much data the user
 enters, the chart will always appear legible. The way this was completed was by keeping the amount of data points per graph to a maximum
 of 25 data points. We can see for this small data size, that there are only 9 data points in the graphs and for that reason 100% of 
@@ -187,14 +208,6 @@ no problems inside my application. For the queries of this section, the experime
 that they all should perform around the same. For all of these queries we can see that they have ranged from 0.02 - 0.08 milliseconds.
 This is very exciting as the developer to see, as it gives confidence that the graphs won't cause any slowness within the application
 functionality.
-
-Wrapping up the first dataset size, all of the parts of the app functioned extremely well under relatively low stress. Knowing how 
-fast they perform will really help with the comparisons as the stress of the app gets increased with higher dataset sizes.
-
-
-### Performance Results with 1,000 Entries
-
-### Performance Results with 10,000 Entries
 
 ### Final Results Evaluation
 
