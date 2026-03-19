@@ -251,7 +251,8 @@ The median within this dataset is run three at 42.29 milliseconds, which is very
 This demonstrates that the results are very consistent, with no outlier heavily distorting the average. Although the load time
 has increased greatly, this is expected because of the growth in the size of the dataset. Knowing this, all five of the measurements
 at the largest dataset size still remain well below the 100 millisecond threshold for noticeable delay. This goes to show how
-efficient the code and functionality within the app works.
+efficient the code and functionality within the app works. We can predict from this data that it would take a much larger dataset
+to cause the load time to take over 100 milliseconds, causing delay within the application.
 
 Across all three dataset sizes, the load time results show a clear and expected increase as the amount of stored data grows. 
 However, even at the largest tested size of 10000 entries, the average load time remained at only 43.63 milliseconds, which is 
