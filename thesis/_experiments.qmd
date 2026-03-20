@@ -9,8 +9,8 @@ to make the results clear and repeatable, this section describes the hardware an
 generate the datasets for testing, and the benchmark methodology used to evaluate system performance. Together, these elements 
 define the foundation of the experimental process and ensure that the reported results can be understood, replicated, and fairly 
 interpreted. The benchmark implementation used for these experiments is also available in a separate public repository to support 
-transparency and reproducibility: WorkoutTrackerExperiment [https://github.com/EvanNelson04/WorkoutTrackerExperiment]. This 
-repository contains the experimental benchmarking code used to generate the performance results discussed in this chapter.
+transparency and reproducibility: [https://github.com/EvanNelson04/WorkoutTrackerExperiment]. This repository contains the 
+experimental benchmarking code used to generate the performance results discussed in this chapter.
 
 ### Hardware and Software Environment
 
