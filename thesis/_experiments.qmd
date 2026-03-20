@@ -315,10 +315,9 @@ no problems inside my application.
 └─────────────────────────────────────────────────────────────┘
 ```
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
-    \caption{Performance Results With 10,000 Entries}
-    \label{fig:workoutcard}
+\centering
+\caption{Chart Rendering Dataset Size 100 Entries}
+\label{fig:workoutcard}
 \end{figure}
 
 This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 ms and 
