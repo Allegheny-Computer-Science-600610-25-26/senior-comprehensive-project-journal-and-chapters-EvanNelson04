@@ -8,7 +8,9 @@ setup focuses on the conditions required to reproduce the app’s behavior and p
 to make the results clear and repeatable, this section describes the hardware and software environment, the method used to 
 generate the datasets for testing, and the benchmark methodology used to evaluate system performance. Together, these elements 
 define the foundation of the experimental process and ensure that the reported results can be understood, replicated, and fairly 
-interpreted.
+interpreted. The benchmark implementation used for these experiments is also available in a separate public repository to support 
+transparency and reproducibility: WorkoutTrackerExperiment [https://github.com/EvanNelson04/WorkoutTrackerExperiment]. This 
+repository contains the experimental benchmarking code used to generate the performance results discussed in this chapter.
 
 ### Hardware and Software Environment
 
@@ -159,7 +161,7 @@ to notice any lag during normal app use.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.55\textwidth]{ExperimentData/Load100.png}
-    \caption{Performance Results With 100 Entries}
+    \caption{Load Time Performance Results With 100 Entries}
     \label{fig:workoutcard}
 \end{figure}
 
@@ -199,7 +201,7 @@ functionality performs efficiently and would not create any noticeable delay for
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
-    \caption{Performance Results With 1,000 Entries}
+    \caption{Load Time Performance Results With 1,000 Entries}
     \label{fig:workoutcard}
 \end{figure}
 
@@ -238,7 +240,7 @@ causing visible lag for the user.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
-    \caption{Performance Results With 10,000 Entries}
+    \caption{Load Time Performance Results With 10,000 Entries}
     \label{fig:workoutcard}
 \end{figure}
 
@@ -289,13 +291,49 @@ of 100 entries, which is very exciting to see for the performance of this app.
 
 Finally looking at the chart rendering section. These charts are designed in a specific way so that no matter how much data the user
 enters, the chart will always appear legible. The way this was completed was by keeping the amount of data points per graph to a maximum
-of 25 data points. We can see for this small data size, that there are only 9 data points in the graphs and for that reason 100% of 
-the data was retained. This is just showing the percentage of how many data points are displayed versus how many data points there are
-in total. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
-no problems inside my application. For the queries of this section, the experiment looks only into 3 exercises, but important to note
-that they all should perform around the same. For all of these queries we can see that they have ranged from 0.02 - 0.08 milliseconds.
-This is very exciting as the developer to see, as it gives confidence that the graphs won't cause any slowness within the application
-functionality.
+of 25 data points. As the first dataset size is only 100 entries, this will not force the graph to hit the maximum of 25 entries. You
+will notice in the output a few important pieces. The first being the average time, along with the 5 seperate runs of the benchmarking
+experiment. After that, the next line will display how many pieces of data for the exercise there are, compared to how many are shown.
+This will be important to note as the dataset gets bigger because there will be much more than 25 data points but not will be shown. This
+brings us to the next important piece, that is the percent of data retained. This is showing in a percentage output, how much of the 
+data is on the graph, just by completing a simple formula which is the shown data divided by the total data, all multiplied by 100 to 
+get the final percentage value. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
+no problems inside my application.
+
+```swift│  
+   📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.008 ms               │
+│        Runs: 0.027 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.003 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+│     Chart data for Squat         Avg 0.003 ms               │
+│        Runs: 0.003 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.002 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+│     Chart data for Deadlift      Avg 0.003 ms               │
+│        Runs: 0.003 ms, 0.002 ms, 0.003 ms, 0.003 ms, 0.003 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
+    \caption{Performance Results With 10,000 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 ms and 
+0.008 ms for all three exercises, which is essentially instantaneous from a user perspective. Bench press was the slowest of the 
+three at 0.008 ms average, but even that is still far below any noticeable threshold, while Squat and Deadlift both averaged 
+0.003 ms, showing very consistent speed. The slightly higher first bench press run of 0.027 milliseconds was likely due to initial 
+setup overhead during the first run rather than sustained chart rendering cost. This is supported by the remaining runs, which stabilized at about 
+0.003 ms, indicating consistently fast performance once the process was initialized.The individual runs also stayed tightly 
+grouped, which suggests the chart data generation logic is stable and reliable rather than producing random spikes in processing time.
+
+Another important result is that the chart retained 100% of the available data points for each exercise, with 9 total points shown 
+out of 9 available. This means the rendering logic did not need to trim or reduce the dataset in this case, so the app was able 
+to display the full workout history for each exercise while still maintaining near-zero processing time. Overall, these results 
+indicate that the chart rendering system is highly efficient and should have no negative effect on app responsiveness or user 
+experience.
 
 ### Final Results Analysis
 
