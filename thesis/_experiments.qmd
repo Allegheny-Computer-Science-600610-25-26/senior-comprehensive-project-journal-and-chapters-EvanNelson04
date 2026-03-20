@@ -333,7 +333,8 @@ Another important result is that the chart retained 100% of the available data p
 out of 9 available. This means the rendering logic did not need to trim or reduce the dataset in this case, so the app was able 
 to display the full workout history for each exercise while still maintaining near-zero processing time. Overall, these results 
 indicate that the chart rendering system is highly efficient and should have no negative effect on app responsiveness or user 
-experience.
+experience. As mentioned before, the chart will only handle a maximum of 25 values. Since these primary results performed strong,
+it is fair to predict that there should not be much change in the performance as the dataset sizes increase.
 
 ### Final Results Analysis
 
