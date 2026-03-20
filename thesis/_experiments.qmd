@@ -300,8 +300,8 @@ data is on the graph, just by completing a simple formula which is the shown dat
 get the final percentage value. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
 no problems inside my application.
 
-```swift│  
-   📈 CHART RENDERING (same logic as WorkoutChartView)        │
+```swift
+│   📈 CHART RENDERING (same logic as WorkoutChartView)        │
 │     (capped at 25 pts)                                      │
 │     Chart data for Bench Press   Avg 0.008 ms               │
 │        Runs: 0.027 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.003 m│
