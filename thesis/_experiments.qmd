@@ -320,12 +320,14 @@ no problems inside my application.
 \label{fig:workoutcard}
 \end{figure}
 
-This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 ms and 
-0.008 ms for all three exercises, which is essentially instantaneous from a user perspective. Bench press was the slowest of the 
-three at 0.008 ms average, but even that is still far below any noticeable threshold, while Squat and Deadlift both averaged 
-0.003 ms, showing very consistent speed. The slightly higher first bench press run of 0.027 milliseconds was likely due to initial 
-setup overhead during the first run rather than sustained chart rendering cost. This is supported by the remaining runs, which stabilized at about 
-0.003 ms, indicating consistently fast performance once the process was initialized.The individual runs also stayed tightly 
+This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 milliseconds and 
+0.008 milliseconds for all three exercises, which is essentially instantaneous from a user perspective. Bench press was the slowest of the 
+three at 0.008 milliseconds average, but even that is still far below any noticeable threshold, while squat and deadlift both averaged 
+0.003 milliseconds, showing very consistent speed. The slightly higher first bench press run of 0.027 milliseconds was likely due to initial 
+setup overhead during the first run rather than sustained chart rendering cost. This is a known phenomenon called the cold start effect.
+This is when initial setup work affects the first run of a benchmarking experiment, making it seem slower when in reality it is just
+as fast as the next runs of the experiment. This is supported by the remaining runs, which stabilized at about 
+0.003 milliseconds, indicating consistently fast performance once the process was initialized.The individual runs also stayed tightly 
 grouped, which suggests the chart data generation logic is stable and reliable rather than producing random spikes in processing time.
 
 Another important result is that the chart retained 100% of the available data points for each exercise, with 9 total points shown 
@@ -334,6 +336,76 @@ to display the full workout history for each exercise while still maintaining ne
 indicate that the chart rendering system is highly efficient and should have no negative effect on app responsiveness or user 
 experience. As mentioned before, the chart will only handle a maximum of 25 values. Since these primary results performed strong,
 it is fair to predict that there should not be much change in the performance as the dataset sizes increase.
+
+```swift
+│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.007 ms               │
+│        Runs: 0.012 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+│     Chart data for Squat         Avg 0.006 ms               │
+│        Runs: 0.007 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+│     Chart data for Deadlift      Avg 0.006 ms               │
+│        Runs: 0.006 ms, 0.005 ms, 0.005 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Chart Rendering Dataset Size 1,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+This chart rendering result again demonstrates extremely strong performance, even with the larger 100-entry dataset. The 
+average render time remained between 0.006 milliseconds and 0.007 milliseconds for all three exercises, which is still effectively instantaneous 
+from the user’s perspective. Bench Press showed the highest average at 0.007 milliseconds, while squat and deadlift both averaged 0.006 
+milliseconds, indicating that rendering speed stayed nearly identical across exercises. The individual runs were also very 
+closely grouped, with only minor variation between measurements, which suggests that the chart rendering process is stable 
+and dependable rather than affected by irregular spikes in execution time.
+
+Another important finding is that the chart displayed 25 points out of 84 total available values for each exercise, meaning 29.8% 
+of the total dataset was retained for visualization. This reflects the chart’s built-in cap of 25 values, which is intentionally 
+used to keep the graph readable and efficient even as the stored workout history grows larger. Despite working with a much larger 
+pool of available data, the rendering time remained near zero, showing that limiting the displayed values successfully prevents
+performance from degrading. Overall, these results indicate that the chart rendering system remains highly efficient at this 
+dataset size and should continue to have no noticeable impact on app responsiveness or user experience.
+
+```swift
+│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.006 ms               │
+│        Runs: 0.009 ms, 0.006 ms, 0.006 ms, 0.005 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+│     Chart data for Squat         Avg 0.005 ms               │
+│        Runs: 0.006 ms, 0.006 ms, 0.005 ms, 0.005 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+│     Chart data for Deadlift      Avg 0.007 ms               │
+│        Runs: 0.010 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Chart Rendering Dataset Size 10,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These chart rendering results remain very solid even at the largest dataset size. The average render times stayed between 0.005 
+milliseconds and 0.007 milliseconds across all three exercises, which is still essentially instantaneous from a user perspective. 
+Bench press averaged 0.006 milliseconds, Squat averaged 0.005 milliseconds, and Deadlift averaged 0.007 milliseconds, showing that 
+performance remained highly consistent even with 834 total available values per exercise. Although the first run for bench press 
+and Deadlift was slightly higher than the rest, this is most likely due to a cold start effect, since the later runs quickly 
+stabilized at nearly identical times. The close grouping of the remaining runs further shows that the rendering process is 
+reliable and does not experience meaningful slowdown as more workout history is stored.
+
+Another important result is that only 25 of the 834 available values were displayed for each exercise, meaning 3.0% of the total 
+data was retained for chart rendering. While this is a much smaller percentage than in the earlier tests, it reflects the intended 
+design of the chart system rather than a limitation. Because the chart is capped at a maximum of 25 values, the amount of data 
+actually rendered remains controlled and efficient regardless of how large the underlying dataset becomes. Overall, these results 
+confirm that chart rendering stays fast, stable, and efficient at every dataset size tested, and the 25-value maximum is clearly 
+the reason performance remains consistently strong even as the total number of stored entries grows.
+
 
 ### Final Results Analysis
 
