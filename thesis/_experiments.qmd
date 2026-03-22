@@ -537,7 +537,7 @@ actually rendered remains controlled and efficient regardless of how large the u
 confirm that chart rendering stays fast, stable, and efficient at every dataset size tested, and the 25-value maximum is clearly 
 the reason performance remains consistently strong even as the total number of stored entries grows.
 
-### Final Results Analysis
+## Final Results Analysis
 
 The load time results particularly support the conclusion that the application scales efficiently as more workout data is stored. At 
 100 entries, the average load time was only 1.58 milliseconds, and even at 10,000 entries, the average remained at 43.63 milliseconds. 
@@ -570,5 +570,7 @@ larger workloads. This is especially important for a fitness tracking applicatio
 data over time. Based on these results, it is reasonable to conclude that the app is capable of supporting long term use while maintaining 
 a smooth and responsive experience. Overall, the experiment successfully demonstrates that the application performs at a high level across 
 its major data heavy tasks and is strong enough for realistic, real world scenarios.
+
+## Threats to Validity
 
 
