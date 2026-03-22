@@ -274,27 +274,165 @@ performance that should feel instantaneous to the user.
 
 ### Query Time Performance Results 
 
-Moving onto the query times, as this is the first section each parameter will be introduced with reasoning. The goal of testing the
-queries, is to measuer each section of the app with nothing falling through the cracks. To complete this there were multiple different
-types of queries that needed to be measured starting with two different filtering queries. The first query is used to file through
-the list of exercises to then pull out the specific exercise that the user wants to see the graph for. The second query is used in similar
-fashion to group together all the exercises of the same muscle group. These both are some of the main queries used in this application
-and are essential to be rapid so there is no delay, which as we can see in the results are for this size of data. Both being under 0.050
-milliseconds, and the muscle group query being slightly faster. Moving on from that, the next query is utilized to display the data
-in the workout log in a descending fashion. This specifically files through the data making sure it is displaying the most recent data
-first. This is also rapid at around 0.015 milliseconds which will cause no problems whatsever. The next 4 queries are focused within
-the profile page. This page as explained previously, is designed to show certain personal records, the number of unique exercises, 
-the combined weight of deadlift, squat, and bench press, and finally unique workout days. These queries all focus on differnet but important
-aspects of weightlifting. Regarding the maximum weight query, this timed how fast the application can pick out a user's personal record
-for a specific exercise, which as expected was very fast at 0.032 milliseconds. This next query looks at how many different unique exercises
-has the user completed, which again was rapid at 0.020 milliseconds. Then jumping to the big three combined max weight, this was expected
-to be around triple the time of finding the max weight of one exercise. This is because the big three combined query is searching and 
-collecting three different pieces of data then adding them together to finish with one combined variable. The time for this query was 
-measured at 0.097 milliseconds which is almost three times more than the singular maximum weight query. Finally the monthly
-unique workout days is filing through the list to discover how many days out of the month has the user worked out. This was also
-expected to be a little slower as it is searching multiple times. This still was very fast at 0.095 milliseconds, which again will
-cause zero problems within this application. Closing this section, all these query times performed very well at a smaller data size
-of 100 entries, which is very exciting to see for the performance of this app.
+This section presents and analyzes the query performance results produced during the benchmark testing of the WorkoutTracker application. 
+As mentioned before, hese queries were designed to reflect the types of data retrieval and processing tasks that users would commonly perform while using the 
+app, such as filtering workouts by exercise or muscle group, sorting workout history, and calculating progress-based statistics. Evaluating 
+these query times is important because it shows how efficiently the application can access and process stored workout data under 
+realistic conditions. By measuring the execution time of each query across multiple runs, this section helps determine whether the app can 
+maintain fast and responsive performance as dataset size and query complexity increase.
+
+```swift
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 0.043 ms     │
+│        Runs: 0.083 ms, 0.032 ms, 0.033 ms, 0.033 ms, 0.033 m│
+│     Filter by muscle group (Chest)         Avg 0.009 ms     │
+│        Runs: 0.010 ms, 0.009 ms, 0.009 ms, 0.009 ms, 0.009 m│
+│     Sort by date descending                Avg 0.014 ms     │
+│        Runs: 0.018 ms, 0.013 ms, 0.013 ms, 0.012 ms, 0.013 m│
+│     Max weight per exercise                Avg 0.126 ms     │
+│        Runs: 0.516 ms, 0.030 ms, 0.028 ms, 0.029 ms, 0.029 m│
+│     Unique exercise count                  Avg 0.021 ms     │
+│        Runs: 0.041 ms, 0.017 ms, 0.016 ms, 0.016 ms, 0.016 m│
+│     Monthly unique workout days            Avg 0.102 ms     │
+│        Runs: 0.165 ms, 0.086 ms, 0.086 ms, 0.086 ms, 0.085 m│
+│     Big Three combined max weight          Avg 0.100 ms     │
+│        Runs: 0.102 ms, 0.101 ms, 0.100 ms, 0.099 ms, 0.100 m│
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 0.415 ms                   │
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 100 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These query results are very strong. Overall, the average total query time is 0.415 milliseconds, which means the full set of tested queries 
+completes in well under a single millisecond on average. That indicates the app’s data operations are highly efficient and would feel 
+effectively instantaneous to a user during normal use.
+
+Looking at the individual queries, the fastest operations are filtering by muscle group (0.009 milliseconds) and sorting by date descending (0.014 milliseconds), 
+showing that simple filtering and ordering tasks place almost no measurable strain on the system. Unique exercise count (0.021 milliseconds) and filter 
+by exercise (0.043 milliseconds) are also extremely fast, which suggests the app can quickly narrow down and summarize workout records without introducing 
+delay. These are the kinds of actions users are likely to perform often, so their low times are especially important.
+
+The more computationally demanding queries still performed very well. Monthly unique workout days (milliseconds), Big Three combined max weight (0.100 milliseconds), 
+and max weight per exercise (0.126 ms) were the slowest of the group, but even these remained far below 1 millisecond. This shows that slightly more 
+complex operations still execute at a very high level of performance and would not create any visible lag in the application.
+
+One thing worth noting is the max weight per exercise query had one noticeably higher first run at 0.516 milliseconds, while the remaining runs were all around 
+0.028–0.030 milliseconds. This suggests once again the cold start effect startup or rather than a true performance issue, since the repeated runs were much lower 
+and very consistent. A similar but smaller pattern appears in a few other queries where the first run is slightly slower than the rest. This is common in benchmarking 
+and does not weaken the overall result.
+
+In conclusion, these results demonstrate that the application handles query operations extremely efficiently. All measured queries are far below the threshold where 
+a user would perceive delay, and the consistency across runs suggests stable performance. Even the most complex queries remain fast enough to support responsive 
+filtering, sorting, and progress tracking features within the app.
+
+
+
+```swift 
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 0.326 ms     │
+│        Runs: 0.333 ms, 0.349 ms, 0.317 ms, 0.316 ms, 0.316 m│
+│     Filter by muscle group (Chest)         Avg 0.080 ms     │
+│        Runs: 0.080 ms, 0.079 ms, 0.080 ms, 0.081 ms, 0.079 m│
+│     Sort by date descending                Avg 0.142 ms     │
+│        Runs: 0.147 ms, 0.140 ms, 0.141 ms, 0.137 ms, 0.143 m│
+│     Max weight per exercise                Avg 0.244 ms     │
+│        Runs: 0.257 ms, 0.236 ms, 0.241 ms, 0.243 ms, 0.244 m│
+│     Unique exercise count                  Avg 0.150 ms     │
+│        Runs: 0.156 ms, 0.151 ms, 0.148 ms, 0.149 ms, 0.147 m│
+│     Monthly unique workout days            Avg 0.438 ms     │
+│        Runs: 0.447 ms, 0.429 ms, 0.431 ms, 0.449 ms, 0.435 m│
+│     Big Three combined max weight          Avg 0.959 ms     │
+│        Runs: 0.958 ms, 0.955 ms, 0.951 ms, 0.936 ms, 0.995 m│
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 2.34 ms                    |
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 1000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These query results continue to demonstrate excellent application performance. The total average query time is 2.34 milliseconds, meaning that all tested query 
+operations together still complete in only a tiny fraction of a second. This shows that even as the dataset grows, the app remains highly responsive and 
+capable of processing user-inputted data requests without noticeable delay.
+
+Among the individual queries, filter by muscle group (0.080 milliseconds) and sort by date descending (0.142 milliseconds) were the fastest, showing that basic 
+filtering and sorting tasks are handled very efficiently. Unique exercise count (0.150 milliseconds) and max weight per exercise (0.244 milliseconds) also performed 
+well, indicating that the app can quickly calculate summary-style information in addition to simple lookups. Filter by exercise (0.326 milliseconds) was slightly 
+higher, but it still remained extremely fast and well within the range of instantaneous performance.
+
+The more advanced summary queries required somewhat more processing time, which is expected. Monthly unique workout days (0.438 milliseconds) took longer than the 
+simpler filters and counts, likely because it involves grouping or identifying distinct workout dates across the dataset. The slowest query was Big Three combined 
+max weight (0.959 milliseconds), but even this result remained under a single millisecond on average. This is still an exceptionally fast execution time and suggests 
+that even the most complex progress-tracking calculations in the application are highly optimized.
+
+Another important observation is the strong consistency across the five runs for each query. The recorded times remain very close from one run to the next, which 
+suggests stable and reliable query behavior rather than inconsistent spikes in performance. This consistency strengthens the validity of the benchmark because it 
+shows the application is not only fast, but also predictable under repeated testing.
+
+Overall, these results show that the WorkoutTracker application performs query operations at a very high level of efficiency. Every tested operation completed in 
+under one millisecond individually, and the full query set averaged only 2.34 milliseconds in total. This indicates that users would be able to filter, sort, and 
+analyze workout data smoothly, even when working with a larger dataset, with no visible lag during normal app use.
+
+```swift
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 3.20 ms      │
+│        Runs: 3.25 ms, 3.24 ms, 3.20 ms, 3.15 ms, 3.15 ms    │
+│     Filter by muscle group (Chest)         Avg 0.823 ms     │
+│        Runs: 0.843 ms, 0.829 ms, 0.817 ms, 0.813 ms, 0.815 m│
+│     Sort by date descending                Avg 1.39 ms      │
+│        Runs: 1.36 ms, 1.37 ms, 1.42 ms, 1.40 ms, 1.40 ms    │
+│     Max weight per exercise                Avg 2.40 ms      │
+│        Runs: 2.54 ms, 2.43 ms, 2.41 ms, 2.33 ms, 2.32 ms    │
+│     Unique exercise count                  Avg 1.52 ms      │
+│        Runs: 1.51 ms, 1.54 ms, 1.52 ms, 1.53 ms, 1.51 ms    │
+│     Monthly unique workout days            Avg 3.96 ms      │
+│        Runs: 3.93 ms, 3.95 ms, 3.99 ms, 3.96 ms, 3.97 ms    │
+│     Big Three combined max weight          Avg 9.56 ms      │
+│        Runs: 9.44 ms, 9.39 ms, 9.32 ms, 9.66 ms, 9.97 ms    │
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 22.86 ms                   │
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 10000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These results show that query performance remains strong even at the largest dataset size tested. The total average query time is 22.86 milliseconds, which means 
+that all benchmarked queries combined still execute in far less than 100 milliseconds. From a user experience standpoint, this is important because it indicates 
+that the app can continue to retrieve and process workout information quickly, even when handling a much larger volume of stored records.
+
+Looking at the individual query categories, the simplest operations remained very efficient. Filter by muscle group (0.823 milliseconds) and sort by date descending 
+(1.39 milliseconds) both completed quickly, showing that common browsing and organization tasks still place only a small load on the system. Unique exercise count 
+(1.52 milliseconds) also stayed low, suggesting that summary counts can be generated with very little overhead. Although these values are higher than in the smaller 
+datasets, they are still extremely fast in practical terms.
+
+Some of the more data-intensive operations naturally required more processing time. Max weight per exercise (2.40 milliseconds) and filter by exercise (3.20 milliseconds) 
+were higher than the simpler queries, but they still completed within only a few milliseconds. Monthly unique workout days (3.96 milliseconds) took slightly longer, 
+which makes sense because it likely involves identifying and comparing distinct dates across many entries. The most demanding operation was Big Three combined max 
+weight (9.56 milliseconds), but even this remained under 10 milliseconds on average. That result shows that more advanced calculations tied to progress tracking and 
+workout analysis can still be performed very efficiently.
+
+Another notable strength in these results is the consistency between runs. The values for each query remain close across all five trials, with only minor variation. This 
+steady pattern suggests that performance is not only fast, but also dependable under repeated execution. Rather than showing major spikes or instability, the benchmark 
+demonstrates that the system handles larger datasets in a controlled and predictable way.
+
+Taken together, these findings suggest that the application scales well as data volume increases. Even at this larger dataset size, all individual queries remained under 
+10 milliseconds, and the full benchmark set averaged only 22.86 milliseconds in total. This supports the conclusion that the WorkoutTracker application can maintain smooth, 
+responsive query performance under heavier data conditions without introducing noticeable lag for the user.
+
+Overall, the query benchmark results show that the WorkoutTracker application performed very well under increasing levels of stress and larger dataset sizes. Across all tests, 
+query operations remained consistently fast, and even the most complex calculations were completed in only a small number of milliseconds. Basic tasks such as filtering, sorting, 
+and counting were especially efficient, while more advanced summary queries also maintained strong performance without approaching a level that would create visible lag for the
+user. This is important because these types of operations represent the core ways users interact with their stored workout data inside the application. In addition, the results
+showed a high level of consistency across repeated runs, which strengthens the reliability of the benchmark findings. Rather than producing unpredictable spikes in execution time, 
+the application handled repeated query execution in a stable and controlled manner. As the dataset increased, query times rose in an expected and manageable way, showing that the 
+system scales effectively under heavier workloads. Taken together, these results demonstrate that the WorkoutTracker application is capable of maintaining smooth, responsive, and 
+dependable performance even under high stress conditions, supporting the conclusion that the app is optimized for real-world use.
 
 ### Chart Rendering Performance Results
 
@@ -310,7 +448,7 @@ get the final percentage value. Keeping the maximum data points to 25, while kee
 no problems inside my application.
 
 ```swift
-│   📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│   📈 CHART RENDERING (same logic as WorkoutChartView)       │
 │     (capped at 25 pts)                                      │
 │     Chart data for Bench Press   Avg 0.008 ms               │
 │        Runs: 0.027 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.003 m│
