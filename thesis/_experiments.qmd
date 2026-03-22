@@ -139,6 +139,14 @@ it does not need to be repeated in each section, is that a common performance st
 loading times under 100 milliseconds. As long as the load time and query time remain below this threshold, the user is unlikely 
 to notice any lag during normal app use.
 
+To provide some context for the upcoming visuals there are a few things to point out. To display the results of the experiment, 
+box and whisker plots were utilized. Within this visual there are four main things to point out. First is the line to the furthest-right 
+of the plot. This line shows you the highest number, in this case the slowest recorded time. On the contrary, the line furthest to the 
+left will display the smallest number, which is the fastest recorded time for this experiment. In between these two lines there is a purple 
+box. This box represents the middle 50 percent of the recorded values, meaning it shows where the central portion of the data falls. Inside 
+this box there is also a line, which represents the median. The median is the middle value of the dataset when all recorded times are arranged 
+from smallest to largest, and it helps show the central tendency of the results.
+
 ### Load Time Performance Results 
 
 ```swift
@@ -168,7 +176,7 @@ to notice any lag during normal app use.
 As shown in the benchmark output above, five separate load time measurements were recorded for the dataset containing 100 
 entries, followed by the average of those five runs. The box-and-whisker plot below presents these same results visually 
 and will be used throughout the remainder of the benchmark analysis for consistency. Among these five run times, the slowest 
-recorded value was 4.48 milliseconds. This is likely due to the first run including additional startup overhead from the 
+recorded value was 4.48 milliseconds represented by the furthest-right line on the plot. This is likely due to the first run including additional startup overhead from the 
 simulator and the initial execution of the loading process, which can make the first measurement slightly slower than the 
 rest. After this initial run, the remaining four times are much closer together, ranging from 0.805 milliseconds to 0.934 
 milliseconds. This small range indicates that the load operation is highly consistent once the application has completed 
@@ -179,7 +187,8 @@ because it shows that most runs are clustered at a much lower value than the ave
 average is raised by the unusually slower first run, meaning the median may better represent the typical load performance for 
 this dataset size. Overall, these results demonstrate that with 100 entries, the application is able to load workout data 
 extremely quickly and with very little variation between repeated runs. This suggests that at smaller dataset sizes, the loading 
-functionality performs efficiently and would not create any noticeable delay for the user.
+functionality performs efficiently and would not create any noticeable delay for the user. It is also important to note that x axis
+numbers are in milliseconds.
 
 ```swift
 ┌─────────────────────────────────────────────────────────────┐
@@ -209,8 +218,8 @@ Moving onto the next dataset size, five separate load time measurements were rec
 entries, followed by the average of those five runs. Among these five run times, the highest 
 recorded value was 9.83 milliseconds, which is noticeably higher than the other four runs. This suggests that one run 
 experienced slightly more overhead than the others, while the remaining measurements stayed within a much narrower range 
-of 5.35 milliseconds to 6.89 milliseconds. The relatively small spread among those four runs indicates that the app loading time 
-remains stable as the dataset size increases.
+of 5.35 milliseconds to 6.89 milliseconds. This again is represented by the furthest-right line on the plot. The relatively 
+small spread among those four runs indicates that the app loading time remains stable as the dataset size increases.
 
 The median value for these five runs is 6.83 milliseconds, which provides a better representation of the typical load 
 performance than the average in this case. This is because the average of 6.91 milliseconds is slightly influenced by the 
