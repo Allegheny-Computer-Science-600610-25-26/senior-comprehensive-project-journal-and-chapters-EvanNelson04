@@ -1,0 +1,35 @@
+---
+title: "Related Works Chapter Outline"
+date: "2025-12-1"
+---
+
+# Chapter 2: Related Works 
+
+## 2.1 Introduction to Related Work
+ - Define the scope: fitness tracking apps, methodology papers, personal analytics dashboards
+ - Explain how these works inform the current project
+
+## 2.2 Review / Analysis of Existing Applications
+ - Comparative analysis of mainstream apps (Strong, Fitbod, Hevy, Jefit)
+    - Features: workout tracking, data visualization, workout log
+    - Technical Aspects: APIs, data handling
+    - Limitations: dependence on external services, lack of user data control, limited customization
+ - Discussion of what this application introduces beyond these limitations
+
+## 2.3 Review of Existing Literature
+ - Provide deep, interconnected explanations rather than isolated summaries
+ - Review of Existing Literature
+ - How findings from multiple papers connect
+
+## 2.4 Thematic Connections and Integration
+ - Show how all referenced works—academic papers, apps, frameworks, and ethical discussions—connect to form the project’s foundation
+ - Emphasize how project synthesizes these ideas into a cohesive, functional system
+
+## 1.5 Summary
+ - Reiterate how this chapter situates the project within the larger technological and academic landscape
+ - Transition into the Methods chapter (implementation details and experimentation)
+
+Similar to the first outline, jotting down important things to consider while writing this chapter,
+is really what I focused on within this outline. I didn't include the sources, but instead I emphasized
+the importance of talking about thematic connections. Especially in the literature review, it is important
+for me to talk about how this paper connects to my work and what it is adding to my knowledge.
