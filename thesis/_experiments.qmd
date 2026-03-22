@@ -265,13 +265,6 @@ at the largest dataset size still remain well below the 100 millisecond threshol
 efficient the code and functionality within the app works. We can predict from this data that it would take a much larger dataset
 to cause the load time to take over 100 milliseconds, causing delay within the application.
 
-Across all three dataset sizes, the load time results show a clear and expected increase as the amount of stored data grows. 
-However, even at the largest tested size of 10000 entries, the average load time remained at only 43.63 milliseconds, which is 
-still comfortably below the 100 millisecond standard for maintaining a smooth user experience. The smaller dataset sizes of 100 
-and 1,000 entries performed especially fast, with results in the range of only a few milliseconds. Overall, these findings show 
-that the application’s loading process scales efficiently as more workout data is added, while still maintaining a level of 
-performance that should feel instantaneous to the user.
-
 ### Query Time Performance Results 
 
 This section presents and analyzes the query performance results produced during the benchmark testing of the WorkoutTracker application. 
@@ -425,15 +418,6 @@ Taken together, these findings suggest that the application scales well as data 
 10 milliseconds, and the full benchmark set averaged only 22.86 milliseconds in total. This supports the conclusion that the WorkoutTracker application can maintain smooth, 
 responsive query performance under heavier data conditions without introducing noticeable lag for the user.
 
-Overall, the query benchmark results show that the WorkoutTracker application performed very well under increasing levels of stress and larger dataset sizes. Across all tests, 
-query operations remained consistently fast, and even the most complex calculations were completed in only a small number of milliseconds. Basic tasks such as filtering, sorting, 
-and counting were especially efficient, while more advanced summary queries also maintained strong performance without approaching a level that would create visible lag for the
-user. This is important because these types of operations represent the core ways users interact with their stored workout data inside the application. In addition, the results
-showed a high level of consistency across repeated runs, which strengthens the reliability of the benchmark findings. Rather than producing unpredictable spikes in execution time, 
-the application handled repeated query execution in a stable and controlled manner. As the dataset increased, query times rose in an expected and manageable way, showing that the 
-system scales effectively under heavier workloads. Taken together, these results demonstrate that the WorkoutTracker application is capable of maintaining smooth, responsive, and 
-dependable performance even under high stress conditions, supporting the conclusion that the app is optimized for real-world use.
-
 ### Chart Rendering Performance Results
 
 Finally looking at the chart rendering section. These charts are designed in a specific way so that no matter how much data the user
@@ -553,15 +537,38 @@ actually rendered remains controlled and efficient regardless of how large the u
 confirm that chart rendering stays fast, stable, and efficient at every dataset size tested, and the 25-value maximum is clearly 
 the reason performance remains consistently strong even as the total number of stored entries grows.
 
-
 ### Final Results Analysis
 
-## Threats to Validity
+The load time results particularly support the conclusion that the application scales efficiently as more workout data is stored. At 
+100 entries, the average load time was only 1.58 milliseconds, and even at 10,000 entries, the average remained at 43.63 milliseconds. 
+Although this increase is significant in relative terms, it is still comfortably below the point where a user would begin to notice lag. 
+In addition, the repeated runs were generally close together, especially at the larger dataset sizes, showing that the loading process 
+is not only fast but also stable. The slightly slower first runs or occasional higher values appear to be caused by startup overhead 
+rather than flaws in the loading logic itself. Together, these results suggest that the app’s encoding, storage, and decoding process 
+is efficient enough to support real-world use even as the amount of stored workout history grows substantially.
 
-### Synthetic Data
+The query benchmark results strengthen this conclusion even further. Across all dataset sizes, the app was able to filter, sort, count, 
+and summarize workout data in extremely small time ranges. At the smallest dataset size, the total average query time was just 0.415 
+milliseconds, and even at the largest dataset size, the total remained only 22.86 milliseconds. This means that the core user-facing data 
+operations inside the app remain highly efficient under heavier workloads. Simpler operations such as filtering by muscle group, sorting 
+by date, and counting unique exercises stayed especially fast, while more advanced calculations such as monthly workout days and Big Three 
+combined max weight also remained well within a range that would feel instantaneous to the user. Just as importantly, the query timings 
+stayed consistent across repeated runs, which suggests the app performs in a reliable and predictable way rather than producing random 
+spikes in execution time.
 
-### Hardware Dependence
+The chart rendering results also provide strong support for the app’s performance under stress. In every dataset size tested, chart generation 
+times remained extremely low, generally between 0.003 and 0.008 milliseconds. This shows that the charting logic introduces almost no 
+measurable overhead to the application. An important reason for this is the design decision to cap each chart at a maximum of 25 displayed 
+data points. That cap prevents performance from degrading as the total underlying dataset becomes much larger. At 100 entries, the charts 
+could display all available values, while at 1,000 and 10,000 entries they displayed a smaller percentage of the total data but still 
+preserved legibility and rendering speed. This design choice is important because it shows that the app was not only benchmarked 
+successfully, but also engineered thoughtfully to maintain performance as the user’s workout history grows over time.
 
-### Limited Dataset Sizes
+Taken together, these findings show that the WorkoutTracker application is well optimized and performs reliably under high-stress conditions. 
+The results also show that performance scales in a controlled and manageable way as the dataset increases, rather than breaking down under 
+larger workloads. This is especially important for a fitness tracking application, since users are expected to continuously add more workout 
+data over time. Based on these results, it is reasonable to conclude that the app is capable of supporting long term use while maintaining 
+a smooth and responsive experience. Overall, the experiment successfully demonstrates that the application performs at a high level across 
+its major data heavy tasks and is strong enough for realistic, real world scenarios.
 
 
