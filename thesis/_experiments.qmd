@@ -569,8 +569,67 @@ The results also show that performance scales in a controlled and manageable way
 larger workloads. This is especially important for a fitness tracking application, since users are expected to continuously add more workout 
 data over time. Based on these results, it is reasonable to conclude that the app is capable of supporting long term use while maintaining 
 a smooth and responsive experience. Overall, the experiment successfully demonstrates that the application performs at a high level across 
-its major data heavy tasks and is strong enough for realistic, real world scenarios.
+its major data heavy tasks and is strong enough for realistic, real-world scenarios.
 
 ## Threats to Validity
+
+Although the benchmark results show that the WorkoutTracker application performed well during testing, several threats to validity 
+should be considered when interpreting the results. Acknowledging these limitations is important because it provides a more 
+balanced evaluation of the experiment and helps clarify the extent to which the findings can be generalized to real use. 
+The main threats in this study relate to the use of synthetic data, the dependence on a specific hardware environment, and the 
+limited range of dataset sizes included in the benchmarks.
+
+### Synthetic Data
+
+One important threat to validity is that the benchmark datasets were generated artificially rather than collected from real 
+users. Synthetic data was necessary for this experiment because it allowed the tests to be performed in a controlled and 
+repeatable way, while also making it possible to create larger dataset sizes for stress testing. In addition, the generated 
+records were designed to match the same general structure and format as the workout entries that a real user would create 
+within the application. This helped make the benchmark more realistic and relevant to the intended use of the system.
+
+However, artificially generated data still has limitations. Real users may not log workouts in such a regular or predictable 
+manner. Their records could contain more variation in exercise selection, workout frequency, repetition patterns, dates, and 
+overall distribution of entries. Some users may consistently repeat the same exercises, while others may create highly uneven 
+training logs over long periods of time. Because of this, real-world data could produce performance behavior that differs slightly 
+from the benchmark results. As a result, the experiment provides a strong approximation of realistic use, but it does not guarantee 
+that every possible user pattern would produce identical performance outcomes.
+
+### Hardware Dependencies 
+
+Another threat to validity is that the benchmark results depend on the specific hardware and software environment used for 
+testing. The experiments were conducted on a single Apple MacBook Air with an Apple M4 chip, using Xcode and the iPhone 
+Simulator. This created a stable and reproducible testing setup, which is valuable for consistency across repeated benchmark 
+runs. By holding the environment constant, the experiment was able to focus more directly on the behavior of the application 
+itself.
+
+Even so, performance measurements are always influenced by the hardware on which they are collected. A different computer, 
+processor, memory configuration, simulator setting, or operating system version could produce somewhat different results. 
+In addition, performance on the iPhone Simulator may not exactly match performance on a physical iPhone, where factors such 
+as device age, battery state, background tasks, and real mobile hardware limitations could affect timing. This means the 
+reported values should be understood as results from the tested environment rather than universal performance guarantees 
+across all devices. The findings strongly suggest good performance, but they may vary when the application is used on different 
+hardware platforms.
+
+### Limited Dataset Sizes 
+
+A third threat to validity is the limited range of dataset sizes used in the experiment. The benchmarks were performed using 
+datasets of 100, 1,000, and 10,000 entries. These sizes were chosen because they represent small, medium, and high-stress 
+conditions and provide a useful basis for evaluating how the application scales as more data is stored. Testing across these 
+increasing sizes made it possible to observe performance trends and determine whether the app remained efficient under heavier 
+workloads.
+
+However, the maximum tested dataset was 10,000 entries, and some long-term users could eventually exceed that number. A very 
+active user who logs workouts frequently over many years might accumulate more records than were included in this benchmark. 
+Because the experiment did not test beyond 10,000 entries, it cannot fully confirm how the app would behave at substantially 
+larger scales. While the results suggest that performance increases in a controlled and manageable way, additional testing 
+with even larger datasets would strengthen the conclusions and provide a clearer picture of the application’s upper limits.
+
+Overall, these threats to validity do not invalidate the benchmark findings, but they do place reasonable boundaries on how 
+the results should be interpreted. The experiment still provides strong evidence that the WorkoutTracker application performs 
+efficiently under the tested conditions. At the same time, recognizing the use of synthetic data, the influence of the testing 
+hardware, and the limited maximum dataset size helps ensure that the evaluation remains realistic, transparent, and academically 
+sound.
+
+
 
 
