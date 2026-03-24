@@ -243,8 +243,8 @@ example if the developer was looking to collect all of the exercises that are wo
 \label{fig:workoutcard}
 \end{figure}
 
-Within this code snippet, you can see that it is parsing through every entry within the list and looking for the targetMuscle, which would
-have been initialized before the loop. If the targetMuscle was declared as "legs," then the matchingExercises list would solely contain
+Within this code snippet, you can see that it is parsing through every entry within the list and looking for the `targetMuscle`, which would
+have been initialized before the loop. If the `targetMuscle` was declared as "legs," then the matchingExercises list would solely contain
 all the exercises that have muscleGroup as legs. Swift makes for each loop very simple by only requiring three things for this specific 
 example. First, what are you parsing through in this case, specifically, the name of the list. Secondly, you need to specify what you want the for
 each loop to do once it gets to a data input, in this case, looking for a specific muscle group, and then finally appending the data only if
@@ -291,7 +291,7 @@ This SwiftUI code defines the user interface for a "Workout History" screen. The
 allows layering of elements. At the back of the stack, a full-screen gradient defined by AppColors.gradient is displayed and extended to 
 cover the safe area using .ignoresSafeArea(). On top of this gradient, a List presents all workout entries stored in workoutData.entries 
 using ForEach, where each entry is represented by a custom WorkoutCard view. Each list row is customized to have a transparent background 
-(.listRowBackground(Color.clear)) and no default separator (.listRowSeparator(.hidden)), giving it a clean, card-like appearance. Users can 
+(.listRowBackground(Color.clear)) and no default separator (.listRFowSeparator(.hidden)), giving it a clean, card-like appearance. Users can 
 also delete entries with swipe actions via .onDelete(perform:). The list uses PlainListStyle() to remove extra padding and the default list 
 styling, and the navigation bar is set with the title "Workout History," displayed inline for a compact appearance.
 
@@ -328,7 +328,7 @@ clearly shows the title of the screen. Overall, this layout combines style and f
 ```
 \begin{figure}[h!]
 \centering
-\caption{Layout of a single workout entry in the `WorkoutCard` view.}
+\caption{Layout of a single workout entry in the WorkoutCard view.}
 \label{fig:workoutcard}
 \end{figure}
 

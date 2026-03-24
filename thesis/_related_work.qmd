@@ -31,7 +31,7 @@ are actively paying for the subscription.
 
 **Whoop One** is the first and most affordable subscription option. This plan includes:
 
-- Whoop 4.0 wearable, the previous-generation device with a 5-day battery life  
+- Whoop 4.0 wearable, the previous-generation device with a 5-day battery life
 - Sleep, strain, and recovery insights
 - Personalized coaching
 - VO2 max and heart-rate zones
@@ -88,7 +88,7 @@ users evaluate their strength progression. Like the my project, Strong emphasize
 data, focusing on the user’s engagement in tracking and reflecting on their workouts.
 
 ![Strong App Screenshot](images/strong.png)
-: **[Strong App](https://www.theverge.com/2017/5/23/15678588/strong-app-fitness)** :
+: **[Strong App Screenshot](https://www.theverge.com/2017/5/23/15678588/strong-app-fitness)** 
 
 Strong has many strengths within their app. Their main focus comes within an engaging workout log feature. You can
 see within this image that it is very unique in the elements that the log contains. It allows the user to enter
@@ -126,7 +126,7 @@ user questions: What should I work out today? How long should I wait before work
 long enough to work out that muscle group again?
 
 ![Fitbod App Screenshot](images/fitbod.png)
-: **[Fitbod App Review](https://fitnessdrum.com/fitbod-review/)** :
+: **[Fitbod App Screenshot](https://fitnessdrum.com/fitbod-review/)**
 
 Fitbods' major strength and focus is their ability to aid users in workout planning. One of the major concepts
 that this page includes is monitored recovery. After the user logs a workout, Fitbod records the exercises and assigns
@@ -175,7 +175,7 @@ plan builds upon the workout planning from Fitbod. The workout planning style fo
 to build and create their own workouts. 
 
 ![Jefit App Screenshot](images/jefit.png)
-: **[Jefit App Review](https://www.gymbird.com/fitness-apps/jefit-app-review)** :
+: **[Jefit App Screenshot](https://www.gymbird.com/fitness-apps/jefit-app-review)** 
 
 
 Within this image it displays the ability to pick from a large group of different programs to aid the user in getting started. These different
@@ -246,7 +246,7 @@ detail.
 
 
 ![Hevy App Screenshot](images/hevy.png)
-: **[Hevy App: How We Build Hevy](https://www.hevyapp.com/how-we-built-hevy/)** :
+: **[Hevy App Screenshot](https://www.hevyapp.com/how-we-built-hevy/)**
 
 Hevy’s biggest strength lies in its simplicity and usability. As you can see in the image, this app is much more simple within the design which helps users to understand
 how to use the application much better than a more complicated UI. The workout log is highly intuitive, allowing users to enter sets quickly, duplicate previous
@@ -507,7 +507,7 @@ compression, and more. This paper provides recent evidence that synthetic data c
 is done carefully. Knowing this, this goes to strengthen my methodology and approach to gathering data about my application. This also protects my experiment
 from criticism around the use of synthetic data instead of human data.
 
-Moving forward with supporting my evaluation design, AutoEval emphasizes three main things...
+Moving forward with supporting my evaluation design, AutoEval emphasizes three main things:
 
 - Comparing outcomes from synthetic vs. real-data pipelines
 - Measuring consistency of results, not just raw accuracy

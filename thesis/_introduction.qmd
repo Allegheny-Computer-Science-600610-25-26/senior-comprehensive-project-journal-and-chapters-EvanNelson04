@@ -39,7 +39,7 @@ This project includes a working iOS application with all core components impleme
 This app is made from three main ideas: workout progress tracking, providing evaluation and feedback, and
 local data storage.
 
-![My Application Image](images/AppImage.png)
+![WorkoutTracker Evaluation Page Image](images/AppImage.png)
 
 Workout progress tracking consists of two different areas. Primarily is the concept of
 logging your workout. In my app, the goal is to keep it simple, taking in user-inputted data that consists
@@ -349,9 +349,13 @@ iterative testing and helps streamline the development process.
 
 This experiment aims to provide me with feedback on graph compression, responsiveness, data processing, and query
 times. As visuals are a key component of this application, the importance that they are clean and legible cannot be
-emphasized enough. Some research questions that this aims to answer are as follows: How will the graphs look with one
-year's worth of user data? How will the graphs compress? Will the data points be too close together? These are all
-essential to the success of my application. Without knowing the answers to all these questions, the app would feel
+emphasized enough. Some research questions that this aims to answer are as follows: 
+
+- How will the graphs look with one year's worth of user data?
+- How will the graphs compress?
+- Will the data points be too close together?
+ 
+These are all essential to the success of my application. Without knowing the answers to all these questions, the app would feel
 incomplete. Moving forward with this concept involves gaining knowledge of responsiveness. This theme is of number one importance
 within app development. Developers pride themselves on giving a fun and engaging user experience. If the app takes ten
 seconds to load a specific page, users will most likely find a different application. Learning about the amount of 
