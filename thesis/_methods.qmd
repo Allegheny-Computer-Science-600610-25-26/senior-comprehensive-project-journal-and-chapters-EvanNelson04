@@ -505,6 +505,8 @@ By evaluating these metrics and providing the user with this information, Workou
 mobile fitness applications have been able to complete. Providing careful justification within this section is important to 
 understand why and how many of these metrics are being completed, as well as to demonstrate the uniqueness of this project.
 
+The code for this experiment was developed and is published in a public repository at the following 
+link: <https://github.com/EvanNelson04/WorkoutTrackerExperiment>.
 
 
 

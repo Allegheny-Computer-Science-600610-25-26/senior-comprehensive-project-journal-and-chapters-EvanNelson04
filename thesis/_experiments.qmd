@@ -629,7 +629,3 @@ the results should be interpreted. The experiment still provides strong evidence
 efficiently under the tested conditions. At the same time, recognizing the use of synthetic data, the influence of the testing 
 hardware, and the limited maximum dataset size helps ensure that the evaluation remains realistic, transparent, and academically 
 sound.
-
-
-
-
