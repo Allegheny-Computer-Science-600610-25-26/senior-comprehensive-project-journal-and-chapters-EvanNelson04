@@ -1,15 +1,79 @@
-# Conclusion
+# Discussion and Future Works
 
-Traditionally, this chapter addresses the areas proposed below as sections, although
-not necessarily in this order or organized as offered. However, the last section --
-"Ethical Implcations" is required for this chapter. See the heading below for more
-details.
+## Project Overview and Goals
 
-## Summary of Results
+The primary goal of this project was to address a clear gap in existing mobile fitness applications which is the lack of meaningful 
+evaluation and trend analysis for user workout data. While many popular fitness apps provide effective tools for logging 
+exercises and visualizing basic progress, they often fall short in delivering personalized insights that help users understand 
+how they are improving and what they should do next. This project aimed to bridge that gap by developing a system that not only 
+records workout data, but also interprets it in a way that is actionable and user-specific.
 
-## Future Work
+To achieve this, the application was designed to focus on user-inputted workout data, allowing individuals to log exercises, 
+weights, and repetitions in a structured format. From this data, the system performs trend analysis by comparing recent workouts, 
+identifying patterns over time, and generating simple predictive insights. These evaluations provide users with feedback on their 
+performance, such as whether they are improving, plateauing, or regressing in specific exercises or muscle groups.
 
-## Future Ethical Implications and Recommendations
+The completed application successfully fulfills this objective by integrating data tracking, visualization, and evaluation into a 
+single cohesive platform. Features such as progress charts, personalized feedback, and performance comparisons demonstrate the 
+system’s ability to transform raw workout data into meaningful insights. As a result, the project not only meets its original goal 
+but also highlights the potential for more intelligent, user-centered fitness applications that go beyond basic tracking to 
+actively support user progress and decision-making.
 
-Especially as pertains to the public release or use of your software or methods, what
-unresolved or special issues remain? What recommendations might you make?
+This project is also closely tied to my original motivation, as someone who regularly goes to the gym and has consistently sought 
+meaningful evaluation of my own progress. While I could track weights, reps, and workouts over time, I often found it difficult to 
+clearly understand whether I was improving at an optimal rate or what adjustments I should make next. This personal frustration
+highlighted a gap between simply collecting workout data and actually interpreting it in a useful way. As a result, this application 
+was designed not just as a technical solution, but as a direct response to that need—providing the kind of structured feedback, 
+trend analysis, and performance insights that I had always wanted in my own fitness journey.
+
+## Critical Evaluation of WorkoutTracker
+
+### Reflection
+
+The development of WorkoutTracker provided a meaningful opportunity to critically evaluate not only whether the application met its 
+original goal, but also how effectively each individual component contributed to that goal. At a high level, the application 
+successfully addressed the problem of evaluation and trend analysis in mobile fitness apps by moving beyond simple data logging 
+and introducing structured feedback and performance insights. However, a deeper reflection reveals that the success of the 
+system is largely tied to specific design and implementation decisions, each with their own strengths and areas for growth.
+
+One of the most effective aspects of the application was its use of local data storage. By storing workout data using JSON,
+the system achieved fast load times, simple data management, and a reliable user experience without the overhead 
+of external dependencies. For the scope of this project, this approach worked extremely well, as it allowed for efficient querying, 
+smooth chart rendering, and consistent performance across increasing dataset sizes. At the same time, this decision also 
+highlighted an important trade-off being that while local storage is effective for a prototype and ensures user data privacy, it limits 
+scalability and accesing data from different devices.
+
+Another strong component of the application was the gamification system, particularly the implementation of awards and achievement 
+notifications. Features such as progress tracking, milestone-based awards, and visual feedback through popups added an engaging 
+layer to the user experience. These elements demonstrated how motivation and user retention can be enhanced through relatively 
+simple mechanisms. The notification system was effective in providing immediate reinforcement when users reached 
+milestones, making the experience feel more interactive and rewarding. However, reflecting on this feature also reveals 
+opportunities for improvement, such as making awards more dynamic, personalized, and adding badges.
+
+The evaluation and trend analysis features, which form the core of the application, were successful in providing users with a 
+clearer understanding of their progress. By comparing recent workouts and identifying patterns, the system introduced a level of 
+interpretation that is often missing in traditional fitness apps. That said, this component also exposed the complexity of 
+delivering truly meaningful insights. While the current implementation provides useful feedback, it remains relatively simple 
+and could be expanded to include more advanced predictive models or deeper analysis of long-term trends. This highlights an 
+important realization from the project: building an evaluation system is not just about processing data, but about ensuring 
+that the feedback is both accurate and valuable to the user.
+
+From a user interface perspective, the application achieved its goal of maintaining clean, legible visuals, particularly through 
+the use of SwiftUI and structured chart design. The decision to prioritize simplicity and clarity proved effective, as it made 
+complex data easier to interpret. This also revealed the challenge of balancing simplicity with depth, as more advanced 
+features and visualizations could further enhance the user experience without compromising usability if implemented carefully.
+
+Overall, the project demonstrates that the core idea of combining workout tracking with evaluation and feedback is both feasible
+and impactful. At the same time, reflecting on the individual components of the system shows that many of the current solutions 
+represent strong foundational implementations rather than final, fully developed features. Each major part of the application—data 
+storage, gamification, evaluation, and visualization—worked well within the scope of the project, but also revealed clear pathways 
+for refinement and expansion. This reflection not only validates the success of the current system but also naturally leads into a 
+discussion of its limitations and potential future improvements.
+
+### Limitations of the Current System
+
+### Future Works
+
+## Project Impact
+
+## Final Reflection
