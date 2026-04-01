@@ -72,7 +72,125 @@ discussion of its limitations and potential future improvements.
 
 ### Limitations of the Current System
 
-### Future Works
+While WorkoutTracker successfully achieves its primary goal of providing evaluation and trend analysis, several limitations were 
+identified throughout the development process that impact the system’s scalability, depth, and overall functionality. These 
+limitations are not failures of the system, but rather natural outcomes of design decisions made to prioritize simplicity, 
+performance, and feasibility within the scope of the project.
+
+One of the most significant limitations is the use of local data storage through JSON. Although this approach 
+proved to be efficient and reliable for performance testing and daily usage, it restricts the application to a single 
+device and does not support data synchronization or backup. Users cannot access their data across multiple devices, and there 
+is a risk of data loss if the application is deleted or the device is reset. Additionally, as the dataset grows beyond the 
+tested limits, this storage method may become less efficient compared to more scalable solutions such as cloud-based databases. The
+local storage was tested with as many as 10,000 pieces of data, but the experiment didn't tell what would happen past that dataset size.
+
+Another limitation lies within the evaluation system itself. While the application provides useful comparisons and trend 
+analysis, the logic behind these evaluations remains relatively simple. The system primarily relies on recent averages and 
+straightforward comparisons, which may not fully capture more complex patterns in user performance. As a result, the feedback, 
+while helpful, can sometimes lack depth or fail to adapt to more nuanced workout behaviors over time.
+
+The gamification system, particularly the awards feature, also presents limitations. Currently, awards are largely predefined and 
+based on fixed thresholds, such as the number of workouts completed or achieving a personal record. While these awards add 
+motivation and engagement, they are not personalized to the individual user’s habits, goals, or progress patterns. This can 
+reduce their long-term effectiveness, as users may quickly exhaust meaningful milestones or feel that the rewards do not 
+accurately reflect their unique fitness journey.
+
+Similarly, the suggestions feature is limited in its current implementation. The application provides users with lists of 
+exercises organized by muscle group, along with general tips and external video links. While this is useful as a reference 
+tool, it lacks personalization and does not adapt based on the user’s workout history, strengths, or areas needing improvement. 
+As a result, the suggestions function more as static guidance rather than an intelligent recommendation system.
+
+From a user experience standpoint, although the interface is clean and visually effective, there are limitations in interactivity 
+and customization. Charts, while informative, are relatively basic and do not allow for deeper exploration of data, such as 
+filtering by time range or comparing multiple exercises simultaneously. Additionally, users have limited control over how their 
+data is displayed or analyzed, which could restrict the app’s usefulness for more advanced users.
+
+Overall, these limitations highlight that while WorkoutTracker provides a strong foundation for evaluation-focused fitness tracking, 
+many of its current features represent initial implementations rather than fully developed solutions. These constraints naturally 
+point toward opportunities for future enhancements, particularly in areas such as scalability, personalization, and advanced data 
+analysis.
+
+## Future Works
+
+Building upon the critical evaluation of WorkoutTracker, several opportunities for future development emerge that have the 
+potential to significantly enhance the application’s functionality, scalability, and overall user experience. While the current 
+system successfully establishes a foundation for evaluation focused fitness tracking, it also highlights areas where deeper 
+personalization, advanced analysis, and expanded features could further differentiate the application. The following proposed 
+improvements are directly informed by the limitations identified in the current system and represent logical next steps in 
+evolving WorkoutTracker into a more intelligent, adaptive, and comprehensive fitness platform.
+
+### AI Integration
+
+One of the most ambitious and impactful future enhancements is the integration of artificial intelligence through large language 
+models (LLMs). This feature would allow the application to move beyond static design and evolve into a system that continuously 
+learns from user behavior. By tracking interaction patterns, such as time spent on specific pages, frequently accessed features, 
+and navigation habits, the application could dynamically adjust its layout, recommendations, and emphasis areas to better align 
+with individual user preferences. For example, if a user consistently engages with progress charts and evaluation insights but rarely interacts with the suggestions 
+page, the system could prioritize those analytics on the home screen or streamline access to them. Similarly, if a user frequently 
+logs workouts within a specific muscle group, the app could proactively highlight related trends or recommendations. Over time, 
+this would create a highly personalized experience that adapts as the user’s habits and goals evolve.
+
+The integration of large language models would significantly advance WorkoutTracker. This would allow the application to evolve 
+alongside the user, continuously refining its insights and recommendations without requiring constant manual updates to the 
+underlying logic. As a result, the app would shift toward a more intelligent and autonomous system, capable of delivering 
+increasingly relevant and sophisticated guidance as it accumulates more user data.
+
+This type of adaptive interface represents a exciting future innovation in mobile applications. While modern smartphones are soon
+to incorporate AI-driven personalization at the system level, such functionality has not yet been deeply integrated 
+into individual fitness applications. Implementing this feature would position WorkoutTracker as a leader in intelligent 
+fitness app design, transforming it from a passive tool into an actively evolving system tailored to each user.
+
+### Personalized Gamification and Dynamic Awards System
+
+Another key area for improvement is the expansion of the gamification system, particularly through the introduction of personalized
+awards and badges. The current implementation relies on predefined milestones, such as total workouts completed or achieving a 
+new personal record. While effective in the short term, this approach lacks long-term adaptability and may not fully reflect 
+each user’s unique fitness journey.
+
+A more advanced system would generate dynamic, user-specific achievements based on individual behavior and progress patterns. For 
+instance, a user who consistently improves repetitions on a certain exercise might receive awards tied to progression for that exercise, 
+while another user focused on strength could earn recognition for incremental increases in lifting performance. Additionally, 
+awards could be tailored to consistency, recovery habits, or even volume metrics provided in the evaluation.
+
+This personalized approach would make the gamification system significantly more engaging and meaningful. Rather than working 
+toward generic milestones, users would feel that the app recognizes and rewards their specific efforts and progress. Over time, 
+this could improve user retention, increase motivation, and create a more immersive and rewarding experience. Developing the app
+in this way would be exciting as a devloper to see what different awards would be developed. This also opens the area of sharing awards
+with the WorkoutTracker community or friends to see what unique awards the userbase achieves.
+
+### Automated Strength Training Program Generation
+
+A major functional expansion of WorkoutTracker would be the introduction of a personalized strength training program generator. 
+This feature would leverage the user’s historical workout data—collected over an initial period of approximately two to three 
+months—to create a structured and customized training plan. By analyzing frequently performed exercises, weight progression, and 
+muscle group distribution, the system could identify patterns in the user’s training habits and areas for improvement. 
+Using this information, the application could generate a tailored program that builds upon the user’s strengths while addressing potential imbalances. 
+For example, if a user consistently prioritizes upper body exercises but neglects lower body training, the generated program could 
+incorporate more balanced workout splits. This would help a countless number of users recognize their training habits and how to change
+them in a beneficial way.
+
+The final output could be formatted as a downloadable PDF, providing users with a clear, organized, and portable training plan. 
+This would elevate the application from a tracking and evaluation tool to a more comprehensive fitness solution that actively 
+guides user progression. Additionally, this feature could serve as a bridge between data analysis and actionable outcomes, 
+further reinforcing the app’s core goal of meaningful evaluation.
+
+### Cloud-Based Data Storage and Multi-Device Accessibility
+
+To address one of the most significant limitations of the current system, future development should include the implementation of 
+cloud-based data storage. Transitioning from local storage to a shared database would allow users to create accounts and access 
+their workout data across multiple devices, significantly improving usability. This enhancement would enable features 
+such as real-time data synchronization, secure backups, and account-based login systems. Users would no longer be restricted to a 
+single device, reducing the risk of data loss and making the application more practical for long-term use. Additionally, cloud 
+integration would open the door to future features such as social sharing, collaborative training, or community-based challenges.
+
+From a technical standpoint, this would involve integrating backend services such as cloud databases and authentication systems to 
+support secure, persistent, and synchronized data storage. Implementing this architecture would require designing a structured 
+backend that can efficiently handle user accounts, data retrieval, and real time updates across multiple devices. Technologies
+such as cloud-based databases (Firebase or AWS) would enable scalable data management, while authentication systems would 
+ensure that user information remains secure and accessible only to the appropriate account. Additionally, considerations such as 
+data consistency, and offline functionality would need to be addressed to maintain a smooth user experience. 
+While this introduces additional complexity compared to the current lightweight architecture, it would significantly enhance the 
+system by enabling seamless cross-device access, improved data reliability, and a more flexible foundation for future feature expansion.
 
 ## Project Impact
 
