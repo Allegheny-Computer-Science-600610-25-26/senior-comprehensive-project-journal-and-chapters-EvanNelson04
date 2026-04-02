@@ -1,5 +1,5 @@
 ---
-title: "ReadyResearchers Template"
+title: "WorkoutEvaluator - IOS app that provides personalized exercise feedback through user-inputted information"
 listing:
   - id: posts
     contents:

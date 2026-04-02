@@ -1,0 +1,39 @@
+---
+title: "Presentation Reflection"
+date: "2025-11-21"
+image: slides/titleslide.png
+---
+
+<object 
+  data="slides/PresentationSlides.pdf" 
+  type="application/pdf" 
+  width="100%" 
+  height="500px">
+</object>
+
+
+My presenation went very well in my opinion. Most of the preperation and research for the presenation came naturally
+as it was basically documenting the process of what I was developing. 
+
+In preperation for the presenation I picked out the most important themes for me to nail down. Some of these included, 
+pain points, problem and solution of my project, and why does my project matter. Emphasizing the importance of 
+starting my presenatation with an emphasis on talking to the listeners to make sure that they understand my topic
+was my number one priority. I wanted to make sure that I had the attention of all my colleagues as it would be a much
+more exciting and engaging presentation. Once I grabbed the attention of the listeners, the next main idea
+was to explain in basic terms the problem and solution that I was completing, as well as the oppurtunity. The goal
+of my project directly correlates to the oppurtunity that I adressed, so it was a perfect segway into talking
+about my project. 
+
+Once I completed this I decided it was important to give a brief page by page of what was already developed. Giving 
+the listeners a brief and concise explanation and reasoning behind each page so I can explain why I am completing each
+page. As well as the importance and significance behind the application I am developing. 
+
+After this it was just going through a demonstration and questions part of the presentation.
+
+The actual presentation in my opinion went very well. I have had lots of practice with presenation and practicing 
+presentation skills in other classes, specifically junior seminar. This was able to help me stay composed and talk
+through my slides slowly so all my colleagues could understand the points I was describing. The demonstration went
+well as I was able to show and walk through the process of adding a workout to a users application. I thought this
+was a good demonstration as we could go back and look at the evaluation and the change in the graph as well. In 
+conclusion, it was a well prepared presentation that went accordingly to plan in my eyes.
+
