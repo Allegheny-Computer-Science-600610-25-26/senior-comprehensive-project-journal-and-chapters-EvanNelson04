@@ -194,4 +194,39 @@ system by enabling seamless cross-device access, improved data reliability, and 
 
 ## Project Impact
 
+WorkoutTracker demonstrates the potential for a shift in how mobile fitness applications support users, moving from data visualization and 
+collection toward active performance evaluation and guidance. By focusing on interpreting workout data rather than simply 
+recording it, the application introduces a more meaningful and user-centered approach to fitness tracking. This has direct 
+implications for user motivation and long lasting adherence, as individuals are more likely to remain consistent when they can 
+clearly understand their progress and receive actionable feedback.
+
+In a broader context, this project highlights an opportunity within the fitness technology space to prioritize personalization 
+and insight generation. Many existing applications provide extensive data but leave interpretation up to the user. WorkoutTracker 
+addresses this gap by simplifying complex information into understandable trends and evaluations, making fitness data more 
+accessible to a wider range of users. Additionally, the concepts explored in this project such as adaptive feedback, personalized 
+recommendations, and intelligent evaluation, can extend beyond fitness into other domains where user-inputted data can be 
+leveraged to improve decision making and engagement.
+
+Overall, the impact of this project lies not only in the functionality of the application itself, but also in its demonstration 
+that relatively lightweight systems can deliver meaningful insights when designed with a clear focus on user needs. It 
+reinforces the idea that the value of an application is not solely in the amount of data it collects, but in how effectively 
+that data is transformed into useful and actionable information.
+
 ## Final Reflection
+
+Looking back on the development of WorkoutTracker, this project represents both a successful technical implementation and a 
+meaningful personal achievement. It began with a simple but important motivation which was the desire to better understand progress 
+in the gym and to have access to clear, actionable feedback that was not readily available in existing applications. Through the 
+design and development process, this idea evolved into a fully functional system that not only tracks workouts but actively 
+evaluates them.
+
+Throughout this project, I developed a deeper understanding of both software engineering and user-centered design. From 
+structuring data models and optimizing performance to designing intuitive visualizations and feedback systems, each component 
+required thoughtful decision making and iterative improvement. This process also reinforced the importance of balancing simplicity 
+with functionality, as many of the most effective features were those that presented complex information in a clear and accessible 
+way.
+
+Perhaps most importantly, this project demonstrated how a personally motivated problem can lead to a meaningful and impactful 
+solution. By building something that I would genuinely use in my own fitness journey, I was able to maintain a strong focus on 
+usability, relevance, and practicality. Moving forward, this project provides a solid foundation for further development and 
+serves as a reflection of both my technical growth and my ability to design solutions that address real-world needs.
