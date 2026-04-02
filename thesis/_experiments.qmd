@@ -629,3 +629,14 @@ the results should be interpreted. The experiment still provides strong evidence
 efficiently under the tested conditions. At the same time, recognizing the use of synthetic data, the influence of the testing 
 hardware, and the limited maximum dataset size helps ensure that the evaluation remains realistic, transparent, and academically 
 sound.
+
+## Final reflection
+
+Overall, this project represents a successful integration of software engineering, data analysis, and user-centered design to 
+solve a real world problem in fitness tracking. Through the design and implementation of the WorkoutTracker application, combined 
+with the structured benchmarking experiments, it is clear that the system is both technically efficient and practically useful. 
+The results demonstrate that the application maintains strong performance across increasing dataset sizes while continuing to 
+deliver a smooth and responsive user experience. Beyond the technical achievements, this project also highlights the importance 
+of thoughtful design decisions, such as efficient data structures, controlled chart rendering, and meaningful query selection in 
+building scalable applications. Overall, this work not only validates the effectiveness of the current system but also provides 
+a strong foundation for future enhancements, reinforcing its potential to evolve into a real-world fitness solution. 
