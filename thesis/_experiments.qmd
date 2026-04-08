@@ -254,7 +254,7 @@ causing visible lag for the user.
 \end{figure}
 
 Finally moving onto the largest dataset size of 10,000 entries. This is the largest dataset size that this experiment handles, which
-will provide a complete picture on how the WorkoutTracker application can function with lots of data. Looking at the 5 run times,
+will provide a complete picture on how the WorkoutEvaluator application can function with lots of data. Looking at the 5 run times,
 they are all very close together as we can see in the plot. Since the dataset is a larger size, meaning the runtimes may vary more
 than you would see in a smaller dataset, the run at 47.51 milliseconds is not considered an outlier within this experiment. 
 
@@ -267,7 +267,7 @@ to cause the load time to take over 100 milliseconds, causing delay within the a
 
 ### Query Time Performance Results 
 
-This section presents and analyzes the query performance results produced during the benchmark testing of the WorkoutTracker application. 
+This section presents and analyzes the query performance results produced during the benchmark testing of the WorkoutEvaluator application. 
 As mentioned before, hese queries were designed to reflect the types of data retrieval and processing tasks that users would commonly perform while using the 
 app, such as filtering workouts by exercise or muscle group, sorting workout history, and calculating progress-based statistics. Evaluating 
 these query times is important because it shows how efficiently the application can access and process stored workout data under 
@@ -366,7 +366,7 @@ Another important observation is the strong consistency across the five runs for
 suggests stable and reliable query behavior rather than inconsistent spikes in performance. This consistency strengthens the validity of the benchmark because it 
 shows the application is not only fast, but also predictable under repeated testing.
 
-Overall, these results show that the WorkoutTracker application performs query operations at a very high level of efficiency. Every tested operation completed in 
+Overall, these results show that the WorkoutEvaluator application performs query operations at a very high level of efficiency. Every tested operation completed in 
 under one millisecond individually, and the full query set averaged only 2.34 milliseconds in total. This indicates that users would be able to filter, sort, and 
 analyze workout data smoothly, even when working with a larger dataset, with no visible lag during normal app use.
 
@@ -415,7 +415,7 @@ steady pattern suggests that performance is not only fast, but also dependable u
 demonstrates that the system handles larger datasets in a controlled and predictable way.
 
 Taken together, these findings suggest that the application scales well as data volume increases. Even at this larger dataset size, all individual queries remained under 
-10 milliseconds, and the full benchmark set averaged only 22.86 milliseconds in total. This supports the conclusion that the WorkoutTracker application can maintain smooth, 
+10 milliseconds, and the full benchmark set averaged only 22.86 milliseconds in total. This supports the conclusion that the WorkoutEvaluator application can maintain smooth, 
 responsive query performance under heavier data conditions without introducing noticeable lag for the user.
 
 ### Chart Rendering Performance Results
@@ -564,7 +564,7 @@ could display all available values, while at 1,000 and 10,000 entries they displ
 preserved legibility and rendering speed. This design choice is important because it shows that the app was not only benchmarked 
 successfully, but also engineered thoughtfully to maintain performance as the user’s workout history grows over time.
 
-Taken together, these findings show that the WorkoutTracker application is well optimized and performs reliably under high-stress conditions. 
+Taken together, these findings show that the WorkoutEvaluator application is well optimized and performs reliably under high-stress conditions. 
 The results also show that performance scales in a controlled and manageable way as the dataset increases, rather than breaking down under 
 larger workloads. This is especially important for a fitness tracking application, since users are expected to continuously add more workout 
 data over time. Based on these results, it is reasonable to conclude that the app is capable of supporting long term use while maintaining 
@@ -573,7 +573,7 @@ its major data heavy tasks and is strong enough for realistic, real-world scenar
 
 ## Threats to Validity
 
-Although the benchmark results show that the WorkoutTracker application performed well during testing, several threats to validity 
+Although the benchmark results show that the WorkoutEvaluator application performed well during testing, several threats to validity 
 should be considered when interpreting the results. Acknowledging these limitations is important because it provides a more 
 balanced evaluation of the experiment and helps clarify the extent to which the findings can be generalized to real use. 
 The main threats in this study relate to the use of synthetic data, the dependence on a specific hardware environment, and the 
