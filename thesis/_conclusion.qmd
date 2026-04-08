@@ -26,11 +26,11 @@ highlighted a gap between simply collecting workout data and actually interpreti
 was designed not just as a technical solution, but as a direct response to that need—providing the kind of structured feedback, 
 trend analysis, and performance insights that I had always wanted in my own fitness journey.
 
-## Critical Evaluation of WorkoutTracker
+## Critical Evaluation of WorkoutEvaluator
 
 ### Reflection
 
-The development of WorkoutTracker provided a meaningful opportunity to critically evaluate not only whether the application met its 
+The development of WorkoutEvaluator provided a meaningful opportunity to critically evaluate not only whether the application met its 
 original goal, but also how effectively each individual component contributed to that goal. At a high level, the application 
 successfully addressed the problem of evaluation and trend analysis in mobile fitness apps by moving beyond simple data logging 
 and introducing structured feedback and performance insights. However, a deeper reflection reveals that the success of the 
@@ -72,7 +72,7 @@ discussion of its limitations and potential future improvements.
 
 ### Limitations of the Current System
 
-While WorkoutTracker successfully achieves its primary goal of providing evaluation and trend analysis, several limitations were 
+While WorkoutEvaluator successfully achieves its primary goal of providing evaluation and trend analysis, several limitations were 
 identified throughout the development process that impact the system’s scalability, depth, and overall functionality. These 
 limitations are not failures of the system, but rather natural outcomes of design decisions made to prioritize simplicity, 
 performance, and feasibility within the scope of the project.
@@ -105,19 +105,19 @@ and customization. Charts, while informative, are relatively basic and do not al
 filtering by time range or comparing multiple exercises simultaneously. Additionally, users have limited control over how their 
 data is displayed or analyzed, which could restrict the app’s usefulness for more advanced users.
 
-Overall, these limitations highlight that while WorkoutTracker provides a strong foundation for evaluation-focused fitness tracking, 
+Overall, these limitations highlight that while WorkoutEvaluator provides a strong foundation for evaluation-focused fitness tracking, 
 many of its current features represent initial implementations rather than fully developed solutions. These constraints naturally 
 point toward opportunities for future enhancements, particularly in areas such as scalability, personalization, and advanced data 
 analysis.
 
 ## Future Works
 
-Building upon the critical evaluation of WorkoutTracker, several opportunities for future development emerge that have the 
+Building upon the critical evaluation of WorkoutEvaluator, several opportunities for future development emerge that have the 
 potential to significantly enhance the application’s functionality, scalability, and overall user experience. While the current 
 system successfully establishes a foundation for evaluation focused fitness tracking, it also highlights areas where deeper 
 personalization, advanced analysis, and expanded features could further differentiate the application. The following proposed 
 improvements are directly informed by the limitations identified in the current system and represent logical next steps in 
-evolving WorkoutTracker into a more intelligent, adaptive, and comprehensive fitness platform.
+evolving WorkoutEvaluator into a more intelligent, adaptive, and comprehensive fitness platform.
 
 ### AI Integration
 
@@ -130,14 +130,14 @@ page, the system could prioritize those analytics on the home screen or streamli
 logs workouts within a specific muscle group, the app could proactively highlight related trends or recommendations. Over time, 
 this would create a highly personalized experience that adapts as the user’s habits and goals evolve.
 
-The integration of large language models would significantly advance WorkoutTracker. This would allow the application to evolve 
+The integration of large language models would significantly advance WorkoutEvaluator. This would allow the application to evolve 
 alongside the user, continuously refining its insights and recommendations without requiring constant manual updates to the 
 underlying logic. As a result, the app would shift toward a more intelligent and autonomous system, capable of delivering 
 increasingly relevant and sophisticated guidance as it accumulates more user data.
 
 This type of adaptive interface represents a exciting future innovation in mobile applications. While modern smartphones are soon
 to incorporate AI-driven personalization at the system level, such functionality has not yet been deeply integrated 
-into individual fitness applications. Implementing this feature would position WorkoutTracker as a leader in intelligent 
+into individual fitness applications. Implementing this feature would position WorkoutEvaluator as a leader in intelligent 
 fitness app design, transforming it from a passive tool into an actively evolving system tailored to each user.
 
 ### Personalized Gamification and Dynamic Awards System
@@ -156,11 +156,11 @@ This personalized approach would make the gamification system significantly more
 toward generic milestones, users would feel that the app recognizes and rewards their specific efforts and progress. Over time, 
 this could improve user retention, increase motivation, and create a more immersive and rewarding experience. Developing the app
 in this way would be exciting as a devloper to see what different awards would be developed. This also opens the area of sharing awards
-with the WorkoutTracker community or friends to see what unique awards the userbase achieves.
+with the WorkoutEvaluator community or friends to see what unique awards the userbase achieves.
 
 ### Automated Strength Training Program Generation
 
-A major functional expansion of WorkoutTracker would be the introduction of a personalized strength training program generator. 
+A major functional expansion of WorkoutEvaluator would be the introduction of a personalized strength training program generator. 
 This feature would leverage the user’s historical workout data—collected over an initial period of approximately two to three 
 months—to create a structured and customized training plan. By analyzing frequently performed exercises, weight progression, and 
 muscle group distribution, the system could identify patterns in the user’s training habits and areas for improvement. 
@@ -194,14 +194,14 @@ system by enabling seamless cross-device access, improved data reliability, and 
 
 ## Project Impact
 
-WorkoutTracker demonstrates the potential for a shift in how mobile fitness applications support users, moving from data visualization and 
+WorkoutEvaluator demonstrates the potential for a shift in how mobile fitness applications support users, moving from data visualization and 
 collection toward active performance evaluation and guidance. By focusing on interpreting workout data rather than simply 
 recording it, the application introduces a more meaningful and user-centered approach to fitness tracking. This has direct 
 implications for user motivation and long lasting adherence, as individuals are more likely to remain consistent when they can 
 clearly understand their progress and receive actionable feedback.
 
 In a broader context, this project highlights an opportunity within the fitness technology space to prioritize personalization 
-and insight generation. Many existing applications provide extensive data but leave interpretation up to the user. WorkoutTracker 
+and insight generation. Many existing applications provide extensive data but leave interpretation up to the user. WorkoutEvaluator 
 addresses this gap by simplifying complex information into understandable trends and evaluations, making fitness data more 
 accessible to a wider range of users. Additionally, the concepts explored in this project such as adaptive feedback, personalized 
 recommendations, and intelligent evaluation, can extend beyond fitness into other domains where user-inputted data can be 
@@ -214,7 +214,7 @@ that data is transformed into useful and actionable information.
 
 ## Final Reflection
 
-Looking back on the development of WorkoutTracker, this project represents both a successful technical implementation and a 
+Looking back on the development of WorkoutEvaluator, this project represents both a successful technical implementation and a 
 meaningful personal achievement. It began with a simple but important motivation which was the desire to better understand progress 
 in the gym and to have access to clear, actionable feedback that was not readily available in existing applications. Through the 
 design and development process, this idea evolved into a fully functional system that not only tracks workouts but actively 

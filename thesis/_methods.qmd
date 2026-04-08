@@ -1,20 +1,20 @@
 # Method of approach
 
-## Overview of WorkoutTracker
+## Overview of WorkoutEvaluator
 
-WorkoutTracker is a dynamic fitness app designed to help users log, monitor, analyze, and receive evaluations on their workouts in a seamless 
+WorkoutEvaluator is a dynamic fitness app designed to help users log, monitor, analyze, and receive evaluations on their workouts in a seamless 
 and visually engaging way. Beyond simply recording exercises, the app provides charts, trend analysis, and personalized evaluations, 
 allowing users to track progress, identify patterns, and receive actionable insights on strength, endurance, and fatigue. Its architecture 
 emphasizes a single source of truth for workout data, ensuring that every logged session automatically updates history views, progress 
 visualizations, and predictive assessments in real time. The intuitive interface and integrated analytics make it a tool not just for 
 tracking workouts, but for optimizing training and staying motivated over the long term.
 
-The purpose of WorkoutTracker is to provide users with free and accessible tools to track and evaluate their workouts, helping them 
+The purpose of WorkoutEvaluator is to provide users with free and accessible tools to track and evaluate their workouts, helping them 
 improve over time. While fitness can often feel complicated, this app simplifies progress tracking, emphasizing that real growth comes 
 from commitment, consistency, and determination. Providing the mobile fitness world with this application will finally solve the problem
 of receiving free and concise feedback and analysis to benefit the user. 
 
-WorkoutTracker is designed for fitness enthusiasts of all levels, from beginners who want to establish consistent workout habits to advanced 
+WorkoutEvaluator is designed for fitness enthusiasts of all levels, from beginners who want to establish consistent workout habits to advanced 
 athletes aiming to monitor performance trends and optimize training. Its intuitive interface and automated tracking features make it accessible 
 to anyone, regardless of prior experience with fitness apps. Users can log individual exercises, track weight and repetitions, monitor heart 
 rate, and view historical progress, enabling them to make data-driven decisions about their training routine. Whether the goal is building 
@@ -24,7 +24,7 @@ strength, improving endurance, or maintaining overall fitness, the app supports 
 
 ![App Overview Image](images/Overview.png)
 
-The overall architecture of WorkoutTracker is designed to provide a seamless, reactive experience for users while maintaining a simple design.
+The overall architecture of WorkoutEvaluator is designed to provide a seamless, reactive experience for users while maintaining a simple design.
 As seen in the flowchart above, there are many moving pieces within this application that are important to note and explain. Many of these
 pages communicate together and work together to produce one functioning application. Explaining the Xcode platform and the Swift language will be
 completed first, after that there are 6 different pages that will be explained: History, Progress, Awards, Suggestions, Add, and Profile. 
@@ -33,7 +33,7 @@ completed first, after that there are 6 different pages that will be explained: 
 
 Xcode is Apple’s integrated development environment (IDE) for building applications across its platforms, including iOS, iPadOS, macOS and watchOS. 
 It provides developers with a complete toolkit, including a code editor, interface builder, simulator, debugging tools, and project management, 
-all in one environment. For a mobile app like WorkoutTracker, Xcode allows for rapid development and testing, letting developers design 
+all in one environment. For a mobile app like WorkoutEvaluator, Xcode allows for rapid development and testing, letting developers design 
 interactive interfaces visually while simultaneously writing and compiling Swift code. It allows users to utilize themselves as a prototype tester
 for their app by providing the users with 2 choices. Test the app on provided simulators of chosen platform (iOS, watchOS, etc...), or est the app 
 on their own device 
@@ -43,7 +43,7 @@ how the app performs in real-world conditions. Simulators are helpful for quickl
 fully replicate device-specific behaviors such as actual touch responsiveness, performance under load, battery usage, or integration with 
 hardware features such as local user creation.
 
-To test WorkoutTracker on a live device, the following steps were taken:
+To test WorkoutEvaluator on a live device, the following steps were taken:
 
 1. Device Preparation: The iPhone was connected via USB to the development computer. The device was trusted and registered with Xcode.
 2. Provisioning and Signing: A free or paid Apple Developer account was used to set up a provisioning profile and code signing for the device.
@@ -60,7 +60,7 @@ improves code reliability and reduces debugging time.
 
 Xcode includes advanced debugging tools such as breakpoints, variable inspection, and console logging. Additionally, Instruments allows 
 developers to profile CPU usage, memory consumption, and energy impact. These tools are especially important for a fitness app like 
-WorkoutTracker, where performance efficiency and battery usage are critical during prolonged use.
+WorkoutEvaluator, where performance efficiency and battery usage are critical during prolonged use.
 
 Xcode’s Interface Builder and SwiftUI Previews allow developers to visually design user interfaces and immediately see changes reflected in 
 real time. This significantly speeds up UI iteration and ensures layouts adapt properly across different screen sizes and device types.
@@ -74,7 +74,7 @@ TestFlight or the App Store. This makes it a centralized tool not only for devel
 
 Xcode provides detailed build logs and warnings that help developers understand compilation errors and runtime issues. This feedback is 
 crucial for debugging logic errors and ensuring the app meets Apple’s platform requirements. Overall, Xcode serves as a comprehensive 
-development environment that supports the entire workflow of the WorkoutTracker app, from initial design and coding to real-device testing, 
+development environment that supports the entire workflow of the WorkoutEvaluator app, from initial design and coding to real-device testing, 
 performance optimization, and eventual deployment.
 
 ### User Authentication
@@ -178,7 +178,7 @@ journey.
 
 ## Data Flow and Processing Pipeline
 
-This section introduces the data flow and processing pipeline used in the WorkoutTracker application. It explains how user-entered workout 
+This section introduces the data flow and processing pipeline used in the WorkoutEvaluator application. It explains how user-entered workout 
 data moves through the system, from initial input to final output, and how each stage contributes to the app’s overall functionality. Rather 
 than focusing solely on individual code segments, this section emphasizes the logical flow of data and the design decisions behind it, 
 supported by a flowchart and selected code examples. This approach provides a clear understanding of how raw workout data is transformed into 
@@ -187,7 +187,7 @@ meaningful metrics, summaries, and visualizations presented to the user.
 ![Data Pipeline Flowchart](images/DataFlow.png)
 
 Let's start with how the data gets inputted from the user. As seen in the flowchart, the user-inputted data starts all the following processes.
-In WorkoutTracker, data querying does not run continuously. This means that everything becomes powered and runs when the user presses the save
+In WorkoutEvaluator, data querying does not run continuously. This means that everything becomes powered and runs when the user presses the save
 button which finalizes the data they are inputting. This folows what is called an event-driven model, where queries are triggered only when
 specific events occur, in this case being when the user logs a workout. Other cases within this app are when the user navigates to the progress
 page to view visualizations. When no new data is being entered or requested, the querying logic becomes idle, consuming no processing resources. 
@@ -251,7 +251,7 @@ each loop to do once it gets to a data input, in this case, looking for a specif
 it matches the desired muscle group.
 
 Moving forward in the flow chart, we can see that this list WorkoutData.entries, fuels the rest of the processes. There are three different 
-pages that take data from this list: History, Progress (charts and evaluation), and Profile. All of these different sections of WorkoutTracker
+pages that take data from this list: History, Progress (charts and evaluation), and Profile. All of these different sections of WorkoutEvaluator
 actively us different queries to update data. 
 
 WorkoutListView (history) is the page where the user is able to view a log of all the workouts they have entered into the app. Within this page
@@ -409,7 +409,7 @@ how the user-inputted data is the center of attention in this application.
 
 ## Algorithms and Analytical Methods
 
-The trend analysis and evaluation system is the most analytically sophisticated component of WorkoutTracker, and represents the
+The trend analysis and evaluation system is the most analytically sophisticated component of WorkoutEvaluator, and represents the
 feature that most clearly differentiates this application from a basic workout logging tool. Implemented within WorkoutProgressView.swift,
 this system transforms a user's raw workout history into a structured, session-by-session performance assessment. The following subsections
 explain the logic, design decisions, and justifications behind each analytical layer.
@@ -501,12 +501,12 @@ high-frequency training and accumulated fatigue. Two users might show identical 
 achieved that momentum with three sessions per week while the other trained seven days consecutively. The fatigue
 index surfaces this distinction, providing context that the other metrics do not capture.
 
-By evaluating these metrics and providing the user with this information, WorkoutTracker is able to complete a task that no other
+By evaluating these metrics and providing the user with this information, WorkoutEvaluator is able to complete a task that no other
 mobile fitness applications have been able to complete. Providing careful justification within this section is important to 
 understand why and how many of these metrics are being completed, as well as to demonstrate the uniqueness of this project.
 
 The code for this experiment was developed and is published in a public repository at the following 
-link: <https://github.com/EvanNelson04/WorkoutTrackerExperiment>.
+link: <https://github.com/EvanNelson04/WorkoutEvaluatorExperiment>.
 
 
 

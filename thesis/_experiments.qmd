@@ -2,14 +2,14 @@
 
 ## Experimental Setup
 
-This experiment is tailored specifically to the technical components and development environment used in the WorkoutTracker 
+This experiment is tailored specifically to the technical components and development environment used in the WorkoutEvaluator 
 application. Since the project was designed, implemented, and tested entirely within Xcode using the simulator, the experimental 
 setup focuses on the conditions required to reproduce the app’s behavior and performance measurements. In order 
 to make the results clear and repeatable, this section describes the hardware and software environment, the method used to 
 generate the datasets for testing, and the benchmark methodology used to evaluate system performance. Together, these elements 
 define the foundation of the experimental process and ensure that the reported results can be understood, replicated, and fairly 
 interpreted. The benchmark implementation used for these experiments is also available in a separate public repository to support 
-transparency and reproducibility: [https://github.com/EvanNelson04/WorkoutTrackerExperiment]. This repository contains the 
+transparency and reproducibility: [https://github.com/EvanNelson04/WorkoutEvaluatorExperiment]. This repository contains the 
 experimental benchmarking code used to generate the performance results discussed in this chapter.
 
 ### Hardware and Software Environment
@@ -625,7 +625,7 @@ larger scales. While the results suggest that performance increases in a control
 with even larger datasets would strengthen the conclusions and provide a clearer picture of the application’s upper limits.
 
 Overall, these threats to validity do not invalidate the benchmark findings, but they do place reasonable boundaries on how 
-the results should be interpreted. The experiment still provides strong evidence that the WorkoutTracker application performs 
+the results should be interpreted. The experiment still provides strong evidence that the WorkoutEvaluator application performs 
 efficiently under the tested conditions. At the same time, recognizing the use of synthetic data, the influence of the testing 
 hardware, and the limited maximum dataset size helps ensure that the evaluation remains realistic, transparent, and academically 
 sound.
@@ -633,7 +633,7 @@ sound.
 ## Final reflection
 
 Overall, this project represents a successful integration of software engineering, data analysis, and user-centered design to 
-solve a real world problem in fitness tracking. Through the design and implementation of the WorkoutTracker application, combined 
+solve a real world problem in fitness tracking. Through the design and implementation of the WorkoutEvaluator application, combined 
 with the structured benchmarking experiments, it is clear that the system is both technically efficient and practically useful. 
 The results demonstrate that the application maintains strong performance across increasing dataset sizes while continuing to 
 deliver a smooth and responsive user experience. Beyond the technical achievements, this project also highlights the importance 
