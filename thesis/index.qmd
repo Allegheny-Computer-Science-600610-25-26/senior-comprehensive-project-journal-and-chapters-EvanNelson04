@@ -31,7 +31,19 @@ author:
       postal-code: 16335
 
 abstract: |
-  A well-researched student project. Like very.
+This project presents WorkoutEvaluator, a fully developed iOS application designed to improve strength training by providing
+structured workout tracking, performance visualization, and personalized feedback based entirely on user-entered data. The 
+motivation for this work stems from limitations in existing fitness applications, which often rely on wearable sensors or 
+lack meaningful, individualized insights for resistance training; this application instead focuses on simplicity, accessibility, 
+and actionable analytics. Built using Swift and SwiftUI in Xcode, the system implements a lightweight architecture with local 
+data persistence via JSON encoding and UserDefaults, and includes core features such as exercise logging, progress charts, 
+evaluation metrics, achievement-based gamification, and guided exercise selection. To evaluate performance and scalability, 
+controlled experiments were conducted using synthetic datasets ranging from 100 to 10,000 workout entries, measuring load times, 
+query efficiency, and chart rendering responsiveness across multiple runs. Results demonstrate that the application maintains 
+fast load and query times and remains responsive even at larger data scales, supporting its practicality for real-world use. 
+Overall, this work delivers a functional, efficient, and user-focused fitness application that not only tracks workouts but 
+actively helps users understand and improve their performance, offering a compelling alternative to existing solutions in the 
+health and fitness app space.
 ---
 
 {{< include _introduction.qmd >}}
