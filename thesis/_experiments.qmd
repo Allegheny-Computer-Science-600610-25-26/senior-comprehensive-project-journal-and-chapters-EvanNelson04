@@ -1,14 +1,643 @@
 # Experiments
 
-This chapter describes your experimental set up and evaluation. It should also
-produce and describe the results of your study. The section titles below offer
-a typical structure used for this chapter.
+## Experimental Setup
 
-## Experimental Design
+This experiment is tailored specifically to the technical components and development environment used in the WorkoutEvaluator 
+application. Since the project was designed, implemented, and tested entirely within Xcode using the simulator, the experimental 
+setup focuses on the conditions required to reproduce the app’s behavior and performance measurements. In order 
+to make the results clear and repeatable, this section describes the hardware and software environment, the method used to 
+generate the datasets for testing, and the benchmark methodology used to evaluate system performance. Together, these elements 
+define the foundation of the experimental process and ensure that the reported results can be understood, replicated, and fairly 
+interpreted. The benchmark implementation used for these experiments is also available in a separate public repository to support 
+transparency and reproducibility: [https://github.com/EvanNelson04/WorkoutEvaluatorExperiment]. This repository contains the 
+experimental benchmarking code used to generate the performance results discussed in this chapter.
 
-Especially as it pertains to responisble computing, if conducting experiments or
-evaluations that involve particular ethical considerations, detail those issues here.
+### Hardware and Software Environment
 
-## Evaluation
+The experiments for this project were conducted on Apple hardware using Xcode and the iPhone Simulator to ensure a consistent and 
+reproducible testing environment. The hardware platform used was an Apple MacBook Air equipped with an Apple M4 chip and 16 GB of 
+RAM. This machine provided sufficient processing power and memory to build, run, and evaluate the application without hardware-related 
+limitations affecting the benchmark results. Rather than deploying to a physical iPhone for the reported experiments, the 
+application was executed through the iPhone Simulator included with Xcode, allowing controlled and repeatable testing conditions 
+across multiple runs. 
+
+On the software side, the development environment consisted of macOS as the host operating system, Xcode as the integrated 
+development environment, Swift as the programming language, and the iOS SDK version bundled with the installed Xcode release. 
+Unless otherwise stated, the application was compiled and tested using the Debug build configuration, since this was the 
+configuration used during development and simulator-based experimental runs. Recording these hardware and software details is 
+important so that another reader or developer can recreate the same setup and reproduce the experimental procedure under 
+comparable conditions.
+
+### Dataset Generation
+
+It is important to talk about this data generation as it is the central point of the experiment. This data needed to be created and generated
+in the same format as the data the users will enter into the app to simulate real data. By simulating this real data, it will make
+this experiment as close to what a user's real app will look like. Being able to simulate the look of real data for this experiment
+is important for strengthening my argument and experiment. This synthetic data generation process ensures that the benchmark results 
+reflect realistic usage conditions rather than an artificial test environment.
+
+```swift
+static let exercises = [
+        "Bench Press", "Squat", "Deadlift", "Overhead Press",
+        "Pull Up", "Barbell Row", "Leg Press", "Incline Bench",
+        "Dumbbell Curl", "Tricep Pushdown", "Lat Pulldown", "Cable Fly"
+    ]
+
+    static let muscleGroups = ["Chest", "Back", "Legs", "Arms", 
+    "Shoulders", "Core"]
+```
+\begin{figure}[h!]
+\centering
+\caption{List of Exercises and Muscle Groups}
+\label{fig:workoutcard}
+\end{figure}
+
+This is where the data generation starts. The data generation was designed to be simple and efficient. As you can see in the code above,
+there is a set list of exercises that the data gets generated from, as well as a set list of muscle groups. When the data is being generated
+the loop will cycle through this list of exercises, generating piece by piece in a fashion that equally generates data for each set
+exercise. This is also most accurate to what a real user's data might look like. Ideally data should be spread out evenly over different
+exercises using different muscle groups. Initializing a set list of exercises makes the data generation easier, as it is just 
+assigning a exercise to the piece of data.
+
+Next, it is important to display what this data looks like in the code. Like noted before, the data is built to the same format as the
+real data within the app. Like previously mentioned, this will best mirror a user's real data. 
+
+```swift
+entries.append(WorkoutEntry(
+    date: date,
+    muscleGroup: muscleGroup,
+    exercise: exercise,
+    weight: weight,
+    reps: Int.random(in: 3...12)
+))
+```
+\begin{figure}[h!]
+\centering
+\caption{Data Format and Progression Simulation}
+\label{fig:workoutcard}
+\end{figure}
+
+This code above is the format for every piece of generated data that this experiment uses. It outlines and uses the same parameters
+that the real user data utilizes. Within this code segment you can see that it generates different parameters such as date, muscleGroup,
+exercise, weight, and reps. These are all of the important things that the app needs to produce a full and accurate evaluation 
+so the user can progress over their time of using the app. By making the data all in the same format, it makes the generation
+process super simple and can be done in only a few steps.
+
+### Benchmark Methodology
+
+The benchmark methodology begins by generating synthetic workout data and appending it to the dataset list used by the 
+application. This process fills the app with realistic test data before any measurements are taken, ensuring that the benchmark 
+reflects how the app performs when it is already populated with entries similar to those a real user would create. For this 
+experiment, the dataset size was set to 100, 1000, and 10000 entries so that performance could be observed under a controlled and 
+repeatable condition.
+
+Performance was measured in milliseconds to provide precise timing results for each tested operation. Each benchmark test was 
+executed 5 times, and the final reported values were calculated as the average of those 5 runs. Averaging the results helped 
+reduce the effect of temporary system variation and produced a more reliable representation of the app’s typical performance. As
+learned in many classes including data analysis, taking the average of 5 or more runs creates a more accurate depiction of the 
+performance. When an experiment is only run once, this contains the possibility of having outliers in your data. By running the
+benchmarking experiment multiple times, it allows the times to be much more accurate. 
+
+The benchmark includes three main performance categories: load time, query performance, and chart rendering. Load time measures 
+how long the application takes to read and display the stored workout data after launch. Query performance measures how quickly 
+the app can search, filter, or retrieve workout-related information from the dataset. Chart rendering measures the time required 
+for the app to generate and display visual progress charts based on the stored entries. Together, these three categories provide 
+a clear view of the app’s responsiveness and efficiency during its most important functions.
+
+Within the query performance category, several specific queries were selected because they represent the most important 
+data-processing tasks used throughout the application. These queries were chosen to ensure that each major area of the app 
+was tested without overlooking any essential operation. The first set of queries focuses on filtering. One filtering query 
+searches through the workout entries to isolate records for a specific exercise so that the correct graph data can be displayed 
+to the user. A second filtering query groups exercises by muscle group, allowing the application to organize and present workout 
+data based on categories such as chest, back, or legs. These filtering operations are central to how users interact with their 
+workout history and progress.
+
+Another important query included in the benchmark is the descending sort query used in the workout log. This query organizes the 
+stored entries so that the most recent workout data appears first, which is a key part of making the workout log practical and 
+user-friendly. Since users are most likely to review their newest workouts, this sorting behavior is an important operation to 
+measure.
+
+Additional benchmarked queries were taken from the profile page, where the application calculates several performance-based 
+statistics. One query finds the maximum weight recorded for a specific exercise, which represents the user’s personal record. 
+Another determines the number of unique exercises completed, giving insight into workout variety. A third calculates the combined 
+total of the user’s bench press, squat, and deadlift maximums, commonly referred to as the “big three” total in weightlifting. 
+The final profile-related query counts the number of unique workout days in a month, which helps summarize consistency and training 
+frequency. These queries were included because they measure the speed of retrieving some of the most meaningful fitness metrics 
+displayed by the application.
+
+By defining these queries in advance and testing each one individually, the benchmark methodology provides a structured way to 
+evaluate how efficiently the application handles its core features. This allows the results section to not only report the measured 
+query times, but also explain why each query matters to the overall user experience and performance of the app.
+
+## Experimental Results
+
+In this section, the results of each category will be analyzed and discussed to demonstrate this application’s ability to 
+maintain strong performance under high-stress conditions. As this experiment was performed with 3 different dataset sizes, 
+this evaluation and analysis is broken into three sections with the corresponding dataset size. By completing this analysis in this
+fashion, it will best align with the code output, which will make the analysis much easier. One important point to note, so that 
+it does not need to be repeated in each section, is that a common performance standard for application responsiveness is to keep 
+loading times under 100 milliseconds. As long as the load time and query time remain below this threshold, the user is unlikely 
+to notice any lag during normal app use.
+
+To provide some context for the upcoming visuals there are a few things to point out. To display the results of the experiment, 
+box and whisker plots were utilized. Within this visual there are four main things to point out. First is the line to the furthest-right 
+of the plot. This line shows you the highest number, in this case the slowest recorded time. On the contrary, the line furthest to the 
+left will display the smallest number, which is the fastest recorded time for this experiment. In between these two lines there is a purple 
+box. This box represents the middle 50 percent of the recorded values, meaning it shows where the central portion of the data falls. Inside 
+this box there is also a line, which represents the median. The median is the middle value of the dataset when all recorded times are arranged 
+from smallest to largest, and it helps show the central tendency of the results.
+
+### Load Time Performance Results 
+
+Table: Load Time Dataset Size 100 Entries
+```swift
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 100 entries                                  │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 4.48 ms, 0.934 ms, 0.861 ms, 0.830 ms, 0.805 ms   │
+│     Avg : 1.58 ms                                           │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 100 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load100.png}
+    \caption{Load Time Performance Results With 100 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+As shown in the benchmark output above, five separate load time measurements were recorded for the dataset containing 100 
+entries, followed by the average of those five runs. The box-and-whisker plot below presents these same results visually 
+and will be used throughout the remainder of the benchmark analysis for consistency. Among these five run times, the slowest 
+recorded value was 4.48 milliseconds represented by the furthest-right line on the plot. This is likely due to the first run including additional startup overhead from the 
+simulator and the initial execution of the loading process, which can make the first measurement slightly slower than the 
+rest. After this initial run, the remaining four times are much closer together, ranging from 0.805 milliseconds to 0.934 
+milliseconds. This small range indicates that the load operation is highly consistent once the application has completed 
+its initial startup behavior.
+
+The median value, represented by the black line in the box and whisker plot, is 0.861 milliseconds. This is especially important 
+because it shows that most runs are clustered at a much lower value than the average of 1.58 milliseconds. In this case, the 
+average is raised by the unusually slower first run, meaning the median may better represent the typical load performance for 
+this dataset size. Overall, these results demonstrate that with 100 entries, the application is able to load workout data 
+extremely quickly and with very little variation between repeated runs. This suggests that at smaller dataset sizes, the loading 
+functionality performs efficiently and would not create any noticeable delay for the user. It is also important to note that x axis
+numbers are in milliseconds.
+
+```swift
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 1000 entries                                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 5.35 ms, 5.64 ms, 9.83 ms, 6.83 ms, 6.89 ms       │
+│     Avg : 6.91 ms                                           │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 1,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
+    \caption{Load Time Performance Results With 1,000 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+Moving onto the next dataset size, five separate load time measurements were recorded for the dataset containing 1000 
+entries, followed by the average of those five runs. Among these five run times, the highest 
+recorded value was 9.83 milliseconds, which is noticeably higher than the other four runs. This suggests that one run 
+experienced slightly more overhead than the others, while the remaining measurements stayed within a much narrower range 
+of 5.35 milliseconds to 6.89 milliseconds. This again is represented by the furthest-right line on the plot. The relatively 
+small spread among those four runs indicates that the app loading time remains stable as the dataset size increases.
+
+The median value for these five runs is 6.83 milliseconds, which provides a better representation of the typical load 
+performance than the average in this case. This is because the average of 6.91 milliseconds is slightly influenced by the 
+slower 9.83 millisecond run. Even with that higher result included, all five measurements remain well below the 100 
+millisecond threshold for noticeable delay, showing that the application continues to load data very quickly at this
+dataset size. Overall, these results demonstrate that with 1000 entries, the loading functionality remains efficient, 
+consistent, and responsive, suggesting that the app can comfortably handle a moderate amount of stored workout data without 
+causing visible lag for the user.
+
+```swift
+┌─────────────────────────────────────────────────────────────┐
+│  DATASET SIZE: 10000 entries                                │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  📦 LOAD TIME (encode + UserDefaults write + decode)        │
+│     Runs: 47.51 ms, 44.11 ms, 42.29 ms, 42.25 ms, 41.99 ms  │
+│     Avg : 43.63 ms                                          │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Load Time Dataset Size 10,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{ExperimentData/Load1000.png}
+    \caption{Load Time Performance Results With 10,000 Entries}
+    \label{fig:workoutcard}
+\end{figure}
+
+Finally moving onto the largest dataset size of 10,000 entries. This is the largest dataset size that this experiment handles, which
+will provide a complete picture on how the WorkoutEvaluator application can function with lots of data. Looking at the 5 run times,
+they are all very close together as we can see in the plot. Since the dataset is a larger size, meaning the runtimes may vary more
+than you would see in a smaller dataset, the run at 47.51 milliseconds is not considered an outlier within this experiment. 
+
+The median within this dataset is run three at 42.29 milliseconds, which is very close to the average time of 43.63 milliseconds.
+This demonstrates that the results are very consistent, with no outlier heavily distorting the average. Although the load time
+has increased greatly, this is expected because of the growth in the size of the dataset. Knowing this, all five of the measurements
+at the largest dataset size still remain well below the 100 millisecond threshold for noticeable delay. This goes to show how
+efficient the code and functionality within the app works. We can predict from this data that it would take a much larger dataset
+to cause the load time to take over 100 milliseconds, causing delay within the application.
+
+### Query Time Performance Results 
+
+This section presents and analyzes the query performance results produced during the benchmark testing of the WorkoutEvaluator application. 
+As mentioned before, hese queries were designed to reflect the types of data retrieval and processing tasks that users would commonly perform while using the 
+app, such as filtering workouts by exercise or muscle group, sorting workout history, and calculating progress-based statistics. Evaluating 
+these query times is important because it shows how efficiently the application can access and process stored workout data under 
+realistic conditions. By measuring the execution time of each query across multiple runs, this section helps determine whether the app can 
+maintain fast and responsive performance as dataset size and query complexity increase.
+
+```swift
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 0.043 ms     │
+│        Runs: 0.083 ms, 0.032 ms, 0.033 ms, 0.033 ms, 0.033 m│
+│     Filter by muscle group (Chest)         Avg 0.009 ms     │
+│        Runs: 0.010 ms, 0.009 ms, 0.009 ms, 0.009 ms, 0.009 m│
+│     Sort by date descending                Avg 0.014 ms     │
+│        Runs: 0.018 ms, 0.013 ms, 0.013 ms, 0.012 ms, 0.013 m│
+│     Max weight per exercise                Avg 0.126 ms     │
+│        Runs: 0.516 ms, 0.030 ms, 0.028 ms, 0.029 ms, 0.029 m│
+│     Unique exercise count                  Avg 0.021 ms     │
+│        Runs: 0.041 ms, 0.017 ms, 0.016 ms, 0.016 ms, 0.016 m│
+│     Monthly unique workout days            Avg 0.102 ms     │
+│        Runs: 0.165 ms, 0.086 ms, 0.086 ms, 0.086 ms, 0.085 m│
+│     Big Three combined max weight          Avg 0.100 ms     │
+│        Runs: 0.102 ms, 0.101 ms, 0.100 ms, 0.099 ms, 0.100 m│
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 0.415 ms                   │
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 100 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These query results are very strong. Overall, the average total query time is 0.415 milliseconds, which means the full set of tested queries 
+completes in well under a single millisecond on average. That indicates the app’s data operations are highly efficient and would feel 
+effectively instantaneous to a user during normal use.
+
+Looking at the individual queries, the fastest operations are filtering by muscle group (0.009 milliseconds) and sorting by date descending (0.014 milliseconds), 
+showing that simple filtering and ordering tasks place almost no measurable strain on the system. Unique exercise count (0.021 milliseconds) and filter 
+by exercise (0.043 milliseconds) are also extremely fast, which suggests the app can quickly narrow down and summarize workout records without introducing 
+delay. These are the kinds of actions users are likely to perform often, so their low times are especially important.
+
+The more computationally demanding queries still performed very well. Monthly unique workout days (milliseconds), Big Three combined max weight (0.100 milliseconds), 
+and max weight per exercise (0.126 ms) were the slowest of the group, but even these remained far below 1 millisecond. This shows that slightly more 
+complex operations still execute at a very high level of performance and would not create any visible lag in the application.
+
+One thing worth noting is the max weight per exercise query had one noticeably higher first run at 0.516 milliseconds, while the remaining runs were all around 
+0.028–0.030 milliseconds. This suggests once again the cold start effect startup or rather than a true performance issue, since the repeated runs were much lower 
+and very consistent. A similar but smaller pattern appears in a few other queries where the first run is slightly slower than the rest. This is common in benchmarking 
+and does not weaken the overall result.
+
+In conclusion, these results demonstrate that the application handles query operations extremely efficiently. All measured queries are far below the threshold where 
+a user would perceive delay, and the consistency across runs suggests stable performance. Even the most complex queries remain fast enough to support responsive 
+filtering, sorting, and progress tracking features within the app.
+
+
+
+```swift 
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 0.326 ms     │
+│        Runs: 0.333 ms, 0.349 ms, 0.317 ms, 0.316 ms, 0.316 m│
+│     Filter by muscle group (Chest)         Avg 0.080 ms     │
+│        Runs: 0.080 ms, 0.079 ms, 0.080 ms, 0.081 ms, 0.079 m│
+│     Sort by date descending                Avg 0.142 ms     │
+│        Runs: 0.147 ms, 0.140 ms, 0.141 ms, 0.137 ms, 0.143 m│
+│     Max weight per exercise                Avg 0.244 ms     │
+│        Runs: 0.257 ms, 0.236 ms, 0.241 ms, 0.243 ms, 0.244 m│
+│     Unique exercise count                  Avg 0.150 ms     │
+│        Runs: 0.156 ms, 0.151 ms, 0.148 ms, 0.149 ms, 0.147 m│
+│     Monthly unique workout days            Avg 0.438 ms     │
+│        Runs: 0.447 ms, 0.429 ms, 0.431 ms, 0.449 ms, 0.435 m│
+│     Big Three combined max weight          Avg 0.959 ms     │
+│        Runs: 0.958 ms, 0.955 ms, 0.951 ms, 0.936 ms, 0.995 m│
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 2.34 ms                    |
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 1000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These query results continue to demonstrate excellent application performance. The total average query time is 2.34 milliseconds, meaning that all tested query 
+operations together still complete in only a tiny fraction of a second. This shows that even as the dataset grows, the app remains highly responsive and 
+capable of processing user-inputted data requests without noticeable delay.
+
+Among the individual queries, filter by muscle group (0.080 milliseconds) and sort by date descending (0.142 milliseconds) were the fastest, showing that basic 
+filtering and sorting tasks are handled very efficiently. Unique exercise count (0.150 milliseconds) and max weight per exercise (0.244 milliseconds) also performed 
+well, indicating that the app can quickly calculate summary-style information in addition to simple lookups. Filter by exercise (0.326 milliseconds) was slightly 
+higher, but it still remained extremely fast and well within the range of instantaneous performance.
+
+The more advanced summary queries required somewhat more processing time, which is expected. Monthly unique workout days (0.438 milliseconds) took longer than the 
+simpler filters and counts, likely because it involves grouping or identifying distinct workout dates across the dataset. The slowest query was Big Three combined 
+max weight (0.959 milliseconds), but even this result remained under a single millisecond on average. This is still an exceptionally fast execution time and suggests 
+that even the most complex progress-tracking calculations in the application are highly optimized.
+
+Another important observation is the strong consistency across the five runs for each query. The recorded times remain very close from one run to the next, which 
+suggests stable and reliable query behavior rather than inconsistent spikes in performance. This consistency strengthens the validity of the benchmark because it 
+shows the application is not only fast, but also predictable under repeated testing.
+
+Overall, these results show that the WorkoutEvaluator application performs query operations at a very high level of efficiency. Every tested operation completed in 
+under one millisecond individually, and the full query set averaged only 2.34 milliseconds in total. This indicates that users would be able to filter, sort, and 
+analyze workout data smoothly, even when working with a larger dataset, with no visible lag during normal app use.
+
+```swift
+│  🔍 QUERY TIMES (5 individual runs each)                    │
+│     Filter by exercise (Bench Press)       Avg 3.20 ms      │
+│        Runs: 3.25 ms, 3.24 ms, 3.20 ms, 3.15 ms, 3.15 ms    │
+│     Filter by muscle group (Chest)         Avg 0.823 ms     │
+│        Runs: 0.843 ms, 0.829 ms, 0.817 ms, 0.813 ms, 0.815 m│
+│     Sort by date descending                Avg 1.39 ms      │
+│        Runs: 1.36 ms, 1.37 ms, 1.42 ms, 1.40 ms, 1.40 ms    │
+│     Max weight per exercise                Avg 2.40 ms      │
+│        Runs: 2.54 ms, 2.43 ms, 2.41 ms, 2.33 ms, 2.32 ms    │
+│     Unique exercise count                  Avg 1.52 ms      │
+│        Runs: 1.51 ms, 1.54 ms, 1.52 ms, 1.53 ms, 1.51 ms    │
+│     Monthly unique workout days            Avg 3.96 ms      │
+│        Runs: 3.93 ms, 3.95 ms, 3.99 ms, 3.96 ms, 3.97 ms    │
+│     Big Three combined max weight          Avg 9.56 ms      │
+│        Runs: 9.44 ms, 9.39 ms, 9.32 ms, 9.66 ms, 9.97 ms    │
+│     ─────────────────────────────────────────────────────   │
+│     Total query time (avg sums): 22.86 ms                   │
+```
+\begin{figure}[h!]
+\centering
+\caption{Query Times Dataset Size 10000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These results show that query performance remains strong even at the largest dataset size tested. The total average query time is 22.86 milliseconds, which means 
+that all benchmarked queries combined still execute in far less than 100 milliseconds. From a user experience standpoint, this is important because it indicates 
+that the app can continue to retrieve and process workout information quickly, even when handling a much larger volume of stored records.
+
+Looking at the individual query categories, the simplest operations remained very efficient. Filter by muscle group (0.823 milliseconds) and sort by date descending 
+(1.39 milliseconds) both completed quickly, showing that common browsing and organization tasks still place only a small load on the system. Unique exercise count 
+(1.52 milliseconds) also stayed low, suggesting that summary counts can be generated with very little overhead. Although these values are higher than in the smaller 
+datasets, they are still extremely fast in practical terms.
+
+Some of the more data-intensive operations naturally required more processing time. Max weight per exercise (2.40 milliseconds) and filter by exercise (3.20 milliseconds) 
+were higher than the simpler queries, but they still completed within only a few milliseconds. Monthly unique workout days (3.96 milliseconds) took slightly longer, 
+which makes sense because it likely involves identifying and comparing distinct dates across many entries. The most demanding operation was Big Three combined max 
+weight (9.56 milliseconds), but even this remained under 10 milliseconds on average. That result shows that more advanced calculations tied to progress tracking and 
+workout analysis can still be performed very efficiently.
+
+Another notable strength in these results is the consistency between runs. The values for each query remain close across all five trials, with only minor variation. This 
+steady pattern suggests that performance is not only fast, but also dependable under repeated execution. Rather than showing major spikes or instability, the benchmark 
+demonstrates that the system handles larger datasets in a controlled and predictable way.
+
+Taken together, these findings suggest that the application scales well as data volume increases. Even at this larger dataset size, all individual queries remained under 
+10 milliseconds, and the full benchmark set averaged only 22.86 milliseconds in total. This supports the conclusion that the WorkoutEvaluator application can maintain smooth, 
+responsive query performance under heavier data conditions without introducing noticeable lag for the user.
+
+### Chart Rendering Performance Results
+
+Finally looking at the chart rendering section. These charts are designed in a specific way so that no matter how much data the user
+enters, the chart will always appear legible. The way this was completed was by keeping the amount of data points per graph to a maximum
+of 25 data points. As the first dataset size is only 100 entries, this will not force the graph to hit the maximum of 25 entries. You
+will notice in the output a few important pieces. The first being the average time, along with the 5 seperate runs of the benchmarking
+experiment. After that, the next line will display how many pieces of data for the exercise there are, compared to how many are shown.
+This will be important to note as the dataset gets bigger because there will be much more than 25 data points but not will be shown. This
+brings us to the next important piece, that is the percent of data retained. This is showing in a percentage output, how much of the 
+data is on the graph, just by completing a simple formula which is the shown data divided by the total data, all multiplied by 100 to 
+get the final percentage value. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
+no problems inside my application.
+
+```swift
+│   📈 CHART RENDERING (same logic as WorkoutChartView)       │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.008 ms               │
+│        Runs: 0.027 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.003 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+│     Chart data for Squat         Avg 0.003 ms               │
+│        Runs: 0.003 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.002 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+│     Chart data for Deadlift      Avg 0.003 ms               │
+│        Runs: 0.003 ms, 0.002 ms, 0.003 ms, 0.003 ms, 0.003 m│
+│        [9 total → 9 shown, 100.0% retained]                 │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Chart Rendering Dataset Size 100 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 milliseconds and 
+0.008 milliseconds for all three exercises, which is essentially instantaneous from a user perspective. Bench press was the slowest of the 
+three at 0.008 milliseconds average, but even that is still far below any noticeable threshold, while squat and deadlift both averaged 
+0.003 milliseconds, showing very consistent speed. The slightly higher first bench press run of 0.027 milliseconds was likely due to initial 
+setup overhead during the first run rather than sustained chart rendering cost. This is a known phenomenon called the cold start effect.
+This is when initial setup work affects the first run of a benchmarking experiment, making it seem slower when in reality it is just
+as fast as the next runs of the experiment. This is supported by the remaining runs, which stabilized at about 
+0.003 milliseconds, indicating consistently fast performance once the process was initialized.The individual runs also stayed tightly 
+grouped, which suggests the chart data generation logic is stable and reliable rather than producing random spikes in processing time.
+
+Another important result is that the chart retained 100% of the available data points for each exercise, with 9 total points shown 
+out of 9 available. This means the rendering logic did not need to trim or reduce the dataset in this case, so the app was able 
+to display the full workout history for each exercise while still maintaining near-zero processing time. Overall, these results 
+indicate that the chart rendering system is highly efficient and should have no negative effect on app responsiveness or user 
+experience. As mentioned before, the chart will only handle a maximum of 25 values. Since these primary results performed strong,
+it is fair to predict that there should not be much change in the performance as the dataset sizes increase.
+
+```swift
+│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.007 ms               │
+│        Runs: 0.012 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+│     Chart data for Squat         Avg 0.006 ms               │
+│        Runs: 0.007 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+│     Chart data for Deadlift      Avg 0.006 ms               │
+│        Runs: 0.006 ms, 0.005 ms, 0.005 ms, 0.006 ms, 0.006 m│
+│        [84 total → 25 shown, 29.8% retained]                │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Chart Rendering Dataset Size 1,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+This chart rendering result again demonstrates extremely strong performance, even with the larger 100-entry dataset. The 
+average render time remained between 0.006 milliseconds and 0.007 milliseconds for all three exercises, which is still effectively instantaneous 
+from the user’s perspective. Bench Press showed the highest average at 0.007 milliseconds, while squat and deadlift both averaged 0.006 
+milliseconds, indicating that rendering speed stayed nearly identical across exercises. The individual runs were also very 
+closely grouped, with only minor variation between measurements, which suggests that the chart rendering process is stable 
+and dependable rather than affected by irregular spikes in execution time.
+
+Another important finding is that the chart displayed 25 points out of 84 total available values for each exercise, meaning 29.8% 
+of the total dataset was retained for visualization. This reflects the chart’s built-in cap of 25 values, which is intentionally 
+used to keep the graph readable and efficient even as the stored workout history grows larger. Despite working with a much larger 
+pool of available data, the rendering time remained near zero, showing that limiting the displayed values successfully prevents
+performance from degrading. Overall, these results indicate that the chart rendering system remains highly efficient at this 
+dataset size and should continue to have no noticeable impact on app responsiveness or user experience.
+
+```swift
+│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
+│     (capped at 25 pts)                                      │
+│     Chart data for Bench Press   Avg 0.006 ms               │
+│        Runs: 0.009 ms, 0.006 ms, 0.006 ms, 0.005 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+│     Chart data for Squat         Avg 0.005 ms               │
+│        Runs: 0.006 ms, 0.006 ms, 0.005 ms, 0.005 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+│     Chart data for Deadlift      Avg 0.007 ms               │
+│        Runs: 0.010 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.005 m│
+│        [834 total → 25 shown, 3.0% retained]                │
+└─────────────────────────────────────────────────────────────┘
+```
+\begin{figure}[h!]
+\centering
+\caption{Chart Rendering Dataset Size 10,000 Entries}
+\label{fig:workoutcard}
+\end{figure}
+
+These chart rendering results remain very solid even at the largest dataset size. The average render times stayed between 0.005 
+milliseconds and 0.007 milliseconds across all three exercises, which is still essentially instantaneous from a user perspective. 
+Bench press averaged 0.006 milliseconds, Squat averaged 0.005 milliseconds, and Deadlift averaged 0.007 milliseconds, showing that 
+performance remained highly consistent even with 834 total available values per exercise. Although the first run for bench press 
+and Deadlift was slightly higher than the rest, this is most likely due to a cold start effect, since the later runs quickly 
+stabilized at nearly identical times. The close grouping of the remaining runs further shows that the rendering process is 
+reliable and does not experience meaningful slowdown as more workout history is stored.
+
+Another important result is that only 25 of the 834 available values were displayed for each exercise, meaning 3.0% of the total 
+data was retained for chart rendering. While this is a much smaller percentage than in the earlier tests, it reflects the intended 
+design of the chart system rather than a limitation. Because the chart is capped at a maximum of 25 values, the amount of data 
+actually rendered remains controlled and efficient regardless of how large the underlying dataset becomes. Overall, these results 
+confirm that chart rendering stays fast, stable, and efficient at every dataset size tested, and the 25-value maximum is clearly 
+the reason performance remains consistently strong even as the total number of stored entries grows.
+
+## Final Results Analysis
+
+The load time results particularly support the conclusion that the application scales efficiently as more workout data is stored. At 
+100 entries, the average load time was only 1.58 milliseconds, and even at 10,000 entries, the average remained at 43.63 milliseconds. 
+Although this increase is significant in relative terms, it is still comfortably below the point where a user would begin to notice lag. 
+In addition, the repeated runs were generally close together, especially at the larger dataset sizes, showing that the loading process 
+is not only fast but also stable. The slightly slower first runs or occasional higher values appear to be caused by startup overhead 
+rather than flaws in the loading logic itself. Together, these results suggest that the app’s encoding, storage, and decoding process 
+is efficient enough to support real-world use even as the amount of stored workout history grows substantially.
+
+The query benchmark results strengthen this conclusion even further. Across all dataset sizes, the app was able to filter, sort, count, 
+and summarize workout data in extremely small time ranges. At the smallest dataset size, the total average query time was just 0.415 
+milliseconds, and even at the largest dataset size, the total remained only 22.86 milliseconds. This means that the core user-facing data 
+operations inside the app remain highly efficient under heavier workloads. Simpler operations such as filtering by muscle group, sorting 
+by date, and counting unique exercises stayed especially fast, while more advanced calculations such as monthly workout days and Big Three 
+combined max weight also remained well within a range that would feel instantaneous to the user. Just as importantly, the query timings 
+stayed consistent across repeated runs, which suggests the app performs in a reliable and predictable way rather than producing random 
+spikes in execution time.
+
+The chart rendering results also provide strong support for the app’s performance under stress. In every dataset size tested, chart generation 
+times remained extremely low, generally between 0.003 and 0.008 milliseconds. This shows that the charting logic introduces almost no 
+measurable overhead to the application. An important reason for this is the design decision to cap each chart at a maximum of 25 displayed 
+data points. That cap prevents performance from degrading as the total underlying dataset becomes much larger. At 100 entries, the charts 
+could display all available values, while at 1,000 and 10,000 entries they displayed a smaller percentage of the total data but still 
+preserved legibility and rendering speed. This design choice is important because it shows that the app was not only benchmarked 
+successfully, but also engineered thoughtfully to maintain performance as the user’s workout history grows over time.
+
+Taken together, these findings show that the WorkoutEvaluator application is well optimized and performs reliably under high-stress conditions. 
+The results also show that performance scales in a controlled and manageable way as the dataset increases, rather than breaking down under 
+larger workloads. This is especially important for a fitness tracking application, since users are expected to continuously add more workout 
+data over time. Based on these results, it is reasonable to conclude that the app is capable of supporting long term use while maintaining 
+a smooth and responsive experience. Overall, the experiment successfully demonstrates that the application performs at a high level across 
+its major data heavy tasks and is strong enough for realistic, real-world scenarios.
 
 ## Threats to Validity
+
+Although the benchmark results show that the WorkoutEvaluator application performed well during testing, several threats to validity 
+should be considered when interpreting the results. Acknowledging these limitations is important because it provides a more 
+balanced evaluation of the experiment and helps clarify the extent to which the findings can be generalized to real use. 
+The main threats in this study relate to the use of synthetic data, the dependence on a specific hardware environment, and the 
+limited range of dataset sizes included in the benchmarks.
+
+### Synthetic Data
+
+One important threat to validity is that the benchmark datasets were generated artificially rather than collected from real 
+users. Synthetic data was necessary for this experiment because it allowed the tests to be performed in a controlled and 
+repeatable way, while also making it possible to create larger dataset sizes for stress testing. In addition, the generated 
+records were designed to match the same general structure and format as the workout entries that a real user would create 
+within the application. This helped make the benchmark more realistic and relevant to the intended use of the system.
+
+However, artificially generated data still has limitations. Real users may not log workouts in such a regular or predictable 
+manner. Their records could contain more variation in exercise selection, workout frequency, repetition patterns, dates, and 
+overall distribution of entries. Some users may consistently repeat the same exercises, while others may create highly uneven 
+training logs over long periods of time. Because of this, real-world data could produce performance behavior that differs slightly 
+from the benchmark results. As a result, the experiment provides a strong approximation of realistic use, but it does not guarantee 
+that every possible user pattern would produce identical performance outcomes.
+
+### Hardware Dependencies 
+
+Another threat to validity is that the benchmark results depend on the specific hardware and software environment used for 
+testing. The experiments were conducted on a single Apple MacBook Air with an Apple M4 chip, using Xcode and the iPhone 
+Simulator. This created a stable and reproducible testing setup, which is valuable for consistency across repeated benchmark 
+runs. By holding the environment constant, the experiment was able to focus more directly on the behavior of the application 
+itself.
+
+Even so, performance measurements are always influenced by the hardware on which they are collected. A different computer, 
+processor, memory configuration, simulator setting, or operating system version could produce somewhat different results. 
+In addition, performance on the iPhone Simulator may not exactly match performance on a physical iPhone, where factors such 
+as device age, battery state, background tasks, and real mobile hardware limitations could affect timing. This means the 
+reported values should be understood as results from the tested environment rather than universal performance guarantees 
+across all devices. The findings strongly suggest good performance, but they may vary when the application is used on different 
+hardware platforms.
+
+### Limited Dataset Sizes 
+
+A third threat to validity is the limited range of dataset sizes used in the experiment. The benchmarks were performed using 
+datasets of 100, 1,000, and 10,000 entries. These sizes were chosen because they represent small, medium, and high-stress 
+conditions and provide a useful basis for evaluating how the application scales as more data is stored. Testing across these 
+increasing sizes made it possible to observe performance trends and determine whether the app remained efficient under heavier 
+workloads.
+
+However, the maximum tested dataset was 10,000 entries, and some long-term users could eventually exceed that number. A very 
+active user who logs workouts frequently over many years might accumulate more records than were included in this benchmark. 
+Because the experiment did not test beyond 10,000 entries, it cannot fully confirm how the app would behave at substantially 
+larger scales. While the results suggest that performance increases in a controlled and manageable way, additional testing 
+with even larger datasets would strengthen the conclusions and provide a clearer picture of the application’s upper limits.
+
+Overall, these threats to validity do not invalidate the benchmark findings, but they do place reasonable boundaries on how 
+the results should be interpreted. The experiment still provides strong evidence that the WorkoutEvaluator application performs 
+efficiently under the tested conditions. At the same time, recognizing the use of synthetic data, the influence of the testing 
+hardware, and the limited maximum dataset size helps ensure that the evaluation remains realistic, transparent, and academically 
+sound.
+
+## Final reflection
+
+Overall, this project represents a successful integration of software engineering, data analysis, and user-centered design to 
+solve a real world problem in fitness tracking. Through the design and implementation of the WorkoutEvaluator application, combined 
+with the structured benchmarking experiments, it is clear that the system is both technically efficient and practically useful. 
+The results demonstrate that the application maintains strong performance across increasing dataset sizes while continuing to 
+deliver a smooth and responsive user experience. Beyond the technical achievements, this project also highlights the importance 
+of thoughtful design decisions, such as efficient data structures, controlled chart rendering, and meaningful query selection in 
+building scalable applications. Overall, this work not only validates the effectiveness of the current system but also provides 
+a strong foundation for future enhancements, reinforcing its potential to evolve into a real-world fitness solution. 
