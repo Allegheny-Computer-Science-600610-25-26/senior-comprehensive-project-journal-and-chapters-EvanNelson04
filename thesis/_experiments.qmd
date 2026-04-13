@@ -149,6 +149,7 @@ from smallest to largest, and it helps show the central tendency of the results.
 
 ### Load Time Performance Results 
 
+Table: Load Time Dataset Size 100 Entries
 ```swift
 ┌─────────────────────────────────────────────────────────────┐
 │  DATASET SIZE: 100 entries                                  │
