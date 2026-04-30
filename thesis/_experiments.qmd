@@ -159,12 +159,7 @@ from smallest to largest, and it helps show the central tendency of the results.
 │     Avg : 1.58 ms                                           │
 └─────────────────────────────────────────────────────────────┘
 ```
-\begin{figure}[h!]
-\centering
-\caption{Load Time Dataset Size 100 Entries}
-\label{fig:workoutcard}
-\end{figure}
-
+#| fig-cap: "Load Time Dataset Size 100 Entries"
 
 \begin{figure}[h!]
     \centering
