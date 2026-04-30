@@ -256,30 +256,18 @@ these query times is important because it shows how efficiently the application 
 realistic conditions. By measuring the execution time of each query across multiple runs, this section helps determine whether the app can 
 maintain fast and responsive performance as dataset size and query complexity increase.
 
-```swift
-│  🔍 QUERY TIMES (5 individual runs each)                    │
-│     Filter by exercise (Bench Press)       Avg 0.043 ms     │
-│        Runs: 0.083 ms, 0.032 ms, 0.033 ms, 0.033 ms, 0.033 m│
-│     Filter by muscle group (Chest)         Avg 0.009 ms     │
-│        Runs: 0.010 ms, 0.009 ms, 0.009 ms, 0.009 ms, 0.009 m│
-│     Sort by date descending                Avg 0.014 ms     │
-│        Runs: 0.018 ms, 0.013 ms, 0.013 ms, 0.012 ms, 0.013 m│
-│     Max weight per exercise                Avg 0.126 ms     │
-│        Runs: 0.516 ms, 0.030 ms, 0.028 ms, 0.029 ms, 0.029 m│
-│     Unique exercise count                  Avg 0.021 ms     │
-│        Runs: 0.041 ms, 0.017 ms, 0.016 ms, 0.016 ms, 0.016 m│
-│     Monthly unique workout days            Avg 0.102 ms     │
-│        Runs: 0.165 ms, 0.086 ms, 0.086 ms, 0.086 ms, 0.085 m│
-│     Big Three combined max weight          Avg 0.100 ms     │
-│        Runs: 0.102 ms, 0.101 ms, 0.100 ms, 0.099 ms, 0.100 m│
-│     ─────────────────────────────────────────────────────   │
-│     Total query time (avg sums): 0.415 ms                   │
-```
-\begin{figure}[h!]
-\centering
-\caption{Query Times Dataset Size 100 Entries}
-\label{fig:query100}
-\end{figure}
+Table: Query Performance With 100 Entries
+
+| Query Operation                     | Average Time (ms) | Individual Runs (ms)                          |
+|:------------------------------------|:------------------|:-----------------------------------------------|
+| Filter by exercise (Bench Press)    | 0.043            | 0.083, 0.032, 0.033, 0.033, 0.033             |
+| Filter by muscle group (Chest)      | 0.009            | 0.010, 0.009, 0.009, 0.009, 0.009             |
+| Sort by date descending             | 0.014            | 0.018, 0.013, 0.013, 0.012, 0.013             |
+| Max weight per exercise             | 0.126            | 0.516, 0.030, 0.028, 0.029, 0.029             |
+| Unique exercise count               | 0.021            | 0.041, 0.017, 0.016, 0.016, 0.016             |
+| Monthly unique workout days         | 0.102            | 0.165, 0.086, 0.086, 0.086, 0.085             |
+| Big Three combined max weight       | 0.100            | 0.102, 0.101, 0.100, 0.099, 0.100             |
+| **Total Query Time (Average Sum)**  | **0.415**        | —                                             |
 
 These query results are very strong. Overall, the average total query time is 0.415 milliseconds, which means the full set of tested queries 
 completes in well under a single millisecond on average. That indicates the app’s data operations are highly efficient and would feel 
@@ -305,30 +293,18 @@ filtering, sorting, and progress tracking features within the app.
 
 
 
-```swift 
-│  🔍 QUERY TIMES (5 individual runs each)                    │
-│     Filter by exercise (Bench Press)       Avg 0.326 ms     │
-│        Runs: 0.333 ms, 0.349 ms, 0.317 ms, 0.316 ms, 0.316 m│
-│     Filter by muscle group (Chest)         Avg 0.080 ms     │
-│        Runs: 0.080 ms, 0.079 ms, 0.080 ms, 0.081 ms, 0.079 m│
-│     Sort by date descending                Avg 0.142 ms     │
-│        Runs: 0.147 ms, 0.140 ms, 0.141 ms, 0.137 ms, 0.143 m│
-│     Max weight per exercise                Avg 0.244 ms     │
-│        Runs: 0.257 ms, 0.236 ms, 0.241 ms, 0.243 ms, 0.244 m│
-│     Unique exercise count                  Avg 0.150 ms     │
-│        Runs: 0.156 ms, 0.151 ms, 0.148 ms, 0.149 ms, 0.147 m│
-│     Monthly unique workout days            Avg 0.438 ms     │
-│        Runs: 0.447 ms, 0.429 ms, 0.431 ms, 0.449 ms, 0.435 m│
-│     Big Three combined max weight          Avg 0.959 ms     │
-│        Runs: 0.958 ms, 0.955 ms, 0.951 ms, 0.936 ms, 0.995 m│
-│     ─────────────────────────────────────────────────────   │
-│     Total query time (avg sums): 2.34 ms                    |
-```
-\begin{figure}[h!]
-\centering
-\caption{Query Times Dataset Size 1000 Entries}
-\label{fig:query1000}
-\end{figure}
+Table: Query Performance With 1,000 Entries
+
+| Query Operation                     | Average Time (ms) | Individual Runs (ms)                          |
+|:------------------------------------|:------------------|:-----------------------------------------------|
+| Filter by exercise (Bench Press)    | 0.326            | 0.333, 0.349, 0.317, 0.316, 0.316             |
+| Filter by muscle group (Chest)      | 0.080            | 0.080, 0.079, 0.080, 0.081, 0.079             |
+| Sort by date descending             | 0.142            | 0.147, 0.140, 0.141, 0.137, 0.143             |
+| Max weight per exercise             | 0.244            | 0.257, 0.236, 0.241, 0.243, 0.244             |
+| Unique exercise count               | 0.150            | 0.156, 0.151, 0.148, 0.149, 0.147             |
+| Monthly unique workout days         | 0.438            | 0.447, 0.429, 0.431, 0.449, 0.435             |
+| Big Three combined max weight       | 0.959            | 0.958, 0.955, 0.951, 0.936, 0.995             |
+| **Total Query Time (Average Sum)**  | **2.34**         | —                                              |
 
 These query results continue to demonstrate excellent application performance. The total average query time is 2.34 milliseconds, meaning that all tested query 
 operations together still complete in only a tiny fraction of a second. This shows that even as the dataset grows, the app remains highly responsive and 
@@ -352,30 +328,18 @@ Overall, these results show that the WorkoutEvaluator application performs query
 under one millisecond individually, and the full query set averaged only 2.34 milliseconds in total. This indicates that users would be able to filter, sort, and 
 analyze workout data smoothly, even when working with a larger dataset, with no visible lag during normal app use.
 
-```swift
-│  🔍 QUERY TIMES (5 individual runs each)                    │
-│     Filter by exercise (Bench Press)       Avg 3.20 ms      │
-│        Runs: 3.25 ms, 3.24 ms, 3.20 ms, 3.15 ms, 3.15 ms    │
-│     Filter by muscle group (Chest)         Avg 0.823 ms     │
-│        Runs: 0.843 ms, 0.829 ms, 0.817 ms, 0.813 ms, 0.815 m│
-│     Sort by date descending                Avg 1.39 ms      │
-│        Runs: 1.36 ms, 1.37 ms, 1.42 ms, 1.40 ms, 1.40 ms    │
-│     Max weight per exercise                Avg 2.40 ms      │
-│        Runs: 2.54 ms, 2.43 ms, 2.41 ms, 2.33 ms, 2.32 ms    │
-│     Unique exercise count                  Avg 1.52 ms      │
-│        Runs: 1.51 ms, 1.54 ms, 1.52 ms, 1.53 ms, 1.51 ms    │
-│     Monthly unique workout days            Avg 3.96 ms      │
-│        Runs: 3.93 ms, 3.95 ms, 3.99 ms, 3.96 ms, 3.97 ms    │
-│     Big Three combined max weight          Avg 9.56 ms      │
-│        Runs: 9.44 ms, 9.39 ms, 9.32 ms, 9.66 ms, 9.97 ms    │
-│     ─────────────────────────────────────────────────────   │
-│     Total query time (avg sums): 22.86 ms                   │
-```
-\begin{figure}[h!]
-\centering
-\caption{Query Times Dataset Size 10000 Entries}
-\label{fig:query10000}
-\end{figure}
+Table: Query Performance With 10,000 Entries
+
+| Query Operation                     | Average Time (ms) | Individual Runs (ms)                          |
+|:------------------------------------|:------------------|:-----------------------------------------------|
+| Filter by exercise (Bench Press)    | 3.20             | 3.25, 3.24, 3.20, 3.15, 3.15                  |
+| Filter by muscle group (Chest)      | 0.823            | 0.843, 0.829, 0.817, 0.813, 0.815             |
+| Sort by date descending             | 1.39             | 1.36, 1.37, 1.42, 1.40, 1.40                  |
+| Max weight per exercise             | 2.40             | 2.54, 2.43, 2.41, 2.33, 2.32                  |
+| Unique exercise count               | 1.52             | 1.51, 1.54, 1.52, 1.53, 1.51                  |
+| Monthly unique workout days         | 3.96             | 3.93, 3.95, 3.99, 3.96, 3.97                  |
+| Big Three combined max weight       | 9.56             | 9.44, 9.39, 9.32, 9.66, 9.97                  |
+| **Total Query Time (Average Sum)**  | **22.86**        | —                                              |
 
 These results show that query performance remains strong even at the largest dataset size tested. The total average query time is 22.86 milliseconds, which means 
 that all benchmarked queries combined still execute in far less than 100 milliseconds. From a user experience standpoint, this is important because it indicates 
@@ -413,25 +377,13 @@ data is on the graph, just by completing a simple formula which is the shown dat
 get the final percentage value. Keeping the maximum data points to 25, while keeping the chart legible, should also keep the load time relatively fast, causing
 no problems inside my application.
 
-```swift
-│   📈 CHART RENDERING (same logic as WorkoutChartView)       │
-│     (capped at 25 pts)                                      │
-│     Chart data for Bench Press   Avg 0.008 ms               │
-│        Runs: 0.027 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.003 m│
-│        [9 total → 9 shown, 100.0% retained]                 │
-│     Chart data for Squat         Avg 0.003 ms               │
-│        Runs: 0.003 ms, 0.003 ms, 0.003 ms, 0.003 ms, 0.002 m│
-│        [9 total → 9 shown, 100.0% retained]                 │
-│     Chart data for Deadlift      Avg 0.003 ms               │
-│        Runs: 0.003 ms, 0.002 ms, 0.003 ms, 0.003 ms, 0.003 m│
-│        [9 total → 9 shown, 100.0% retained]                 │
-└─────────────────────────────────────────────────────────────┘
-```
-\begin{figure}[h!]
-\centering
-\caption{Chart Rendering Dataset Size 100 Entries}
-\label{fig:workoutcard}
-\end{figure}
+Table: Chart Rendering Performance With 100 Entries
+
+| Exercise      | Average Time (ms) | Individual Runs (ms)                     | Data Reduction |
+|:---------------|:-----------------|:-----------------------------------------|:----------------|
+| Bench Press    | 0.008            | 0.027, 0.003, 0.003, 0.003, 0.003       | 9 → 9 (100.0%) |
+| Squat          | 0.003            | 0.003, 0.003, 0.003, 0.003, 0.002       | 9 → 9 (100.0%) |
+| Deadlift       | 0.003            | 0.003, 0.002, 0.003, 0.003, 0.003       | 9 → 9 (100.0%) |
 
 This chart rendering result shows extremely strong performance. The average render time stayed between 0.003 milliseconds and 
 0.008 milliseconds for all three exercises, which is essentially instantaneous from a user perspective. Bench press was the slowest of the 
@@ -450,25 +402,13 @@ indicate that the chart rendering system is highly efficient and should have no 
 experience. As mentioned before, the chart will only handle a maximum of 25 values. Since these primary results performed strong,
 it is fair to predict that there should not be much change in the performance as the dataset sizes increase.
 
-```swift
-│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
-│     (capped at 25 pts)                                      │
-│     Chart data for Bench Press   Avg 0.007 ms               │
-│        Runs: 0.012 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
-│        [84 total → 25 shown, 29.8% retained]                │
-│     Chart data for Squat         Avg 0.006 ms               │
-│        Runs: 0.007 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.006 m│
-│        [84 total → 25 shown, 29.8% retained]                │
-│     Chart data for Deadlift      Avg 0.006 ms               │
-│        Runs: 0.006 ms, 0.005 ms, 0.005 ms, 0.006 ms, 0.006 m│
-│        [84 total → 25 shown, 29.8% retained]                │
-└─────────────────────────────────────────────────────────────┘
-```
-\begin{figure}[h!]
-\centering
-\caption{Chart Rendering Dataset Size 1,000 Entries}
-\label{fig:workoutcard}
-\end{figure}
+Table: Chart Rendering Performance With 1,000 Entries
+
+| Exercise      | Average Time (ms) | Individual Runs (ms)                     | Data Reduction |
+|:---------------|:-----------------|:-----------------------------------------|:----------------|
+| Bench Press    | 0.007            | 0.012, 0.006, 0.006, 0.006, 0.006       | 84 → 25 (29.8%) |
+| Squat          | 0.006            | 0.007, 0.006, 0.006, 0.006, 0.006       | 84 → 25 (29.8%) |
+| Deadlift       | 0.006            | 0.006, 0.005, 0.005, 0.006, 0.006       | 84 → 25 (29.8%) |
 
 This chart rendering result again demonstrates extremely strong performance, even with the larger 100-entry dataset. The 
 average render time remained between 0.006 milliseconds and 0.007 milliseconds for all three exercises, which is still effectively instantaneous 
@@ -484,25 +424,13 @@ pool of available data, the rendering time remained near zero, showing that limi
 performance from degrading. Overall, these results indicate that the chart rendering system remains highly efficient at this 
 dataset size and should continue to have no noticeable impact on app responsiveness or user experience.
 
-```swift
-│  📈 CHART RENDERING (same logic as WorkoutChartView)        │
-│     (capped at 25 pts)                                      │
-│     Chart data for Bench Press   Avg 0.006 ms               │
-│        Runs: 0.009 ms, 0.006 ms, 0.006 ms, 0.005 ms, 0.005 m│
-│        [834 total → 25 shown, 3.0% retained]                │
-│     Chart data for Squat         Avg 0.005 ms               │
-│        Runs: 0.006 ms, 0.006 ms, 0.005 ms, 0.005 ms, 0.005 m│
-│        [834 total → 25 shown, 3.0% retained]                │
-│     Chart data for Deadlift      Avg 0.007 ms               │
-│        Runs: 0.010 ms, 0.006 ms, 0.006 ms, 0.006 ms, 0.005 m│
-│        [834 total → 25 shown, 3.0% retained]                │
-└─────────────────────────────────────────────────────────────┘
-```
-\begin{figure}[h!]
-\centering
-\caption{Chart Rendering Dataset Size 10,000 Entries}
-\label{fig:workoutcard}
-\end{figure}
+Table: Chart Rendering Performance With 10,000 Entries
+
+| Exercise      | Average Time (ms) | Individual Runs (ms)                     | Data Reduction |
+|:---------------|:-----------------|:-----------------------------------------|:----------------|
+| Bench Press    | 0.006            | 0.009, 0.006, 0.006, 0.005, 0.005       | 834 → 25 (3.0%) |
+| Squat          | 0.005            | 0.006, 0.006, 0.005, 0.005, 0.005       | 834 → 25 (3.0%) |
+| Deadlift       | 0.007            | 0.010, 0.006, 0.006, 0.006, 0.005       | 834 → 25 (3.0%) |
 
 These chart rendering results remain very solid even at the largest dataset size. The average render times stayed between 0.005 
 milliseconds and 0.007 milliseconds across all three exercises, which is still essentially instantaneous from a user perspective. 
