@@ -166,7 +166,7 @@ Table: Load Time Performance With 100 Entries
     \centering
     \includegraphics[width=0.55\textwidth]{ExperimentData/Load100.png}
     \caption{Load Time Performance Results With 100 Entries}
-    \label{fig:workoutcard}
+    \label{fig:loadtimeperformance100}
 \end{figure}
 
 As shown in the benchmark output above, five separate load time measurements were recorded for the dataset containing 100 
