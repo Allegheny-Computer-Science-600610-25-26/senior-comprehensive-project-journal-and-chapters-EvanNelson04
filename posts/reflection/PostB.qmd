@@ -1,0 +1,18 @@
+---
+title: "Empirical Study Results"
+date: "2026-4-30"
+image: slides/AppImage.png
+---
+
+The empirical study for my project focused on benchmarking performance as the dataset size increased. I tested loading, querying, 
+and chart rendering using workout datasets containing 100, 1,000, and 10,000 entries. The results showed that most operations 
+remained highly responsive even at larger scales, especially when limiting chart rendering to recent data points. One interesting 
+result was that the first benchmark run was often slower due to initialization overhead, while later runs stabilized significantly.
+Overall, the study demonstrated that the application’s architecture and data management approach were efficient enough to support 
+realistic long-term usage.
+
+The study also reinforced the importance of experimental evaluation in software development. Rather than assuming the application 
+would perform well, the benchmarking process provided measurable evidence about how the system behaved under different workloads. 
+It also highlighted areas where optimization mattered most, such as reducing unnecessary rendering and improving data filtering 
+efficiency. Conducting these experiments helped connect the technical implementation of the project to broader concepts in 
+computer science, including performance analysis, scalability, and system reliability.

@@ -1,0 +1,18 @@
+---
+title: "Setbacks, Progress, and Project Growth"
+date: "2026-4-30"
+image: slides/AppImage.png
+---
+
+One of the biggest setbacks during this project was balancing feature ambition with development time. I initially planned more 
+advanced account systems and external integrations, but I later scaled back certain features to ensure the core experience 
+remained polished and reliable. Another challenge involved debugging UI issues in SwiftUI, particularly with charts and dynamic 
+layouts across different device sizes. Despite these setbacks, the project showed consistent progress throughout both the 
+600-level and 610-level courses. Over time, the application evolved from a basic workout logger into a more complete platform 
+with workout evaluations, achievement systems, progress visualization, and personalized feedback features.
+
+Looking back on the project as a whole, I can clearly see how much both the application and my technical skills developed over 
+time. Working through setbacks forced me to improve my debugging, planning, and decision-making abilities, especially when 
+adapting to unfamiliar frameworks and technologies. The steady progress made across both courses demonstrated the value of 
+long-term iteration and persistence in software engineering projects. By the end of the process, the project represented not 
+only a completed application, but also a reflection of my growth as a computer science student and developer.
