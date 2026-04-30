@@ -1,0 +1,18 @@
+---
+title: "Iterative Problem-Solving and Decision-Making"
+date: "2026-4-30"
+image: slides/AppImage.png
+---
+
+Throughout the development of my fitness tracking application, I consistently revised both the design and functionality based on 
+testing and usability concerns. One major decision was simplifying the app’s focus from wearable integration to user-entered 
+workout data. This change made the application more accessible and allowed me to focus on creating meaningful workout evaluations 
+and progress analysis rather than relying on external hardware APIs. I also iteratively redesigned the chart system several times 
+to improve readability and better visualize workout trends. These revisions demonstrated how software development is an ongoing 
+problem-solving process where user experience, technical limitations, and project scope all influence final design decisions.
+
+Another important aspect of the iterative process was incorporating feedback from presentations, testing sessions, and personal 
+evaluation of the app’s usability. As I continued developing the project, I realized that clarity and simplicity were just as 
+important as adding new features. For example, I adjusted navigation layouts, improved the organization of workout data, and 
+refined the visual styling to create a more professional and intuitive interface. These repeated improvements helped me better 
+understand how developers must continuously adapt their solutions rather than expecting the first implementation to be perfect.
