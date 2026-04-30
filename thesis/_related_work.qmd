@@ -21,7 +21,7 @@ completed to learn more about this growing lifestyle.
 
 ## Review of Existing Aplications
 
-### Whoop
+### Whoop [@whoop2026]
 
 Whoop is the only wearable device with a mobile application that I think is worth considering and looking into. For
 a brief introduction, Whoop is a wearable device that consists of a mobile application and a website. As of the current
@@ -80,7 +80,7 @@ the user with an easily readable way to analyze progress is something that I can
 provide the users with visuals. This aligns with the importance of my app in creating a clean UI and providing the users
 with well-designed visuals.
 
-### Strong
+### Strong [@strong2026]
 
 Strong is a mobile workout tracking application that allows users to manually input exercises, sets, reps, and weights
 to monitor progress over time. The app provides data visualization tools such as charts and personal records to help
@@ -115,7 +115,7 @@ workout data into actionable insights, empowering users to make more informed de
 toward their strength goals.
 
  
-### Fitbod
+### Fitbod [@fitbod2026]
 
 Fitbod is a mobile fitness application that focuses more on workout planning and recommendations. This app contains 
 similar concepts to workout logging and workout tracking, but focuses on the workout planning aspect as its main selling
@@ -159,7 +159,7 @@ can provide the user with the necessary information while not overloading the us
 completing the evaluation while giving it to the users without needing a paid subscription is something that is unheard
 but something that I believe every gym-goer deserves better yet needs.
 
-### JEFIT
+### JEFIT [@jefit2026]
 
 JEFIT is a long-standing workout tracking application designed to help users plan, record, and review their training sessions. The
 app allows users to manually log exercises, sets, reps, and weights, and it includes one of the largest prebuilt exercise libraries
@@ -217,7 +217,7 @@ generate insights about performance patterns, identify plateaus, or suggest adju
 this is similar throughout al of the fitness apps I am diving into. Paying for this subscription gives the user access to many important tools that can
 help the user but I finid it hard to believe there is a better tool than feedback and reccomendations to the user.
 
-### Hevy
+### Hevy [@hevy2026]
 
 Hevy is a modern workout tracking application designed to provide a clean, streamlined experience for logging strength training sessions. Hevy centers on manual
 user input—exercises, sets, reps, and weights—rather than wearable integration. The app is known for its minimalist interface, fast logging workflow, and 
